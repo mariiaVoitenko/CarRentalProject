@@ -17,6 +17,7 @@
         <junit-version>4.11</junit-version>
         <slf4j.version>1.7.7</slf4j.version>
         <mysql-connector-version>5.1.33</mysql-connector-version>
+        <hikari-cp-version>2.3.9</hikari-cp-version>
     </properties>
 
     <dependencies>
@@ -71,6 +72,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql-connector-version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${hikari-cp-version}</version>
+        </dependency>
+
 
     </dependencies>
 
