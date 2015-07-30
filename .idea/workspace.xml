@@ -1,61 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a9e38f4-19db-438a-b779-6ca3564f2bcf" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\css\bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\css\bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\css\bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\css\bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\resources\bootstrap-3.3.5-dist\js\npm.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\css\bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\css\bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\css\bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\css\bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\WEB-INF\classes\bootstrap-3.3.5-dist\js\npm.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\index.jsp\META-INF\context.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\index.jsp\WEB-INF\jsp_header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\index.jsp\WEB-INF\web.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\index.jsp\hello.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\CarRental-1.0-SNAPSHOT\index.jsp\index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\css\bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\css\bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\css\bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\css\bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\target\classes\bootstrap-3.3.5-dist\js\npm.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project.iml" afterPath="$PROJECT_DIR$/Project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Project_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Project_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/web.xml" />
+    <list default="true" id="6a9e38f4-19db-438a-b779-6ca3564f2bcf" name="Default" comment="Some beans. Works">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/DamageCheck.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CarRental.iws" />
@@ -81,32 +28,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ConnectionHolder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/holder/ConnectionHolder.java">
+      <file leaf-file-name="Damage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Damage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatementsContainer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java">
+      <file leaf-file-name="DamageCheck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/DamageCheck.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Class.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Class.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-              <folding />
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+              <folding>
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#426#427#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,48 +60,178 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Color.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+              <caret line="11" column="64" selection-start-line="10" selection-start-column="9" selection-end-line="11" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Status.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Status.java">
+      <file leaf-file-name="Check.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Check.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-              <folding />
+              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+              <folding>
+                <element signature="e#206#207#0" expanded="true" />
+                <element signature="e#232#233#0" expanded="true" />
+                <element signature="e#267#268#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#359#360#0" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Damage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Damage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5409091">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Brand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Brand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Decline.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.java">
+      <file leaf-file-name="Car.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Car.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+              <folding>
+                <element signature="e#1490#1491#0" expanded="true" />
+                <element signature="e#1518#1519#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1594#1595#0" expanded="true" />
+                <element signature="e#1623#1624#0" expanded="true" />
+                <element signature="e#1651#1652#0" expanded="true" />
+                <element signature="e#1690#1691#0" expanded="true" />
+                <element signature="e#1724#1725#0" expanded="true" />
+                <element signature="e#1765#1766#0" expanded="true" />
+                <element signature="e#1805#1806#0" expanded="true" />
+                <element signature="e#1868#1869#0" expanded="true" />
+                <element signature="e#1926#1927#0" expanded="true" />
+                <element signature="e#1962#1963#0" expanded="true" />
+                <element signature="e#1994#1995#0" expanded="true" />
+                <element signature="e#2044#2045#0" expanded="true" />
+                <element signature="e#2086#2087#0" expanded="true" />
+                <element signature="e#2124#2125#0" expanded="true" />
+                <element signature="e#2161#2162#0" expanded="true" />
+                <element signature="e#2218#2219#0" expanded="true" />
+                <element signature="e#2270#2271#0" expanded="true" />
+                <element signature="e#2301#2302#0" expanded="true" />
+                <element signature="e#2329#2330#0" expanded="true" />
+                <element signature="e#2370#2371#0" expanded="true" />
+                <element signature="e#2404#2405#0" expanded="true" />
+                <element signature="e#2437#2438#0" expanded="true" />
+                <element signature="e#2466#2467#0" expanded="true" />
+                <element signature="e#2510#2511#0" expanded="true" />
+                <element signature="e#2546#2547#0" expanded="true" />
+                <element signature="e#2577#2578#0" expanded="true" />
+                <element signature="e#2605#2606#0" expanded="true" />
+                <element signature="e#2646#2647#0" expanded="true" />
+                <element signature="e#2680#2681#0" expanded="true" />
+                <element signature="e#2715#2716#0" expanded="true" />
+                <element signature="e#2747#2748#0" expanded="true" />
+                <element signature="e#2796#2797#0" expanded="true" />
+                <element signature="e#2838#2839#0" expanded="true" />
+                <element signature="e#2871#2872#0" expanded="true" />
+                <element signature="e#2903#2904#0" expanded="true" />
+                <element signature="e#2950#2951#0" expanded="true" />
+                <element signature="e#2992#2993#0" expanded="true" />
+                <element signature="e#3031#3032#0" expanded="true" />
+                <element signature="e#3069#3070#0" expanded="true" />
+                <element signature="e#3128#3129#0" expanded="true" />
+                <element signature="e#3182#3183#0" expanded="true" />
+                <element signature="e#3223#3224#0" expanded="true" />
+                <element signature="e#3260#3261#0" expanded="true" />
+                <element signature="e#3321#3322#0" expanded="true" />
+                <element signature="e#3373#3374#0" expanded="true" />
+                <element signature="e#3407#3408#0" expanded="true" />
+                <element signature="e#3440#3441#0" expanded="true" />
+                <element signature="e#3489#3490#0" expanded="true" />
+                <element signature="e#3533#3534#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rent.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Rent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6909091">
+              <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+              <folding>
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#523#524#0" expanded="true" />
+                <element signature="e#555#556#0" expanded="true" />
+                <element signature="e#582#583#0" expanded="true" />
+                <element signature="e#608#609#0" expanded="true" />
+                <element signature="e#643#644#0" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+                <element signature="e#767#768#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+                <element signature="e#911#912#0" expanded="true" />
+                <element signature="e#949#950#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
+                <element signature="e#1008#1009#0" expanded="true" />
+                <element signature="e#1049#1050#0" expanded="true" />
+                <element signature="e#1083#1084#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Role.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="83" column="45" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
+              <folding>
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+                <element signature="e#530#531#0" expanded="true" />
+                <element signature="e#564#565#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#689#690#0" expanded="true" />
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#761#762#0" expanded="true" />
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#950#951#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
+                <element signature="e#1074#1075#0" expanded="true" />
+                <element signature="e#1115#1116#0" expanded="true" />
+                <element signature="e#1152#1153#0" expanded="true" />
+                <element signature="e#1212#1213#0" expanded="true" />
+                <element signature="e#1264#1265#0" expanded="true" />
+                <element signature="e#1293#1294#0" expanded="true" />
+                <element signature="e#1320#1321#0" expanded="true" />
+                <element signature="e#1358#1359#0" expanded="true" />
+                <element signature="e#1390#1391#0" expanded="true" />
+                <element signature="e#1426#1427#0" expanded="true" />
+                <element signature="e#1458#1459#0" expanded="true" />
+                <element signature="e#1508#1509#0" expanded="true" />
+                <element signature="e#1550#1551#0" expanded="true" />
+                <element signature="e#1585#1586#0" expanded="true" />
+                <element signature="e#1616#1617#0" expanded="true" />
+                <element signature="e#1664#1665#0" expanded="true" />
+                <element signature="e#1704#1705#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,12 +241,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <element signature="e#161#162#0" expanded="true" />
-                <element signature="e#186#187#0" expanded="true" />
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -253,6 +323,12 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Entity.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Damage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Check.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/DamageCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Rent.java" />
       </list>
     </option>
   </component>
@@ -321,7 +397,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -1138,12 +1214,19 @@
       <workItem from="1438154635601" duration="10050000" />
       <workItem from="1438253306692" duration="6642000" />
       <workItem from="1438270735820" duration="3983000" />
-      <workItem from="1438281837746" duration="55000" />
+      <workItem from="1438281837746" duration="1449000" />
     </task>
+    <task id="LOCAL-00001" summary="Some beans. Works">
+      <created>1438281940901</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1438281940901</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25382000" />
+    <option name="totallyTimeSpent" value="26776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1040" extended-state="0" />
@@ -1151,6 +1234,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
@@ -1174,7 +1258,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3215859" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1191,6 +1274,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Some beans. Works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some beans. Works" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -1200,46 +1288,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/holder/ConnectionHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Damage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1268,12 +1316,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1296,6 +1339,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1303,6 +1347,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1317,6 +1364,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1354,6 +1402,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,6 +1433,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1457,6 +1507,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1478,6 +1529,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1533,14 +1587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1580,24 +1626,203 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Entity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Damage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/DamageCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding>
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Damage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Check.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5409091">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+          <folding>
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding>
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1594#1595#0" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#1805#1806#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#1926#1927#0" expanded="true" />
+            <element signature="e#1962#1963#0" expanded="true" />
+            <element signature="e#1994#1995#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+            <element signature="e#2086#2087#0" expanded="true" />
+            <element signature="e#2124#2125#0" expanded="true" />
+            <element signature="e#2161#2162#0" expanded="true" />
+            <element signature="e#2218#2219#0" expanded="true" />
+            <element signature="e#2270#2271#0" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2329#2330#0" expanded="true" />
+            <element signature="e#2370#2371#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2437#2438#0" expanded="true" />
+            <element signature="e#2466#2467#0" expanded="true" />
+            <element signature="e#2510#2511#0" expanded="true" />
+            <element signature="e#2546#2547#0" expanded="true" />
+            <element signature="e#2577#2578#0" expanded="true" />
+            <element signature="e#2605#2606#0" expanded="true" />
+            <element signature="e#2646#2647#0" expanded="true" />
+            <element signature="e#2680#2681#0" expanded="true" />
+            <element signature="e#2715#2716#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2796#2797#0" expanded="true" />
+            <element signature="e#2838#2839#0" expanded="true" />
+            <element signature="e#2871#2872#0" expanded="true" />
+            <element signature="e#2903#2904#0" expanded="true" />
+            <element signature="e#2950#2951#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
+            <element signature="e#3031#3032#0" expanded="true" />
+            <element signature="e#3069#3070#0" expanded="true" />
+            <element signature="e#3128#3129#0" expanded="true" />
+            <element signature="e#3182#3183#0" expanded="true" />
+            <element signature="e#3223#3224#0" expanded="true" />
+            <element signature="e#3260#3261#0" expanded="true" />
+            <element signature="e#3321#3322#0" expanded="true" />
+            <element signature="e#3373#3374#0" expanded="true" />
+            <element signature="e#3407#3408#0" expanded="true" />
+            <element signature="e#3440#3441#0" expanded="true" />
+            <element signature="e#3489#3490#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="64" selection-start-line="10" selection-start-column="9" selection-end-line="11" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="45" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
+          <folding>
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1074#1075#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1585#1586#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
+            <element signature="e#1704#1705#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Rent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6909091">
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+          <folding>
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1049#1050#0" expanded="true" />
+            <element signature="e#1083#1084#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
