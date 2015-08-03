@@ -5,6 +5,10 @@ package ua.nure.voitenkom.SummaryTask4.db.entity;
  */
 public class Status extends SimpleEntity {
 
+    public Status(int id, String name) {
+        super(id, name);
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Status{");

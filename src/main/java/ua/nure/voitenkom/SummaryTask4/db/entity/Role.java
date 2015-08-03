@@ -5,6 +5,10 @@ package ua.nure.voitenkom.SummaryTask4.db.entity;
  */
 public class Role extends SimpleEntity {
 
+    public Role(int id, String name) {
+        super(id, name);
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Role{");

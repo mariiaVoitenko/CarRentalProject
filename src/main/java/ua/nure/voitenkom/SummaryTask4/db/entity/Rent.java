@@ -12,6 +12,16 @@ public class Rent extends Entity {
     private int declineId;
     private int checkId;
 
+    public Rent(int id, boolean isDriven, int days, int carId, int userId, int declineId, int checkId) {
+        this.setId(id);
+        this.days = days;
+        this.carId = carId;
+        this.isDriven = isDriven;
+        this.userId = userId;
+        this.declineId = declineId;
+        this.checkId = checkId;
+    }
+
     public boolean isDriven() {
         return isDriven;
     }

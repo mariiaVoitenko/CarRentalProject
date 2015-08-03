@@ -14,6 +14,18 @@ public class User extends Entity{
     private String photoPath;
     private String password;
 
+    public User(int id, String fullName, boolean isBlocked, boolean isRegistered, String registrationToken, String passportNumber, int roleId, String photoPath, String password) {
+        this.setId(id);
+        this.fullName = fullName;
+        this.isBlocked = isBlocked;
+        this.isRegistered = isRegistered;
+        this.registrationToken = registrationToken;
+        this.passportNumber = passportNumber;
+        this.roleId = roleId;
+        this.photoPath = photoPath;
+        this.password = password;
+    }
+
     public String getFullName() {
         return fullName;
     }

@@ -3,11 +3,15 @@ package ua.nure.voitenkom.SummaryTask4.db.entity;
 /**
  * Created by Maria on 30.07.2015.
  */
-public class Class extends SimpleEntity{
+public class MajorityClass extends SimpleEntity{
+
+    public MajorityClass(int id, String name) {
+        super(id, name);
+    }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Class{");
+        final StringBuilder sb = new StringBuilder("MajorityClass{");
         sb.append("id='").append(this.getId()).append('\'');
         sb.append("name='").append(this.getName()).append('\'');
         sb.append('}');

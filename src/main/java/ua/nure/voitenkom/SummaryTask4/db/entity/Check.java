@@ -8,6 +8,12 @@ public class Check extends Entity {
     private int sum;
     private boolean isPayed;
 
+    public Check(int id, int sum, boolean isPayed) {
+        this.setId(id);
+        this.sum = sum;
+        this.isPayed = isPayed;
+    }
+
     public int getSum() {
         return sum;
     }
