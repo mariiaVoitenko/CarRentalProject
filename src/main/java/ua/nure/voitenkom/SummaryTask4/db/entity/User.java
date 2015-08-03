@@ -13,8 +13,9 @@ public class User extends Entity{
     private int roleId;
     private String photoPath;
     private String password;
+    private String login;
 
-    public User(int id, String fullName, boolean isBlocked, boolean isRegistered, String registrationToken, String passportNumber, int roleId, String photoPath, String password) {
+    public User(int id, String fullName, boolean isBlocked, boolean isRegistered, String registrationToken, String passportNumber, int roleId, String photoPath, String password, String login) {
         this.setId(id);
         this.fullName = fullName;
         this.isBlocked = isBlocked;
@@ -24,6 +25,7 @@ public class User extends Entity{
         this.roleId = roleId;
         this.photoPath = photoPath;
         this.password = password;
+        this.login = login;
     }
 
     public String getFullName() {
@@ -90,6 +92,14 @@ public class User extends Entity{
         this.password = password;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("User{");
@@ -102,6 +112,7 @@ public class User extends Entity{
         sb.append(", roleId=").append(roleId);
         sb.append(", photoPath='").append(photoPath).append('\'');
         sb.append(", password='").append(password).append('\'');
+        sb.append(", login='").append(login).append('\'');
         sb.append('}');
         return sb.toString();
     }

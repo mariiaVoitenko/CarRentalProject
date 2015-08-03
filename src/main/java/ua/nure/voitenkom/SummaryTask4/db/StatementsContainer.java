@@ -55,7 +55,7 @@ public class StatementsContainer {
     public static final String SQL_SELECT_ALL_DAMAGECHECKS = "SELECT * FROM damages_checks";
     public static final String SQL_SELECT_DAMAGE_ID_BY_DAMAGECHECK_ID = "SELECT damages_id FROM damages_checks WHERE id = ?";
     public static final String SQL_SELECT_CHECK_ID_BY_DAMAGECHECK_ID = "SELECT checks_id FROM damages_checks WHERE id = ?";
-    public static final String SQL_SELECT_ALL_DAMAGECHECK_INFORMATION= "SELECT damages.name, damages.sum, checks.id AS \"check\", damages.id AS \"damage\", damages_checks.id FROM damages_checks, damages, checks";
+    public static final String SQL_SELECT_ALL_DAMAGECHECK_INFORMATION = "SELECT damages.name, damages.sum, checks.id AS \"check\", damages.id AS \"damage\", damages_checks.id FROM damages_checks, damages, checks";
 
     //declines
     public static final String SQL_SELECT_ALL_DECLINES = "SELECT * FROM declines";
@@ -104,16 +104,10 @@ public class StatementsContainer {
     //user
     public static final String SQL_SELECT_ALL_USERS = "SELECT * FROM users";
     public static final String SQL_SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
-    public static final String SQL_SELECT_USER_PASSWORD = "SELECT password FROM users WHERE id = ?";
-    public static final String SQL_SELECT_USER_BLOCK_STATE = "SELECT is_blocked FROM users WHERE id = ?";
-    public static final String SQL_SELECT_USER_REGISTRATION_STATE = "SELECT is_registered FROM users WHERE id = ?";
-    public static final String SQL_SELECT_USER_TOKEN= "SELECT registration_token FROM users WHERE id = ?";
-    public static final String SQL_SELECT_USER_ROLE_ID = "SELECT role_id FROM users WHERE id = ?";
-    public static final String SQL_SELECT_USER_ROLE = "SELECT roles.name FROM users, roles WHERE users.id = 1 AND roles.id = users.roles_id";
-    public static final String SQL_SELECT_USER_BY_PASSPORT = "SELECT * FROM users WHERE passport_number = ?";
-    public static final String SQL_INSERT_USER = "INSERT INTO users (full_name, registration_token, passport_number, roles_id, password) VALUES (?,?,?,?,?)";
+    public static final String SQL_INSERT_USER = "INSERT INTO users (full_name, registration_token, passport_number, roles_id, password, login) VALUES (?,?,?,?,?,?)";
     public static final String SQL_UPDATE_USER_BLOCKED = "UPDATE users SET is_blocked = true WHERE id = ?";
     public static final String SQL_UPDATE_USER_BLOCKED_NOT = "UPDATE users SET is_blocked = false WHERE id = ?";
     public static final String SQL_UPDATE_USER_IS_REGISTERED = "UPDATE users SET is_registered = true WHERE id = ?";
     public static final String SQL_DELETE_USER_BY_ID = "DELETE FROM users WHERE id = ?";
+    public static final String SQL_SELECT_USER_BY_LOGIN = "SELECT * FROM users WHERE login = ?";
 }

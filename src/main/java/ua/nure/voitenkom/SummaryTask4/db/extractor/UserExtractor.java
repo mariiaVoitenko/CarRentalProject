@@ -21,7 +21,8 @@ public class UserExtractor implements IExtractor<User> {
         String passportNumber = resultSet.getString(FieldsContainer.FIELD_PASSPORT_NUMBER);
         String photoPath = resultSet.getString(FieldsContainer.FIELD_PHOTO);
         String password = resultSet.getString(FieldsContainer.FIELD_PASSWORD);
+        String login = resultSet.getString(FieldsContainer.FIELD_LOGIN);
         int roleId = resultSet.getInt(FieldsContainer.FIELD_ROLES_ID);
-        return new User(id, name, isBlocked, isRegistered,token,passportNumber,roleId,photoPath,password);
+        return new User(id, name, isBlocked, isRegistered,token,passportNumber,roleId,photoPath,password,login);
     }
 }

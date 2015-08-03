@@ -36,5 +36,5 @@ public class FieldsContainer {
     public static final String FIELD_PASSPORT_NUMBER = "passport_number";
     public static final String FIELD_ROLES_ID = "roles_id";
     public static final String FIELD_PASSWORD = "password";
-
+    public static final String FIELD_LOGIN = "login";
 }

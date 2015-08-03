@@ -13,6 +13,4 @@ public interface IAbstractRepository<T> {
     int findByName(String name,String sql, IExtractor<T> extractor);
 
     List<T> findAll(String sql, IExtractor<T> extractor);
-
-    void deleteById(int id, String sql);
 }
