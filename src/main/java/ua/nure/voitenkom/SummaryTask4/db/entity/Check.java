@@ -1,0 +1,36 @@
+package ua.nure.voitenkom.SummaryTask4.db.entity;
+
+/**
+ * Created by Maria on 30.07.2015.
+ */
+public class Check extends Entity {
+
+    private int sum;
+    private boolean isPayed;
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+
+    public boolean isPayed() {
+        return isPayed;
+    }
+
+    public void setIsPayed(boolean isPayed) {
+        this.isPayed = isPayed;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Check{");
+        sb.append("id=").append(this.getId());
+        sb.append("sum=").append(sum);
+        sb.append(", isPayed=").append(isPayed);
+        sb.append('}');
+        return sb.toString();
+    }
+}
