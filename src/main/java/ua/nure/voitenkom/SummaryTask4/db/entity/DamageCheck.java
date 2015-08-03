@@ -5,31 +5,31 @@ package ua.nure.voitenkom.SummaryTask4.db.entity;
  */
 public class DamageCheck extends Entity {
 
-    private Check check;
-    private Damage damage;
+    private int checkId;
+    private int damageId;
 
-    public Check getCheck() {
-        return check;
+    public int getCheckId() {
+        return checkId;
     }
 
-    public void setCheck(Check check) {
-        this.check = check;
+    public void setCheckId(int checkId) {
+        this.checkId = checkId;
     }
 
-    public Damage getDamage() {
-        return damage;
+    public int getDamageId() {
+        return damageId;
     }
 
-    public void setDamage(Damage damage) {
-        this.damage = damage;
+    public void setDamageId(int damageId) {
+        this.damageId = damageId;
     }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("DamageCheck{");
         sb.append("id=").append(this.getId());
-        sb.append("damageId=").append(damage.getId());
-        sb.append(", checkId=").append(check.getId());
+        sb.append("damageId=").append(damageId);
+        sb.append(", checkId=").append(checkId);
         sb.append('}');
         return sb.toString();
     }

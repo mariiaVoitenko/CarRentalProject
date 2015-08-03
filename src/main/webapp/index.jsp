@@ -6,7 +6,7 @@
     <title></title>
 
     <link rel="stylesheet" href="<c:url value="/bootstrap-3.3.5-dist/css/bootstrap.css"/>">
-    <link rel="stylesheet" href="<c:url value="/css/css.css"/>">
+    <link rel="stylesheet" href="<c:url value="/css/main.css"/>">
 </head>
 
 <body>
