@@ -3,7 +3,10 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.color;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Color;
+import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
+import ua.nure.voitenkom.SummaryTask4.db.extractor.BrandExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.ColorExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
@@ -26,47 +29,32 @@ public class ColorRepository extends AbstractRepository<Color> implements IColor
     }
 
     @Override
-    public Color findById(int id) {
+    public Color selectById(int id) {
         return super.selectById(id, StatementsContainer.SQL_SELECT_COLOR_BY_ID, new ColorExtractor());
     }
 
     @Override
-    public int findByName(String name) {
+    public int selectByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_COLOR_BY_NAME, new ColorExtractor());
     }
 
     @Override
-    public List<Color> selectAll(String sql, IExtractor<Color> extractor) {
-        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_COLORS, extractor);
+    public List<Color> selectAll() {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_COLORS, new ColorExtractor());
     }
 
     @Override
-    public void deleteById(int id, String sql) {
+    public void deleteById(int id) {
         super.deleteById(id, StatementsContainer.SQL_DELETE_COLOR_BY_ID);
     }
 
     @Override
-    public void update(Color color) {
-        String sql = StatementsContainer.SQL_UPDATE_COLOR_BY_ID;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setString(1, color.getName());
-            preparedStatement.setInt(2, color.getId());
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
-            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
-        }
+    public void update(SimpleEntity brand) {
+        super.update(brand,StatementsContainer.SQL_UPDATE_COLOR_BY_ID);
     }
 
     @Override
-    public void create(Color color) {
-        String sql = StatementsContainer.SQL_INSERT_COLOR;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setString(1, color.getName());
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
-            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
-        }
+    public void insert(SimpleEntity brand) {
+        super.insert(brand,StatementsContainer.SQL_INSERT_COLOR);
     }
 }

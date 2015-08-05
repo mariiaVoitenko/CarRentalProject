@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
+import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.DamageExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
@@ -26,22 +27,32 @@ public class DamageRepository extends AbstractRepository<Damage> implements IDam
     }
 
     @Override
-    public Damage findById(int id) {
-        return super.selectById(id, StatementsContainer.SQL_SELECT_DAMAGE_BY_ID, new DamageExtractor());
-    }
-
-    @Override
     public int findByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_DAMAGE_BY_NAME, new DamageExtractor());
     }
 
     @Override
-    public List<Damage> selectAll(String sql, IExtractor<Damage> extractor) {
-        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_DAMAGES, extractor);
+    public List<Damage> selectAll() {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_DAMAGES, new DamageExtractor());
     }
 
     @Override
-    public void deleteById(int id, String sql) {
+    public Damage selectById(int id) {
+        return super.selectById(id, StatementsContainer.SQL_SELECT_DAMAGE_BY_ID, new DamageExtractor());
+    }
+
+    @Override
+    public void insert(SimpleEntity entity) {
+
+    }
+
+    @Override
+    public void update(SimpleEntity entity) {
+
+    }
+
+    @Override
+    public void deleteById(int id) {
         super.deleteById(id, StatementsContainer.SQL_DELETE_DAMAGE_BY_ID);
     }
 
@@ -60,7 +71,20 @@ public class DamageRepository extends AbstractRepository<Damage> implements IDam
     }
 
     @Override
-    public void create(Damage damage) {
+    public void updateSum(Damage damage) {
+        String sql = StatementsContainer.SQL_UPDATE_DAMAGE_SUM_BY_ID;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(2, damage.getSum());
+            preparedStatement.setInt(3, damage.getId());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public void insert(Damage damage) {
         String sql = StatementsContainer.SQL_INSERT_DAMAGE;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, damage.getName());

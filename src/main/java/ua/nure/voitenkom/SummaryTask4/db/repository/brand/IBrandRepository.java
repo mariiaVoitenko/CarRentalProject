@@ -9,11 +9,6 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
  */
 public interface IBrandRepository extends IAbstractRepository<Brand> {
 
-    Brand findById(int id);
+    int selectByName(String name);
 
-    int findByName(String name);
-
-    void create(Brand brand);
-
-    void update(Brand brand);
 }

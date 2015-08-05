@@ -9,12 +9,7 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
  */
 public interface IStatusRepository extends IAbstractRepository<Status> {
 
-    Status findById(int id);
-
     int findByName(String name);
 
-    void create(Status status);
-
-    void update(Status status);
 }
 

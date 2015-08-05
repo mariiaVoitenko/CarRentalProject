@@ -3,6 +3,7 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.user;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
+import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.UserExtractor;
@@ -26,7 +27,7 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     }
 
     @Override
-    public User findById(int id) {
+    public User selectById(int id) {
         return super.selectById(id, StatementsContainer.SQL_SELECT_USER_BY_ID, new UserExtractor());
     }
 
@@ -80,17 +81,27 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     }
 
     @Override
-    public List<User> selectAll(String sql, IExtractor<User> extractor) {
-        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_USERS, extractor);
+    public List<User> selectAll() {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_USERS, new UserExtractor());
     }
 
     @Override
-    public void deleteById(int id, String sql) {
+    public void insert(SimpleEntity entity) {
+        
+    }
+
+    @Override
+    public void update(SimpleEntity entity) {
+
+    }
+
+    @Override
+    public void deleteById(int id) {
         super.deleteById(id, StatementsContainer.SQL_DELETE_USER_BY_ID);
     }
 
     @Override
-    public void create(User user) {
+    public void insert(User user) {
         String sql = StatementsContainer.SQL_INSERT_USER;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, user.getFullName());

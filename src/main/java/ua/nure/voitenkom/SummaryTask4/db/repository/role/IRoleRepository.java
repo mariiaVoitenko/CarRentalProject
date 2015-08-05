@@ -8,11 +8,6 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
  */
 public interface IRoleRepository extends IAbstractRepository<Role>{
 
-    Role findById(int id);
-
     int findByName(String name);
 
-    void create(Role role);
-
-    void update(Role role);
 }

@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.MajorityClass;
+import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.MajorityClassExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
@@ -26,47 +27,32 @@ public class MajorityClassRepository extends AbstractRepository<MajorityClass> i
     }
 
     @Override
-    public MajorityClass findById(int id) {
-        return super.selectById(id, StatementsContainer.SQL_SELECT_CLASS_BY_ID, new MajorityClassExtractor());
-    }
-
-    @Override
     public int findByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_CLASS_BY_NAME, new MajorityClassExtractor());
     }
 
     @Override
-    public List<MajorityClass> selectAll(String sql, IExtractor<MajorityClass> extractor) {
-        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_CLASSES, extractor);
+    public MajorityClass selectById(int id) {
+        return super.selectById(id, StatementsContainer.SQL_SELECT_CLASS_BY_ID, new MajorityClassExtractor());
     }
 
     @Override
-    public void deleteById(int id, String sql) {
+    public List<MajorityClass> selectAll() {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_CLASSES, new MajorityClassExtractor());
+    }
+
+    @Override
+    public void insert(SimpleEntity entity) {
+        super.insert(entity, StatementsContainer.SQL_INSERT_CLASS);
+    }
+
+    @Override
+    public void update(SimpleEntity entity) {
+        super.update(entity, StatementsContainer.SQL_UPDATE_CLASS_BY_ID);
+    }
+
+    @Override
+    public void deleteById(int id) {
         super.deleteById(id, StatementsContainer.SQL_DELETE_CLASS_BY_ID);
-    }
-
-    @Override
-    public void update(MajorityClass majorityClass) {
-        String sql = StatementsContainer.SQL_UPDATE_CLASS_BY_ID;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setString(1, majorityClass.getName());
-            preparedStatement.setInt(2, majorityClass.getId());
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
-            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
-        }
-    }
-
-    @Override
-    public void create(MajorityClass majorityClass) {
-        String sql = StatementsContainer.SQL_INSERT_CLASS;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setString(1, majorityClass.getName());
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
-            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
-        }
     }
 }

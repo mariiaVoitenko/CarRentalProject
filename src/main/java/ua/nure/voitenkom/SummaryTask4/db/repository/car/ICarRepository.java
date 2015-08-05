@@ -9,17 +9,16 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
  */
 public interface ICarRepository extends IAbstractRepository<Car> {
 
-    Car findById(int id);
-
     String getBrandName(int id);
 
     String getClassName(int id);
-
-    void create(Car car);
 
     void updateAvailableCount(Car car);
 
     void updateStatus(Car car);
 
     void updatePrice(Car car);
+
+    void insert(Car car);
+
 }

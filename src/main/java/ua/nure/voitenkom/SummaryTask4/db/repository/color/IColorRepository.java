@@ -9,11 +9,5 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
  */
 public interface IColorRepository extends IAbstractRepository<Color> {
 
-    Color findById(int id);
-
-    int findByName(String name);
-
-    void create(Color color);
-
-    void update(Color color);
+    int selectByName(String name);
 }

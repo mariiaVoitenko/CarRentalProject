@@ -8,9 +8,7 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
  */
 public interface IUserRepository extends IAbstractRepository<User> {
 
-    User findById(int id);
-
-    void create(User user);
+    void insert(User user);
 
     User findByLogin(String login);
 

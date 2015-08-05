@@ -31,7 +31,7 @@ public class StatementsContainer {
     public static final String SQL_INSERT_CHECK = "INSERT INTO checks (sum, is_payed) VALUES (?, ?)";
     public static final String SQL_UPDATE_CHECK_BY_ID = "UPDATE checks SET sum = ?, is_payed = ? WHERE id = ?";
     public static final String SQL_UPDATE_CHECK_SUM_BY_ID = "UPDATE checks SET sum = ? WHERE id = ?";
-    public static final String SQL_UPDATE_CHECK_PAY_BY_ID = "UPDATE checks SET is_payed = ? WHERE id = ?";
+    public static final String SQL_UPDATE_CHECK_PAY_BY_ID = "UPDATE checks SET is_payed = true WHERE id = ?";
     public static final String SQL_DELETE_CHECK_BY_ID = "DELETE FROM checks WHERE id = ?";
 
     //colors
@@ -48,6 +48,7 @@ public class StatementsContainer {
     public static final String SQL_SELECT_DAMAGE_BY_NAME = "SELECT * FROM damages WHERE name = ?";
     public static final String SQL_INSERT_DAMAGE = "INSERT INTO damages (name, sum) VALUES (?, ?)";
     public static final String SQL_UPDATE_DAMAGE_BY_ID = "UPDATE damages SET name = ?, sum = ? WHERE id = ?";
+    public static final String SQL_UPDATE_DAMAGE_SUM_BY_ID = "UPDATE damages SET sum = ? WHERE id = ?";
     public static final String SQL_DELETE_DAMAGE_BY_ID = "DELETE FROM damages WHERE id = ?";
 
     //damagecheks
@@ -80,12 +81,8 @@ public class StatementsContainer {
     public static final String SQL_SELECT_ALL_RENTS = "SELECT * FROM rents";
     public static final String SQL_SELECT_ALL_RENTS_FOR_USER = "SELECT * FROM rents WHERE users_id = ?";
     public static final String SQL_SELECT_RENT_BY_ID = "SELECT * FROM rents WHERE id = ?";
-    public static final String SQL_SELECT_RENT_USER_BY_ID = "SELECT users_id FROM rents WHERE id = ?";
-    public static final String SQL_SELECT_RENT_CHECK_BY_ID = "SELECT checks_id FROM rents WHERE id = ?";
-    public static final String SQL_SELECT_RENT_DECLINE_NAME_BY_ID = "SELECT declines.name FROM rents, declines WHERE rents.id = ? AND declines.id = rents.declines_id";
-    public static final String SQL_SELECT_RENT_CAR_BY_ID = "SELECT cars_id FROM rents WHERE id = ?";
     public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, days, cars_id, users_id, declines_id, checks_id) VALUES (?,?,?,?,?,?)";
-    //public static final String SQL_UPDATE_CLASS_BY_ID = "UPDATE classes SET name = ? WHERE id = ?";
+    public static final String SQL_UPDATE_RENT_BY_ID = "UPDATE rents SET is_driven = ?, days = ?, cars_id = ?, users_id = ?, declines_id = ?, checks_id = ? WHERE id = ?";
     public static final String SQL_DELETE_RENT_BY_ID = "DELETE FROM rents WHERE id = ?";
 
     // roles

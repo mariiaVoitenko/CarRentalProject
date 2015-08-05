@@ -9,11 +9,6 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
  */
 public interface IDeclineRepository extends IAbstractRepository<Decline> {
 
-    Decline findById(int id);
-
     int findByName(String name);
 
-    void create(Decline decline);
-
-    void update(Decline decline);
 }

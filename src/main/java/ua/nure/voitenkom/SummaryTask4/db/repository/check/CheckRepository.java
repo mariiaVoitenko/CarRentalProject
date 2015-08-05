@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
+import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CheckExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
@@ -26,17 +27,32 @@ public class CheckRepository extends AbstractRepository<Check> implements ICheck
     }
 
     @Override
-    public Check findById(int id) {
+    public Check selectById(int id) {
         return super.selectById(id, StatementsContainer.SQL_SELECT_CHECK_BY_ID, new CheckExtractor());
     }
 
     @Override
-    public List<Check> selectAll(String sql, IExtractor<Check> extractor) {
-        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_CHECKS, extractor);
+    public List<Check> selectAll() {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_CHECKS, new CheckExtractor());
     }
 
     @Override
-    public void deleteById(int id, String sql) {
+    public List<Check> selectUnpayed() {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_UNPAYED_CHECKS, new CheckExtractor());
+    }
+
+    @Override
+    public void insert(SimpleEntity entity) {
+
+    }
+
+    @Override
+    public void update(SimpleEntity entity) {
+
+    }
+
+    @Override
+    public void deleteById(int id) {
         super.deleteById(id, StatementsContainer.SQL_DELETE_CHECK_BY_ID);
     }
 
@@ -44,9 +60,9 @@ public class CheckRepository extends AbstractRepository<Check> implements ICheck
     public void update(Check check) {
         String sql = StatementsContainer.SQL_UPDATE_CHECK_BY_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setInt(1, check.getId());
-            preparedStatement.setInt(2, check.getSum());
-            preparedStatement.setBoolean(3, check.isPayed());
+            preparedStatement.setInt(1, check.getSum());
+            preparedStatement.setBoolean(2, check.isPayed());
+            preparedStatement.setInt(3, check.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
@@ -55,7 +71,32 @@ public class CheckRepository extends AbstractRepository<Check> implements ICheck
     }
 
     @Override
-    public void create(Check check) {
+    public void setPayed(Check check) {
+        String sql = StatementsContainer.SQL_UPDATE_CHECK_PAY_BY_ID;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, check.getId());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public void updateSum(Check check, int sum) {
+        String sql = StatementsContainer.SQL_UPDATE_CHECK_SUM_BY_ID;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, check.getSum());
+            preparedStatement.setInt(2, check.getId());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public void insert(Check check) {
         String sql = StatementsContainer.SQL_INSERT_CHECK;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, check.getSum());

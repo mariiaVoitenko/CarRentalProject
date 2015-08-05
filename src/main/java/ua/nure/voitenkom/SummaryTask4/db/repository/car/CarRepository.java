@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
+import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CarExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
@@ -23,14 +24,33 @@ import java.util.List;
 public class CarRepository extends AbstractRepository<Car> implements ICarRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CarRepository.class);
-
     public CarRepository(ConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 
     @Override
-    public Car findById(int id) {
+    public Car selectById(int id) {
         return super.selectById(id, StatementsContainer.SQL_SELECT_CAR_BY_ID, new CarExtractor());
+    }
+
+    @Override
+    public List<Car> selectAll() {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_CARS, new CarExtractor());
+    }
+
+    @Override
+    public void insert(SimpleEntity entity) {
+
+    }
+
+    @Override
+    public void update(SimpleEntity entity) {
+
+    }
+
+    @Override
+    public void deleteById(int id) {
+        super.deleteById(id, StatementsContainer.SQL_DELETE_CAR_BY_ID);
     }
 
     @Override
@@ -77,11 +97,6 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     }
 
     @Override
-    public void deleteById(int id, String sql) {
-        super.deleteById(id, StatementsContainer.SQL_DELETE_CAR_BY_ID);
-    }
-
-    @Override
     public void updateAvailableCount(Car car) {
         String sql = StatementsContainer.SQL_UPDATE_CAR_AVAILABLE_COUNT_BY_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
@@ -121,7 +136,7 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     }
 
     @Override
-    public void create(Car car) {
+    public void insert(Car car) {
         String sql = StatementsContainer.SQL_INSERT_CAR;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, car.getModel());

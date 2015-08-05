@@ -9,11 +9,11 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
  */
 public interface IDamageRepository extends IAbstractRepository<Damage> {
 
-    Damage findById(int id);
-
     int findByName(String name);
 
-    void create(Damage damage);
+    void insert(Damage damage);
 
     void update(Damage damage);
+
+    void updateSum(Damage damage);
 }
