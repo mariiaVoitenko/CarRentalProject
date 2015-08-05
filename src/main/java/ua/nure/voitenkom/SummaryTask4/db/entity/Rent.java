@@ -1,25 +1,29 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
+import java.sql.Date;
+
 /**
  * Created by Maria on 30.07.2015.
  */
 public class Rent extends Entity {
 
     private boolean isDriven;
-    private int days;
     private int carId;
     private int userId;
     private int declineId;
     private int checkId;
+    private Date startDate;
+    private Date endDate;
 
-    public Rent(int id, boolean isDriven, int days, int carId, int userId, int declineId, int checkId) {
+    public Rent(int id, boolean isDriven,  int carId, int userId, int declineId, int checkId, Date startDate, Date endDate) {
         this.setId(id);
-        this.days = days;
         this.carId = carId;
         this.isDriven = isDriven;
         this.userId = userId;
         this.declineId = declineId;
         this.checkId = checkId;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
     public boolean isDriven() {
@@ -28,14 +32,6 @@ public class Rent extends Entity {
 
     public void setIsDriven(boolean isDriven) {
         this.isDriven = isDriven;
-    }
-
-    public int getDays() {
-        return days;
-    }
-
-    public void setDays(int days) {
-        this.days = days;
     }
 
     public int getCarId() {
@@ -70,16 +66,32 @@ public class Rent extends Entity {
         this.checkId = checkId;
     }
 
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Rent{");
-        sb.append("id=").append(this.getId());
         sb.append("isDriven=").append(isDriven);
-        sb.append(", days=").append(days);
         sb.append(", carId=").append(carId);
         sb.append(", userId=").append(userId);
         sb.append(", declineId=").append(declineId);
         sb.append(", checkId=").append(checkId);
+        sb.append(", startDate=").append(startDate);
+        sb.append(", endDate=").append(endDate);
         sb.append('}');
         return sb.toString();
     }

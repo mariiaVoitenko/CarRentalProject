@@ -37,4 +37,10 @@ public class FieldsContainer {
     public static final String FIELD_ROLES_ID = "roles_id";
     public static final String FIELD_PASSWORD = "password";
     public static final String FIELD_LOGIN = "login";
+    public static final String FIELD_BRAND_NAME = "brand_name";
+    public static final String FIELD_STATUS_NAME = "status_name";
+    public static final String FIELD_COLOR_NAME = "color_name";
+    public static final String FIELD_CLASS_NAME = "class_name";
+    public static final String FIELD_START_DATE = "start_date";
+    public static final String FIELD_END_DATE = "end_date";
 }

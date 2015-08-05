@@ -87,7 +87,7 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
 
     @Override
     public void insert(SimpleEntity entity) {
-        
+
     }
 
     @Override

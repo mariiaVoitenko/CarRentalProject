@@ -16,13 +16,22 @@ public class StatementsContainer {
     //cars
     public static final String SQL_SELECT_ALL_CARS = "SELECT * FROM cars";
     public static final String SQL_SELECT_CAR_BY_ID = "SELECT * FROM cars WHERE id = ?";
-    public static final String SQL_SELECT_CAR_BRAND_BY_ID = "SELECT brands.name FROM brands, cars WHERE cars.id = ? AND cars.brands_id = brands.id";
-    public static final String SQL_SELECT_CAR_CLASS_BY_ID = "SELECT classes.name FROM classes, cars WHERE cars.id = ? AND cars.classes_id = classes.id";
-    public static final String SQL_INSERT_CAR = "INSERT INTO cars (model, price, doors_count, has_conditioner, big_luggage_count, small_luggage_count, sits_count, classes_id, colors_id, statuses_id, brands_id, photo, available_count) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    public static final String SQL_SELECT_CAR_BRAND_BY_ID = "SELECT brands.name FROM brands, cars WHERE cars.id = ? AND " +
+            "cars.brands_id = brands.id";
+    public static final String SQL_SELECT_CAR_CLASS_BY_ID = "SELECT classes.name FROM classes, cars WHERE cars.id = ? AND " +
+            "cars.classes_id = classes.id";
+    public static final String SQL_INSERT_CAR = "INSERT INTO cars (model, price, doors_count, has_conditioner, " +
+            "big_luggage_count, small_luggage_count, sits_count, classes_id, colors_id, statuses_id, brands_id, photo, " +
+            "available_count) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
     public static final String SQL_UPDATE_CAR_AVAILABLE_COUNT_BY_ID = "UPDATE cars SET available_count = ? WHERE id = ?";
     public static final String SQL_UPDATE_CAR_STATUS_BY_ID = "UPDATE cars SET statuses_id = ? WHERE id = ?";
     public static final String SQL_UPDATE_CAR_PRICE_BY_ID = "UPDATE cars SET price = ? WHERE id = ?";
     public static final String SQL_DELETE_CAR_BY_ID = "DELETE FROM cars WHERE id = ?";
+    public static final String SQL_SELECT_ALL_CAR_INFORMATION =  "SELECT cars.id, cars.model, price, doors_count, has_conditioner, " +
+            "big_luggage_count, small_luggage_count, sits_count, classes.name AS class_name, brands.name AS brand_name, \n" +
+            "colors.name AS color_name, statuses.name AS status_name FROM cars, classes, colors, statuses,\n" +
+            "brands WHERE cars.classes_id = classes.id AND cars.brands_id = brands.id AND colors.id = cars.colors_id " +
+            "AND statuses.id = cars.statuses_id AND cars.id = ?";
 
     //checks
     public static final String SQL_SELECT_ALL_CHECKS = "SELECT * FROM checks";
@@ -56,9 +65,11 @@ public class StatementsContainer {
     public static final String SQL_SELECT_ALL_DAMAGECHECKS = "SELECT * FROM damages_checks";
     public static final String SQL_SELECT_DAMAGE_ID_BY_DAMAGECHECK_ID = "SELECT damages_id FROM damages_checks WHERE id = ?";
     public static final String SQL_SELECT_CHECK_ID_BY_DAMAGECHECK_ID = "SELECT checks_id FROM damages_checks WHERE id = ?";
-    public static final String SQL_SELECT_ALL_DAMAGECHECK_INFORMATION = "SELECT damages.name, damages.sum, checks.id AS \"check\", damages.id AS \"damage\", damages_checks.id FROM damages_checks, damages, checks";
+    public static final String SQL_SELECT_ALL_DAMAGECHECK_INFORMATION = "SELECT damages.name, damages.sum, checks.id " +
+            "AS check, damages.id AS damage, damages_checks.id FROM damages_checks, damages, checks";
     public static final String SQL_INSERT_DAMAGECHECK = "INSERT INTO damages_checks (damages_id, checks_id) VALUES (?, ?)";
-    public static final String SQL_UPDATE_DAMAGECHECK_BY_ID = "UPDATE damages_checks SET damages_id = ?, checks_id = ? WHERE id = ?";
+    public static final String SQL_UPDATE_DAMAGECHECK_BY_ID = "UPDATE damages_checks SET damages_id = ?, checks_id = ? " +
+            "WHERE id = ?";
     public static final String SQL_DELETE_DAMAGECHECK_BY_ID = "DELETE FROM damages_checks WHERE id = ?";
 
     //declines
@@ -81,8 +92,10 @@ public class StatementsContainer {
     public static final String SQL_SELECT_ALL_RENTS = "SELECT * FROM rents";
     public static final String SQL_SELECT_ALL_RENTS_FOR_USER = "SELECT * FROM rents WHERE users_id = ?";
     public static final String SQL_SELECT_RENT_BY_ID = "SELECT * FROM rents WHERE id = ?";
-    public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, days, cars_id, users_id, declines_id, checks_id) VALUES (?,?,?,?,?,?)";
-    public static final String SQL_UPDATE_RENT_BY_ID = "UPDATE rents SET is_driven = ?, days = ?, cars_id = ?, users_id = ?, declines_id = ?, checks_id = ? WHERE id = ?";
+    public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, days, cars_id, users_id, declines_id, " +
+            "checks_id, start_date, end_date) VALUES (?,?,?,?,?,?,?,?)";
+    public static final String SQL_UPDATE_RENT_BY_ID = "UPDATE rents SET is_driven = ?, days = ?, cars_id = ?, " +
+            "users_id = ?, declines_id = ?, checks_id = ?, start_date = ?, end_date = ? WHERE id = ?";
     public static final String SQL_DELETE_RENT_BY_ID = "DELETE FROM rents WHERE id = ?";
 
     // roles
@@ -104,7 +117,8 @@ public class StatementsContainer {
     //user
     public static final String SQL_SELECT_ALL_USERS = "SELECT * FROM users";
     public static final String SQL_SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
-    public static final String SQL_INSERT_USER = "INSERT INTO users (full_name, registration_token, passport_number, roles_id, password, login) VALUES (?,?,?,?,?,?)";
+    public static final String SQL_INSERT_USER = "INSERT INTO users (full_name, registration_token, passport_number," +
+            " roles_id, password, login) VALUES (?,?,?,?,?,?)";
     public static final String SQL_UPDATE_USER_BLOCKED = "UPDATE users SET is_blocked = true WHERE id = ?";
     public static final String SQL_UPDATE_USER_BLOCKED_NOT = "UPDATE users SET is_blocked = false WHERE id = ?";
     public static final String SQL_UPDATE_USER_IS_REGISTERED = "UPDATE users SET is_registered = true WHERE id = ?";

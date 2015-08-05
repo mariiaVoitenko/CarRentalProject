@@ -33,12 +33,13 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
         String sql = StatementsContainer.SQL_UPDATE_RENT_BY_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setBoolean(1, rent.isDriven());
-            preparedStatement.setInt(2, rent.getDays());
-            preparedStatement.setInt(3, rent.getCarId());
-            preparedStatement.setInt(4, rent.getUserId());
-            preparedStatement.setInt(5, rent.getDeclineId());
-            preparedStatement.setInt(6, rent.getCheckId());
-            preparedStatement.setInt(7, rent.getId());
+            preparedStatement.setInt(2, rent.getCarId());
+            preparedStatement.setInt(3, rent.getUserId());
+            preparedStatement.setInt(4, rent.getDeclineId());
+            preparedStatement.setInt(5, rent.getCheckId());
+            preparedStatement.setDate(6, rent.getStartDate());
+            preparedStatement.setDate(7, rent.getEndDate());
+            preparedStatement.setInt(8, rent.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
@@ -62,11 +63,12 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
         String sql = StatementsContainer.SQL_INSERT_RENT;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setBoolean(1, rent.isDriven());
-            preparedStatement.setInt(2, rent.getDays());
-            preparedStatement.setInt(3, rent.getCarId());
-            preparedStatement.setInt(4, rent.getUserId());
-            preparedStatement.setInt(5, rent.getDeclineId());
-            preparedStatement.setInt(6, rent.getCheckId());
+            preparedStatement.setInt(2, rent.getCarId());
+            preparedStatement.setInt(3, rent.getUserId());
+            preparedStatement.setInt(4, rent.getDeclineId());
+            preparedStatement.setInt(5, rent.getCheckId());
+            preparedStatement.setDate(6, rent.getStartDate());
+            preparedStatement.setDate(7, rent.getEndDate());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);

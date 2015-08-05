@@ -7,10 +7,12 @@ import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CarExtractor;
+import ua.nure.voitenkom.SummaryTask4.db.extractor.CarFormBeanExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
+import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -153,6 +155,25 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
             preparedStatement.setString(12, car.getPhotoPath());
             preparedStatement.setInt(13, car.getAvailableCount());
             preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public List<CarFormBean> getFullCarInformation() {
+        String sql = StatementsContainer.SQL_SELECT_ALL_CAR_INFORMATION;
+        CarFormBeanExtractor extractor = new CarFormBeanExtractor();
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                List<CarFormBean> result = new ArrayList<>();
+                while (resultSet.next()) {
+                    CarFormBean record = extractor.extract(resultSet);
+                    result.add(record);
+                }
+                return result;
+            }
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
