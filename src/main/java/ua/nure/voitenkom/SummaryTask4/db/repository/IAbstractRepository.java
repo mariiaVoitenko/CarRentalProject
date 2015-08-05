@@ -8,9 +8,9 @@ import java.util.List;
  * Created by Maria on 30.07.2015.
  */
 public interface IAbstractRepository<T> {
-    T findById(int id, String sql, IExtractor<T> extractor);
+    T selectById(int id, String sql, IExtractor<T> extractor);
 
-    int findByName(String name,String sql, IExtractor<T> extractor);
+    int selectByName(String name, String sql, IExtractor<T> extractor);
 
-    List<T> findAll(String sql, IExtractor<T> extractor);
+    List<T> selectAll(String sql, IExtractor<T> extractor);
 }

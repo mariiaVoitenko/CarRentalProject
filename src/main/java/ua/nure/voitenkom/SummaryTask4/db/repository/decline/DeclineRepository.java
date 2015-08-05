@@ -1,11 +1,11 @@
-package ua.nure.voitenkom.SummaryTask4.db.repository.role;
+package ua.nure.voitenkom.SummaryTask4.db.repository.decline;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
+import ua.nure.voitenkom.SummaryTask4.db.extractor.DeclineExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.RoleExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
@@ -15,42 +15,42 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * Created by Maria on 03.08.2015.
+ * Created by Maria on 05.08.2015.
  */
-public class RoleRepository extends AbstractRepository<Role> implements IRoleRepository {
+public class DeclineRepository extends AbstractRepository<Decline> implements IDeclineRepository {
 
-    private static final Logger logger = LoggerFactory.getLogger(RoleRepository.class);
+    private static final Logger logger = LoggerFactory.getLogger(DeclineRepository.class);
 
-    public RoleRepository(ConnectionHolder connectionHolder) {
+    public DeclineRepository(ConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 
     @Override
-    public Role findById(int id) {
-        return super.selectById(id, StatementsContainer.SQL_SELECT_ROLE_BY_ID, new RoleExtractor());
+    public Decline findById(int id) {
+        return super.selectById(id, StatementsContainer.SQL_SELECT_DECLINE_BY_ID, new DeclineExtractor());
     }
 
     @Override
     public int findByName(String name) {
-        return super.selectByName(name, StatementsContainer.SQL_SELECT_ROLE_BY_NAME, new RoleExtractor());
+        return super.selectByName(name, StatementsContainer.SQL_SELECT_DECLINE_BY_NAME, new DeclineExtractor());
     }
 
     @Override
-    public List<Role> selectAll(String sql, IExtractor<Role> extractor) {
-        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_ROLES, extractor);
+    public List<Decline> selectAll(String sql, IExtractor<Decline> extractor) {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_DECLINES, extractor);
     }
 
     @Override
     public void deleteById(int id, String sql) {
-        super.deleteById(id, StatementsContainer.SQL_DELETE_ROLE_BY_ID);
+        super.deleteById(id, StatementsContainer.SQL_DELETE_DECLINE_BY_ID);
     }
 
     @Override
-    public void update(Role role) {
-        String sql = StatementsContainer.SQL_UPDATE_ROLE_BY_ID;
+    public void update(Decline decline) {
+        String sql = StatementsContainer.SQL_UPDATE_DECLINE_BY_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setString(1, role.getName());
-            preparedStatement.setInt(2, role.getId());
+            preparedStatement.setString(1, decline.getName());
+            preparedStatement.setInt(2, decline.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
@@ -59,10 +59,10 @@ public class RoleRepository extends AbstractRepository<Role> implements IRoleRep
     }
 
     @Override
-    public void create(Role role) {
-        String sql = StatementsContainer.SQL_INSERT_ROLE;
+    public void create(Decline decline) {
+        String sql = StatementsContainer.SQL_INSERT_DECLINE;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setString(1, role.getName());
+            preparedStatement.setString(1, decline.getName());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);

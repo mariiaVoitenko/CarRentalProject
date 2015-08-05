@@ -1,11 +1,11 @@
-package ua.nure.voitenkom.SummaryTask4.db.repository.role;
+package ua.nure.voitenkom.SummaryTask4.db.repository.check;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
+import ua.nure.voitenkom.SummaryTask4.db.extractor.CheckExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.RoleExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
@@ -15,42 +15,38 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * Created by Maria on 03.08.2015.
+ * Created by Maria on 05.08.2015.
  */
-public class RoleRepository extends AbstractRepository<Role> implements IRoleRepository {
+public class CheckRepository extends AbstractRepository<Check> implements ICheckRepository {
 
-    private static final Logger logger = LoggerFactory.getLogger(RoleRepository.class);
+    private static final Logger logger = LoggerFactory.getLogger(CheckRepository.class);
 
-    public RoleRepository(ConnectionHolder connectionHolder) {
+    public CheckRepository(ConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 
     @Override
-    public Role findById(int id) {
-        return super.selectById(id, StatementsContainer.SQL_SELECT_ROLE_BY_ID, new RoleExtractor());
+    public Check findById(int id) {
+        return super.selectById(id, StatementsContainer.SQL_SELECT_CHECK_BY_ID, new CheckExtractor());
     }
 
     @Override
-    public int findByName(String name) {
-        return super.selectByName(name, StatementsContainer.SQL_SELECT_ROLE_BY_NAME, new RoleExtractor());
-    }
-
-    @Override
-    public List<Role> selectAll(String sql, IExtractor<Role> extractor) {
-        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_ROLES, extractor);
+    public List<Check> selectAll(String sql, IExtractor<Check> extractor) {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_CHECKS, extractor);
     }
 
     @Override
     public void deleteById(int id, String sql) {
-        super.deleteById(id, StatementsContainer.SQL_DELETE_ROLE_BY_ID);
+        super.deleteById(id, StatementsContainer.SQL_DELETE_CHECK_BY_ID);
     }
 
     @Override
-    public void update(Role role) {
-        String sql = StatementsContainer.SQL_UPDATE_ROLE_BY_ID;
+    public void update(Check check) {
+        String sql = StatementsContainer.SQL_UPDATE_CHECK_BY_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setString(1, role.getName());
-            preparedStatement.setInt(2, role.getId());
+            preparedStatement.setInt(1, check.getId());
+            preparedStatement.setInt(2, check.getSum());
+            preparedStatement.setBoolean(3, check.isPayed());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
@@ -59,10 +55,11 @@ public class RoleRepository extends AbstractRepository<Role> implements IRoleRep
     }
 
     @Override
-    public void create(Role role) {
-        String sql = StatementsContainer.SQL_INSERT_ROLE;
+    public void create(Check check) {
+        String sql = StatementsContainer.SQL_INSERT_CHECK;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setString(1, role.getName());
+            preparedStatement.setInt(1, check.getSum());
+            preparedStatement.setBoolean(2, check.isPayed());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);

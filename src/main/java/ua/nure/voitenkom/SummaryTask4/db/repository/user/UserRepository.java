@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.RoleExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.UserExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
@@ -13,7 +12,6 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -29,7 +27,7 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
 
     @Override
     public User findById(int id) {
-        return super.findById(id, StatementsContainer.SQL_SELECT_USER_BY_ID, new UserExtractor());
+        return super.selectById(id, StatementsContainer.SQL_SELECT_USER_BY_ID, new UserExtractor());
     }
 
     @Override
@@ -82,8 +80,8 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     }
 
     @Override
-    public List<User> findAll(String sql, IExtractor<User> extractor) {
-        return super.findAll(StatementsContainer.SQL_SELECT_ALL_USERS, extractor);
+    public List<User> selectAll(String sql, IExtractor<User> extractor) {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_USERS, extractor);
     }
 
     @Override

@@ -40,7 +40,7 @@ public class AbstractRepository<T> implements IAbstractRepository<T>{
         }
     }
 
-    public T findById(int id, String sql, IExtractor<T> extractor) {
+    public T selectById(int id, String sql, IExtractor<T> extractor) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, id);
             List<T> records = executeQuery(preparedStatement, extractor);
@@ -51,7 +51,7 @@ public class AbstractRepository<T> implements IAbstractRepository<T>{
         }
     }
 
-    public int findByName(String name,String sql, IExtractor<T> extractor) {
+    public int selectByName(String name, String sql, IExtractor<T> extractor) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, name);
             List<T> records = executeQuery(preparedStatement, extractor);
@@ -62,7 +62,7 @@ public class AbstractRepository<T> implements IAbstractRepository<T>{
         }
     }
 
-    public List<T> findAll(String sql, IExtractor<T> extractor) {
+    public List<T> selectAll(String sql, IExtractor<T> extractor) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             return executeQuery(preparedStatement, extractor);
         } catch (SQLException e) {

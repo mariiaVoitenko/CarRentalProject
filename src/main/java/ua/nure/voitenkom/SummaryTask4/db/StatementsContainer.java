@@ -16,8 +16,8 @@ public class StatementsContainer {
     //cars
     public static final String SQL_SELECT_ALL_CARS = "SELECT * FROM cars";
     public static final String SQL_SELECT_CAR_BY_ID = "SELECT * FROM cars WHERE id = ?";
-    public static final String SQL_SELECT_CAR_BRAND_BY_NAME = "SELECT brands.name FROM brands, cars WHERE cars.id = ? AND cars.brands_id = brands.id";
-    public static final String SQL_SELECT_CAR_CLASS_BY_NAME = "SELECT classes.name FROM classes, cars WHERE cars.id = ? AND cars.classes_id = classes.id";
+    public static final String SQL_SELECT_CAR_BRAND_BY_ID = "SELECT brands.name FROM brands, cars WHERE cars.id = ? AND cars.brands_id = brands.id";
+    public static final String SQL_SELECT_CAR_CLASS_BY_ID = "SELECT classes.name FROM classes, cars WHERE cars.id = ? AND cars.classes_id = classes.id";
     public static final String SQL_INSERT_CAR = "INSERT INTO cars (model, price, doors_count, has_conditioner, big_luggage_count, small_luggage_count, sits_count, classes_id, colors_id, statuses_id, brands_id, photo, available_count) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
     public static final String SQL_UPDATE_CAR_AVAILABLE_COUNT_BY_ID = "UPDATE cars SET available_count = ? WHERE id = ?";
     public static final String SQL_UPDATE_CAR_STATUS_BY_ID = "UPDATE cars SET statuses_id = ? WHERE id = ?";
@@ -47,15 +47,18 @@ public class StatementsContainer {
     public static final String SQL_SELECT_DAMAGE_BY_ID = "SELECT * FROM damages WHERE id = ?";
     public static final String SQL_SELECT_DAMAGE_BY_NAME = "SELECT * FROM damages WHERE name = ?";
     public static final String SQL_INSERT_DAMAGE = "INSERT INTO damages (name, sum) VALUES (?, ?)";
-    public static final String SQL_UPDATE_DAMAGE_NAME_BY_ID = "UPDATE damages SET name = ? WHERE id = ?";
-    public static final String SQL_UPDATE_DAMAGE_SUM_BY_ID = "UPDATE damages SET sum = ? WHERE id = ?";
+    public static final String SQL_UPDATE_DAMAGE_BY_ID = "UPDATE damages SET name = ?, sum = ? WHERE id = ?";
     public static final String SQL_DELETE_DAMAGE_BY_ID = "DELETE FROM damages WHERE id = ?";
 
     //damagecheks
+    public static final String SQL_SELECT_DAMAGECHECK_BY_ID = "SELECT * FROM damages_checks WHERE id = ?";
     public static final String SQL_SELECT_ALL_DAMAGECHECKS = "SELECT * FROM damages_checks";
     public static final String SQL_SELECT_DAMAGE_ID_BY_DAMAGECHECK_ID = "SELECT damages_id FROM damages_checks WHERE id = ?";
     public static final String SQL_SELECT_CHECK_ID_BY_DAMAGECHECK_ID = "SELECT checks_id FROM damages_checks WHERE id = ?";
     public static final String SQL_SELECT_ALL_DAMAGECHECK_INFORMATION = "SELECT damages.name, damages.sum, checks.id AS \"check\", damages.id AS \"damage\", damages_checks.id FROM damages_checks, damages, checks";
+    public static final String SQL_INSERT_DAMAGECHECK = "INSERT INTO damages_checks (damages_id, checks_id) VALUES (?, ?)";
+    public static final String SQL_UPDATE_DAMAGECHECK_BY_ID = "UPDATE damages_checks SET damages_id = ?, checks_id = ? WHERE id = ?";
+    public static final String SQL_DELETE_DAMAGECHECK_BY_ID = "DELETE FROM damages_checks WHERE id = ?";
 
     //declines
     public static final String SQL_SELECT_ALL_DECLINES = "SELECT * FROM declines";
