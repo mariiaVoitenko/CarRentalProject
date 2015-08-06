@@ -18,7 +18,7 @@ public class CarService implements ICarService{
     private final ITransactionManager transactionManager;
     private final ICarRepository carRepository;
 
-    public CarService(TransactionManager transactionManager, ICarRepository carRepository) {
+    public CarService(ITransactionManager transactionManager, ICarRepository carRepository) {
         this.transactionManager = transactionManager;
         this.carRepository = carRepository;
     }

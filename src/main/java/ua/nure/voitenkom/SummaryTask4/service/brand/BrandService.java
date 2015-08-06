@@ -16,7 +16,7 @@ public class BrandService implements IBrandService {
     private final ITransactionManager transactionManager;
     private final IBrandRepository brandRepository;
 
-    public BrandService(TransactionManager transactionManager, IBrandRepository brandRepository) {
+    public BrandService(ITransactionManager transactionManager, IBrandRepository brandRepository) {
         this.transactionManager = transactionManager;
         this.brandRepository = brandRepository;
     }
@@ -27,6 +27,26 @@ public class BrandService implements IBrandService {
             @Override
             public List<Brand> doOperation() {
                 return brandRepository.selectAll();
+            }
+        });
+    }
+
+    @Override
+    public Brand selectById(final int id) {
+        return transactionManager.doInTransaction(new Operation<Brand>() {
+            @Override
+            public Brand doOperation() {
+                return brandRepository.selectById(id);
+            }
+        });
+    }
+
+    @Override
+    public int selectByName(final String name) {
+        return transactionManager.doInTransaction(new Operation<Integer>() {
+            @Override
+            public Integer doOperation() {
+                return brandRepository.selectByName(name);
             }
         });
     }
