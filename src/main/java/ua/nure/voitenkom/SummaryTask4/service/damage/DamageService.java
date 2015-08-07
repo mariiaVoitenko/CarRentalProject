@@ -6,9 +6,6 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
-/**
- * Created by Maria on 06.08.2015.
- */
 public class DamageService implements IDamageService {
 
     private final ITransactionManager transactionManager;

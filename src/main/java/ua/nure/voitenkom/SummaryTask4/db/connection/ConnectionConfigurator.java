@@ -8,9 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-/**
- * Created by Maria on 30.07.2015.
- */
 public class ConnectionConfigurator {
     private static final String DB_CONFIGURATION_PROPERTIES_FILE = "/dbConfiguration.properties";
     private static final Logger logger = LoggerFactory.getLogger(ConnectionConfigurator.class);

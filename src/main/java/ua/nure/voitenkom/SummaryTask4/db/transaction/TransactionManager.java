@@ -9,9 +9,6 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
 import java.sql.Connection;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class TransactionManager implements ITransactionManager {
 
     private static final Logger logger = LoggerFactory.getLogger(TransactionManager.class);

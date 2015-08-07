@@ -1,9 +1,7 @@
 package ua.nure.voitenkom.SummaryTask4.validation;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class ValidationManager {
+
     public static boolean isNotNull(Object obj) {
         return !isNull(obj);
     }

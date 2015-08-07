@@ -15,9 +15,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class CheckRepository extends AbstractRepository<Check> implements ICheckRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CheckRepository.class);

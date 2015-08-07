@@ -7,9 +7,6 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by Maria on 03.08.2015.
- */
 public class ColorExtractor implements IExtractor<Color> {
 
     @Override

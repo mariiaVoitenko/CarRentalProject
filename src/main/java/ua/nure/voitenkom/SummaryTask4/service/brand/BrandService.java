@@ -8,9 +8,6 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
 import java.util.List;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class BrandService implements IBrandService {
 
     private final ITransactionManager transactionManager;

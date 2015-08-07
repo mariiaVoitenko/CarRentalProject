@@ -7,9 +7,6 @@ import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class CarFormBeanExtractor implements IExtractor<CarFormBean> {
 
     @Override

@@ -10,9 +10,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.FileHandler;
 
-/**
- * Created by Maria on 03.08.2015.
- */
 public class RentExtractor implements IExtractor<Rent> {
     @Override
     public Rent extract(ResultSet resultSet) throws SQLException {

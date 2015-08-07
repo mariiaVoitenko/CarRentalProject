@@ -10,9 +10,6 @@ import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import java.util.List;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class DeclineRepository extends AbstractRepository<Decline> implements IDeclineRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(DeclineRepository.class);

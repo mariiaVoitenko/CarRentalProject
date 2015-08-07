@@ -9,9 +9,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public abstract class BaseFilter implements Filter {
 
     @Override

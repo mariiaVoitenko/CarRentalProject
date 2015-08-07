@@ -7,9 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.FileHandler;
 
-/**
- * Created by Maria on 31.07.2015.
- */
 public class CarExtractor implements IExtractor<Car> {
 
     @Override

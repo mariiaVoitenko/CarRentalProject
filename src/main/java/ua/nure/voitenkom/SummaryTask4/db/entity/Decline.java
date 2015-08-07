@@ -1,8 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
-/**
- * Created by Maria on 30.07.2015.
- */
 public class Decline extends SimpleEntity {
 
     public Decline(int id, String name) {

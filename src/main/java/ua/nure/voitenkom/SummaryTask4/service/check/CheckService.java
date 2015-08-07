@@ -8,9 +8,6 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
 import java.util.List;
 
-/**
- * Created by Maria on 06.08.2015.
- */
 public class CheckService implements ICheckService {
 
     private final ITransactionManager transactionManager;

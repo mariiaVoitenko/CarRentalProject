@@ -6,9 +6,6 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 import java.util.List;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public interface ICheckRepository extends IAbstractRepository<Check> {
 
     List<Check> selectUnpayed();

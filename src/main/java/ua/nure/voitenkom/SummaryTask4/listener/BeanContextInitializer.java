@@ -61,9 +61,6 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 @WebListener
 public class BeanContextInitializer implements ServletContextListener {
 

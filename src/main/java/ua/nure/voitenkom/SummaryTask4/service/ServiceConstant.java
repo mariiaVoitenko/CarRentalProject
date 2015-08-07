@@ -1,8 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.service;
 
-/**
- * Created by Maria on 06.08.2015.
- */
 public final class ServiceConstant {
 
     public static final String BRAND_SERVICE_CONTEXT = "brandService";

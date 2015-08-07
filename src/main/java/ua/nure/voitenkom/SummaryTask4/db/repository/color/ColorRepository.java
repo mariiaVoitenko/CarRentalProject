@@ -17,9 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class ColorRepository extends AbstractRepository<Color> implements IColorRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(ColorRepository.class);

@@ -4,9 +4,6 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.majorityclass.IMajorityClass
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
-/**
- * Created by Maria on 06.08.2015.
- */
 public class MajorityClassService implements IMajorityClassService {
 
     private final ITransactionManager transactionManager;

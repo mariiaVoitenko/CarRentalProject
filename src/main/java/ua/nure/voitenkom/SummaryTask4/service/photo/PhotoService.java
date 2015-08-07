@@ -14,9 +14,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class PhotoService implements IPhotoService {
 
     public static final String FORMAT = "jpg";

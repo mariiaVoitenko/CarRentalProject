@@ -17,9 +17,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Maria on 30.07.2015.
- */
 public abstract class AbstractRepository<T> implements IAbstractRepository<T> {
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractRepository.class);

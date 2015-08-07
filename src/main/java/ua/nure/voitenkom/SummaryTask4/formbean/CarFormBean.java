@@ -2,9 +2,6 @@ package ua.nure.voitenkom.SummaryTask4.formbean;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class CarFormBean extends Entity {
 
     private String model;

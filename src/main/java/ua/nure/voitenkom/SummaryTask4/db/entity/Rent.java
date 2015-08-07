@@ -2,9 +2,6 @@ package ua.nure.voitenkom.SummaryTask4.db.entity;
 
 import java.sql.Date;
 
-/**
- * Created by Maria on 30.07.2015.
- */
 public class Rent extends Entity {
 
     private boolean isDriven;

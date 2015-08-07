@@ -7,9 +7,6 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseConnectionException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/**
- * Created by Maria on 05.08.2015.
- */
 public class ConnectionManager {
     private static final Logger logger = LoggerFactory.getLogger(ConnectionManager.class);
 

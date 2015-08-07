@@ -1,8 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
-/**
- * Created by Maria on 30.07.2015.
- */
 public class Color extends SimpleEntity {
 
     public Color(int id, String name) {

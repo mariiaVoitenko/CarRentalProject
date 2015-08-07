@@ -1,8 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.db;
 
-/**
- * Created by Maria on 30.07.2015.
- */
 public class FieldsContainer {
 
     public static final String FIELD_ID = "id";
