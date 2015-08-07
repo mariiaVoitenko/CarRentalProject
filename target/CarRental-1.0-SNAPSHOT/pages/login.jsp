@@ -1,12 +1,14 @@
 <%@ include file="../WEB-INF/jsp_header.jsp" %>
-<%@ include file="/pages/header.jsp" %>
+<%@ include file="/WEB-INF/header.jsp" %>
 <html>
 <head>
     <title></title>
   <link rel="stylesheet" href="<c:url value="/bootstrap-3.3.5-dist/css/bootstrap.css"/>">
   <link rel="stylesheet" href="<c:url value="/css/main.css"/>">
 </head>
+
 <body>
+
 <div class="container center-input">
   <form class="form-signin" action="/LoginServlet" method="POST">
     <h2 class="form-signin-heading">Please, sign in</h2>
@@ -18,5 +20,6 @@
     <button class="btn btn-large btn-primary" type="submit">Sign in</button>
   </form>
 </div>
+<%@ include file="../WEB-INF/footer.jsp" %>
 </body>
 </html>

@@ -14,4 +14,12 @@ public class ValidationManager {
         return obj == null || obj.trim().isEmpty();
     }
 
+    public static boolean ifMail(String s) {
+        return s.contains("@");
+    }
+
+    public static boolean ifNumber(String s) {
+        return (s.matches("[0-9]+")) ? true : false;
+    }
+
 }

@@ -69,4 +69,14 @@ public class UserService implements IUserService {
             }
         });
     }
+
+    @Override
+    public boolean checkPassword(final String login, final String password) {
+        return transactionManager.doInTransaction(new Operation<Boolean>() {
+            @Override
+            public Boolean doOperation() {
+                return userRepository.checkPassword(login,password);
+            }
+        });
+    }
 }

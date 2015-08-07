@@ -14,4 +14,6 @@ public interface IUserRepository extends IAbstractRepository<User> {
     void unblock(int id);
 
     void setRegisteredState(int id);
+
+    boolean checkPassword(String login, String password);
 }

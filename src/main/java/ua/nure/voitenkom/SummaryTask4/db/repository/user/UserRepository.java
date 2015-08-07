@@ -15,7 +15,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-public class UserRepository extends AbstractRepository<User> implements IUserRepository{
+public class UserRepository extends AbstractRepository<User> implements IUserRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(UserRepository.class);
 
@@ -78,6 +78,12 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     }
 
     @Override
+    public boolean checkPassword(String login, String password) {
+        User user = findByLogin(login);
+        return user.getPassword().equals(password) ? true : false;
+    }
+
+    @Override
     public List<User> selectAll() {
         return super.selectAll(StatementsContainer.SQL_SELECT_ALL_USERS, new UserExtractor());
     }
@@ -102,11 +108,11 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
         String sql = StatementsContainer.SQL_INSERT_USER;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, user.getFullName());
-            preparedStatement.setString(2,user.getRegistrationToken());
-            preparedStatement.setString(3,user.getPassportNumber());
+            preparedStatement.setString(2, user.getRegistrationToken());
+            preparedStatement.setString(3, user.getPassportNumber());
             preparedStatement.setInt(4, user.getRoleId());
-            preparedStatement.setString(5,user.getPassword());
-            preparedStatement.setString(6,user.getLogin());
+            preparedStatement.setString(5, user.getPassword());
+            preparedStatement.setString(6, user.getLogin());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
