@@ -18,7 +18,7 @@
 
 <body>
 
-<div class="jumbotron">
+<div class="jumbotron header-color">
     <div class="container">
         <div class="left-div">
             <img src="../images/logo_trans.png" alt="Logo" height="385" width="445">
