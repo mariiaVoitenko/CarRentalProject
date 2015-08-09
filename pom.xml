@@ -18,6 +18,7 @@
         <slf4j.version>1.7.7</slf4j.version>
         <mysql-connector-version>5.1.33</mysql-connector-version>
         <hikari-cp-version>2.3.9</hikari-cp-version>
+        <md5-version>1.9</md5-version>
     </properties>
 
     <dependencies>
@@ -77,6 +78,12 @@
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>${hikari-cp-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${md5-version}</version>
         </dependency>
 
 

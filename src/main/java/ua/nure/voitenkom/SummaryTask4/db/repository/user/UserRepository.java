@@ -1,7 +1,9 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.user;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.PasswordMaker;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
@@ -80,7 +82,8 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     @Override
     public boolean checkPassword(String login, String password) {
         User user = findByLogin(login);
-        return user.getPassword().equals(password) ? true : false;
+        String cipherPassword = PasswordMaker.makePassword(password);
+        return user.getPassword().equals(cipherPassword) ? true : false;
     }
 
     @Override

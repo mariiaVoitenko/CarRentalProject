@@ -17,6 +17,8 @@ public final class ServiceConstant {
     public static final String ROLE_SERVICE_CONTEXT = "roleService";
     public static final String LOCALE_SERVICE_CONTEXT = "localeService";
 
+    public static final String LANG_PARAM = "lang";
+
     private ServiceConstant() {
     }
 

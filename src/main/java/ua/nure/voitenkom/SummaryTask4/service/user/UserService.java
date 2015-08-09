@@ -32,7 +32,7 @@ public class UserService implements IUserService {
         return transactionManager.doInTransaction(new Operation<User>() {
             @Override
             public User doOperation() {
-               return userRepository.findByLogin(login);
+                return userRepository.findByLogin(login);
             }
         });
     }
@@ -75,7 +75,7 @@ public class UserService implements IUserService {
         return transactionManager.doInTransaction(new Operation<Boolean>() {
             @Override
             public Boolean doOperation() {
-                return userRepository.checkPassword(login,password);
+                return userRepository.checkPassword(login, password);
             }
         });
     }

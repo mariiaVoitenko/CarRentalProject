@@ -46,15 +46,23 @@ public class LoginServlet extends AuthenticationServlet {
                     return;
                 }
                 else{
-                    //TODO tell user he's blocked by special page
+                    logger.debug("User {} was blocked. Access denied", user);
+                    response.sendRedirect(PageNames.BANNED_PAGE);
+                    return;
                 }
             }
             else{
-                //TODO tell user password doesn't match. redirect to login page
+                request.setAttribute(Attributes.MESSAGE, "Wrong login or password");
+                logger.debug("Wrong login or password");
+                response.sendRedirect(PageNames.LOGIN_PAGE);
+                return;
             }
         }
         else{
-            //TODO tell user about mistakes
+            request.setAttribute(Attributes.MESSAGE, "You should write your email and password");
+            logger.debug("Validation problems");
+            response.sendRedirect(PageNames.LOGIN_PAGE);
+            return;
         }
     }
 

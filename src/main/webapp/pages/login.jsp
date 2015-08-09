@@ -18,6 +18,7 @@
       <input type="checkbox" value="remember-me"> Remember me
     </label>
     <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+      ${message}
   </form>
 </div>
 

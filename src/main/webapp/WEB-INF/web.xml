@@ -8,6 +8,32 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
+    <context-param>
+        <param-name>AppLocales</param-name>
+        <param-value>en,ru</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DefaultLocale</param-name>
+        <param-value>en</param-value>
+    </context-param>
+    <context-param>
+        <param-name>LangFilterType</param-name>
+        <param-value>Cookie</param-value>
+    </context-param>
+    <context-param>
+        <param-name>CookieLangTimeout</param-name>
+        <param-value>100</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

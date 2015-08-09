@@ -31,6 +31,7 @@ public class TransactionManager implements ITransactionManager {
         Connection connection = getConnection();
         try {
             T result = operation.doOperation();
+            connection.setAutoCommit(false);
             connection.commit();
             return result;
         } catch (Exception e) {
