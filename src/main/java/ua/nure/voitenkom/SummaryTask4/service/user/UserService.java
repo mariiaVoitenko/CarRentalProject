@@ -28,6 +28,17 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public void insertWithPhoto(final User user) {
+        transactionManager.doInTransaction(new Operation<Void>() {
+            @Override
+            public Void doOperation() {
+                userRepository.insertWithPhoto(user);
+                return null;
+            }
+        });
+    }
+
+    @Override
     public User findByLogin(final String login) {
         return transactionManager.doInTransaction(new Operation<User>() {
             @Override

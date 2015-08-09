@@ -17,10 +17,10 @@ public class DamageService implements IDamageService {
     }
 
     @Override
-    public int findByName(final String name) {
-        return transactionManager.doInTransaction(new Operation<Integer>() {
+    public Damage findByName(final String name) {
+        return transactionManager.doInTransaction(new Operation<Damage>() {
             @Override
-            public Integer doOperation() {
+            public Damage doOperation() {
                 return damageRepository.findByName(name);
             }
         });

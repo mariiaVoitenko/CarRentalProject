@@ -24,7 +24,7 @@ public class BrandRepository extends AbstractRepository<Brand> implements IBrand
     }
 
     @Override
-    public int selectByName(String name) {
+    public Brand selectByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_BRAND_BY_NAME, new BrandExtractor());
     }
 

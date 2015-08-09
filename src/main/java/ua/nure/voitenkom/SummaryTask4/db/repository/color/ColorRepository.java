@@ -31,7 +31,7 @@ public class ColorRepository extends AbstractRepository<Color> implements IColor
     }
 
     @Override
-    public int selectByName(String name) {
+    public Color selectByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_COLOR_BY_NAME, new ColorExtractor());
     }
 

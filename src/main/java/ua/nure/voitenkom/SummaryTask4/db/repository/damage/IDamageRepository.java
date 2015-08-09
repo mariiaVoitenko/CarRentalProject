@@ -6,7 +6,7 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 public interface IDamageRepository extends IAbstractRepository<Damage> {
 
-    int findByName(String name);
+    Damage findByName(String name);
 
     void insert(Damage damage);
 

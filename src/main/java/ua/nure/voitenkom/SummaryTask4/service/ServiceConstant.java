@@ -19,6 +19,11 @@ public final class ServiceConstant {
 
     public static final String LANG_PARAM = "lang";
 
+    public static final String HOST_PARAM = "host";
+    public static final String PORT_PARAM = "port";
+    public static final String USER_EMAIL_PARAM = "user";
+    public static final String USER_PASSWORD_PARAM = "pass";
+
     private ServiceConstant() {
     }
 

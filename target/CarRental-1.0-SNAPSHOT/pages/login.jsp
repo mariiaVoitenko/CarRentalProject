@@ -18,6 +18,7 @@
     <button class="btn btn-large btn-primary" type="submit"><fmt:message key="sign_in"/></button>
 
   </form>
+  <h4><a href="/RegistrationServlet"><fmt:message key="registration_message"/></a></h4>
   <h4>${message}</h4>
 </div>
 

@@ -39,10 +39,10 @@ public class BrandService implements IBrandService {
     }
 
     @Override
-    public int selectByName(final String name) {
-        return transactionManager.doInTransaction(new Operation<Integer>() {
+    public Brand selectByName(final String name) {
+        return transactionManager.doInTransaction(new Operation<Brand>() {
             @Override
-            public Integer doOperation() {
+            public Brand doOperation() {
                 return brandRepository.selectByName(name);
             }
         });

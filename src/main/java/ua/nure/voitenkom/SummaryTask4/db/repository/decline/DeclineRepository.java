@@ -19,7 +19,7 @@ public class DeclineRepository extends AbstractRepository<Decline> implements ID
     }
 
     @Override
-    public int findByName(String name) {
+    public Decline findByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_DECLINE_BY_NAME, new DeclineExtractor());
     }
 

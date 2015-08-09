@@ -24,7 +24,7 @@ public class RoleRepository extends AbstractRepository<Role> implements IRoleRep
     }
 
     @Override
-    public int findByName(String name) {
+    public Role findByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_ROLE_BY_NAME, new RoleExtractor());
     }
 

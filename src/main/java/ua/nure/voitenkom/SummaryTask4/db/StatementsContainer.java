@@ -115,7 +115,9 @@ public class StatementsContainer {
     public static final String SQL_SELECT_ALL_USERS = "SELECT * FROM users";
     public static final String SQL_SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
     public static final String SQL_INSERT_USER = "INSERT INTO users (full_name, registration_token, passport_number," +
-            " roles_id, password, login) VALUES (?,?,?,?,?,?)";
+            " roles_id, password, login, registration_time) VALUES (?,?,?,?,?,?,?)";
+    public static final String SQL_INSERT_USER_WITH_PHOTO = "INSERT INTO users (full_name, registration_token, passport_number," +
+            " roles_id, photo, password, login, registration_time) VALUES (?,?,?,?,?,?,?,?)";
     public static final String SQL_UPDATE_USER_BLOCKED = "UPDATE users SET is_blocked = true WHERE id = ?";
     public static final String SQL_UPDATE_USER_BLOCKED_NOT = "UPDATE users SET is_blocked = false WHERE id = ?";
     public static final String SQL_UPDATE_USER_IS_REGISTERED = "UPDATE users SET is_registered = true WHERE id = ?";

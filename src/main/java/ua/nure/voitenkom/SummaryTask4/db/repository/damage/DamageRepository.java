@@ -24,7 +24,7 @@ public class DamageRepository extends AbstractRepository<Damage> implements IDam
     }
 
     @Override
-    public int findByName(String name) {
+    public Damage findByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_DAMAGE_BY_NAME, new DamageExtractor());
     }
 

@@ -23,7 +23,7 @@ public class StatusRepository extends AbstractRepository<Status> implements ISta
     }
 
     @Override
-    public int findByName(String name) {
+    public Status findByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_STATUS_BY_NAME, new StatusExtractor());
     }
 

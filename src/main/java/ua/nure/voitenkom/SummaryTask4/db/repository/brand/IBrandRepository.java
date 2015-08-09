@@ -6,6 +6,6 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 public interface IBrandRepository extends IAbstractRepository<Brand> {
 
-    int selectByName(String name);
+    Brand selectByName(String name);
 
 }

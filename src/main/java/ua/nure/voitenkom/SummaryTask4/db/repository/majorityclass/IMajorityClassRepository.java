@@ -6,7 +6,7 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 public interface IMajorityClassRepository extends IAbstractRepository<MajorityClass> {
 
-    int findByName(String name);
+    MajorityClass findByName(String name);
 
 }
 

@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class User extends Entity{
 
     private String fullName;
@@ -11,8 +14,9 @@ public class User extends Entity{
     private String photoPath;
     private String password;
     private String login;
+    private Timestamp registrationTime;
 
-    public User(int id, String fullName, boolean isBlocked, boolean isRegistered, String registrationToken, String passportNumber, int roleId, String photoPath, String password, String login) {
+    public User(int id, String fullName, boolean isBlocked, boolean isRegistered, String registrationToken, String passportNumber, int roleId, String photoPath, String password, String login, Timestamp registrationTime) {
         this.setId(id);
         this.fullName = fullName;
         this.isBlocked = isBlocked;
@@ -23,6 +27,17 @@ public class User extends Entity{
         this.photoPath = photoPath;
         this.password = password;
         this.login = login;
+        this.registrationTime=registrationTime;
+    }
+
+    public User(String fullName, String registrationToken, String passportNumber, int roleId,  String password, String login, Timestamp registrationTime) {
+        this.fullName = fullName;
+        this.registrationToken = registrationToken;
+        this.passportNumber = passportNumber;
+        this.roleId = roleId;
+        this.password = password;
+        this.login = login;
+        this.registrationTime=registrationTime;
     }
 
     public String getFullName() {
@@ -95,6 +110,14 @@ public class User extends Entity{
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public Timestamp getRegistrationTime() {
+        return registrationTime;
+    }
+
+    public void setRegistrationTime(Timestamp registrationTime) {
+        this.registrationTime = registrationTime;
     }
 
     @Override

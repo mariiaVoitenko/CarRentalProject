@@ -5,6 +5,6 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 public interface IRoleRepository extends IAbstractRepository<Role>{
 
-    int findByName(String name);
+    Role findByName(String name);
 
 }

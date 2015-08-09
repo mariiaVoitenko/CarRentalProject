@@ -24,6 +24,7 @@ public class ConnectionManager {
 
     public static void rollback(Connection connection) throws DatabaseConnectionException {
         try {
+            connection.setAutoCommit(false);
             connection.rollback();
         } catch (SQLException e) {
             logger.error("Couldn't rollback, exception: " + e.getMessage());

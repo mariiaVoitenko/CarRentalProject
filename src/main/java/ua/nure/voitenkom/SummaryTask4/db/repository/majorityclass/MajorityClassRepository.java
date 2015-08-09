@@ -24,7 +24,7 @@ public class MajorityClassRepository extends AbstractRepository<MajorityClass> i
     }
 
     @Override
-    public int findByName(String name) {
+    public MajorityClass findByName(String name) {
         return super.selectByName(name, StatementsContainer.SQL_SELECT_CLASS_BY_NAME, new MajorityClassExtractor());
     }
 

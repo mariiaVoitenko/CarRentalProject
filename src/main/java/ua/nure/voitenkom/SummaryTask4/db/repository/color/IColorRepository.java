@@ -6,5 +6,5 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 public interface IColorRepository extends IAbstractRepository<Color> {
 
-    int selectByName(String name);
+    Color selectByName(String name);
 }

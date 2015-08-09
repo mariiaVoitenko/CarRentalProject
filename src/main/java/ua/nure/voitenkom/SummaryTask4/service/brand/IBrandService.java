@@ -11,6 +11,6 @@ public interface IBrandService {
 
     Brand selectById(int id);
 
-    int selectByName(String name);
+    Brand selectByName(String name);
 
 }

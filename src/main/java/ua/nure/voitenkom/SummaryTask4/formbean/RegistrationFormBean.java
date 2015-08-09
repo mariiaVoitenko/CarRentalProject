@@ -1,10 +1,18 @@
 package ua.nure.voitenkom.SummaryTask4.formbean;
 
-public class RegistrationFormBean extends LoginFormBean{
+public class RegistrationFormBean extends LoginFormBean {
 
     private String passportNumber;
     private String fullName;
-    private String photoPath;
+    private String repeatedPassword;
+
+    public String getRepeatedPassword() {
+        return repeatedPassword;
+    }
+
+    public void setRepeatedPassword(String repeatedPassword) {
+        this.repeatedPassword = repeatedPassword;
+    }
 
     public String getPassportNumber() {
         return passportNumber;
@@ -22,18 +30,10 @@ public class RegistrationFormBean extends LoginFormBean{
         this.fullName = fullName;
     }
 
-    public String getPhotoPath() {
-        return photoPath;
-    }
-
-    public void setPhotoPath(String photoPath) {
-        this.photoPath = photoPath;
-    }
-
-    public RegistrationFormBean(String login, String password, String passportNumber, String fullName, String photoPath) {
+    public RegistrationFormBean(String login, String password, String passportNumber, String fullName, String repeatedPassword) {
         super(login, password);
         this.passportNumber = passportNumber;
         this.fullName = fullName;
-        this.photoPath = photoPath;
+        this.repeatedPassword = repeatedPassword;
     }
 }

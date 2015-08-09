@@ -54,7 +54,7 @@ public class PhotoService implements IPhotoService {
             }
         }
         String avatarName = generateAvatarName();
-        String path = folder + avatarName;
+        String path = folder + "/" + avatarName;
         saveOnDisk(picture, path);
         car.setPhotoPath(avatarName);
         logger.debug("Picture has been saved {}", path);

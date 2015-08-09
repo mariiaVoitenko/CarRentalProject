@@ -6,7 +6,7 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 public interface IStatusRepository extends IAbstractRepository<Status> {
 
-    int findByName(String name);
+    Status findByName(String name);
 
 }
 

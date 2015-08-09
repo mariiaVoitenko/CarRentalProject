@@ -1,13 +1,11 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.user;
 
-import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.db.PasswordMaker;
+import ua.nure.voitenkom.SummaryTask4.service.account.PasswordMaker;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.UserExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
@@ -116,6 +114,26 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
             preparedStatement.setInt(4, user.getRoleId());
             preparedStatement.setString(5, user.getPassword());
             preparedStatement.setString(6, user.getLogin());
+            preparedStatement.setTimestamp(7, user.getRegistrationTime());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public void insertWithPhoto(User user) {
+        String sql = StatementsContainer.SQL_INSERT_USER_WITH_PHOTO;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setString(1, user.getFullName());
+            preparedStatement.setString(2, user.getRegistrationToken());
+            preparedStatement.setString(3, user.getPassportNumber());
+            preparedStatement.setInt(4, user.getRoleId());
+            preparedStatement.setString(5, user.getPhotoPath());
+            preparedStatement.setString(6, user.getPassword());
+            preparedStatement.setString(7, user.getLogin());
+            preparedStatement.setTimestamp(8, user.getRegistrationTime());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);

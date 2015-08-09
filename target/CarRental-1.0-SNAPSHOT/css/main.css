@@ -48,8 +48,13 @@ body {
 
 .center-input{
     text-align: center;
+    max-height: 80%
 }
 
 .header-color{
     background-color: #f2fccb;
+}
+
+.marginned{
+    margin-top:60px;
 }

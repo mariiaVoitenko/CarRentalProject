@@ -52,11 +52,11 @@ public abstract class AbstractRepository<T> implements IAbstractRepository<T> {
         }
     }
 
-    public int selectByName(String name, String sql, IExtractor<T> extractor) {
+    public T selectByName(String name, String sql, IExtractor<T> extractor) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, name);
             List<T> records = executeQuery(preparedStatement, extractor);
-            return Integer.parseInt(records.get(0).toString());
+            return records.isEmpty() ? null : records.get(0);
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");

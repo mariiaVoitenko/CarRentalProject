@@ -40,7 +40,7 @@ public class LoginServlet extends AuthenticationServlet {
             String password = loginFormBean.getPassword();
             if (userService.checkPassword(login, password)) {
                 User user = userService.findByLogin(login);
-                if (!user.isBlocked()) {
+                if (!user.isBlocked() && !user.isRegistered()) {
                     authorize(user, request);
                     logger.debug("User {} was authenticated", user);
                     response.sendRedirect(PageNames.MAIN_PAGE);
@@ -61,7 +61,7 @@ public class LoginServlet extends AuthenticationServlet {
         }
         else{
             logger.debug("Validation problems");
-            sendMessage(request,"You should write your email and password");
+            sendMessage(request,"Login is your email. Password must be more than 8 characters");
             response.sendRedirect(PageNames.LOGIN_PAGE);
             return;
         }

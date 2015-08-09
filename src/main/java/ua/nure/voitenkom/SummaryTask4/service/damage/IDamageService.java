@@ -4,7 +4,7 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 
 public interface IDamageService {
 
-    int findByName(String name);
+    Damage findByName(String name);
 
     void insert(Damage damage);
 

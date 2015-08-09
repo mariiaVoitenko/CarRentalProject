@@ -48,6 +48,8 @@ import ua.nure.voitenkom.SummaryTask4.service.decline.DeclineService;
 import ua.nure.voitenkom.SummaryTask4.service.decline.IDeclineService;
 import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassService;
 import ua.nure.voitenkom.SummaryTask4.service.majorityclass.MajorityClassService;
+import ua.nure.voitenkom.SummaryTask4.service.photo.IPhotoService;
+import ua.nure.voitenkom.SummaryTask4.service.photo.PhotoService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
 import ua.nure.voitenkom.SummaryTask4.service.role.IRoleService;
@@ -120,6 +122,10 @@ public class BeanContextInitializer implements ServletContextListener {
         IUserRepository userRepository = new UserRepository(connectionHolder);
         IUserService userService = new UserService(transactionManager, userRepository);
         context.getServletContext().setAttribute(ServiceConstant.USER_SERVICE_CONTEXT, userService);
+
+        String picturesFolder = context.getServletContext().getInitParameter(Attributes.PICTURES_FOLDER);
+        IPhotoService photoService = new PhotoService(picturesFolder);
+        context.getServletContext().setAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT, photoService);
 
         logger.debug("Put beans to context");
     }

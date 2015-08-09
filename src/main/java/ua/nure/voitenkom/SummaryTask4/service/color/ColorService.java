@@ -39,10 +39,10 @@ public class ColorService implements IColorService {
     }
 
     @Override
-    public int selectByName(final String name) {
-        return transactionManager.doInTransaction(new Operation<Integer>() {
+    public Color selectByName(final String name) {
+        return transactionManager.doInTransaction(new Operation<Color>() {
             @Override
-            public Integer doOperation() {
+            public Color doOperation() {
                 return colorRepository.selectByName(name);
             }
         });

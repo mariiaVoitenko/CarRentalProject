@@ -11,6 +11,6 @@ public interface IColorService {
 
     Color selectById(int id);
 
-    int selectByName(String name);
+    Color selectByName(String name);
 
 }

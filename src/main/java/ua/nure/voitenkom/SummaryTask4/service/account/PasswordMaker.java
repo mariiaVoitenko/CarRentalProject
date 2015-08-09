@@ -1,4 +1,4 @@
-package ua.nure.voitenkom.SummaryTask4.db;
+package ua.nure.voitenkom.SummaryTask4.service.account;
 
 import org.apache.commons.codec.digest.DigestUtils;
 

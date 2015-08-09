@@ -20,14 +20,14 @@ public class LoginValidator implements IValidator<LoginFormBean> {
         return errorMap;
     }
 
-    private Map<String, String> validateLogin(String login, Map<String, String> errorMap) {
+    public Map<String, String> validateLogin(String login, Map<String, String> errorMap) {
         errorMap = checkEmptyLogin(login, errorMap);
         errorMap = checkMail(login, errorMap);
         errorMap = checkOnlyNumbers(login, errorMap);
         return errorMap;
     }
 
-    private Map<String, String> validatePassword(String password, Map<String, String> errorMap) {
+    public Map<String, String> validatePassword(String password, Map<String, String> errorMap) {
         errorMap = checkEmptyPassword(password, errorMap);
         errorMap = checkShortPassword(password, errorMap);
         return errorMap;

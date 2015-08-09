@@ -6,6 +6,8 @@ public interface IUserService {
 
     void insert(User user);
 
+    void insertWithPhoto(User user);
+
     User findByLogin(String login);
 
     void makeBlocked(int id);
