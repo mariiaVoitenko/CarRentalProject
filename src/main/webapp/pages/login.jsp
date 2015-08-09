@@ -2,24 +2,24 @@
 <%@ include file="/WEB-INF/header.jsp" %>
 <html>
 <head>
-    <title></title>
-  <link rel="stylesheet" href="<c:url value="/bootstrap-3.3.5-dist/css/bootstrap.css"/>">
-  <link rel="stylesheet" href="<c:url value="/css/main.css"/>">
+    <title><fmt:message key="loginTitle"/></title>
 </head>
 
 <body>
 
 <div class="container center-input">
   <form class="form-signin" action="/LoginServlet" method="POST">
-    <h2 class="form-signin-heading">Please, sign in</h2>
-    <input type="text" class="input-block-level" name="login" placeholder="Email address">
-    <input type="password" class="input-block-level" name="password" placeholder="Password">
+    <h2 class="form-signin-heading"><fmt:message key="please_sign_in"/></h2>
+    <input type="text" class="input-block-level" name="login" placeholder="<fmt:message key="email"/>">
+    <input type="password" class="input-block-level" name="password" placeholder="<fmt:message key="password"/>">
     <label class="checkbox">
-      <input type="checkbox" value="remember-me"> Remember me
+      <input type="checkbox" value="remember-me"> <fmt:message key="remember_me"/>
     </label>
-    <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-      ${message}
+    <button class="btn btn-large btn-primary" type="submit"><fmt:message key="sign_in"/></button>
+
   </form>
+  <h4><a href="/RegistrationServlet"><fmt:message key="registration_message"/></a></h4>
+  <h4>${message}</h4>
 </div>
 
 <%@ include file="../WEB-INF/footer.jsp" %>

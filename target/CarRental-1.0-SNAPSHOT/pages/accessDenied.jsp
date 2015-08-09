@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/header.jsp" %>
 <html>
 <head>
-    <title></title>
+    <title><fmt:message key="access_denied_title"/></title>
 </head>
 <body>
 <div class="row">

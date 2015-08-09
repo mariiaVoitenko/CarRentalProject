@@ -20,15 +20,54 @@ public class LoginValidator implements IValidator<LoginFormBean> {
         return errorMap;
     }
 
-    private void validateLogin(String login, Map<String, String> errorMap) {
-        if (isEmpty(login) && !ifMail(login) && !ifNumber(login)) {
-            errorMap.put("login", "wrongLogin");
-        }
+    private Map<String, String> validateLogin(String login, Map<String, String> errorMap) {
+        errorMap = checkEmptyLogin(login, errorMap);
+        errorMap = checkMail(login, errorMap);
+        errorMap = checkOnlyNumbers(login, errorMap);
+        return errorMap;
     }
 
-    private void validatePassword(String password, Map<String, String> errorMap) {
-        if (isEmpty(password) && password.length() < 8) {
-            errorMap.put("login", "wrongPassword");
+    private Map<String, String> validatePassword(String password, Map<String, String> errorMap) {
+        errorMap = checkEmptyPassword(password, errorMap);
+        errorMap = checkShortPassword(password, errorMap);
+        return errorMap;
+    }
+
+    private Map<String, String> checkEmptyLogin(String login, Map<String, String> errorMap) {
+        if (isEmpty(login)) {
+            errorMap.put("login", "empty Login.");
         }
+        return errorMap;
+    }
+
+    private Map<String, String> checkMail(String login, Map<String, String> errorMap) {
+        if (!ifMail(login)) {
+            String error = errorMap.get("login");
+            errorMap.put("login", error + "login is not email.");
+        }
+        return errorMap;
+    }
+
+    private Map<String, String> checkOnlyNumbers(String login, Map<String, String> errorMap) {
+        if (ifNumber(login)) {
+            String error = errorMap.get("login");
+            errorMap.put("login", error + "login contains only numbers.");
+        }
+        return errorMap;
+    }
+
+    private Map<String, String> checkEmptyPassword(String password, Map<String, String> errorMap) {
+        if (isEmpty(password)) {
+            errorMap.put("password", "empty password.");
+        }
+        return errorMap;
+    }
+
+    private Map<String, String> checkShortPassword(String password, Map<String, String> errorMap) {
+        if (password.length() < 8) {
+            String error = errorMap.get("password");
+            errorMap.put("password", error + "short password");
+        }
+        return errorMap;
     }
 }

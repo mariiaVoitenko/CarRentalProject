@@ -20,6 +20,7 @@ public abstract class AuthenticationServlet extends HttpServlet {
         session.setAttribute(Attributes.USER_ID, user.getId());
         session.setAttribute(Attributes.FULL_NAME, user.getFullName());
         session.setAttribute(Attributes.PHOTO, user.getPhotoPath());
+        session.setAttribute(Attributes.ROLE_ID, user.getRoleId());
     }
 
     protected Integer getAuthUserId(HttpServletRequest request) {

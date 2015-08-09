@@ -16,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Map;
 
@@ -52,15 +53,15 @@ public class LoginServlet extends AuthenticationServlet {
                 }
             }
             else{
-                request.setAttribute(Attributes.MESSAGE, "Wrong login or password");
+                sendMessage(request,"Wrong login or password");
                 logger.debug("Wrong login or password");
                 response.sendRedirect(PageNames.LOGIN_PAGE);
                 return;
             }
         }
         else{
-            request.setAttribute(Attributes.MESSAGE, "You should write your email and password");
             logger.debug("Validation problems");
+            sendMessage(request,"You should write your email and password");
             response.sendRedirect(PageNames.LOGIN_PAGE);
             return;
         }
@@ -74,5 +75,10 @@ public class LoginServlet extends AuthenticationServlet {
         String login = request.getParameter(Attributes.LOGIN);
         String password = request.getParameter(Attributes.PASSWORD);
         return new LoginFormBean(login, password);
+    }
+
+    private void sendMessage(HttpServletRequest request,String message){
+        HttpSession session=request.getSession();
+        session.setAttribute(Attributes.MESSAGE, message);
     }
 }

@@ -8,6 +8,9 @@ public final class Attributes {
     public static final String FULL_NAME = "fullName";
     public static final String PHOTO = "photo";
     public static final String MESSAGE = "message";
+    public static final String ROLE_ID = "roleId";
+    public static final String PASSPORT = "passport";
+
     public static final String USER_LOCALE = "userLocale";
     public static final String APP_LOCALES = "AppLocales";
     public static final String DEFAULT_LOCALE = "DefaultLocale";

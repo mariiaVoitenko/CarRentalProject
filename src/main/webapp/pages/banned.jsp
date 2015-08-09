@@ -2,15 +2,11 @@
 <%@ include file="/WEB-INF/header.jsp" %>
 <html>
 <head>
-  <title></title>
+    <title><fmt:message key="banned_title"/></title>
 </head>
 <body>
-<div class="row">
-  <div class="large-12 columns">
-    <div class="panel">
-      <h3><fmt:message key="blocked"/></h3>
-    </div>
-  </div>
+<div class="container center-input">
+    <h3><fmt:message key="blocked"/></h3>
 </div>
 <%@ include file="../WEB-INF/footer.jsp" %>
 </body>
