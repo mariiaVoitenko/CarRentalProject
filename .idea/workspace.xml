@@ -2,149 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a9e38f4-19db-438a-b779-6ca3564f2bcf" name="Default" comment="Some beans changed. No linked entities in beans, just IDs. Some extractors">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/Attributes.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/Attributes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/Attributes.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/Attributes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/listener/BeanContextInitializer.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/listener/BeanContextInitializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/listener/BeanContextInitializer.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/listener/BeanContextInitializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService$3.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService$3.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/color/ColorService$3.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/color/ColorService$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/color/ColorService$3.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/color/ColorService$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/color/ColorService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/color/ColorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/color/ColorService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/color/ColorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionManager.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionManager.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService$1.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService$1.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/IBrandRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/IBrandRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/IBrandRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/IBrandRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/brand/IBrandService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/brand/IBrandService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/brand/IBrandService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/brand/IBrandService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/IColorRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/IColorRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/IColorRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/IColorRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/color/IColorService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/color/IColorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/color/IColorService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/color/IColorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/IDamageRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/IDamageRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/IDamageRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/IDamageRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/damage/IDamageService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/damage/IDamageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/damage/IDamageService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/damage/IDamageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/IDeclineRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/IDeclineRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/IDeclineRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/IDeclineRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/IMajorityClassRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/IMajorityClassRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/IMajorityClassRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/IMajorityClassRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/IRoleRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/IRoleRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/IRoleRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/IRoleRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/role/IRoleService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/role/IRoleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/role/IRoleService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/role/IRoleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/IStatusRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/IStatusRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/IStatusRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/IStatusRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/IUserRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/IUserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/IUserRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/IUserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/IUserService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/IUserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/IUserService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/IUserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/validation/user/LoginValidator.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/validation/user/LoginValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/validation/user/LoginValidator.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/validation/user/LoginValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/PageNames.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/PageNames.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/PageNames.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/PageNames.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/role/RoleService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/role/RoleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/role/RoleService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/role/RoleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/User.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/User.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$2.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$2.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$3.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$3.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$4.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$4.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$5.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$5.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$6.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$6.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/user/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/validation/ValidationManager.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/validation/ValidationManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/validation/ValidationManager.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/validation/ValidationManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/Attributes.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/Attributes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/BeanContextInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/BeanContextInitializer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/color/ColorService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/color/ColorService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionManager.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/FieldsContainer.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/FieldsContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/brand/IBrandRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/brand/IBrandRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/brand/IBrandService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/brand/IBrandService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/color/IColorRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/color/IColorRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/color/IColorService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/color/IColorService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damage/IDamageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damage/IDamageRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/IDamageService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/IDamageService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/decline/IDeclineRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/decline/IDeclineRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/IMajorityClassRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/IMajorityClassRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/role/IRoleRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/role/IRoleRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/role/IRoleService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/role/IRoleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/status/IStatusRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/status/IStatusRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/IUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/IUserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/user/IUserService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/user/IUserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/LoginServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/LoginServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/validation/user/LoginValidator.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/validation/user/LoginValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/PageNames.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/PageNames.java" />
+      <change type="DELETED" beforePath="E:\EPAM\CarRentalProject\Project\picturesdafcba02-e35e-4c2c-8cd3-295deaab0916.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/photo/PhotoService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/photo/PhotoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project.iml" afterPath="$PROJECT_DIR$/Project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Project_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Project_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/RegistrationFormBean.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/RegistrationFormBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/RegistrationServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/RegistrationServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/validation/user/RegistrationValidator.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/validation/user/RegistrationValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/role/RoleService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/role/RoleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/ServiceConstant.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/ServiceConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/extractor/UserExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/extractor/UserExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/user/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/user/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/validation/ValidationManager.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/validation/ValidationManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" afterPath="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/locale/locale_en.properties" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/locale/locale_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/locale/locale_en.properties" afterPath="$PROJECT_DIR$/target/classes/locale/locale_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/pages/login.jsp" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/pages/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/registration.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/pages/registration.jsp" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/pages/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\EPAM\CarRentalProject\Project\src\main\java\ua\nure\voitenkom\SummaryTask4\db\PasswordMaker.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/account/PasswordMaker.java" />
     </list>
     <ignored path="CarRental.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -236,21 +96,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.709389">
+            <state vertical-scroll-proportion="0.0">
               <caret line="63" column="93" selection-start-line="63" selection-start-column="93" selection-end-line="63" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PasswordMaker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/account/PasswordMaker.java">
+      <file leaf-file-name="PhotoService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/photo/PhotoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.5320417">
+              <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -333,7 +193,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/role/IRoleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/BeanContextInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/photo/PhotoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/FieldsContainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/date/DateService.java" />
@@ -356,6 +215,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/main.css" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/RegistrationServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/photo/PhotoService.java" />
       </list>
     </option>
   </component>
@@ -765,6 +625,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="photo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1396,7 +1290,7 @@
       <workItem from="1438940341820" duration="13325000" />
       <workItem from="1439050211931" duration="8690000" />
       <workItem from="1439110159503" duration="5920000" />
-      <workItem from="1439119007837" duration="22754000" />
+      <workItem from="1439119007837" duration="23539000" />
     </task>
     <task id="LOCAL-00001" summary="Some beans. Works">
       <created>1438281940901</created>
@@ -1426,11 +1320,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136328000" />
+    <option name="totallyTimeSpent" value="137113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1445,7 +1339,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24350649" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1875" sideWeight="0.48108107" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1875" sideWeight="0.48108107" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18763326" sideWeight="0.51891893" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1484,7 +1378,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1773,14 +1667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/photo/PhotoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/account/DateService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1927,8 +1813,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.709389">
+        <state vertical-scroll-proportion="0.0">
           <caret line="63" column="93" selection-start-line="63" selection-start-column="93" selection-end-line="63" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/photo/PhotoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5320417">
+          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
           <folding />
         </state>
       </provider>
