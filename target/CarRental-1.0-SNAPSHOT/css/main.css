@@ -43,7 +43,7 @@ body {
 
 .right-div{
     float: right;
-    width: 60%;
+    width: 40%;
 }
 
 .center-input{
@@ -57,4 +57,61 @@ body {
 
 .marginned{
     margin-top:60px;
+}
+
+.rectangle {
+    border-top: 1px solid #DDDDDD;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    clear: both;
+    overflow: hidden;
+}
+
+.small-image{
+    margin-right:5px;
+    margin-left: 10px;
+}
+
+.gap-div40 {
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+}
+
+.gap-div20 {
+    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px; /* Firefox */
+    column-gap: 20px;
+}
+
+.gap-div10 {
+    -webkit-column-gap: 120px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 10px; /* Firefox */
+    column-gap: 10px;
+}
+
+.middle-headline{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -1px;color: #444;
+}
+
+.large-headline{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 48px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    color: #444;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-weight: 100;
+}
+
+.paragraph-text{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #444;
 }

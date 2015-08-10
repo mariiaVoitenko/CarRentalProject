@@ -26,7 +26,7 @@
     </context-param>
     <context-param>
         <param-name>picturesFolder</param-name>
-        <param-value>E:/EPAM/CarRentalProject/Project/pictures</param-value>
+        <param-value>E:/EPAM/CarRentalProject/Project/src/main/webapp/images</param-value>
     </context-param>
     <context-param>
         <param-name>host</param-name>
@@ -50,7 +50,7 @@
 
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.LoginServlet</servlet-class>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.authentication.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -59,7 +59,7 @@
 
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.LogoutServlet</servlet-class>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.authentication.LogoutServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
@@ -68,7 +68,7 @@
 
     <servlet>
         <servlet-name>RegistrationServlet</servlet-name>
-        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.RegistrationServlet</servlet-class>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.authentication.RegistrationServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegistrationServlet</servlet-name>
@@ -77,12 +77,32 @@
 
     <servlet>
         <servlet-name>RegistrationConfirmationServlet</servlet-name>
-        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.RegistrationConfirmationServlet</servlet-class>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.authentication.RegistrationConfirmationServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegistrationConfirmationServlet</servlet-name>
         <url-pattern>/confirm/*</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.MainServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CarsServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.CarsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CarsServlet</servlet-name>
+        <url-pattern>/admin/cars</url-pattern>
+    </servlet-mapping>
+
 
     <jsp-config>
         <jsp-property-group>

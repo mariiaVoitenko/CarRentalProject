@@ -7,7 +7,7 @@
 
 <footer class="container">
     <hr>
-    <p>© Car Rental</p>
+    <div class="paragraph-text">© Car Rental</div>
 </footer>
 
 </body>

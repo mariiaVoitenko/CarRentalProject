@@ -27,21 +27,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand">Car Rental</a>
+            <a href="/" class="large-headline">Car Rental</a>
         </div>
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li ><a href="/"><fmt:message key="home"/></a></li>
+                <li ><a class="middle-headline" href="/"><fmt:message key="home"/></a></li>
                 <li>
                 <li class="dropdown">
                     <c:choose>
                         <c:when test="${sessionScope.userId!=null}">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">${sessionScope.fullName}<b
+                            <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle" href="#">${sessionScope.fullName}<b
                                     class="caret"></b></a>
                             <ul role="menu" class="dropdown-menu">
                                 <li><a href="#"></a></li>
-                                <li><a href="#"><fmt:message key="edit_profile"/></a></li>
-                                <li><a href="#"><fmt:message key="show_rents"/></a></li>
+                                <li><a class="paragraph-text" href="#"><fmt:message key="edit_profile"/></a></li>
+                                <li><a class="paragraph-text" href="#"><fmt:message key="show_rents"/></a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">TODO</a></li>
                             </ul>
@@ -55,18 +55,17 @@
                 <li class="dropdown">
                     <c:choose>
                         <c:when test="${sessionScope.roleId==1}">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><fmt:message key="administration"/><b
+                            <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle" href="#"><fmt:message key="administration"/><b
                                     class="caret"></b></a>
                             <ul role="menu" class="dropdown-menu">
-                                <li><a href="#">TODO</a></li>
-                                <li><a href="#">TODO</a></li>
-                                <li><a href="#">TODO</a></li>
+                                <li><a class="paragraph-text" href="/admin/cars"><fmt:message key="cars"/></a></li>
+                                <li><a class="paragraph-text" href="#"><fmt:message key="users"/></a></li>
+                                <li><a class="paragraph-text" href="#"><fmt:message key="managers"/></a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">TODO</a></li>
                             </ul>
                         </c:when>
                         <c:otherwise>
-
                         </c:otherwise>
                     </c:choose>
                 </li>
@@ -74,7 +73,7 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#"><fmt:message key="language"/><b
+                    <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle" href="#"><fmt:message key="language"/><b
                             class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="#" onclick="setLocale('ru');"><img src="<c:url value="/images/rus.png"/>"></a></li>
@@ -83,10 +82,10 @@
                 <li>
                     <c:choose>
                         <c:when test="${sessionScope.userId!=null}">
-                            <a href="/logout"><fmt:message key="logout"/></a>
+                            <a class="middle-headline" href="/logout"><fmt:message key="logout"/></a>
                         </c:when>
                         <c:otherwise>
-                            <a href="/login"><fmt:message key="login"/></a>
+                            <a class="middle-headline" href="/login"><fmt:message key="login"/></a>
                         </c:otherwise>
                     </c:choose>
                 </li>

@@ -1,4 +1,4 @@
-<%@ include file="../WEB-INF/jsp_header.jsp" %>
+<%@ include file="/WEB-INF/jsp_header.jsp" %>
 <%@ include file="/WEB-INF/header.jsp" %>
 <html>
 <head>
@@ -9,7 +9,8 @@
 <div class="container center-input">
     <form class="form-signin" name="registration" action="/registration" method="POST"
           enctype="multipart/form-data">
-        <h2 class="form-signin-heading"><fmt:message key="registration"/></h2>
+        <h2 class="large-headline"><fmt:message key="registration"/></h2>
+        <br>
         <input type="text" class="input-block-level" name="login" placeholder="<fmt:message key="email"/>">
         <input type="text" class="input-block-level" name="fullName" placeholder="<fmt:message key="full_name"/>">
         <input type="text" class="input-block-level" name="passport" placeholder="<fmt:message key="passport"/>">

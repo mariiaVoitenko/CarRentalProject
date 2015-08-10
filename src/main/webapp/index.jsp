@@ -1,5 +1,5 @@
 <%@ include file="WEB-INF/jsp_header.jsp" %>
-<%@ include file="/WEB-INF/header.jsp" %>
+<%@ include file="WEB-INF/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,17 +11,15 @@
 <div class="jumbotron">
     <div class="container">
         <div class="left-div">
-            <img src="../images/logo_trans.png" alt="Logo" height="385" width="445">
+            <img src="<c:url value="/images/logo_trans.png"/>" alt="Logo" height="385" width="445">
         </div>
         <div class="right-div">
-            <h1 class="logo-text">We can help you to rent a nice car</h1>
-            <p class="logo-text">Best Final Car Rental Rates! NO Hidden Extra Charges!</p>
+            <div class="large-headline logo-text">We can help you to rent a nice car</div>
+            <br>
+
+            <div class="middle-headline logo-text">Best Final Car Rental Rates! NO Hidden Extra Charges!</div>
         </div>
     </div>
-</div>
-
-<div class="container">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit at lacus blandit, commodo iaculis justo viverra. Etiam vitae est arcu. Mauris vel congue dolor. Aliquam eget mi mi. Fusce quam tortor, commodo ac dui quis, bibendum viverra erat. Maecenas mattis lectus enim, quis tincidunt dui molestie euismod. Curabitur et diam tristique, accumsan nunc eu, hendrerit tellus. Tibulum consectetur scelerisque lacus, ac fermentum lorem convallis sed.</p>
 </div>
 
 <%@ include file="/WEB-INF/footer.jsp" %>

@@ -25,10 +25,10 @@ public class StatementsContainer {
     public static final String SQL_UPDATE_CAR_PRICE_BY_ID = "UPDATE cars SET price = ? WHERE id = ?";
     public static final String SQL_DELETE_CAR_BY_ID = "DELETE FROM cars WHERE id = ?";
     public static final String SQL_SELECT_ALL_CAR_INFORMATION =  "SELECT cars.id, cars.model, price, doors_count, has_conditioner, " +
-            "big_luggage_count, small_luggage_count, sits_count, classes.name AS class_name, brands.name AS brand_name, \n" +
+            "big_luggage_count, small_luggage_count, sits_count, photo, available_count, classes.name AS class_name, brands.name AS brand_name, \n" +
             "colors.name AS color_name, statuses.name AS status_name FROM cars, classes, colors, statuses,\n" +
             "brands WHERE cars.classes_id = classes.id AND cars.brands_id = brands.id AND colors.id = cars.colors_id " +
-            "AND statuses.id = cars.statuses_id AND cars.id = ?";
+            "AND statuses.id = cars.statuses_id";
 
     //checks
     public static final String SQL_SELECT_ALL_CHECKS = "SELECT * FROM checks";

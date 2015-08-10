@@ -8,7 +8,7 @@
 <div class="row">
   <div class="large-12 columns">
     <div class="panel">
-      <h3><fmt:message key="accessDenied"/></h3>
+      <h3 class="middle-headline"><fmt:message key="accessDenied"/></h3>
     </div>
   </div>
 </div>

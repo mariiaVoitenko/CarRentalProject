@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="container center-input">
-    <h3><fmt:message key="blocked"/></h3>
+    <h3 class="middle-headline"><fmt:message key="blocked"/></h3>
 </div>
 <%@ include file="../WEB-INF/footer.jsp" %>
 </body>

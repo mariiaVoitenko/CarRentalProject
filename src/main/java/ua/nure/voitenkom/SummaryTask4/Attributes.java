@@ -24,5 +24,6 @@ public final class Attributes {
     public static final String UNREGISTERED_USER_VALUE = "Unregistered user";
 
     public static final String PICTURES_FOLDER = "picturesFolder";
+    public static final String CARS = "cars";
 
 }
