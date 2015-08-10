@@ -52,8 +52,15 @@
                         <br>
                         <br>
                         <br>
-                        <button class="btn btn-large btn-primary" type="submit"><fmt:message key="edit"/></button>
-                        <button class="btn btn-large btn-primary" type="submit"><fmt:message key="delete"/></button>
+
+                        <form action="editCar?id=${car.id}" method="POST">
+                            <button class="btn btn-large btn-primary" type="submit"><fmt:message key="edit"/></button>
+                        </form>
+
+                        <form action="deleteCar?id=${car.id}" method="POST">
+                            <button class="btn btn-large btn-primary" type="submit"><fmt:message key="delete"/></button>
+
+                        </form>
                     </div>
                 </div>
             </c:forEach>

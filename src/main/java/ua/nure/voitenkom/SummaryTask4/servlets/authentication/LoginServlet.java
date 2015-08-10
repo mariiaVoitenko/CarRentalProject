@@ -44,23 +44,20 @@ public class LoginServlet extends AuthenticationServlet {
                     logger.debug("User {} was authenticated", user);
                     response.sendRedirect(PageNames.MAIN_PAGE);
                     return;
-                }
-                else{
+                } else {
                     logger.debug("User {} was blocked. Access denied", user);
                     response.sendRedirect(PageNames.BANNED_PAGE);
                     return;
                 }
-            }
-            else{
-                sendMessage(request,"Wrong login or password");
+            } else {
+                sendMessage(request, "Wrong login or password");
                 logger.debug("Wrong login or password");
                 response.sendRedirect(PageNames.LOGIN_PAGE);
                 return;
             }
-        }
-        else{
+        } else {
             logger.debug("Validation problems");
-            sendMessage(request,"Login is your email. Password must be more than 8 characters");
+            sendMessage(request, "Login is your email. Password must be more than 8 characters");
             response.sendRedirect(PageNames.LOGIN_PAGE);
             return;
         }
@@ -76,8 +73,8 @@ public class LoginServlet extends AuthenticationServlet {
         return new LoginFormBean(login, password);
     }
 
-    private void sendMessage(HttpServletRequest request,String message){
-        HttpSession session=request.getSession();
+    private void sendMessage(HttpServletRequest request, String message) {
+        HttpSession session = request.getSession();
         session.setAttribute(Attributes.MESSAGE, message);
     }
 }

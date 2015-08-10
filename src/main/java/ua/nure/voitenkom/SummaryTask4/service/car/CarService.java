@@ -114,4 +114,14 @@ public class CarService implements ICarService{
             }
         });
     }
+
+    @Override
+    public Car getById(final int id) {
+        return transactionManager.doInTransaction(new Operation<Car>() {
+            @Override
+            public Car doOperation() {
+                return carRepository.selectById(id);
+            }
+        });
+    }
 }

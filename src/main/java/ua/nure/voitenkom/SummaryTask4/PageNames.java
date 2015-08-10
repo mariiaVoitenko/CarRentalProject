@@ -12,5 +12,7 @@ public class PageNames {
     public static final String SUCCESS_CONFIRMATION_PAGE = "pages/confirmation.jsp";
     public static final String EMPTY_PAGE = "http://localhost:8080/";
     public static final String CARS_PAGE = "cars.jsp";
+    public static final String EDIT_CARS_PAGE = "editCar.jsp";
+    public static final String ADMIN = "admin/";
 
 }

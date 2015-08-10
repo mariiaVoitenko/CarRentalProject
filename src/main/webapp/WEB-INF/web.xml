@@ -87,7 +87,6 @@
     <servlet>
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.MainServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>
@@ -101,6 +100,24 @@
     <servlet-mapping>
         <servlet-name>CarsServlet</servlet-name>
         <url-pattern>/admin/cars</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteCarServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.DeleteCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteCarServlet</servlet-name>
+        <url-pattern>/admin/deleteCar/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditCarServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.EditCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditCarServlet</servlet-name>
+        <url-pattern>/admin/editCar/*</url-pattern>
     </servlet-mapping>
 
 

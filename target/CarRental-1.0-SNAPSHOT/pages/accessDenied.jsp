@@ -5,12 +5,8 @@
     <title><fmt:message key="access_denied_title"/></title>
 </head>
 <body>
-<div class="row">
-  <div class="large-12 columns">
-    <div class="panel">
-      <h3 class="middle-headline"><fmt:message key="accessDenied"/></h3>
-    </div>
-  </div>
+<div class="container center-input">
+    <h3 class="middle-headline"><fmt:message key="accessDenied"/></h3>
 </div>
 <%@ include file="../WEB-INF/footer.jsp" %>
 </body>

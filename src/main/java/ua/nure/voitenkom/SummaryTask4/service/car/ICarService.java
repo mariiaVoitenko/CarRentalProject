@@ -25,4 +25,6 @@ public interface ICarService {
 
     void updatePrice(final Car car);
 
+    Car getById(int id);
+
 }

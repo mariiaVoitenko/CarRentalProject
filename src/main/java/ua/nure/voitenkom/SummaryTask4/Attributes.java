@@ -25,5 +25,10 @@ public final class Attributes {
 
     public static final String PICTURES_FOLDER = "picturesFolder";
     public static final String CARS = "cars";
+    public static final String CAR = "car";
+    public static final String BRANDS = "brandsList";
+    public static final String CLASSES = "classesList";
+    public static final String COLORS = "colorsList";
+    public static final String STATUSES = "statusesList";
 
 }
