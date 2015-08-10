@@ -35,7 +35,7 @@ import java.util.Map;
 import java.util.Properties;
 
 
-@WebServlet(name = "RegistrationServlet")
+@WebServlet(name = "registration")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class RegistrationServlet extends AuthenticationServlet {
 

@@ -8,7 +8,7 @@
 <body>
 
 <div class="container center-input">
-  <form class="form-signin" action="/LoginServlet" method="POST">
+  <form class="form-signin" action="/login" method="POST">
     <h2 class="form-signin-heading"><fmt:message key="please_sign_in"/></h2>
     <input type="text" class="input-block-level" name="login" placeholder="<fmt:message key="email"/>">
     <input type="password" class="input-block-level" name="password" placeholder="<fmt:message key="password"/>">
@@ -18,7 +18,7 @@
     <button class="btn btn-large btn-primary" type="submit"><fmt:message key="sign_in"/></button>
 
   </form>
-  <h4><a href="/RegistrationServlet"><fmt:message key="registration_message"/></a></h4>
+  <h4><a href="/registration"><fmt:message key="registration_message"/></a></h4>
   <h4>${message}</h4>
 </div>
 

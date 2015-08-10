@@ -105,6 +105,19 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     }
 
     @Override
+    public User selectByToken(String token) {
+        String sql = StatementsContainer.SQL_SELECT_USER_BY_TOKEN;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setString(1, token);
+            List<User> records = executeQuery(preparedStatement, new UserExtractor());
+            return records.isEmpty() ? null : records.get(0);
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
     public void insert(User user) {
         String sql = StatementsContainer.SQL_INSERT_USER;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {

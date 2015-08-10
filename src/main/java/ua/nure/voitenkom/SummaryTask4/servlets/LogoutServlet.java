@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
-@WebServlet(name = "LogoutServlet")
+@WebServlet(name = "logout")
 public class LogoutServlet extends HttpServlet {
 
     @Override

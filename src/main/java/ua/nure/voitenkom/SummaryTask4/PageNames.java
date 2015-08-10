@@ -9,5 +9,6 @@ public class PageNames {
     public static final String ERROR_PAGE = "pages/error.jsp";
     public static final String REGISTRATION_PAGE = "pages/registration.jsp";
     public static final String SUCCESS_REGISTRATION_PAGE = "pages/successRegistration.jsp";
+    public static final String SUCCESS_CONFIRMATION_PAGE = "pages/confirmation.jsp";
 
 }

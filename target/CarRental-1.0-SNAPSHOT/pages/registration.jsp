@@ -7,7 +7,7 @@
 <body>
 
 <div class="container center-input">
-    <form class="form-signin" name="registration" action="/RegistrationServlet" method="POST"
+    <form class="form-signin" name="registration" action="/registration" method="POST"
           enctype="multipart/form-data">
         <h2 class="form-signin-heading"><fmt:message key="registration"/></h2>
         <input type="text" class="input-block-level" name="login" placeholder="<fmt:message key="email"/>">

@@ -4,6 +4,8 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 
 public interface IUserService {
 
+    User selectByToken(String token);
+
     void insert(User user);
 
     void insertWithPhoto(User user);
@@ -17,5 +19,7 @@ public interface IUserService {
     void setRegisteredState(int id);
 
     boolean checkPassword(String login, String password);
+
+    void deleteUser(int id);
 
 }

@@ -114,6 +114,7 @@ public class StatementsContainer {
     //user
     public static final String SQL_SELECT_ALL_USERS = "SELECT * FROM users";
     public static final String SQL_SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
+    public static final String SQL_SELECT_USER_BY_TOKEN = "SELECT * FROM users WHERE registration_token = ?";
     public static final String SQL_INSERT_USER = "INSERT INTO users (full_name, registration_token, passport_number," +
             " roles_id, password, login, registration_time) VALUES (?,?,?,?,?,?,?)";
     public static final String SQL_INSERT_USER_WITH_PHOTO = "INSERT INTO users (full_name, registration_token, passport_number," +

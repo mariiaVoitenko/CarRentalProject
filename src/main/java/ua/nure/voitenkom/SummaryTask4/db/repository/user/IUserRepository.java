@@ -5,6 +5,8 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 public interface IUserRepository extends IAbstractRepository<User> {
 
+    User selectByToken(String token);
+
     void insert(User user);
 
     void insertWithPhoto(User user);

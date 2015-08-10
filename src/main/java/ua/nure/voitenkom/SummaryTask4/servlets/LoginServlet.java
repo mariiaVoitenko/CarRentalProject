@@ -20,7 +20,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Map;
 
-@WebServlet(name = "LoginServlet")
+@WebServlet(name = "login")
 public class LoginServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(LoginServlet.class);

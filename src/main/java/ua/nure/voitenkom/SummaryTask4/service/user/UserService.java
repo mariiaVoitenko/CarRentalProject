@@ -17,6 +17,16 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public User selectByToken(final String token) {
+        return transactionManager.doInTransaction(new Operation<User>() {
+            @Override
+            public User doOperation() {
+                return userRepository.selectByToken(token);
+            }
+        });
+    }
+
+    @Override
     public void insert(final User user) {
         transactionManager.doInTransaction(new Operation<Void>() {
             @Override
@@ -87,6 +97,17 @@ public class UserService implements IUserService {
             @Override
             public Boolean doOperation() {
                 return userRepository.checkPassword(login, password);
+            }
+        });
+    }
+
+    @Override
+    public void deleteUser(final int id) {
+        transactionManager.doInTransaction(new Operation<Void>() {
+            @Override
+            public Void doOperation() {
+                userRepository.deleteById(id);
+                return null;
             }
         });
     }
