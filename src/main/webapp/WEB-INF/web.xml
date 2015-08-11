@@ -120,6 +120,15 @@
         <url-pattern>/admin/editCar/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SaveCarServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.SaveCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveCarServlet</servlet-name>
+        <url-pattern>/admin/saveCar/*</url-pattern>
+    </servlet-mapping>
+
 
     <jsp-config>
         <jsp-property-group>

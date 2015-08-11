@@ -37,9 +37,10 @@ public class PhotoService implements IPhotoService {
             }
         }
         String avatarName = generateAvatarName();
-        String path = folder +"/"+ avatarName;
+        String path = folder + "/" + avatarName;
         saveOnDisk(picture, path);
-        user.setPhotoPath(avatarName);
+        String[] splitted = path.split("/");
+        user.setPhotoPath("/" + splitted[splitted.length - 2] + "/" + avatarName);
         logger.debug("Picture has been saved {}", path);
     }
 
@@ -56,7 +57,8 @@ public class PhotoService implements IPhotoService {
         String avatarName = generateAvatarName();
         String path = folder + "/" + avatarName;
         saveOnDisk(picture, path);
-        car.setPhotoPath(avatarName);
+        String[] splitted = path.split("/");
+        car.setPhotoPath("/" + splitted[splitted.length - 2] + "/" + avatarName);
         logger.debug("Picture has been saved {}", path);
     }
 

@@ -176,4 +176,29 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
         }
     }
+
+    @Override
+    public void updateCar(Car car) {
+        String sql = StatementsContainer.SQL_UPDATE_CAR;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setString(1, car.getModel());
+            preparedStatement.setInt(2, car.getPrice());
+            preparedStatement.setInt(3, car.getDoorsCount());
+            preparedStatement.setBoolean(4, car.isHasConditioner());
+            preparedStatement.setInt(5, car.getBigLuggageCount());
+            preparedStatement.setInt(6, car.getSmallLuggageCount());
+            preparedStatement.setInt(7, car.getSitsCount());
+            preparedStatement.setInt(8, car.getClassTypeId());
+            preparedStatement.setInt(9, car.getColorId());
+            preparedStatement.setInt(10, car.getStatusId());
+            preparedStatement.setInt(11, car.getBrandId());
+            preparedStatement.setString(12, car.getPhotoPath());
+            preparedStatement.setInt(13, car.getAvailableCount());
+            preparedStatement.setInt(14, car.getId());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
 }

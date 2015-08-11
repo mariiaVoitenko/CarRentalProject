@@ -124,4 +124,15 @@ public class CarService implements ICarService{
             }
         });
     }
+
+    @Override
+    public void update(final Car car) {
+        transactionManager.doInTransaction(new Operation<Void>() {
+            @Override
+            public Void doOperation() {
+                carRepository.updateCar(car);
+                return null;
+            }
+        });
+    }
 }

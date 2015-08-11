@@ -19,8 +19,8 @@ public class CarFormBean extends Entity {
     private String statusName;
 
     public CarFormBean(int id, String model, int price, int doorsCount,
-               boolean hasConditioner, int bigLuggageCount,
-               int smallLuggageCount, int sitsCount,String brandName, String colorName,String className,String statusName,String photoPath, int availableCount
+                       boolean hasConditioner, int bigLuggageCount,
+                       int smallLuggageCount, int sitsCount, String brandName, String colorName, String className, String statusName, String photoPath, int availableCount
     ) {
         this.setId(id);
         this.model = model;
@@ -32,10 +32,28 @@ public class CarFormBean extends Entity {
         this.sitsCount = sitsCount;
         this.photoPath = photoPath;
         this.availableCount = availableCount;
-        this.className=className;
-        this.brandName=brandName;
-        this.colorName=colorName;
-        this.statusName=statusName;
+        this.className = className;
+        this.brandName = brandName;
+        this.colorName = colorName;
+        this.statusName = statusName;
+    }
+
+    public CarFormBean(String model, int price, int doorsCount,
+                       boolean hasConditioner, int bigLuggageCount,
+                       int smallLuggageCount, int sitsCount, String brandName, String colorName, String className, String statusName, int availableCount
+    ) {
+        this.model = model;
+        this.price = price;
+        this.doorsCount = doorsCount;
+        this.hasConditioner = hasConditioner;
+        this.bigLuggageCount = bigLuggageCount;
+        this.smallLuggageCount = smallLuggageCount;
+        this.sitsCount = sitsCount;
+        this.availableCount = availableCount;
+        this.className = className;
+        this.brandName = brandName;
+        this.colorName = colorName;
+        this.statusName = statusName;
     }
 
     public String getModel() {

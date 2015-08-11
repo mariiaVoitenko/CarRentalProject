@@ -33,6 +33,8 @@
                         <c:if test="${car.hasConditioner}">
                             <img class="small-image" src="<c:url value="/images/ac.gif"/>" height="24" width="23">
                         </c:if>
+                        <span class="small-image paragraph-text">${car.doorsCount} <fmt:message key="doors"/></span>
+                        <span class="price red">${car.price} HRN</span>
                         <br><br><br><br>
 
                         <div class="paragraph-text">
@@ -49,7 +51,10 @@
                             <fmt:message key="status"/> : ${car.statusName}
                         </div>
                         <br>
-                        <br>
+
+                        <div class="paragraph-text">
+                            <fmt:message key="available_count"/> : ${car.availableCount}
+                        </div>
                         <br>
                         <br>
 
@@ -59,7 +64,6 @@
 
                         <form action="deleteCar?id=${car.id}" method="POST">
                             <button class="btn btn-large btn-primary" type="submit"><fmt:message key="delete"/></button>
-
                         </form>
                     </div>
                 </div>

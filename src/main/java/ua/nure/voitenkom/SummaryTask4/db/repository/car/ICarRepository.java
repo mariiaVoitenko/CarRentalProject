@@ -23,4 +23,6 @@ public interface ICarRepository extends IAbstractRepository<Car> {
 
     List<CarFormBean> getFullCarInformation();
 
+    void updateCar(Car car);
+
 }

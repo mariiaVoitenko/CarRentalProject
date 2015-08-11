@@ -30,5 +30,17 @@ public final class Attributes {
     public static final String CLASSES = "classesList";
     public static final String COLORS = "colorsList";
     public static final String STATUSES = "statusesList";
+    public static final String BRAND = "brand";
+    public static final String COLOR = "color";
+    public static final String STATUS = "status";
+    public static final String CLASS = "class";
+    public static final String HAS_CONDITIONER = "hasConditioner";
+    public static final String MODEL = "model";
+    public static final String SITS_COUNT = "sitsCount";
+    public static final String BIG_LUGGAGE_COUNT = "bigLuggageCount";
+    public static final String SMALL_LUGGAGE_COUNT = "smallLuggageCount";
+    public static final String AVAILABLE_COUNT = "availableCount";
+    public static final String PRICE = "price";
+    public static final String DOORS_COUNT = "doorsCount";
 
 }

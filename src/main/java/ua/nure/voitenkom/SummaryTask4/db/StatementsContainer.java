@@ -20,6 +20,9 @@ public class StatementsContainer {
     public static final String SQL_INSERT_CAR = "INSERT INTO cars (model, price, doors_count, has_conditioner, " +
             "big_luggage_count, small_luggage_count, sits_count, classes_id, colors_id, statuses_id, brands_id, photo, " +
             "available_count) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    public static final String SQL_UPDATE_CAR = "UPDATE cars SET model=?, price=?, doors_count=?, has_conditioner=?, " +
+            "big_luggage_count=?, small_luggage_count=?, sits_count=?, classes_id=?, colors_id=?, statuses_id=?, brands_id=?, photo=?, " +
+            "available_count=? WHERE cars.id=?";
     public static final String SQL_UPDATE_CAR_AVAILABLE_COUNT_BY_ID = "UPDATE cars SET available_count = ? WHERE id = ?";
     public static final String SQL_UPDATE_CAR_STATUS_BY_ID = "UPDATE cars SET statuses_id = ? WHERE id = ?";
     public static final String SQL_UPDATE_CAR_PRICE_BY_ID = "UPDATE cars SET price = ? WHERE id = ?";
