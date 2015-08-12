@@ -38,6 +38,10 @@ public class Car extends Entity {
         this.brandId = brandId;
     }
 
+    public Car(){
+
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Car{");

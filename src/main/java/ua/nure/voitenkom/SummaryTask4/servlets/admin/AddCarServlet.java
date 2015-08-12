@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
-import ua.nure.voitenkom.SummaryTask4.db.entity.*;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.brand.BrandService;
@@ -20,22 +20,25 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.Map;
 
-@WebServlet(name = "saveCar")
+@WebServlet(name = "addCar")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
-public class SaveCarServlet extends AdminServlet {
+public class AddCarServlet extends AdminServlet {
 
-    private static final Logger logger = LoggerFactory.getLogger(SaveCarServlet.class);
-    private PhotoService photoService;
+    private static final Logger logger = LoggerFactory.getLogger(AddCarServlet.class);
     private CarService carService;
-    private IValidator<CarFormBean> carFormBeanIValidator = new CarValidator();
-    private StatusService statusService;
     private BrandService brandService;
-    private ColorService colorService;
     private MajorityClassService majorityClassService;
+    private ColorService colorService;
+    private StatusService statusService;
+    private PhotoService photoService;
+    private IValidator<CarFormBean> carFormBeanIValidator = new CarValidator();
 
     @Override
     public void init() throws ServletException {
@@ -48,7 +51,17 @@ public class SaveCarServlet extends AdminServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
+        if (getRoleId(request) != 1) {
+            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
+            return;
+        }
+
+        loadEntities(request, brandService, majorityClassService, colorService, statusService);
+        logger.debug("Dropdowns are loaded");
+
+        RequestDispatcher requestDispatcher = request
+                .getRequestDispatcher(PageNames.ADD_CARS_PAGE);
+        requestDispatcher.forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -57,20 +70,17 @@ public class SaveCarServlet extends AdminServlet {
             return;
         }
         HttpSession session = request.getSession();
-        int id = Integer.parseInt(request.getParameter("id"));
-        Car car = carService.getById(id);
         CarFormBean carFormBean = parseForm(request);
         Part photo = request.getPart(Attributes.PHOTO);
-
+        Car car = new Car();
         Map<String, String> errors = validateData(carFormBean, carFormBeanIValidator);
 
         if (!errors.isEmpty()) {
             session.setAttribute(Attributes.MESSAGE, errors.get("error"));
-            request.setAttribute(Attributes.CAR, car);
             logger.debug("Car selected");
             loadEntities(request, brandService, majorityClassService, colorService, statusService);
             RequestDispatcher requestDispatcher = request
-                    .getRequestDispatcher(PageNames.EDIT_CARS_PAGE);
+                    .getRequestDispatcher(PageNames.ADD_CARS_PAGE);
             requestDispatcher.forward(request, response);
             return;
         }
@@ -83,8 +93,8 @@ public class SaveCarServlet extends AdminServlet {
 
         fillEntity(car, carFormBean, statusService, brandService, colorService, majorityClassService);
 
-        carService.update(car);
-        logger.debug("Car {} was updated", id);
+        carService.add(car);
+        logger.debug("Car was updated");
         response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + PageNames.CARS_MAPPING);
     }
 }

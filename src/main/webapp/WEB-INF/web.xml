@@ -130,6 +130,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>AddCarServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.AddCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCarServlet</servlet-name>
+        <url-pattern>/admin/addCar</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>UsersServlet</servlet-name>
         <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.UsersServlet</servlet-class>
     </servlet>

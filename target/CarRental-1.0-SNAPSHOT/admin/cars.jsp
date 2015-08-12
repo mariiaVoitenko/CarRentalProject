@@ -6,6 +6,11 @@
 </head>
 <body>
 <div class="container">
+
+    <form action="addCar" method="GET">
+        <button class="btn btn-large btn-primary" type="submit"><fmt:message key="add"/></button>
+    </form>
+
     <c:choose>
         <c:when test="${empty requestScope.cars}">
             <fmt:message key="noItems"/>
