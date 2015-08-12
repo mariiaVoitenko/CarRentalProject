@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/header.jsp" %>
 <html>
 <head>
-    <title><fmt:message key="banned_title"/></title>
+    <title>Car details</title>
 </head>
 <body>
 <div class="container">
@@ -29,29 +29,28 @@
             <div class="gap-div40"></div>
             <div class="right-div">
                 <img class="small-image" src="<c:url value="/images/passagerare.gif"/>" height="28"
-                     width="15">x<input type="text" name="sitsCount" placeholder="<fmt:message key="sits_count"/>"
-                                        value='<c:out value="${car.sitsCount}"/>'>
+                     width="15">&nbsp;&nbsp;
+                <input type="text" name="sitsCount" placeholder="<fmt:message key="sits_count"/>"
+                       value='<c:out value="${car.sitsCount}"/>'>
                 <br>
-                <img class="small-image" src="<c:url value="/images/minibagage.gif"/>" height="28"
-                     width="17">x<input type="text" name="smallLuggageCount"
-                                        placeholder="<fmt:message key="small_luggage_count"/>"
-                                        value='<c:out value="${car.smallLuggageCount}"/>'>
+                <img class="small-image" src="<c:url value="/images/minibagage.gif"/>" height="28" width="17">&nbsp;&nbsp;
+                <input type="text" name="smallLuggageCount" placeholder="<fmt:message key="small_luggage_count"/>"
+                       value='<c:out value="${car.smallLuggageCount}"/>'>
                 <br>
-                <img class="small-image" src="<c:url value="/images/bagage.gif"/>" height="28"
-                     width="23">x<input type="text" name="bigLuggageCount"
-                                        placeholder="<fmt:message key="big_luggage_count"/>"
-                                        value='<c:out value="${car.bigLuggageCount}"/>'>
+                <img class="small-image" src="<c:url value="/images/bagage.gif"/>" height="28" width="23">&nbsp;
+                <input type="text" name="bigLuggageCount" placeholder="<fmt:message key="big_luggage_count"/>"
+                       value='<c:out value="${car.bigLuggageCount}"/>'>
                 <br><br>
 
-                <div class="paragraph-text"><fmt:message key="price"/><input type="text" name="price"
-                                                                             placeholder="<fmt:message key="price"/>"
-                                                                             value='<c:out value="${car.price}"/>'>
+                <div class="paragraph-text"><fmt:message key="price"/> :
+                    <input type="text" name="price" placeholder="<fmt:message key="price"/>"
+                           value='<c:out value="${car.price}"/>'>&nbsp; HRN
                 </div>
                 <br>
 
-                <div class="paragraph-text"><fmt:message key="doors"/><input type="text" name="doorsCount"
-                                                                             placeholder="<fmt:message key="doors"/>"
-                                                                             value='<c:out value="${car.doorsCount}"/>'>
+                <div class="paragraph-text"><fmt:message key="doors"/> :
+                    <input type="text" name="doorsCount" placeholder="<fmt:message key="doors"/>"
+                           value='<c:out value="${car.doorsCount}"/>'>
                 </div>
 
                 <br>
@@ -116,13 +115,11 @@
                 <br>
                 <br>
                 <br>
-
-
                 <button class="btn btn-large btn-primary" type="submit"><fmt:message key="save"/></button>
+            </div>
+        </div>
     </form>
 
-</div>
-</div>
 </div>
 <div class="container center-input">
     <h3 class="middle-headline">${message}</h3>

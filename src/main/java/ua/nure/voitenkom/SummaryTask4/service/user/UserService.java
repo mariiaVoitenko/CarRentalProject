@@ -6,6 +6,8 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
+import java.util.List;
+
 public class UserService implements IUserService {
 
     private final ITransactionManager transactionManager;
@@ -22,6 +24,16 @@ public class UserService implements IUserService {
             @Override
             public User doOperation() {
                 return userRepository.selectByToken(token);
+            }
+        });
+    }
+
+    @Override
+    public User selectById(final int id) {
+        return transactionManager.doInTransaction(new Operation<User>() {
+            @Override
+            public User doOperation() {
+                return userRepository.selectById(id);
             }
         });
     }
@@ -108,6 +120,16 @@ public class UserService implements IUserService {
             public Void doOperation() {
                 userRepository.deleteById(id);
                 return null;
+            }
+        });
+    }
+
+    @Override
+    public List<User> getAll() {
+        return transactionManager.doInTransaction(new Operation<List<User>>() {
+            @Override
+            public List<User> doOperation() {
+                return userRepository.selectAll();
             }
         });
     }

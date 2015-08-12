@@ -42,5 +42,6 @@ public final class Attributes {
     public static final String AVAILABLE_COUNT = "availableCount";
     public static final String PRICE = "price";
     public static final String DOORS_COUNT = "doorsCount";
+    public static final String USERS = "users";
 
 }

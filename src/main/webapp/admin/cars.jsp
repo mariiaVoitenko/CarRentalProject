@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/header.jsp" %>
 <html>
 <head>
-    <title><fmt:message key="banned_title"/></title>
+    <title>All cars></title>
 </head>
 <body>
 <div class="container">
@@ -33,7 +33,7 @@
                         <c:if test="${car.hasConditioner}">
                             <img class="small-image" src="<c:url value="/images/ac.gif"/>" height="24" width="23">
                         </c:if>
-                        <span class="small-image paragraph-text">${car.doorsCount} <fmt:message key="doors"/></span>
+                        <span class="small-image paragraph-text">${car.doorsCount}&nbsp;<fmt:message key="doors"/></span>
                         <span class="price red">${car.price} HRN</span>
                         <br><br><br><br>
 

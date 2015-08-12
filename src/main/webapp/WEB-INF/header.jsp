@@ -59,7 +59,7 @@
                                     class="caret"></b></a>
                             <ul role="menu" class="dropdown-menu">
                                 <li><a class="paragraph-text" href="/admin/cars"><fmt:message key="cars"/></a></li>
-                                <li><a class="paragraph-text" href="#"><fmt:message key="users"/></a></li>
+                                <li><a class="paragraph-text" href="/admin/users"><fmt:message key="users"/></a></li>
                                 <li><a class="paragraph-text" href="#"><fmt:message key="managers"/></a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">TODO</a></li>

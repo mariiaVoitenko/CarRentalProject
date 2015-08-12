@@ -15,5 +15,5 @@ public class PageNames {
     public static final String EDIT_CARS_PAGE = "editCar.jsp";
     public static final String ADMIN = "admin/";
     public static final String EDIT_CAR = "editCar?id=";
-
+    public static final String USERS_PAGE = "users.jsp";
 }

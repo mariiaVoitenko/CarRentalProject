@@ -53,11 +53,9 @@ public class SaveCarServlet extends AdminServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (getRoleId(request) != 1) {
-            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
-            return;
-        }
+        doPost(request, response);
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (getRoleId(request) != 1) {
             response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
@@ -70,26 +68,12 @@ public class SaveCarServlet extends AdminServlet {
         Part photo = request.getPart(Attributes.PHOTO);
 
         Map<String, String> errors = validateData(carFormBean);
+
         if (!errors.isEmpty()) {
             session.setAttribute(Attributes.MESSAGE, errors.get("error"));
             request.setAttribute(Attributes.CAR, car);
             logger.debug("Car selected");
-
-            List<Brand> brands = brandService.getAll();
-            request.setAttribute(Attributes.BRANDS, brands);
-            logger.debug("Brands selected");
-
-            List<MajorityClass> majorityClasses = majorityClassService.getAll();
-            request.setAttribute(Attributes.CLASSES, majorityClasses);
-            logger.debug("Classes selected");
-
-            List<Color> colors = colorService.getAll();
-            request.setAttribute(Attributes.COLORS, colors);
-            logger.debug("Colors selected");
-
-            List<Status> statuses = statusService.getAll();
-            request.setAttribute(Attributes.STATUSES, statuses);
-            logger.debug("Statuses selected");
+            loadEntities(request, brandService, majorityClassService, colorService, statusService);
             RequestDispatcher requestDispatcher = request
                     .getRequestDispatcher(PageNames.EDIT_CARS_PAGE);
             requestDispatcher.forward(request, response);
@@ -97,26 +81,13 @@ public class SaveCarServlet extends AdminServlet {
         }
         if (photo != null) {
             if (isPhotoIncorrect(photo)) {
-                errors.put("error", "Some error occured");
+                errors.put("error", "Some error with photo has occurred");
             }
             photoService.saveCarPicture(car, photo);
         }
-        car.setModel(carFormBean.getModel());
-        car.setBigLuggageCount(carFormBean.getBigLuggageCount());
-        car.setDoorsCount(carFormBean.getDoorsCount());
-        car.setHasConditioner(carFormBean.isHasConditioner());
-        car.setSmallLuggageCount(carFormBean.getSmallLuggageCount());
-        car.setPrice(carFormBean.getPrice());
-        car.setSitsCount(carFormBean.getSitsCount());
-        Brand brand = brandService.selectByName(carFormBean.getBrandName());
-        car.setBrandId(brand.getId());
-        Color color = colorService.selectByName(carFormBean.getColorName());
-        car.setColorId(color.getId());
-        Status status = statusService.selectByName(carFormBean.getStatusName());
-        car.setStatusId(status.getId());
-        MajorityClass majorityClass = majorityClassService.selectByName(carFormBean.getClassName());
-        car.setClassTypeId(majorityClass.getId());
-        car.setAvailableCount(carFormBean.getAvailableCount());
+
+        fillEntity(car, carFormBean);
+
         carService.update(car);
         logger.debug("Car {} was updated", id);
         response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + "cars");
@@ -146,5 +117,24 @@ public class SaveCarServlet extends AdminServlet {
     private Map<String, String> validateData(CarFormBean carFormBean) {
         Map<String, String> errors = carFormBeanIValidator.validate(carFormBean);
         return errors;
+    }
+
+    private void fillEntity(Car car, CarFormBean carFormBean) {
+        car.setModel(carFormBean.getModel());
+        car.setBigLuggageCount(carFormBean.getBigLuggageCount());
+        car.setDoorsCount(carFormBean.getDoorsCount());
+        car.setHasConditioner(carFormBean.isHasConditioner());
+        car.setSmallLuggageCount(carFormBean.getSmallLuggageCount());
+        car.setPrice(carFormBean.getPrice());
+        car.setSitsCount(carFormBean.getSitsCount());
+        Brand brand = brandService.selectByName(carFormBean.getBrandName());
+        car.setBrandId(brand.getId());
+        Color color = colorService.selectByName(carFormBean.getColorName());
+        car.setColorId(color.getId());
+        Status status = statusService.selectByName(carFormBean.getStatusName());
+        car.setStatusId(status.getId());
+        MajorityClass majorityClass = majorityClassService.selectByName(carFormBean.getClassName());
+        car.setClassTypeId(majorityClass.getId());
+        car.setAvailableCount(carFormBean.getAvailableCount());
     }
 }

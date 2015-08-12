@@ -50,21 +50,7 @@ public class EditCarServlet extends AdminServlet {
         request.setAttribute(Attributes.CAR, car);
         logger.debug("Car selected");
 
-        List<Brand> brands = brandService.getAll();
-        request.setAttribute(Attributes.BRANDS, brands);
-        logger.debug("Brands selected");
-
-        List<MajorityClass> majorityClasses = majorityClassService.getAll();
-        request.setAttribute(Attributes.CLASSES, majorityClasses);
-        logger.debug("Classes selected");
-
-        List<Color> colors = colorService.getAll();
-        request.setAttribute(Attributes.COLORS, colors);
-        logger.debug("Colors selected");
-
-        List<Status> statuses = statusService.getAll();
-        request.setAttribute(Attributes.STATUSES, statuses);
-        logger.debug("Statuses selected");
+        loadEntities(request, brandService, majorityClassService, colorService, statusService);
 
         RequestDispatcher requestDispatcher = request
                 .getRequestDispatcher(PageNames.EDIT_CARS_PAGE);
