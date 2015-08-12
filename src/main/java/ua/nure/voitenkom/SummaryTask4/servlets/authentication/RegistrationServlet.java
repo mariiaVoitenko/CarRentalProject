@@ -68,6 +68,7 @@ public class RegistrationServlet extends AuthenticationServlet {
         RegistrationFormBean registrationFormBean = parseForm(request);
         Part photo = request.getPart(Attributes.PHOTO);
         Map<String, String> errors = validateData(registrationFormBean, photo);
+
         if (!errors.isEmpty()) {
             logger.debug("Validation problems");
             if (errors.get("login") != null) {
@@ -88,7 +89,16 @@ public class RegistrationServlet extends AuthenticationServlet {
         String token = TokenService.getToken();
         Timestamp now = DateService.getCurrentDate();
         User newUser = new User(registrationFormBean.getFullName(), token, registrationFormBean.getPassportNumber(), roleId, cipherPassword, registrationFormBean.getLogin(), now);
-        photoService.saveUserPicture(newUser, photo);
+
+        if (!(photo.getSize() == 0)) {
+            if (isPhotoIncorrect(photo)) {
+                errors.put("error", "Some error with photo has occurred");
+                return;
+            }
+            photoService.saveUserPicture(newUser, photo);
+        } else {
+            newUser.setPhotoPath("/images/user.png");
+        }
         userService.insertWithPhoto(newUser);
         logger.debug("User {} was added", newUser);
         try {
@@ -102,9 +112,6 @@ public class RegistrationServlet extends AuthenticationServlet {
 
     private Map<String, String> validateData(RegistrationFormBean registrationFormBean, Part photo) {
         Map<String, String> errors = userValidator.validate(registrationFormBean);
-        if (isPhotoIncorrect(photo)) {
-            errors.put("photo", "Some error occured");
-        }
         if (errors.isEmpty() && userService.findByLogin(registrationFormBean.getLogin()) != null) {
             errors.put("login", "Login already exists");
         }
@@ -115,7 +122,7 @@ public class RegistrationServlet extends AuthenticationServlet {
     }
 
     private boolean isPhotoIncorrect(Part photo) {
-        return photo == null || !"image/jpeg".equals(photo.getContentType()) || photo.getSize() == 0;
+        return photo == null || !"image/jpeg".equals(photo.getContentType());
     }
 
     private RegistrationFormBean parseForm(HttpServletRequest request) {
