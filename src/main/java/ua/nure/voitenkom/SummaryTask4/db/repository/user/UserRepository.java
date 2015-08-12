@@ -54,6 +54,19 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     }
 
     @Override
+    public void changeRole(int roleId, int userId) {
+        String sql = StatementsContainer.SQL_UPDATE_USER_ROLE;
+        try (PreparedStatement ps = getConnection().prepareStatement(sql)) {
+            ps.setInt(1, roleId);
+            ps.setInt(2, userId);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
     public void unblock(int id) {
         String sql = StatementsContainer.SQL_UPDATE_USER_BLOCKED_NOT;
         try (PreparedStatement ps = getConnection().prepareStatement(sql)) {

@@ -22,6 +22,8 @@ public final class Attributes {
     public static final String COOKIE_LANG_TIMEOUT = "CookieLangTimeout";
 
     public static final String UNREGISTERED_USER_VALUE = "Unregistered user";
+    public static final String MANAGER_USER_VALUE = "Manager";
+    public static final String USER_VALUE = "User";
 
     public static final String PICTURES_FOLDER = "picturesFolder";
     public static final String CARS = "cars";

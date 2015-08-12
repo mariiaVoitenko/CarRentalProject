@@ -82,6 +82,17 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public void changeRole(final int roleId, final int userId) {
+        transactionManager.doInTransaction(new Operation<Void>() {
+            @Override
+            public Void doOperation() {
+                userRepository.changeRole(roleId,userId);
+                return null;
+            }
+        });
+    }
+
+    @Override
     public void unblock(final int id) {
         transactionManager.doInTransaction(new Operation<Void>() {
             @Override

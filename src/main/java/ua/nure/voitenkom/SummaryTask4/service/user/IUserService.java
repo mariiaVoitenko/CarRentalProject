@@ -28,4 +28,6 @@ public interface IUserService {
 
     User selectById(int id);
 
+    void changeRole(int roleId, int userId);
+
 }

@@ -19,6 +19,9 @@
                     <div class="middle-headline">
                             ${user.login}
                     </div>
+                    <div class="middle-headline">
+                        <c:if test="${user.roleId == 4}"><fmt:message key="manager"/></c:if>
+                    </div>
                     <img src="<c:url value="${user.photoPath}"/>" alt="user" height="200" width="200">
                 </div>
                 <div class="gap-div40"></div>
@@ -27,6 +30,7 @@
                         <fmt:message key="passport"/> : ${user.passportNumber}
                     </div>
                     <br>
+
                     <div class="paragraph-text">
                         <fmt:message key="is_blocked"/> :
                         <c:choose>
@@ -35,6 +39,7 @@
                         </c:choose>
                         <br>
                         <br>
+
                         <form action="block?id=${user.id}" method="POST">
                             <button class="btn btn-large btn-primary" type="submit">
                                 <c:choose>
@@ -42,6 +47,16 @@
                                     <c:otherwise><fmt:message key="block"/></c:otherwise>
                                 </c:choose>
                             </button>
+                        </form>
+
+                        <form action="makeManager?id=${user.id}" method="POST">
+                            <c:choose>
+                                <c:when test="${user.roleId == 4}"></c:when>
+                                <c:otherwise>
+                                    <button class="btn btn-large btn-primary" type="submit"><fmt:message
+                                            key="make_manager"/></button>
+                                </c:otherwise>
+                            </c:choose>
                         </form>
                     </div>
                 </div>

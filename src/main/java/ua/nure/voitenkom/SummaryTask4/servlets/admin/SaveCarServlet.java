@@ -90,7 +90,7 @@ public class SaveCarServlet extends AdminServlet {
 
         carService.update(car);
         logger.debug("Car {} was updated", id);
-        response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + "cars");
+        response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + PageNames.CARS_MAPPING);
     }
 
     private boolean isPhotoIncorrect(Part photo) {

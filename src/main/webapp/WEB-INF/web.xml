@@ -139,12 +139,21 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>BlockUserServlet</servlet-name>
-        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.BlockUserServlet</servlet-class>
-    </servlet>
+    <servlet-name>BlockUserServlet</servlet-name>
+    <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.BlockUserServlet</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>BlockUserServlet</servlet-name>
         <url-pattern>/admin/block/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MakeManagerServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.MakeManagerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MakeManagerServlet</servlet-name>
+        <url-pattern>/admin/makeManager/*</url-pattern>
     </servlet-mapping>
 
     <jsp-config>

@@ -31,7 +31,7 @@ public class DeleteCarServlet extends AdminServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         carService.delete(id);
         logger.debug("Deleted car with id {}", id);
-        response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + "cars");
+        response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + PageNames.CARS_MAPPING);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

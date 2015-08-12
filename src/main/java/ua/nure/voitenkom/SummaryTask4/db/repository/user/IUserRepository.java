@@ -20,4 +20,6 @@ public interface IUserRepository extends IAbstractRepository<User> {
     void setRegisteredState(int id);
 
     boolean checkPassword(String login, String password);
+
+    void changeRole(int roleId, int userId);
 }

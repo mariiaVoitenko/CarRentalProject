@@ -4,9 +4,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.account.DateService;
+import ua.nure.voitenkom.SummaryTask4.service.role.RoleService;
 import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 
 import javax.servlet.ServletException;
@@ -22,10 +24,12 @@ import java.io.IOException;
 public class RegistrationConfirmationServlet extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(RegistrationServlet.class);
     private UserService userService;
+    private RoleService roleService;
 
     @Override
     public void init() throws ServletException {
         userService = (UserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
+        roleService = (RoleService) getServletContext().getAttribute(ServiceConstant.ROLE_SERVICE_CONTEXT);
     }
 
     @Override
@@ -41,6 +45,8 @@ public class RegistrationConfirmationServlet extends HttpServlet {
         }
         user.setIsRegistered(true);
         userService.setRegisteredState(user.getId());
+        Role registeredUserRole = roleService.selectByName(Attributes.USER_VALUE);
+        userService.changeRole(registeredUserRole.getId(),user.getId());
         logger.debug("User {} was registered", user);
         response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.SUCCESS_CONFIRMATION_PAGE);
     }
