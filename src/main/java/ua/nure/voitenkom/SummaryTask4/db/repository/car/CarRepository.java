@@ -96,19 +96,6 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     }
 
     @Override
-    public void updateAvailableCount(Car car) {
-        String sql = StatementsContainer.SQL_UPDATE_CAR_AVAILABLE_COUNT_BY_ID;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setInt(1, car.getAvailableCount());
-            preparedStatement.setInt(2, car.getId());
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
-            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
-        }
-    }
-
-    @Override
     public void updateStatus(Car car) {
         String sql = StatementsContainer.SQL_UPDATE_CAR_STATUS_BY_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
@@ -150,7 +137,6 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
             preparedStatement.setInt(10, car.getStatusId());
             preparedStatement.setInt(11, car.getBrandId());
             preparedStatement.setString(12, car.getPhotoPath());
-            preparedStatement.setInt(13, car.getAvailableCount());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
@@ -193,8 +179,7 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
             preparedStatement.setInt(10, car.getStatusId());
             preparedStatement.setInt(11, car.getBrandId());
             preparedStatement.setString(12, car.getPhotoPath());
-            preparedStatement.setInt(13, car.getAvailableCount());
-            preparedStatement.setInt(14, car.getId());
+            preparedStatement.setInt(13, car.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);

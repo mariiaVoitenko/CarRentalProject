@@ -42,6 +42,11 @@ public class LoginServlet extends AuthenticationServlet {
                 if (!user.isBlocked() && user.isRegistered()) {
                     authorize(user, request);
                     logger.debug("User {} was authenticated", user);
+                    HttpSession session = request.getSession();
+                    if (session.getAttribute(Attributes.START_DATE) != null && session.getAttribute(Attributes.END_DATE) != null) {
+                        response.sendRedirect(PageNames.CAR_RENT_MAPPING);
+                        return;
+                    }
                     response.sendRedirect(PageNames.MAIN_PAGE);
                     return;
                 } else {

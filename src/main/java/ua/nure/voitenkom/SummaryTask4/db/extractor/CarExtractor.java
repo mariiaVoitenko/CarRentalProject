@@ -24,9 +24,7 @@ public class CarExtractor implements IExtractor<Car> {
         int statusId = resultSet.getInt(FieldsContainer.FIELD_STATUSES_ID);
         int brandId = resultSet.getInt(FieldsContainer.FIELD_BRANDS_ID);
         String photoPath = resultSet.getString(FieldsContainer.FIELD_PHOTO);
-        int availableCount = resultSet.getInt(FieldsContainer.FIELD_AVAILABLE_COUNT);
         return new Car(id, model, price, doorsCount, hasConditioner, bigLuggageCount,
-                smallLuggageCount, sitsCount, classId, colorId, statusId, brandId, photoPath,
-                availableCount);
+                smallLuggageCount, sitsCount, classId, colorId, statusId, brandId, photoPath);
     }
 }

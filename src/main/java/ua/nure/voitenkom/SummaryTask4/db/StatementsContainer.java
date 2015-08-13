@@ -18,17 +18,14 @@ public class StatementsContainer {
     public static final String SQL_SELECT_CAR_CLASS_BY_ID = "SELECT classes.name FROM classes, cars WHERE cars.id = ? AND " +
             "cars.classes_id = classes.id";
     public static final String SQL_INSERT_CAR = "INSERT INTO cars (model, price, doors_count, has_conditioner, " +
-            "big_luggage_count, small_luggage_count, sits_count, classes_id, colors_id, statuses_id, brands_id, photo, " +
-            "available_count) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            "big_luggage_count, small_luggage_count, sits_count, classes_id, colors_id, statuses_id, brands_id, photo) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
     public static final String SQL_UPDATE_CAR = "UPDATE cars SET model=?, price=?, doors_count=?, has_conditioner=?, " +
-            "big_luggage_count=?, small_luggage_count=?, sits_count=?, classes_id=?, colors_id=?, statuses_id=?, brands_id=?, photo=?, " +
-            "available_count=? WHERE cars.id=?";
-    public static final String SQL_UPDATE_CAR_AVAILABLE_COUNT_BY_ID = "UPDATE cars SET available_count = ? WHERE id = ?";
+            "big_luggage_count=?, small_luggage_count=?, sits_count=?, classes_id=?, colors_id=?, statuses_id=?, brands_id=?, photo=? WHERE cars.id=?";
     public static final String SQL_UPDATE_CAR_STATUS_BY_ID = "UPDATE cars SET statuses_id = ? WHERE id = ?";
     public static final String SQL_UPDATE_CAR_PRICE_BY_ID = "UPDATE cars SET price = ? WHERE id = ?";
     public static final String SQL_DELETE_CAR_BY_ID = "DELETE FROM cars WHERE id = ?";
     public static final String SQL_SELECT_ALL_CAR_INFORMATION =  "SELECT cars.id, cars.model, price, doors_count, has_conditioner, " +
-            "big_luggage_count, small_luggage_count, sits_count, photo, available_count, classes.name AS class_name, brands.name AS brand_name, \n" +
+            "big_luggage_count, small_luggage_count, sits_count, photo, classes.name AS class_name, brands.name AS brand_name, \n" +
             "colors.name AS color_name, statuses.name AS status_name FROM cars, classes, colors, statuses,\n" +
             "brands WHERE cars.classes_id = classes.id AND cars.brands_id = brands.id AND colors.id = cars.colors_id " +
             "AND statuses.id = cars.statuses_id";
@@ -97,6 +94,11 @@ public class StatementsContainer {
     public static final String SQL_UPDATE_RENT_BY_ID = "UPDATE rents SET is_driven = ?, days = ?, cars_id = ?, " +
             "users_id = ?, declines_id = ?, checks_id = ?, start_date = ?, end_date = ? WHERE id = ?";
     public static final String SQL_DELETE_RENT_BY_ID = "DELETE FROM rents WHERE id = ?";
+    //1. start_date = start
+    //2. end_date = end
+    //3. end_date = start
+    //4. start_date = end
+    public static final String SQL_SELECT_RENT_BY_DATE ="SELECT * FROM rents WHERE start_date >= ? AND end_date <= ? OR end_date >= ? AND start_date <= ?";
 
     // roles
     public static final String SQL_SELECT_ALL_ROLES = "SELECT * FROM roles";

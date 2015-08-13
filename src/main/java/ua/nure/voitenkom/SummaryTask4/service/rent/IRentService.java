@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.service.rent;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface IRentService {
@@ -11,5 +12,7 @@ public interface IRentService {
     void update(Rent rent);
 
     List<Rent> selectAllForUser(int id);
+
+    List<Rent> selectRentsForDates(Timestamp start, Timestamp end);
 
 }

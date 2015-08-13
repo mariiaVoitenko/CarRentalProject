@@ -46,8 +46,14 @@ public class RegistrationConfirmationServlet extends HttpServlet {
         user.setIsRegistered(true);
         userService.setRegisteredState(user.getId());
         Role registeredUserRole = roleService.selectByName(Attributes.USER_VALUE);
-        userService.changeRole(registeredUserRole.getId(),user.getId());
+        userService.changeRole(registeredUserRole.getId(), user.getId());
         logger.debug("User {} was registered", user);
+
+        HttpSession session = request.getSession();
+        if (session.getAttribute(Attributes.START_DATE) != null && session.getAttribute(Attributes.END_DATE) != null) {
+            response.sendRedirect(PageNames.CAR_RENT_MAPPING);
+            return;
+        }
         response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.SUCCESS_CONFIRMATION_PAGE);
     }
 

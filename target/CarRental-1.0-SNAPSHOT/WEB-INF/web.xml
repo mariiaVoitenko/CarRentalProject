@@ -165,6 +165,15 @@
         <url-pattern>/admin/makeManager/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>RentCarServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.user.RentCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RentCarServlet</servlet-name>
+        <url-pattern>/rentCar/*</url-pattern>
+    </servlet-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

@@ -13,15 +13,29 @@
         <div class="left-div">
             <img src="<c:url value="/images/logo_trans.png"/>" alt="Logo" height="385" width="445">
         </div>
-        <div class="right-div">
-            <div class="large-headline logo-text">We can help you to rent a nice car</div>
+        <div class="right-div center-input marginned">
+            <div class="large-headline">We can help you to rent a nice car</div>
+            <br>
             <br>
 
-            <div class="middle-headline logo-text">Best Final Car Rental Rates! NO Hidden Extra Charges!</div>
+            <form action="rentCar" method="GET">
+                <div>
+                    <fmt:message key="rental_start"/> : <input type="date" name="start">
+                </div>
+                <br>
+
+                <div>
+                    <fmt:message key="rental_end"/> : <input type="date" name="end">
+                </div>
+                <br>
+                <button class="btn btn-large btn-primary marginned" type="submit"><fmt:message key="rent"/></button>
+            </form>
         </div>
     </div>
 </div>
-
+<div class="container center-input">
+    <h3 class="middle-headline">${message}</h3>
+</div>
 <%@ include file="/WEB-INF/footer.jsp" %>
 
 </body>

@@ -97,10 +97,6 @@
                 </div>
                 <br>
 
-                <div class="paragraph-text">
-                    <fmt:message key="available_count"/> : <input type="text" name="availableCount"
-                                                                  placeholder="<fmt:message key="available_count"/>">
-                </div>
                 <br>
                 <br>
                 <br>

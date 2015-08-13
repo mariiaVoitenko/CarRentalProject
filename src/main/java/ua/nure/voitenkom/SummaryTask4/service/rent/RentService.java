@@ -7,6 +7,7 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public class RentService implements IRentService {
@@ -47,6 +48,16 @@ public class RentService implements IRentService {
             @Override
             public List<Rent> doOperation() {
                 return rentRepository.selectAllForUser(id);
+            }
+        });
+    }
+
+    @Override
+    public List<Rent> selectRentsForDates(final Timestamp start, final Timestamp end) {
+        return transactionManager.doInTransaction(new Operation<List<Rent>>() {
+            @Override
+            public List<Rent> doOperation() {
+                return rentRepository.selectRentsForDates(start, end);
             }
         });
     }

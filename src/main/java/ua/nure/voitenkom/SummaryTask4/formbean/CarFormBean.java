@@ -12,7 +12,6 @@ public class CarFormBean extends Entity {
     private int smallLuggageCount;
     private int sitsCount;
     private String photoPath;
-    private int availableCount;
     private String brandName;
     private String colorName;
     private String className;
@@ -20,8 +19,7 @@ public class CarFormBean extends Entity {
 
     public CarFormBean(int id, String model, int price, int doorsCount,
                        boolean hasConditioner, int bigLuggageCount,
-                       int smallLuggageCount, int sitsCount, String brandName, String colorName, String className, String statusName, String photoPath, int availableCount
-    ) {
+                       int smallLuggageCount, int sitsCount, String brandName, String colorName, String className, String statusName, String photoPath) {
         this.setId(id);
         this.model = model;
         this.price = price;
@@ -31,7 +29,6 @@ public class CarFormBean extends Entity {
         this.smallLuggageCount = smallLuggageCount;
         this.sitsCount = sitsCount;
         this.photoPath = photoPath;
-        this.availableCount = availableCount;
         this.className = className;
         this.brandName = brandName;
         this.colorName = colorName;
@@ -40,8 +37,7 @@ public class CarFormBean extends Entity {
 
     public CarFormBean(String model, int price, int doorsCount,
                        boolean hasConditioner, int bigLuggageCount,
-                       int smallLuggageCount, int sitsCount, String brandName, String colorName, String className, String statusName, int availableCount
-    ) {
+                       int smallLuggageCount, int sitsCount, String brandName, String colorName, String className, String statusName) {
         this.model = model;
         this.price = price;
         this.doorsCount = doorsCount;
@@ -49,7 +45,6 @@ public class CarFormBean extends Entity {
         this.bigLuggageCount = bigLuggageCount;
         this.smallLuggageCount = smallLuggageCount;
         this.sitsCount = sitsCount;
-        this.availableCount = availableCount;
         this.className = className;
         this.brandName = brandName;
         this.colorName = colorName;
@@ -86,14 +81,6 @@ public class CarFormBean extends Entity {
 
     public void setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
-    }
-
-    public int getAvailableCount() {
-        return availableCount;
-    }
-
-    public void setAvailableCount(int availableCount) {
-        this.availableCount = availableCount;
     }
 
     public int getSitsCount() {
@@ -171,7 +158,6 @@ public class CarFormBean extends Entity {
         sb.append(", smallLuggageCount=").append(smallLuggageCount);
         sb.append(", sitsCount=").append(sitsCount);
         sb.append(", photoPath='").append(photoPath).append('\'');
-        sb.append(", availableCount=").append(availableCount);
         sb.append(", brandName='").append(brandName).append('\'');
         sb.append(", colorName='").append(colorName).append('\'');
         sb.append(", className='").append(className).append('\'');

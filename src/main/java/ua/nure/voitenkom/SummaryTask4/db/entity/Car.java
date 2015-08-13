@@ -10,7 +10,6 @@ public class Car extends Entity {
     private int smallLuggageCount;
     private int sitsCount;
     private String photoPath;
-    private int availableCount;
     private int classTypeId;
     private int colorId;
     private int statusId;
@@ -20,7 +19,7 @@ public class Car extends Entity {
                boolean hasConditioner, int bigLuggageCount,
                int smallLuggageCount, int sitsCount,
                int classTypeId, int colorId, int statusId, int brandId,
-               String photoPath, int availableCount
+               String photoPath
     ) {
         this.setId(id);
         this.model = model;
@@ -31,7 +30,6 @@ public class Car extends Entity {
         this.smallLuggageCount = smallLuggageCount;
         this.sitsCount = sitsCount;
         this.photoPath = photoPath;
-        this.availableCount = availableCount;
         this.colorId = colorId;
         this.classTypeId = classTypeId;
         this.statusId = statusId;
@@ -54,7 +52,6 @@ public class Car extends Entity {
         sb.append(", smallLuggageCount=").append(smallLuggageCount);
         sb.append(", sitsCount=").append(sitsCount);
         sb.append(", photoPath='").append(photoPath).append('\'');
-        sb.append(", availableCount=").append(availableCount);
         sb.append(", classTypeId=").append(classTypeId);
         sb.append(", colorId=").append(colorId);
         sb.append(", statusId=").append(statusId);
@@ -94,14 +91,6 @@ public class Car extends Entity {
 
     public void setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
-    }
-
-    public int getAvailableCount() {
-        return availableCount;
-    }
-
-    public void setAvailableCount(int availableCount) {
-        this.availableCount = availableCount;
     }
 
     public int getClassTypeId() {

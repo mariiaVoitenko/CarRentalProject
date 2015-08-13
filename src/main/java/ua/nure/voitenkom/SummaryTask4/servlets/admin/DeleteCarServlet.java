@@ -24,10 +24,7 @@ public class DeleteCarServlet extends AdminServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (getRoleId(request) != 1) {
-            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
-            return;
-        }
+        checkRole(request, response);
         int id = Integer.parseInt(request.getParameter("id"));
         carService.delete(id);
         logger.debug("Deleted car with id {}", id);

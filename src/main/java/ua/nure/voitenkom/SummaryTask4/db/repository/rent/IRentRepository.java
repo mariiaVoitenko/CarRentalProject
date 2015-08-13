@@ -4,6 +4,7 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface IRentRepository extends IAbstractRepository<Rent> {
@@ -13,5 +14,7 @@ public interface IRentRepository extends IAbstractRepository<Rent> {
     void update(Rent rent);
 
     List<Rent> selectAllForUser(int id);
+
+    List<Rent> selectRentsForDates(Timestamp start, Timestamp end);
 
 }

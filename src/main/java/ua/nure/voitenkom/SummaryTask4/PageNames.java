@@ -19,4 +19,6 @@ public class PageNames {
     public static final String USERS_PAGE = "users.jsp";
     public static final String USERS_MAPPING = "users";
     public static final String CARS_MAPPING = "cars";
+    public static final String RENT_CARS_PAGE = "pages/rentCars.jsp";
+    public static final String CAR_RENT_MAPPING = "/rentCar";
 }

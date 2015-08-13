@@ -52,10 +52,7 @@ public class SaveCarServlet extends AdminServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (getRoleId(request) != 1) {
-            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
-            return;
-        }
+        checkRole(request, response);
         HttpSession session = request.getSession();
         int id = Integer.parseInt(request.getParameter("id"));
         Car car = carService.getById(id);
@@ -74,7 +71,7 @@ public class SaveCarServlet extends AdminServlet {
             requestDispatcher.forward(request, response);
             return;
         }
-        if (photo != null) {
+        if (photo.getSize() != 0) {
             if (isPhotoIncorrect(photo)) {
                 errors.put("error", "Some error with photo has occurred");
             }

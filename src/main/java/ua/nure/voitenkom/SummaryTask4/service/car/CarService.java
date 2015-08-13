@@ -82,16 +82,6 @@ public class CarService implements ICarService{
         });
     }
 
-    @Override
-    public void updateAvailableCount(final Car car) {
-       transactionManager.doInTransaction(new Operation<Void>() {
-            @Override
-            public Void doOperation() {
-                carRepository.updateAvailableCount(car);
-                return null;
-            }
-        });
-    }
 
     @Override
     public void updateStatus(final Car car) {

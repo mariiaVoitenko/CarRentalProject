@@ -20,13 +20,11 @@ public class CarFormBeanExtractor implements IExtractor<CarFormBean> {
         int smallLuggageCount = resultSet.getInt(FieldsContainer.FIELD_SMALL_LUGGAGE_COUNT);
         int sitsCount = resultSet.getInt(FieldsContainer.FIELD_SITS_COUNT);
         String photoPath = resultSet.getString(FieldsContainer.FIELD_PHOTO);
-        int availableCount = resultSet.getInt(FieldsContainer.FIELD_AVAILABLE_COUNT);
         String className = resultSet.getString(FieldsContainer.FIELD_CLASS_NAME);
         String brandName = resultSet.getString(FieldsContainer.FIELD_BRAND_NAME);
         String colorName = resultSet.getString(FieldsContainer.FIELD_COLOR_NAME);
         String statusName = resultSet.getString(FieldsContainer.FIELD_STATUS_NAME);
         return new CarFormBean(id, model, price, doorsCount, hasConditioner, bigLuggageCount,
-                smallLuggageCount, sitsCount, brandName, colorName, className, statusName, photoPath,
-                availableCount);
+                smallLuggageCount, sitsCount, brandName, colorName, className, statusName, photoPath);
     }
 }

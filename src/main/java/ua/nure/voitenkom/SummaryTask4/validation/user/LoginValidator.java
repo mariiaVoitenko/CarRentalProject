@@ -35,7 +35,7 @@ public class LoginValidator implements IValidator<LoginFormBean> {
 
     private Map<String, String> checkEmptyLogin(String login, Map<String, String> errorMap) {
         if (isEmpty(login)) {
-            errorMap.put("login", "empty Login.");
+            errorMap.put("login", "Empty Login.");
         }
         return errorMap;
     }
@@ -43,7 +43,7 @@ public class LoginValidator implements IValidator<LoginFormBean> {
     private Map<String, String> checkMail(String login, Map<String, String> errorMap) {
         if (!ifMail(login)) {
             String error = errorMap.get("login");
-            errorMap.put("login", error + "login is not email.");
+            errorMap.put("login", error + "Login is not email.");
         }
         return errorMap;
     }
@@ -51,14 +51,14 @@ public class LoginValidator implements IValidator<LoginFormBean> {
     private Map<String, String> checkOnlyNumbers(String login, Map<String, String> errorMap) {
         if (ifNumber(login)) {
             String error = errorMap.get("login");
-            errorMap.put("login", error + "login contains only numbers.");
+            errorMap.put("login", error + "Login contains only numbers.");
         }
         return errorMap;
     }
 
     private Map<String, String> checkEmptyPassword(String password, Map<String, String> errorMap) {
         if (isEmpty(password)) {
-            errorMap.put("password", "empty password.");
+            errorMap.put("password", "Empty password.");
         }
         return errorMap;
     }
@@ -66,7 +66,7 @@ public class LoginValidator implements IValidator<LoginFormBean> {
     private Map<String, String> checkShortPassword(String password, Map<String, String> errorMap) {
         if (password.length() < 8) {
             String error = errorMap.get("password");
-            errorMap.put("password", error + "short password");
+            errorMap.put("password", error + "Short password");
         }
         return errorMap;
     }

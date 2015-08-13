@@ -51,10 +51,7 @@ public class AddCarServlet extends AdminServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (getRoleId(request) != 1) {
-            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
-            return;
-        }
+        checkRole(request, response);
 
         loadEntities(request, brandService, majorityClassService, colorService, statusService);
         logger.debug("Dropdowns are loaded");
@@ -65,10 +62,8 @@ public class AddCarServlet extends AdminServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (getRoleId(request) != 1) {
-            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
-            return;
-        }
+        checkRole(request, response);
+
         HttpSession session = request.getSession();
         CarFormBean carFormBean = parseForm(request);
         Part photo = request.getPart(Attributes.PHOTO);

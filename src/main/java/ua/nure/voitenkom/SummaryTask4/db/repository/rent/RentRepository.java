@@ -16,6 +16,7 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.List;
 
 public class RentRepository extends AbstractRepository<Rent> implements IRentRepository {
@@ -34,8 +35,8 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
             preparedStatement.setInt(3, rent.getUserId());
             preparedStatement.setInt(4, rent.getDeclineId());
             preparedStatement.setInt(5, rent.getCheckId());
-            preparedStatement.setDate(6, rent.getStartDate());
-            preparedStatement.setDate(7, rent.getEndDate());
+            preparedStatement.setTimestamp(6, rent.getStartDate());
+            preparedStatement.setTimestamp(7, rent.getEndDate());
             preparedStatement.setInt(8, rent.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -56,6 +57,21 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     }
 
     @Override
+    public List<Rent> selectRentsForDates(Timestamp start, Timestamp end) {
+        String sql = StatementsContainer.SQL_SELECT_RENT_BY_DATE;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setTimestamp(1, start);
+            preparedStatement.setTimestamp(2, end);
+            preparedStatement.setTimestamp(3, start);
+            preparedStatement.setTimestamp(4, end);
+            return executeQuery(preparedStatement, new RentExtractor());
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
     public void insert(Rent rent) {
         String sql = StatementsContainer.SQL_INSERT_RENT;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
@@ -64,8 +80,8 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
             preparedStatement.setInt(3, rent.getUserId());
             preparedStatement.setInt(4, rent.getDeclineId());
             preparedStatement.setInt(5, rent.getCheckId());
-            preparedStatement.setDate(6, rent.getStartDate());
-            preparedStatement.setDate(7, rent.getEndDate());
+            preparedStatement.setTimestamp(6, rent.getStartDate());
+            preparedStatement.setTimestamp(7, rent.getEndDate());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);

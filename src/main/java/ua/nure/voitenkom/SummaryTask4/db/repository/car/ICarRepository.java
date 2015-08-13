@@ -13,8 +13,6 @@ public interface ICarRepository extends IAbstractRepository<Car> {
 
     String getClassName(int id);
 
-    void updateAvailableCount(Car car);
-
     void updateStatus(Car car);
 
     void updatePrice(Car car);

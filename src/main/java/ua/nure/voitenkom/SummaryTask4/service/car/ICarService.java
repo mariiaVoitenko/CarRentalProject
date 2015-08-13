@@ -19,8 +19,6 @@ public interface ICarService {
 
     String getClassName(final int id);
 
-    void updateAvailableCount(final Car car);
-
     void updateStatus(final Car car);
 
     void updatePrice(final Car car);

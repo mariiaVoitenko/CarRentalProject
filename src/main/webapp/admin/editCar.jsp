@@ -106,13 +106,6 @@
                     </select>
                 </div>
                 <br>
-
-                <div class="paragraph-text">
-                    <fmt:message key="available_count"/> : <input type="text" name="availableCount"
-                                                                  placeholder="<fmt:message key="available_count"/>"
-                                                                  value='<c:out value="${car.availableCount}"/>'>
-                </div>
-                <br>
                 <br>
                 <br>
                 <button class="btn btn-large btn-primary" type="submit"><fmt:message key="save"/></button>

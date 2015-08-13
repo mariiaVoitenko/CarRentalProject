@@ -20,9 +20,7 @@ public class FieldsContainer {
     public static final String FIELD_STATUSES_ID = "statuses_id";
     public static final String FIELD_BRANDS_ID = "brands_id";
     public static final String FIELD_PHOTO = "photo";
-    public static final String FIELD_AVAILABLE_COUNT = "available_count";
     public static final String FIELD_IS_DRIVEN = "is_driven";
-    public static final String FIELD_DAYS = "days";
     public static final String FIELD_CARS_ID = "cars_id";
     public static final String FIELD_USERS_ID = "users_id";
     public static final String FIELD_DECLINES_ID = "declines_id";
