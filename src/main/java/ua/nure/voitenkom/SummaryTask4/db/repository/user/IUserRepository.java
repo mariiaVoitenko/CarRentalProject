@@ -3,6 +3,8 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.user;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
+import java.util.List;
+
 public interface IUserRepository extends IAbstractRepository<User> {
 
     User selectByToken(String token);
@@ -22,4 +24,6 @@ public interface IUserRepository extends IAbstractRepository<User> {
     boolean checkPassword(String login, String password);
 
     void changeRole(int roleId, int userId);
+
+    List<User> selectByRoleId(int roleId);
 }

@@ -51,7 +51,10 @@
 
                         <form action="makeManager?id=${user.id}" method="POST">
                             <c:choose>
-                                <c:when test="${user.roleId == 4}"></c:when>
+                                <c:when test="${user.roleId == 4}">
+                                    <button class="btn btn-large btn-primary" type="submit"><fmt:message
+                                            key="make_simple_user"/></button>
+                                </c:when>
                                 <c:otherwise>
                                     <button class="btn btn-large btn-primary" type="submit"><fmt:message
                                             key="make_manager"/></button>

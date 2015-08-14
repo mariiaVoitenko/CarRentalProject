@@ -30,4 +30,6 @@ public interface IUserService {
 
     void changeRole(int roleId, int userId);
 
+    List<User> selectByRoleId(int roleId);
+
 }

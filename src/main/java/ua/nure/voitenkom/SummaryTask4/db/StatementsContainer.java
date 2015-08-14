@@ -138,4 +138,5 @@ public class StatementsContainer {
     public static final String SQL_UPDATE_USER_ROLE = "UPDATE users SET roles_id = ? WHERE id = ?";
     public static final String SQL_DELETE_USER_BY_ID = "DELETE FROM users WHERE id = ?";
     public static final String SQL_SELECT_USER_BY_LOGIN = "SELECT * FROM users WHERE login = ?";
+    public static final String SQL_SELECT_USER_BY_ROLE_ID = "SELECT * FROM users WHERE roles_id = ?";
 }

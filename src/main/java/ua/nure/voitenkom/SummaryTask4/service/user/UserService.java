@@ -93,6 +93,16 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public List<User> selectByRoleId(final int roleId) {
+        return transactionManager.doInTransaction(new Operation<List<User>>() {
+            @Override
+            public List<User>  doOperation() {
+                return userRepository.selectByRoleId(roleId);
+            }
+        });
+    }
+
+    @Override
     public void unblock(final int id) {
         transactionManager.doInTransaction(new Operation<Void>() {
             @Override

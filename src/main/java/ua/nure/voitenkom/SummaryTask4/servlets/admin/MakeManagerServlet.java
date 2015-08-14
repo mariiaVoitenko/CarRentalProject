@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "makeManager")
-public class MakeManagerServlet extends AdminServlet{
+public class MakeManagerServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(UsersServlet.class);
     private UserService userService;
@@ -33,8 +33,15 @@ public class MakeManagerServlet extends AdminServlet{
         checkRole(request, response);
         int id = Integer.parseInt(request.getParameter("id"));
         User user = userService.selectById(id);
-        Role registeredUserRole = roleService.selectByName(Attributes.MANAGER_USER_VALUE);
-        userService.changeRole(registeredUserRole.getId(),user.getId());
+        int managerRoleId = Integer.parseInt(Attributes.MANAGER_ROLE_ID);
+        if (user.getRoleId() != managerRoleId) {
+            Role managerRole = roleService.selectByName(Attributes.MANAGER_USER_VALUE);
+            userService.changeRole(managerRole.getId(), user.getId());
+        }
+        else{
+            Role userRole = roleService.selectByName(Attributes.USER_VALUE);
+            userService.changeRole(userRole.getId(), user.getId());
+        }
         response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + PageNames.USERS_MAPPING);
     }
 }

@@ -9,7 +9,7 @@
 
   <c:choose>
     <c:when test="${empty requestScope.rents}">
-      <fmt:message key="noItems"/>
+      <fmt:message key="no_rents"/>
     </c:when>
     <c:otherwise>
       <c:forEach items="${requestScope.rents}" var="rent">

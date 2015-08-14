@@ -183,6 +183,15 @@
         <url-pattern>/history</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ManagersServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.ManagersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagersServlet</servlet-name>
+        <url-pattern>/admin/managers</url-pattern>
+    </servlet-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
