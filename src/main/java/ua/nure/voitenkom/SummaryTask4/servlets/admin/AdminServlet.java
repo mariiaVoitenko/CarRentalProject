@@ -91,4 +91,11 @@ public abstract class AdminServlet extends HttpServlet {
             return;
         }
     }
+
+    protected void checkManagerRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        if (getRoleId(request) != 4) {
+            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
+            return;
+        }
+    }
 }

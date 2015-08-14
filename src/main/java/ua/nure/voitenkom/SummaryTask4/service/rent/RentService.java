@@ -3,6 +3,7 @@ package ua.nure.voitenkom.SummaryTask4.service.rent;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
+import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.db.repository.rent.IRentRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
@@ -11,6 +12,8 @@ import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
 import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
 import ua.nure.voitenkom.SummaryTask4.service.decline.DeclineService;
+import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
+
 import static ua.nure.voitenkom.SummaryTask4.service.account.DateService.timestampToString;
 
 import java.sql.Timestamp;
@@ -50,6 +53,17 @@ public class RentService implements IRentService {
     }
 
     @Override
+    public void updateDecline(final Rent rent) {
+        transactionManager.doInTransaction(new Operation<Void>() {
+            @Override
+            public Void doOperation() {
+                rentRepository.updateDecline(rent);
+                return null;
+            }
+        });
+    }
+
+    @Override
     public List<Rent> selectAllForUser(final int id) {
         return transactionManager.doInTransaction(new Operation<List<Rent>>() {
             @Override
@@ -81,5 +95,43 @@ public class RentService implements IRentService {
             rents.add(rentFormBean);
         }
         return rents;
+    }
+
+    @Override
+    public List<RentFormBean> getPayedUnapprovedRents(List<Rent> rentList, CarService carService, DeclineService declineService, CheckService checkService, UserService userService){
+        List<RentFormBean> payedRents = new ArrayList<>();
+        for (Rent rent : rentList) {
+            Check check = checkService.selectById(rent.getCheckId());
+            if(!check.isPayed()){
+                continue;
+            }
+            CarFormBean car = carService.getFullCarInformationById(rent.getCarId());
+            Decline decline = declineService.selectById(rent.getDeclineId());
+            User user = userService.selectById(rent.getUserId());
+            RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check,decline,
+                    timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), user, rent.getId());
+            payedRents.add(rentFormBean);
+        }
+        return payedRents;
+    }
+
+    @Override
+    public Rent selectById(final int id) {
+        return transactionManager.doInTransaction(new Operation<Rent>() {
+            @Override
+            public Rent doOperation() {
+                return rentRepository.selectById(id);
+            }
+        });
+    }
+
+    @Override
+    public List<Rent> selectUnapproved() {
+        return transactionManager.doInTransaction(new Operation<List<Rent>>() {
+            @Override
+            public List<Rent> doOperation() {
+                return rentRepository.selectUnapproved();
+            }
+        });
     }
 }

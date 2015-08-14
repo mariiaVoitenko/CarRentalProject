@@ -40,12 +40,7 @@
             <br><br><br><br>
 
             <div class="paragraph-text">
-              <fmt:message key="rental_start"/> : ${rent.startDate}
-            </div>
-            <br>
-
-            <div class="paragraph-text">
-              <fmt:message key="rental_end"/> : ${rent.endDate}
+              <fmt:message key="rental_period"/> : ${rent.startDate} - ${rent.endDate}
             </div>
             <br>
 

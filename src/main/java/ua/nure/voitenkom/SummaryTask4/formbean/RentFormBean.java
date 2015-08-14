@@ -2,15 +2,18 @@ package ua.nure.voitenkom.SummaryTask4.formbean;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
+import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 
 public class RentFormBean {
 
+    private int id;
     private boolean isDriven;
     private CarFormBean car;
     private Check check;
-    private Decline  decline;
+    private Decline decline;
     private String startDate;
     private String endDate;
+    private User user;
 
     public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate) {
         this.isDriven = isDriven;
@@ -21,8 +24,34 @@ public class RentFormBean {
         this.endDate = endDate;
     }
 
-    public boolean isDriven() {
+    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate, User user, int id) {
+        this.isDriven = isDriven;
+        this.car = car;
+        this.check = check;
+        this.decline = decline;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.user = user;
+        this.id = id;
+    }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public boolean isDriven() {
         return isDriven;
     }
 

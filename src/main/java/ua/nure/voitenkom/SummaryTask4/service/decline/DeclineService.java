@@ -5,6 +5,8 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.decline.IDeclineRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 
+import java.util.List;
+
 public class DeclineService implements IDeclineService {
 
     private final ITransactionManager transactionManager;
@@ -21,6 +23,16 @@ public class DeclineService implements IDeclineService {
             @Override
             public Decline doOperation() {
                 return declineRepository.selectById(id);
+            }
+        });
+    }
+
+    @Override
+    public List<Decline> getAll() {
+        return transactionManager.doInTransaction(new Operation<List<Decline>>() {
+            @Override
+            public List<Decline> doOperation() {
+                return declineRepository.selectAll();
             }
         });
     }

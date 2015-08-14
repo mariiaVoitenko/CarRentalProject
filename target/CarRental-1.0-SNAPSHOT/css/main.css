@@ -134,6 +134,13 @@ body {
     color: #ce0f0f;
 }
 
+.green-message{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #2d540f;
+}
+
 .price{
     margin-right:15px;
     margin-left: 50px;

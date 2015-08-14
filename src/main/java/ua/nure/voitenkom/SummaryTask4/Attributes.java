@@ -51,4 +51,6 @@ public final class Attributes {
     public static final String NOT_APPROVEN_DECLINE_ID = "5";
     public static final String RENTS = "rents";
     public static final String MANAGER_ROLE_ID = "4";
+    public static final String ACCEPTED_APPLICATION_DECLINE_ID = "6";
+    public static final String DECLINES = "declinesList";
 }

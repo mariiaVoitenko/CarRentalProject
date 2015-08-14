@@ -108,7 +108,7 @@
                 <br>
                 <br>
                 <br>
-                <button class="btn btn-large btn-primary" type="submit"><fmt:message key="save"/></button>
+                <button class="btn btn-large btn-success" type="submit"><fmt:message key="save"/></button>
             </div>
         </div>
     </form>

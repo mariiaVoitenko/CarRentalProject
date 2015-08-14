@@ -192,6 +192,33 @@
         <url-pattern>/admin/managers</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ApplicationsServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.ApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApplicationsServlet</servlet-name>
+        <url-pattern>/admin/applications</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AcceptApplicationServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.AcceptApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AcceptApplicationServlet</servlet-name>
+        <url-pattern>/admin/accept/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeclineApplicationServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.DeclineApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeclineApplicationServlet</servlet-name>
+        <url-pattern>/admin/decline/*</url-pattern>
+    </servlet-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

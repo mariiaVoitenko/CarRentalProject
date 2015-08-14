@@ -41,7 +41,7 @@
                         <br>
 
                         <form action="block?id=${user.id}" method="POST">
-                            <button class="btn btn-large btn-primary" type="submit">
+                            <button class="btn btn-large btn-danger" type="submit">
                                 <c:choose>
                                     <c:when test="${user.isBlocked()}"><fmt:message key="unblock"/></c:when>
                                     <c:otherwise><fmt:message key="block"/></c:otherwise>

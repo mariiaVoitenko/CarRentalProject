@@ -17,4 +17,8 @@ public interface IRentRepository extends IAbstractRepository<Rent> {
 
     List<Rent> selectRentsForDates(Timestamp start, Timestamp end);
 
+    List<Rent> selectUnapproved();
+
+    void updateDecline(Rent rent);
+
 }

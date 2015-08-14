@@ -31,12 +31,11 @@
         </div>
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li ><a class="middle-headline" href="/"><fmt:message key="home"/></a></li>
-                <li>
                 <li class="dropdown">
                     <c:choose>
                         <c:when test="${sessionScope.userId!=null}">
-                            <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle" href="#">${sessionScope.fullName}<b
+                            <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle"
+                               href="#">${sessionScope.fullName}<b
                                     class="caret"></b></a>
                             <ul role="menu" class="dropdown-menu">
                                 <li><a href="#"></a></li>
@@ -51,18 +50,34 @@
                         </c:otherwise>
                     </c:choose>
                 </li>
-                </li>
                 <li class="dropdown">
                     <c:choose>
                         <c:when test="${sessionScope.roleId==1}">
-                            <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle" href="#"><fmt:message key="administration"/><b
+                            <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle"
+                               href="#"><fmt:message key="administration"/><b
                                     class="caret"></b></a>
                             <ul role="menu" class="dropdown-menu">
                                 <li><a class="paragraph-text" href="/admin/cars"><fmt:message key="cars"/></a></li>
                                 <li><a class="paragraph-text" href="/admin/users"><fmt:message key="users"/></a></li>
-                                <li><a class="paragraph-text" href="/admin/managers"><fmt:message key="managers"/></a></li>
+                                <li><a class="paragraph-text" href="/admin/managers"><fmt:message key="managers"/></a>
+                                </li>
                                 <li class="divider"></li>
-                                <li><a href="#">TODO</a></li>
+                                <li><a class="paragraph-text" href="addCar"><fmt:message key="add"/></a></li>
+                            </ul>
+                        </c:when>
+                        <c:otherwise>
+                        </c:otherwise>
+                    </c:choose>
+                </li>
+                <li class="dropdown">
+                    <c:choose>
+                        <c:when test="${sessionScope.roleId==4}">
+                            <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle"
+                               href="#"><fmt:message key="managership"/><b
+                                    class="caret"></b></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a class="paragraph-text" href="/admin/applications"><fmt:message
+                                        key="applications"/></a></li>
                             </ul>
                         </c:when>
                         <c:otherwise>
@@ -73,7 +88,8 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <li class="dropdown">
-                    <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle" href="#"><fmt:message key="language"/><b
+                    <a class="middle-headline" data-toggle="dropdown" class="dropdown-toggle" href="#"><fmt:message
+                            key="language"/><b
                             class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="#" onclick="setLocale('ru');"><img src="<c:url value="/images/rus.png"/>"></a></li>

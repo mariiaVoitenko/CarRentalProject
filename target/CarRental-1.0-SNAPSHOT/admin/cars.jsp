@@ -6,11 +6,6 @@
 </head>
 <body>
 <div class="container">
-
-    <form action="addCar" method="GET">
-        <button class="btn btn-large btn-primary" type="submit"><fmt:message key="add"/></button>
-    </form>
-
     <c:choose>
         <c:when test="${empty requestScope.cars}">
             <fmt:message key="noItems"/>
@@ -28,7 +23,7 @@
                         <img src="<c:url value="${car.photoPath}"/>" alt="Car" height="260" width="450">
                     </div>
                     <div class="gap-div40"></div>
-                    <div class="right-div">
+                    <div class="right-div marginned20">
                         <img class="small-image" src="<c:url value="/images/passagerare.gif"/>" height="28"
                              width="15">x${car.sitsCount}
                         <img class="small-image" src="<c:url value="/images/minibagage.gif"/>" height="28"
@@ -43,30 +38,37 @@
                         <span class="price red">${car.price} <fmt:message key="HRN"/></span>
                         <br><br><br><br>
 
-                        <div class="paragraph-text">
-                            <fmt:message key="class"/> : ${car.className}
+                        <div class="marginned20">
+                            <div class="left-div">
+                                <div class="paragraph-text">
+                                    <fmt:message key="class"/> : ${car.className}
+                                </div>
+                                <br>
+
+                                <div class="paragraph-text">
+                                    <fmt:message key="color"/> : ${car.colorName}
+                                </div>
+                                <br>
+
+                                <div class="paragraph-text">
+                                    <fmt:message key="status"/> : ${car.statusName}
+                                </div>
+                                <br>
+
+                                <br>
+                            </div>
+                            <div class="right-div">
+                                <form action="editCar?id=${car.id}" method="POST">
+                                    <button class="btn btn-large btn-primary btn-group-justified" type="submit"><fmt:message
+                                            key="edit"/></button>
+                                </form>
+
+                                <form action="deleteCar?id=${car.id}" method="POST">
+                                    <button class="btn btn-large btn-danger btn-group-justified" type="submit"><fmt:message
+                                            key="delete"/></button>
+                                </form>
+                            </div>
                         </div>
-                        <br>
-
-                        <div class="paragraph-text">
-                            <fmt:message key="color"/> : ${car.colorName}
-                        </div>
-                        <br>
-
-                        <div class="paragraph-text">
-                            <fmt:message key="status"/> : ${car.statusName}
-                        </div>
-                        <br>
-
-                        <br>
-
-                        <form action="editCar?id=${car.id}" method="POST">
-                            <button class="btn btn-large btn-primary" type="submit"><fmt:message key="edit"/></button>
-                        </form>
-
-                        <form action="deleteCar?id=${car.id}" method="POST">
-                            <button class="btn btn-large btn-primary" type="submit"><fmt:message key="delete"/></button>
-                        </form>
                     </div>
                 </div>
             </c:forEach>

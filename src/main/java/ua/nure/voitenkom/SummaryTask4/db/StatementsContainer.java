@@ -96,11 +96,13 @@ public class StatementsContainer {
     //rent
     public static final String SQL_SELECT_ALL_RENTS = "SELECT * FROM rents";
     public static final String SQL_SELECT_ALL_RENTS_FOR_USER = "SELECT * FROM rents WHERE users_id = ?";
+    public static final String SQL_SELECT_ALL_UNAPPROVED_RENTS = "SELECT * FROM rents WHERE declines_id = 4";
     public static final String SQL_SELECT_RENT_BY_ID = "SELECT * FROM rents WHERE id = ?";
     public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, cars_id, users_id, declines_id, " +
             "checks_id, start_date, end_date) VALUES (?,?,?,?,?,?,?)";
     public static final String SQL_UPDATE_RENT_BY_ID = "UPDATE rents SET is_driven = ?, days = ?, cars_id = ?, " +
             "users_id = ?, declines_id = ?, checks_id = ?, start_date = ?, end_date = ? WHERE id = ?";
+    public static final String SQL_UPDATE_RENT_DECLINE_BY_ID = "UPDATE rents SET declines_id = ? WHERE id = ?";
     public static final String SQL_DELETE_RENT_BY_ID = "DELETE FROM rents WHERE id = ?";
     //1. start_date = start
     //2. end_date = end
