@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.db.repository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
@@ -99,6 +100,7 @@ public abstract class AbstractRepository<T> implements IAbstractRepository<T> {
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
         }
     }
+
     public void update(SimpleEntity entity, String sql) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, entity.getName());

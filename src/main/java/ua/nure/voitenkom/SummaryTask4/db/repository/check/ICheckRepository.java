@@ -17,5 +17,8 @@ public interface ICheckRepository extends IAbstractRepository<Check> {
     void setPayed(Check check);
 
     void updateSum(Check check, int sum);
+
+    int selectLastInsertedId();
+
 }
 

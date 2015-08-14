@@ -11,6 +11,11 @@ public class Check extends Entity {
         this.isPayed = isPayed;
     }
 
+    public Check(int sum, boolean isPayed) {
+        this.sum = sum;
+        this.isPayed = isPayed;
+    }
+
     public int getSum() {
         return sum;
     }

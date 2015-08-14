@@ -24,7 +24,7 @@ public class StatementsContainer {
     public static final String SQL_UPDATE_CAR_STATUS_BY_ID = "UPDATE cars SET statuses_id = ? WHERE id = ?";
     public static final String SQL_UPDATE_CAR_PRICE_BY_ID = "UPDATE cars SET price = ? WHERE id = ?";
     public static final String SQL_DELETE_CAR_BY_ID = "DELETE FROM cars WHERE id = ?";
-    public static final String SQL_SELECT_ALL_CAR_INFORMATION =  "SELECT cars.id, cars.model, price, doors_count, has_conditioner, " +
+    public static final String SQL_SELECT_ALL_CAR_INFORMATION = "SELECT cars.id, cars.model, price, doors_count, has_conditioner, " +
             "big_luggage_count, small_luggage_count, sits_count, photo, classes.name AS class_name, brands.name AS brand_name, \n" +
             "colors.name AS color_name, statuses.name AS status_name FROM cars, classes, colors, statuses,\n" +
             "brands WHERE cars.classes_id = classes.id AND cars.brands_id = brands.id AND colors.id = cars.colors_id " +
@@ -39,6 +39,9 @@ public class StatementsContainer {
     public static final String SQL_UPDATE_CHECK_SUM_BY_ID = "UPDATE checks SET sum = ? WHERE id = ?";
     public static final String SQL_UPDATE_CHECK_PAY_BY_ID = "UPDATE checks SET is_payed = true WHERE id = ?";
     public static final String SQL_DELETE_CHECK_BY_ID = "DELETE FROM checks WHERE id = ?";
+
+
+    public static final String SELECT_LAST_INSERTED_ID = "SELECT LAST_INSERT_ID()";
 
     //colors
     public static final String SQL_SELECT_ALL_COLORS = "SELECT * FROM colors";
@@ -89,8 +92,8 @@ public class StatementsContainer {
     public static final String SQL_SELECT_ALL_RENTS = "SELECT * FROM rents";
     public static final String SQL_SELECT_ALL_RENTS_FOR_USER = "SELECT * FROM rents WHERE users_id = ?";
     public static final String SQL_SELECT_RENT_BY_ID = "SELECT * FROM rents WHERE id = ?";
-    public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, days, cars_id, users_id, declines_id, " +
-            "checks_id, start_date, end_date) VALUES (?,?,?,?,?,?,?,?)";
+    public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, cars_id, users_id, declines_id, " +
+            "checks_id, start_date, end_date) VALUES (?,?,?,?,?,?,?)";
     public static final String SQL_UPDATE_RENT_BY_ID = "UPDATE rents SET is_driven = ?, days = ?, cars_id = ?, " +
             "users_id = ?, declines_id = ?, checks_id = ?, start_date = ?, end_date = ? WHERE id = ?";
     public static final String SQL_DELETE_RENT_BY_ID = "DELETE FROM rents WHERE id = ?";
@@ -98,7 +101,7 @@ public class StatementsContainer {
     //2. end_date = end
     //3. end_date = start
     //4. start_date = end
-    public static final String SQL_SELECT_RENT_BY_DATE ="SELECT * FROM rents WHERE start_date >= ? AND end_date <= ? OR end_date >= ? AND start_date <= ?";
+    public static final String SQL_SELECT_RENT_BY_DATE = "SELECT * FROM rents WHERE start_date >= ? AND end_date <= ? OR end_date >= ? AND start_date <= ?";
 
     // roles
     public static final String SQL_SELECT_ALL_ROLES = "SELECT * FROM roles";

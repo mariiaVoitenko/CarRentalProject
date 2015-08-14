@@ -47,5 +47,6 @@ public final class Attributes {
     public static final String USERS = "users";
     public static final String START_DATE = "start";
     public static final String END_DATE = "end";
-
+    public static final String DRIVER = "driver";
+    public static final String NOT_APPROVEN_DECLINE_ID = "5";
 }

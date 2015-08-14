@@ -2,15 +2,17 @@ package ua.nure.voitenkom.SummaryTask4.service.car;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.car.ICarRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class CarService implements ICarService{
+public class CarService implements ICarService {
 
     private final ITransactionManager transactionManager;
     private final ICarRepository carRepository;
@@ -124,5 +126,19 @@ public class CarService implements ICarService{
                 return null;
             }
         });
+    }
+
+    @Override
+    public List<CarFormBean> getNotRentedCars(List<Rent> rents, List<CarFormBean> carList) {
+        List<CarFormBean> notRentedCars = new ArrayList<>();
+        for (Rent rent : rents) {
+            int carId = rent.getCarId();
+            for (CarFormBean car : carList) {
+                if (car.getId() != carId && car.getStatusName().equals("Free")) {
+                    notRentedCars.add(car);
+                }
+            }
+        }
+        return notRentedCars;
     }
 }

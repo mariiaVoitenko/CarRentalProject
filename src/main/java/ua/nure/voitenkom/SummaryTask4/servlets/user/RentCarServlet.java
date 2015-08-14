@@ -9,6 +9,7 @@ import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.brand.BrandService;
 import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
+import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
 import ua.nure.voitenkom.SummaryTask4.service.color.ColorService;
 import ua.nure.voitenkom.SummaryTask4.service.majorityclass.MajorityClassService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
@@ -35,6 +36,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import static ua.nure.voitenkom.SummaryTask4.service.account.DateService.parseDate;
+import static ua.nure.voitenkom.SummaryTask4.service.account.DateService.getDaysCount;
+
 @WebServlet(name = "rentCar")
 public class RentCarServlet extends AuthenticationServlet {
 
@@ -46,6 +50,7 @@ public class RentCarServlet extends AuthenticationServlet {
     private ColorService colorService;
     private StatusService statusService;
     private IValidator<Date> dateValidator = new DateValidator();
+    private CheckService checkService;
 
     @Override
     public void init() throws ServletException {
@@ -55,40 +60,79 @@ public class RentCarServlet extends AuthenticationServlet {
         majorityClassService = (MajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
         colorService = (ColorService) getServletContext().getAttribute(ServiceConstant.COLOR_SERVICE_CONTEXT);
         statusService = (StatusService) getServletContext().getAttribute(ServiceConstant.STATUS_SERVICE_CONTEXT);
+        checkService = (CheckService) getServletContext().getAttribute(ServiceConstant.CHECK_SERVICE_CONTEXT);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        HttpSession session = request.getSession();
+        String driver = session.getAttribute(Attributes.DRIVER).toString();
+        String startDate = session.getAttribute(Attributes.START_DATE).toString();
+        String endDate = session.getAttribute(Attributes.END_DATE).toString();
+        Date start = parseDate(startDate, logger);
+        Date end = parseDate(endDate, logger);
+        long days = getDaysCount(startDate, endDate);
+        boolean isDriven = session.getAttribute(Attributes.DRIVER).toString().isEmpty() ? false : true;
+
+        Car car = carService.getById(id);
+        int sum = isDriven ? checkService.getSumWithDriver(car, days) : checkService.getSum(car, days);
+        Check check = new Check(sum, false);
+        checkService.insert(check);
+        logger.debug("Check was inserted");
+
+        int userId = Integer.parseInt(session.getAttribute(Attributes.USER_ID).toString());
+        int checkId = checkService.selectLastInsertedId();
+        Rent rent = new Rent(isDriven,
+                car.getId(), userId, Integer.parseInt(Attributes.NOT_APPROVEN_DECLINE_ID),
+                checkId, new Timestamp(start.getTime()), new Timestamp(end.getTime()));
+        rentService.insert(rent);
+        logger.debug("Rent was inserted");
+        //TODO redirect to history
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
+        String startDate = null;
+        String endDate = null;
+        String driver = null;
         if (getAuthUserId(request) == null) {
             session.setAttribute(Attributes.START_DATE, request.getParameter(Attributes.START_DATE));
             session.setAttribute(Attributes.END_DATE, request.getParameter(Attributes.END_DATE));
+            if (request.getParameter(Attributes.DRIVER) == null) {
+                session.setAttribute(Attributes.DRIVER, "");
+            } else {
+                session.setAttribute(Attributes.DRIVER, request.getParameter(Attributes.DRIVER));
+            }
+
             response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.LOGIN_PAGE);
             return;
         }
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String startDate = null;
-        String endDate = null;
 
-        if (session.getAttribute(Attributes.START_DATE) != null && session.getAttribute(Attributes.END_DATE) != null) {
+        if (request.getParameter(Attributes.START_DATE) == null) {
             startDate = session.getAttribute(Attributes.START_DATE).toString();
             endDate = session.getAttribute(Attributes.END_DATE).toString();
+            driver = session.getAttribute(Attributes.DRIVER).toString();
         } else {
             startDate = request.getParameter(Attributes.START_DATE);
             endDate = request.getParameter(Attributes.END_DATE);
+            if (request.getParameter(Attributes.DRIVER) == null) {
+                driver = "";
+            } else {
+                driver = request.getParameter(Attributes.DRIVER);
+            }
             session.setAttribute(Attributes.START_DATE, startDate);
             session.setAttribute(Attributes.END_DATE, endDate);
+            session.setAttribute(Attributes.DRIVER, driver);
         }
 
-        Date start = null;
-        Date end = null;
-        try {
-            start = simpleDateFormat.parse(startDate);
-            end = simpleDateFormat.parse(endDate);
-        } catch (ParseException e) {
-            logger.error("Can't parse date");
+        Date start = parseDate(startDate, logger);
+        Date end = parseDate(endDate, logger);
+
+        if (start == null || end == null) {
+            request.setAttribute(Attributes.MESSAGE, "Can't parse dates");
+            RequestDispatcher requestDispatcher = request
+                    .getRequestDispatcher(PageNames.MAIN_PAGE);
+            requestDispatcher.forward(request, response);
             return;
         }
 
@@ -112,10 +156,9 @@ public class RentCarServlet extends AuthenticationServlet {
         Timestamp endTimestamp = new Timestamp(end.getTime());
         List<Rent> rents = rentService.selectRentsForDates(startTimestamp, endTimestamp);
         if (rents.size() != 0) {
-            List<CarFormBean> notRentedCars = getNotRentedCars(request, rents, carList);
+            List<CarFormBean> notRentedCars = carService.getNotRentedCars(rents, carList);
             request.setAttribute(Attributes.CARS, notRentedCars);
-        }
-        else{
+        } else {
             request.setAttribute(Attributes.CARS, carList);
         }
         logger.debug("All cars information has been got");
@@ -139,19 +182,6 @@ public class RentCarServlet extends AuthenticationServlet {
         request.setAttribute(Attributes.STATUSES, statuses);
     }
 
-    private List<CarFormBean> getNotRentedCars(HttpServletRequest request, List<Rent> rents, List<CarFormBean> carList) {
-        List<CarFormBean> notRentedCars = new ArrayList<>();
-        for (Rent rent : rents) {
-            int carId = rent.getCarId();
-            for (CarFormBean car : carList) {
-                if (car.getId() != carId && car.getStatusName().equals("Free")) {
-                    notRentedCars.add(car);
-                }
-            }
-        }
-        return notRentedCars;
-    }
-
     private Map<String, String> validateDates(Date start, Date end, Map<String, String> errorMap) {
         if (end.before(start)) {
             String message = "Start date can't be before end date";
@@ -168,4 +198,6 @@ public class RentCarServlet extends AuthenticationServlet {
             errorMap.put("error", message);
         }
     }
+
+
 }

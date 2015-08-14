@@ -39,4 +39,5 @@ public class FieldsContainer {
     public static final String FIELD_START_DATE = "start_date";
     public static final String FIELD_END_DATE = "end_date";
     public static final String FIELD_REGISTRATION_TIME = "registration_time";
+    public static final String FIELD_LAST_INSERTED_ID = "LAST_INSERT_ID()";
 }

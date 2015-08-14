@@ -28,6 +28,9 @@
                     <fmt:message key="rental_end"/> : <input type="date" name="end">
                 </div>
                 <br>
+                <div>
+                    <fmt:message key="order_driver"/><input name="driver" type="checkbox" checked>
+                </div>
                 <button class="btn btn-large btn-primary marginned" type="submit"><fmt:message key="rent"/></button>
             </form>
         </div>

@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.check;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
@@ -12,6 +13,7 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -99,6 +101,23 @@ public class CheckRepository extends AbstractRepository<Check> implements ICheck
             preparedStatement.setInt(1, check.getSum());
             preparedStatement.setBoolean(2, check.isPayed());
             preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public int selectLastInsertedId() {
+        String sql = StatementsContainer.SELECT_LAST_INSERTED_ID;
+        int id = 0;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    id = resultSet.getInt(FieldsContainer.FIELD_LAST_INSERTED_ID);
+                }
+                return id;
+            }
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");

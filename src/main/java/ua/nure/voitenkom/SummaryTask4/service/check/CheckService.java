@@ -1,5 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.service.check;
 
+import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 import ua.nure.voitenkom.SummaryTask4.db.repository.check.ICheckRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
@@ -68,6 +69,26 @@ public class CheckService implements ICheckService {
             public Void doOperation() {
                 checkRepository.updateSum(check, sum);
                 return null;
+            }
+        });
+    }
+
+    @Override
+    public int getSum(Car car, long days) {
+        return car.getPrice() * (int) days;
+    }
+
+    @Override
+    public int getSumWithDriver(Car car, long days) {
+        return getSum(car, days) + 200 * (int) days;
+    }
+
+    @Override
+    public int selectLastInsertedId() {
+        return transactionManager.doInTransaction(new Operation<Integer>() {
+            @Override
+            public Integer doOperation() {
+                return checkRepository.selectLastInsertedId();
             }
         });
     }
