@@ -22,4 +22,6 @@ public interface ICheckService {
     int getSumWithDriver(Car car, long days);
 
     int selectLastInsertedId();
+
+    Check selectById(int id);
 }

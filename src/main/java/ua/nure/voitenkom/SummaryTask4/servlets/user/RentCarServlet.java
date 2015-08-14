@@ -14,12 +14,9 @@ import ua.nure.voitenkom.SummaryTask4.service.color.ColorService;
 import ua.nure.voitenkom.SummaryTask4.service.majorityclass.MajorityClassService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
 import ua.nure.voitenkom.SummaryTask4.service.status.StatusService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
-import ua.nure.voitenkom.SummaryTask4.servlets.admin.AdminServlet;
 import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServlet;
 import ua.nure.voitenkom.SummaryTask4.validation.DateValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
-import ua.nure.voitenkom.SummaryTask4.validation.car.CarValidator;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,9 +26,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -72,7 +66,7 @@ public class RentCarServlet extends AuthenticationServlet {
         Date start = parseDate(startDate, logger);
         Date end = parseDate(endDate, logger);
         long days = getDaysCount(startDate, endDate);
-        boolean isDriven = session.getAttribute(Attributes.DRIVER).toString().isEmpty() ? false : true;
+        boolean isDriven = driver.isEmpty() ? false : true;
 
         Car car = carService.getById(id);
         int sum = isDriven ? checkService.getSumWithDriver(car, days) : checkService.getSum(car, days);

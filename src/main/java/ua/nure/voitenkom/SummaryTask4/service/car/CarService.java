@@ -1,12 +1,10 @@
 package ua.nure.voitenkom.SummaryTask4.service.car;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.car.ICarRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 
 import java.util.ArrayList;
@@ -140,5 +138,15 @@ public class CarService implements ICarService {
             }
         }
         return notRentedCars;
+    }
+
+    @Override
+    public CarFormBean getFullCarInformationById(final int id) {
+        return transactionManager.doInTransaction(new Operation<CarFormBean>() {
+            @Override
+            public CarFormBean doOperation() {
+                return carRepository.getFullCarInformationById(id);
+            }
+        });
     }
 }

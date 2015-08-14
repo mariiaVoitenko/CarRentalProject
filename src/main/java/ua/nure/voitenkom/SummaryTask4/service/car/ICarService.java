@@ -30,4 +30,6 @@ public interface ICarService {
 
     List<CarFormBean> getNotRentedCars(List<Rent> rents, List<CarFormBean> carList);
 
+    CarFormBean getFullCarInformationById(int id);
+
 }

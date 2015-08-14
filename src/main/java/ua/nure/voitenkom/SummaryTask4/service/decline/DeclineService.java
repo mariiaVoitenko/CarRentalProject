@@ -1,8 +1,9 @@
 package ua.nure.voitenkom.SummaryTask4.service.decline;
 
+import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.repository.decline.IDeclineRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
-import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
+import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 
 public class DeclineService implements IDeclineService {
 
@@ -14,4 +15,13 @@ public class DeclineService implements IDeclineService {
         this.declineRepository = declineRepository;
     }
 
+    @Override
+    public Decline selectById(final int id) {
+        return transactionManager.doInTransaction(new Operation<Decline>() {
+            @Override
+            public Decline doOperation() {
+                return declineRepository.selectById(id);
+            }
+        });
+    }
 }

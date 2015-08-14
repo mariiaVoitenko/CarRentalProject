@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/header.jsp" %>
 <html>
 <head>
-  <title>All cars></title>
+  <title>All cars</title>
 </head>
 <body>
 <div class="container">

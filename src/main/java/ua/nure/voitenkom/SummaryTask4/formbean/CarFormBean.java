@@ -51,6 +51,9 @@ public class CarFormBean extends Entity {
         this.statusName = statusName;
     }
 
+    public CarFormBean() {
+    }
+
     public String getModel() {
         return model;
     }

@@ -63,4 +63,10 @@ public class DateService {
         int day = Integer.parseInt(date.substring(8, 10));
         return day;
     }
+
+
+    public static String timestampToString(Timestamp timestamp) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return simpleDateFormat.format(timestamp);
+    }
 }

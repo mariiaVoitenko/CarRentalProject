@@ -23,6 +23,7 @@ import java.util.List;
 public class CarRepository extends AbstractRepository<Car> implements ICarRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CarRepository.class);
+
     public CarRepository(ConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
@@ -154,6 +155,25 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
                 while (resultSet.next()) {
                     CarFormBean record = extractor.extract(resultSet);
                     result.add(record);
+                }
+                return result;
+            }
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public CarFormBean getFullCarInformationById(int id) {
+        String sql = StatementsContainer.SQL_SELECT_ALL_CAR_INFORMATION_BY_ID;
+        CarFormBeanExtractor extractor = new CarFormBeanExtractor();
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, id);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                CarFormBean result = new CarFormBean();
+                while (resultSet.next()) {
+                    result = extractor.extract(resultSet);
                 }
                 return result;
             }

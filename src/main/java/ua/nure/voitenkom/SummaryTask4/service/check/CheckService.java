@@ -92,4 +92,14 @@ public class CheckService implements ICheckService {
             }
         });
     }
+
+    @Override
+    public Check selectById(final int id) {
+        return transactionManager.doInTransaction(new Operation<Check>() {
+            @Override
+            public Check doOperation() {
+                return checkRepository.selectById(id);
+            }
+        });
+    }
 }

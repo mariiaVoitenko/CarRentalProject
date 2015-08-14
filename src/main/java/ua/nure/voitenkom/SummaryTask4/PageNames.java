@@ -21,4 +21,5 @@ public class PageNames {
     public static final String CARS_MAPPING = "cars";
     public static final String RENT_CARS_PAGE = "pages/rentCars.jsp";
     public static final String CAR_RENT_MAPPING = "/rentCar";
+    public static final String HISTORY_PAGE = "pages/history.jsp";
 }

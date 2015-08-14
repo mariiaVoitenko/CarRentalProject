@@ -127,6 +127,13 @@ body {
     color: #ce0f0f;
 }
 
+.red-message{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ce0f0f;
+}
+
 .price{
     margin-right:15px;
     margin-left: 50px;

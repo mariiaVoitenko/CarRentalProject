@@ -1,13 +1,20 @@
 package ua.nure.voitenkom.SummaryTask4.service.rent;
 
+import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.rent.IRentRepository;
-import ua.nure.voitenkom.SummaryTask4.db.repository.user.IUserRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
+import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
+import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
+import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
+import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
+import ua.nure.voitenkom.SummaryTask4.service.decline.DeclineService;
+import static ua.nure.voitenkom.SummaryTask4.service.account.DateService.timestampToString;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RentService implements IRentService {
@@ -60,5 +67,19 @@ public class RentService implements IRentService {
                 return rentRepository.selectRentsForDates(start, end);
             }
         });
+    }
+
+    @Override
+    public List<RentFormBean> getUserRents(List<Rent> rentList, CarService carService, DeclineService declineService, CheckService checkService) {
+        List<RentFormBean> rents = new ArrayList<>();
+        for (Rent rent : rentList) {
+            CarFormBean car = carService.getFullCarInformationById(rent.getCarId());
+            Check check = checkService.selectById(rent.getCheckId());
+            Decline decline = declineService.selectById(rent.getDeclineId());
+            RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check,decline,
+                    timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()));
+            rents.add(rentFormBean);
+        }
+        return rents;
     }
 }

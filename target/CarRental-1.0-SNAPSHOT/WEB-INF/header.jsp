@@ -41,7 +41,7 @@
                             <ul role="menu" class="dropdown-menu">
                                 <li><a href="#"></a></li>
                                 <li><a class="paragraph-text" href="#"><fmt:message key="edit_profile"/></a></li>
-                                <li><a class="paragraph-text" href="#"><fmt:message key="show_rents"/></a></li>
+                                <li><a class="paragraph-text" href="/history"><fmt:message key="show_rents"/></a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">TODO</a></li>
                             </ul>

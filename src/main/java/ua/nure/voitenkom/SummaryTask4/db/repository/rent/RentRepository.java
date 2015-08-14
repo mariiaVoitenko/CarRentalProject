@@ -49,6 +49,7 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     public List<Rent> selectAllForUser(int id) {
         String sql = StatementsContainer.SQL_SELECT_ALL_RENTS_FOR_USER;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, id);
             return executeQuery(preparedStatement, new RentExtractor());
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
