@@ -3,7 +3,8 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
-import ua.nure.voitenkom.SummaryTask4.PageNames;
+import ua.nure.voitenkom.SummaryTask4.EntitiesValues;
+import ua.nure.voitenkom.SummaryTask4.Mappings;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
@@ -15,14 +16,12 @@ import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "accept")
 public class AcceptApplicationServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
@@ -46,7 +45,7 @@ public class AcceptApplicationServlet extends AdminServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
         Rent rent = rentService.selectById(id);
-        rent.setDeclineId(Integer.parseInt(Attributes.ACCEPTED_APPLICATION_DECLINE_ID));
+        rent.setDeclineId(Integer.parseInt(EntitiesValues.ACCEPTED_APPLICATION_DECLINE_ID));
         rentService.updateDecline(rent);
 
         List<Rent> rentList = rentService.selectUnapproved();
@@ -56,7 +55,7 @@ public class AcceptApplicationServlet extends AdminServlet {
         }
         request.setAttribute(Attributes.RENTS, rents);
         RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.APPLICATIONS_MAPPING);
+                .getRequestDispatcher(Mappings.APPLICATIONS_MAPPING);
         requestDispatcher.forward(request, response);
     }
 }

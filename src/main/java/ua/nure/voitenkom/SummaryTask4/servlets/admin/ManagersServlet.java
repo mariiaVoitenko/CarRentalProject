@@ -3,6 +3,7 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
+import ua.nure.voitenkom.SummaryTask4.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
@@ -10,13 +11,11 @@ import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "admin/managers")
 public class ManagersServlet extends AdminServlet{
 
     private static final Logger logger = LoggerFactory.getLogger(UsersServlet.class);
@@ -34,7 +33,7 @@ public class ManagersServlet extends AdminServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
 
-        List<User> users = usersService.selectByRoleId(Integer.parseInt(Attributes.MANAGER_ROLE_ID));
+        List<User> users = usersService.selectByRoleId(Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID));
         request.setAttribute(Attributes.USERS, users);
 
         logger.debug("All managers information has been got");

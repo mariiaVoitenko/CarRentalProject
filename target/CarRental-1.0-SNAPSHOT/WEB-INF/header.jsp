@@ -92,8 +92,8 @@
                             key="language"/><b
                             class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a href="#" onclick="setLocale('ru');"><img src="<c:url value="/images/rus.png"/>"></a></li>
-                        <li><a href="#" onclick="setLocale('en');"><img src="<c:url value="/images/gb.png"/>"></a></li>
+                        <li><a href="#" class="center-input" onclick="setLocale('ru');"><img src="<c:url value="/images/rus.png"/>"></a></li>
+                        <li><a href="#" class="center-input" onclick="setLocale('en');"><img src="<c:url value="/images/gb.png"/>"></a></li>
                     </ul>
                 <li>
                     <c:choose>

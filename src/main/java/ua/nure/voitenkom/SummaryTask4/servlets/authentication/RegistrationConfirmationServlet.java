@@ -3,6 +3,8 @@ package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
+import ua.nure.voitenkom.SummaryTask4.EntitiesValues;
+import ua.nure.voitenkom.SummaryTask4.Mappings;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
@@ -12,15 +14,12 @@ import ua.nure.voitenkom.SummaryTask4.service.role.RoleService;
 import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-
-@WebServlet(name = "confirm")
 public class RegistrationConfirmationServlet extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(RegistrationServlet.class);
     private UserService userService;
@@ -45,16 +44,16 @@ public class RegistrationConfirmationServlet extends HttpServlet {
         }
         user.setIsRegistered(true);
         userService.setRegisteredState(user.getId());
-        Role registeredUserRole = roleService.selectByName(Attributes.USER_VALUE);
+        Role registeredUserRole = roleService.selectByName(EntitiesValues.USER_VALUE);
         userService.changeRole(registeredUserRole.getId(), user.getId());
         logger.debug("User {} was registered", user);
 
         HttpSession session = request.getSession();
         if (session.getAttribute(Attributes.START_DATE) != null && session.getAttribute(Attributes.END_DATE) != null) {
-            response.sendRedirect(PageNames.CAR_RENT_MAPPING);
+            response.sendRedirect(Mappings.CAR_RENT_MAPPING);
             return;
         }
-        response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.SUCCESS_CONFIRMATION_PAGE);
+        response.sendRedirect(PageNames.SUCCESS_CONFIRMATION_PAGE);
     }
 
 }

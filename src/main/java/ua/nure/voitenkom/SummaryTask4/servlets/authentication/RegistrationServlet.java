@@ -3,6 +3,7 @@ package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
+import ua.nure.voitenkom.SummaryTask4.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
 import ua.nure.voitenkom.SummaryTask4.service.account.DateService;
@@ -21,7 +22,6 @@ import ua.nure.voitenkom.SummaryTask4.validation.user.RegistrationValidator;
 import javax.mail.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -30,8 +30,6 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Map;
 
-
-@WebServlet(name = "registration")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class RegistrationServlet extends AuthenticationServlet {
 
@@ -83,7 +81,7 @@ public class RegistrationServlet extends AuthenticationServlet {
             response.sendRedirect(PageNames.REGISTRATION_PAGE);
             return;
         }
-        Role unregistered = roleService.selectByName(Attributes.UNREGISTERED_USER_VALUE);
+        Role unregistered = roleService.selectByName(EntitiesValues.UNREGISTERED_USER_VALUE);
         int roleId = unregistered.getId();
         String cipherPassword = PasswordMaker.makePassword(registrationFormBean.getPassword());
         String token = TokenService.getToken();
@@ -102,7 +100,8 @@ public class RegistrationServlet extends AuthenticationServlet {
         userService.insertWithPhoto(newUser);
         logger.debug("User {} was added", newUser);
         try {
-            MailService.sendEmail(newUser.getLogin(), host, port, userEmail, password, token);
+            MailService mailService = new MailService(host, port);
+            mailService.sendEmail(newUser.getLogin(), userEmail, password, token);
         } catch (MessagingException e) {
             e.printStackTrace();
         }

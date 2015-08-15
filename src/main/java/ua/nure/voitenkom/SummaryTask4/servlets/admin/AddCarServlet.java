@@ -3,6 +3,7 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
+import ua.nure.voitenkom.SummaryTask4.Mappings;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
@@ -19,7 +20,6 @@ import ua.nure.voitenkom.SummaryTask4.validation.car.CarValidator;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -27,7 +27,6 @@ import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.Map;
 
-@WebServlet(name = "addCar")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class AddCarServlet extends AdminServlet {
 
@@ -90,6 +89,6 @@ public class AddCarServlet extends AdminServlet {
 
         carService.add(car);
         logger.debug("Car was updated");
-        response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + PageNames.CARS_MAPPING);
+        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.CARS_MAPPING);
     }
 }

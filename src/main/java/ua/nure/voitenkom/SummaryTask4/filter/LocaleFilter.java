@@ -1,7 +1,7 @@
 package ua.nure.voitenkom.SummaryTask4.filter;
 
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.locale.LocaleService;
+import ua.nure.voitenkom.SummaryTask4.service.locale.ILocaleService;
 
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -17,11 +17,11 @@ import java.util.Locale;
 @WebFilter("/*")
 public class LocaleFilter extends BaseFilter {
 
-    private LocaleService localeService;
+    private ILocaleService localeService;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        localeService = (LocaleService) filterConfig.getServletContext().getAttribute(ServiceConstant.LOCALE_SERVICE_CONTEXT);
+        localeService = (ILocaleService) filterConfig.getServletContext().getAttribute(ServiceConstant.LOCALE_SERVICE_CONTEXT);
     }
 
     @Override

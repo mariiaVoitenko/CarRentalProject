@@ -5,8 +5,18 @@
          version="3.1">
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>main</welcome-file>
     </welcome-file-list>
+
+    <error-page>
+        <location>/error</location>
+    </error-page>
+    <error-page>
+        <exception-type>
+            java.lang.Throwable
+        </exception-type>
+        <location>/error</location>
+    </error-page>
 
     <context-param>
         <param-name>AppLocales</param-name>
@@ -217,6 +227,15 @@
     <servlet-mapping>
         <servlet-name>DeclineApplicationServlet</servlet-name>
         <url-pattern>/admin/decline/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ErrorServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.ErrorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ErrorServlet</servlet-name>
+        <url-pattern>/error</url-pattern>
     </servlet-mapping>
 
     <jsp-config>

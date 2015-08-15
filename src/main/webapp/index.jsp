@@ -29,7 +29,7 @@
                 </div>
                 <br>
                 <div>
-                    <fmt:message key="order_driver"/><input name="driver" type="checkbox" checked>
+                    <fmt:message key="order_driver"/>&nbsp;<input name="driver" type="checkbox" checked>
                 </div>
                 <button class="btn btn-large btn-success marginned" type="submit"><fmt:message key="rent"/></button>
             </form>

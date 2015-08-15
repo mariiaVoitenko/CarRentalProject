@@ -2,17 +2,15 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.PageNames;
+import ua.nure.voitenkom.SummaryTask4.Mappings;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "deleteCar")
 public class DeleteCarServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(DeleteCarServlet.class);
@@ -28,7 +26,7 @@ public class DeleteCarServlet extends AdminServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         carService.delete(id);
         logger.debug("Deleted car with id {}", id);
-        response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + PageNames.CARS_MAPPING);
+        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.CARS_MAPPING);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

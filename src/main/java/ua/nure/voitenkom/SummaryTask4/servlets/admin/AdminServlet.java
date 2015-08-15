@@ -1,7 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
-import com.sun.deploy.net.HttpRequest;
-import com.sun.deploy.net.HttpResponse;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
@@ -17,7 +15,6 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
@@ -87,14 +84,14 @@ public abstract class AdminServlet extends HttpServlet {
 
     protected void checkRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
         if (getRoleId(request) != 1) {
-            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
+            response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
             return;
         }
     }
 
     protected void checkManagerRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
         if (getRoleId(request) != 4) {
-            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ACCESS_DENIED_PAGE);
+            response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
             return;
         }
     }

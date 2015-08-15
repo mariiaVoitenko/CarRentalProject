@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
-import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.brand.BrandService;
@@ -20,14 +19,12 @@ import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServ
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "history")
 public class HistoryServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(HistoryServlet.class);
@@ -60,6 +57,7 @@ public class HistoryServlet extends AuthenticationServlet {
             rents = rentService.getUserRents(rentList, carService, declineService, checkService);
         }
         request.setAttribute(Attributes.RENTS, rents);
+        logger.debug("All rents have been got");
         RequestDispatcher requestDispatcher = request
                 .getRequestDispatcher(PageNames.HISTORY_PAGE);
         requestDispatcher.forward(request, response);

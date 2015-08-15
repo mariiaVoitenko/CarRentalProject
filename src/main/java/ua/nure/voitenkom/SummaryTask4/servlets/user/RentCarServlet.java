@@ -3,6 +3,8 @@ package ua.nure.voitenkom.SummaryTask4.servlets.user;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
+import ua.nure.voitenkom.SummaryTask4.EntitiesValues;
+import ua.nure.voitenkom.SummaryTask4.Mappings;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
@@ -20,7 +22,6 @@ import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -33,7 +34,6 @@ import java.util.Map;
 import static ua.nure.voitenkom.SummaryTask4.service.account.DateService.parseDate;
 import static ua.nure.voitenkom.SummaryTask4.service.account.DateService.getDaysCount;
 
-@WebServlet(name = "rentCar")
 public class RentCarServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(RentCarServlet.class);
@@ -77,11 +77,11 @@ public class RentCarServlet extends AuthenticationServlet {
         int userId = Integer.parseInt(session.getAttribute(Attributes.USER_ID).toString());
         int checkId = checkService.selectLastInsertedId();
         Rent rent = new Rent(isDriven,
-                car.getId(), userId, Integer.parseInt(Attributes.NOT_APPROVEN_DECLINE_ID),
+                car.getId(), userId, Integer.parseInt(EntitiesValues.NOT_APPROVEN_DECLINE_ID),
                 checkId, new Timestamp(start.getTime()), new Timestamp(end.getTime()));
         rentService.insert(rent);
         logger.debug("Rent was inserted");
-        //TODO redirect to history
+        response.sendRedirect(Mappings.HISTORY_MAPPING);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -98,7 +98,7 @@ public class RentCarServlet extends AuthenticationServlet {
                 session.setAttribute(Attributes.DRIVER, request.getParameter(Attributes.DRIVER));
             }
 
-            response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.LOGIN_PAGE);
+            response.sendRedirect(PageNames.LOGIN_PAGE);
             return;
         }
 

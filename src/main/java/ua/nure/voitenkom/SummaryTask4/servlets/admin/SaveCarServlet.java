@@ -3,6 +3,7 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.Attributes;
+import ua.nure.voitenkom.SummaryTask4.Mappings;
 import ua.nure.voitenkom.SummaryTask4.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
@@ -19,12 +20,10 @@ import ua.nure.voitenkom.SummaryTask4.validation.car.CarValidator;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.Map;
 
-@WebServlet(name = "saveCar")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class SaveCarServlet extends AdminServlet {
 
@@ -82,6 +81,6 @@ public class SaveCarServlet extends AdminServlet {
 
         carService.update(car);
         logger.debug("Car {} was updated", id);
-        response.sendRedirect(PageNames.EMPTY_PAGE + PageNames.ADMIN + PageNames.CARS_MAPPING);
+        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.CARS_MAPPING);
     }
 }

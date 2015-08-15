@@ -25,7 +25,7 @@
                     <img src="<c:url value="${user.photoPath}"/>" alt="user" height="200" width="200">
                 </div>
                 <div class="gap-div40"></div>
-                <div class="right-div">
+                <div class="right-div marginned20">
                     <div class="paragraph-text">
                         <fmt:message key="passport"/> : ${user.passportNumber}
                     </div>
@@ -39,7 +39,7 @@
                         </c:choose>
                         <br>
                         <br>
-
+                    </div>
                         <form action="block?id=${user.id}" method="POST">
                             <button class="btn btn-large btn-danger" type="submit">
                                 <c:choose>
@@ -61,7 +61,7 @@
                                 </c:otherwise>
                             </c:choose>
                         </form>
-                    </div>
+
                 </div>
             </div>
         </c:forEach>

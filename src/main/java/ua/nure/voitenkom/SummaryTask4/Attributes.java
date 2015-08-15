@@ -21,10 +21,6 @@ public final class Attributes {
     public static final String LANG_FILTER_TYPE = "LangFilterType";
     public static final String COOKIE_LANG_TIMEOUT = "CookieLangTimeout";
 
-    public static final String UNREGISTERED_USER_VALUE = "Unregistered user";
-    public static final String MANAGER_USER_VALUE = "Manager";
-    public static final String USER_VALUE = "User";
-
     public static final String PICTURES_FOLDER = "picturesFolder";
     public static final String CARS = "cars";
     public static final String CAR = "car";
@@ -41,16 +37,12 @@ public final class Attributes {
     public static final String SITS_COUNT = "sitsCount";
     public static final String BIG_LUGGAGE_COUNT = "bigLuggageCount";
     public static final String SMALL_LUGGAGE_COUNT = "smallLuggageCount";
-    public static final String AVAILABLE_COUNT = "availableCount";
     public static final String PRICE = "price";
     public static final String DOORS_COUNT = "doorsCount";
     public static final String USERS = "users";
     public static final String START_DATE = "start";
     public static final String END_DATE = "end";
     public static final String DRIVER = "driver";
-    public static final String NOT_APPROVEN_DECLINE_ID = "5";
     public static final String RENTS = "rents";
-    public static final String MANAGER_ROLE_ID = "4";
-    public static final String ACCEPTED_APPLICATION_DECLINE_ID = "6";
     public static final String DECLINES = "declinesList";
 }

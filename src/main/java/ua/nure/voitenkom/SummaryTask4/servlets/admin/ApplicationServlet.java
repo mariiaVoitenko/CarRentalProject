@@ -23,7 +23,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name="manager/applications")
 public class ApplicationServlet extends AdminServlet{
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);

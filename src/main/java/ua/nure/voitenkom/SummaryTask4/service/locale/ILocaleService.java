@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
-public interface LocaleService {
+public interface ILocaleService {
 
     Locale getLocale(HttpServletRequest request);
 

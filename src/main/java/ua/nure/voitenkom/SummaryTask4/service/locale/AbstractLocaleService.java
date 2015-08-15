@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Locale;
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNull;
 
-public abstract class AbstractLocaleService implements LocaleService {
+public abstract class AbstractLocaleService implements ILocaleService {
 
     private final List<String> applicationLocales;
     private final Locale defaultLocale;

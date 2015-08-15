@@ -6,13 +6,13 @@
 </head>
 <body>
 <div class="container">
-    <form action="saveCar?id=${car.id}" method="POST" enctype="multipart/form-data">
+    <form action="<c:url value="saveCar?id=${car.id}"/>" method="POST" enctype="multipart/form-data">
         <div class="container rectangle">
             <div class="left-div">
                 <div class="middle-headline">
                     <select name="brand">
                         <c:forEach var="item" items="${brandsList}">
-                            <option value="${item.id}" ${item.id == car.brandId ? 'selected="selected"' : ''}>${item.name}</option>
+                            <option value="${item.name}" ${item.id == car.brandId ? 'selected="selected"' : ''}>${item.name}</option>
                         </c:forEach>
                     </select>
                 </div>
