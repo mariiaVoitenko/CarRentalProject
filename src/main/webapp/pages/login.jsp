@@ -17,7 +17,7 @@
     <button class="btn btn-large btn-primary" type="submit"><fmt:message key="sign_in"/></button>
 
   </form>
-  <h4 class="paragraph-text"><fmt:message key="registration_message"/><a class="paragraph-text" href="/registration"><fmt:message key="registration_message_link"/></a></h4>
+  <h4 class="paragraph-text"><fmt:message key="registration_message"/><a class="paragraph-text" href="/registration">&nbsp;<fmt:message key="registration_message_link"/></a></h4>
   <h4>${message}</h4>
 </div>
 

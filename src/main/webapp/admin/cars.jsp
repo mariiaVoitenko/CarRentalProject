@@ -1,5 +1,6 @@
 <%@ include file="/WEB-INF/jsp_header.jsp" %>
 <%@ include file="/WEB-INF/header.jsp" %>
+<%@ taglib uri="/WEB-INF/tags/priceFormatter.tld" prefix="customPriceTag"%>
 <html>
 <head>
     <title>All cars></title>
@@ -35,7 +36,8 @@
                         </c:if>
                         <span class="small-image paragraph-text">${car.doorsCount}&nbsp;<fmt:message
                                 key="doors"/></span>
-                        <span class="price red">${car.price} <fmt:message key="HRN"/></span>
+                        <br><br>
+                        <span class="price red"><customPriceTag:formatNumber price="${car.price}" format="#,###"/> &nbsp;<fmt:message key="HRN"/></span>
                         <br><br><br><br>
 
                         <div class="marginned20">

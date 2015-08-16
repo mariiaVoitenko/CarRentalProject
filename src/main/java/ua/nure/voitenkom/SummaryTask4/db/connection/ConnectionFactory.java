@@ -26,7 +26,9 @@ public class ConnectionFactory {
 
     public Connection getConnection() {
         try {
-            return dataSource.getConnection();
+            Connection connection = dataSource.getConnection();
+            connection.setAutoCommit(false);
+            return connection;
         } catch (SQLException e) {
             logger.error("Connection failed", e);
             throw new IllegalStateException("Connection failed", e);
