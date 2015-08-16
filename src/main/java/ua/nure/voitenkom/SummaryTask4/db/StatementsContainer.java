@@ -138,6 +138,7 @@ public class StatementsContainer {
     public static final String SQL_UPDATE_USER_BLOCKED_NOT = "UPDATE users SET is_blocked = false WHERE id = ?";
     public static final String SQL_UPDATE_USER_IS_REGISTERED = "UPDATE users SET is_registered = true WHERE id = ?";
     public static final String SQL_UPDATE_USER_ROLE = "UPDATE users SET roles_id = ? WHERE id = ?";
+    public static final String SQL_UPDATE_USER_PHOTO = "UPDATE users SET photo = ? WHERE id = ?";
     public static final String SQL_DELETE_USER_BY_ID = "DELETE FROM users WHERE id = ?";
     public static final String SQL_SELECT_USER_BY_LOGIN = "SELECT * FROM users WHERE login = ?";
     public static final String SQL_SELECT_USER_BY_ROLE_ID = "SELECT * FROM users WHERE roles_id = ?";

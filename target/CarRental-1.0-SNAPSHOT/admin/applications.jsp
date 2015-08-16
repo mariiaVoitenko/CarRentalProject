@@ -42,7 +42,7 @@
                         <div>
                             <div class="left-div">
                                 <div class="paragraph-text">
-                                    <fmt:message key="user"/> : <a href="#"> ${rent.user.fullName}</a>
+                                    <fmt:message key="user"/> : <a href="<c:url value="/profile?id=${rent.user.id}&edit=false"/>"> ${rent.user.fullName}</a>
                                 </div>
                                 <br>
 

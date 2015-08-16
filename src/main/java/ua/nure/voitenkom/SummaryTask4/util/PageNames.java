@@ -18,4 +18,5 @@ public class PageNames {
     public static final String HISTORY_PAGE = "pages/history.jsp";
     public static final String APPLICATIONS_PAGE = "applications.jsp";
     public static final String INDEX_PAGE = "index.jsp";
+    public static final String PROFILE_PAGE = "pages/profile.jsp";
 }

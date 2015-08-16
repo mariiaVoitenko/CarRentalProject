@@ -47,4 +47,6 @@ public final class Attributes {
     public static final String DECLINES = "declinesList";
     public static final String DECLINE = "decline";
     public static final String ID = "id";
+    public static final String USER = "user";
+    public static final String EDIT = "edit";
 }

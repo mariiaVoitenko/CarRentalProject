@@ -32,4 +32,6 @@ public interface IUserService {
 
     List<User> selectByRoleId(int roleId);
 
+    void updatePhoto(User user);
+
 }

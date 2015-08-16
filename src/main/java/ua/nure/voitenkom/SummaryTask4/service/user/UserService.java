@@ -103,6 +103,17 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public void updatePhoto(final User user) {
+        transactionManager.doInTransaction(new Operation<Void>() {
+            @Override
+            public Void doOperation() {
+                userRepository.updatePhoto(user);
+                return null;
+            }
+        });
+    }
+
+    @Override
     public void unblock(final int id) {
         transactionManager.doInTransaction(new Operation<Void>() {
             @Override

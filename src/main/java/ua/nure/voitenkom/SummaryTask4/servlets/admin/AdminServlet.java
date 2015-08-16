@@ -1,6 +1,7 @@
 package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
+import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
@@ -78,19 +79,15 @@ public abstract class AdminServlet extends HttpServlet {
         car.setClassTypeId(majorityClass.getId());
     }
 
-    protected boolean isPhotoIncorrect(Part photo) {
-        return photo == null || !"image/jpeg".equals(photo.getContentType()) || photo.getSize() == 0;
-    }
-
     protected void checkRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if (getRoleId(request) != 1) {
+        if (getRoleId(request) != Integer.parseInt(EntitiesValues.ADMIN_ROLE_ID)) {
             response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
             return;
         }
     }
 
     protected void checkManagerRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if (getRoleId(request) != 4) {
+        if (getRoleId(request) != Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID)) {
             response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
             return;
         }

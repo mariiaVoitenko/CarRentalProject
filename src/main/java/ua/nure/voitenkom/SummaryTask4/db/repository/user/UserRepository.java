@@ -80,6 +80,19 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     }
 
     @Override
+    public void updatePhoto(User user) {
+        String sql = StatementsContainer.SQL_UPDATE_USER_PHOTO;
+        try (PreparedStatement ps = getConnection().prepareStatement(sql)) {
+            ps.setString(1, user.getPhotoPath());
+            ps.setInt(2, user.getId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
     public void unblock(int id) {
         String sql = StatementsContainer.SQL_UPDATE_USER_BLOCKED_NOT;
         try (PreparedStatement ps = getConnection().prepareStatement(sql)) {

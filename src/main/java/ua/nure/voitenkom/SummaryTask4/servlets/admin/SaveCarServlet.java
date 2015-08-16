@@ -16,6 +16,7 @@ import ua.nure.voitenkom.SummaryTask4.service.photo.PhotoService;
 import ua.nure.voitenkom.SummaryTask4.service.status.StatusService;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.car.CarValidator;
+import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

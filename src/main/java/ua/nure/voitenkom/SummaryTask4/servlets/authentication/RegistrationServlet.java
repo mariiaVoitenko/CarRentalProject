@@ -29,6 +29,7 @@ import javax.servlet.http.Part;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Map;
+import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class RegistrationServlet extends AuthenticationServlet {
@@ -95,7 +96,7 @@ public class RegistrationServlet extends AuthenticationServlet {
             }
             photoService.saveUserPicture(newUser, photo);
         } else {
-            newUser.setPhotoPath("/images/user.png");
+            newUser.setPhotoPath("user.png");
         }
         userService.insertWithPhoto(newUser);
         logger.debug("User {} was added", newUser);
@@ -117,10 +118,6 @@ public class RegistrationServlet extends AuthenticationServlet {
             errors.put("password", "Passwords don't match");
         }
         return errors;
-    }
-
-    private boolean isPhotoIncorrect(Part photo) {
-        return photo == null || !"image/jpeg".equals(photo.getContentType());
     }
 
     private RegistrationFormBean parseForm(HttpServletRequest request) {
