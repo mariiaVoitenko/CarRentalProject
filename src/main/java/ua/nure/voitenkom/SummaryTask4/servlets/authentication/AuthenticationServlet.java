@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 
-import ua.nure.voitenkom.SummaryTask4.Attributes;
+import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 
 import javax.servlet.http.HttpServlet;

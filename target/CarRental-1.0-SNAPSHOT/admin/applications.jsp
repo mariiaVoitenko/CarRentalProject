@@ -21,7 +21,7 @@
                         <div class="middle-headline">
                                 ${rent.car.model}
                         </div>
-                        <img src="<c:url value="${rent.car.photoPath}"/>" alt="Car" height="260" width="450">
+                        <img src="<c:url value="photo/${rent.car.photoPath}"/>" alt="Car" height="260" width="450">
                     </div>
                     <div class="gap-div40"></div>
                     <div class="right-div">

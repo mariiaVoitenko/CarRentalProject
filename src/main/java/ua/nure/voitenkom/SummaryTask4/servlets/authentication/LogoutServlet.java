@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 
-import ua.nure.voitenkom.SummaryTask4.PageNames;
+import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

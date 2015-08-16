@@ -1,7 +1,7 @@
 package ua.nure.voitenkom.SummaryTask4.servlets;
 
-import ua.nure.voitenkom.SummaryTask4.Attributes;
-import ua.nure.voitenkom.SummaryTask4.PageNames;
+import ua.nure.voitenkom.SummaryTask4.util.Attributes;
+import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

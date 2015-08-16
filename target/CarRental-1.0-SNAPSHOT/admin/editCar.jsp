@@ -23,7 +23,7 @@
                            value='<c:out value="${car.model}"/>'>
                 </div>
 
-                <img src="<c:url value="${car.photoPath}"/>" alt="Car" height="260" width="450">
+                <img src="<c:url value="/photo/${car.photoPath}"/>" alt="Car" height="260" width="450">
                 <input type="file" name="photo">
             </div>
             <div class="gap-div40"></div>
@@ -58,11 +58,9 @@
                 <div class="paragraph-text">
                     <fmt:message key="conditioner"/> :
                     <select name="hasConditioner">
-                        <option value="true"  <c:if
-                                test="${param.selectValue == car.hasConditioner})"> selected </c:if>  >true
+                        <option value="true"  ${car.hasConditioner == true ? 'selected="selected"' : ''}  >true
                         </option>
-                        <option value="false"  <c:if
-                                test="${param.selectValue == car.hasConditioner})"> selected </c:if>  >false
+                        <option value="false"  ${car.hasConditioner == false ? 'selected="selected"' : ''}  >false
                         </option>
                     </select>
                 </div>
@@ -72,10 +70,7 @@
                     <fmt:message key="class"/> :
                     <select name="class">
                         <c:forEach var="item" items="${classesList}">
-                            <option value="<c:out value='${item.name}' />"
-                                    <c:if test="${param.selectValue == item.name})"> selected </c:if>  >
-                                <c:out value="${item.name}"/>
-                            </option>
+                            <option value="${item.name}" ${item.id == car.classTypeId ? 'selected="selected"' : ''}>${item.name}</option>
                         </c:forEach>
                     </select>
                 </div>
@@ -85,10 +80,7 @@
                     <fmt:message key="color"/> :
                     <select name="color">
                         <c:forEach var="item" items="${colorsList}">
-                            <option value="<c:out value='${item.name}' />"
-                                    <c:if test="${param.selectValue == item.name})"> selected </c:if>  >
-                                <c:out value="${item.name}"/>
-                            </option>
+                            <option value="${item.name}" ${item.id == car.colorId ? 'selected="selected"' : ''}>${item.name}</option>
                         </c:forEach>
                     </select>
                 </div>
@@ -98,10 +90,7 @@
                     <fmt:message key="status"/> :
                     <select name="status">
                         <c:forEach var="item" items="${statusesList}">
-                            <option value="<c:out value='${item.name}' />"
-                                    <c:if test="${param.selectValue == item.name})"> selected </c:if>  >
-                                <c:out value="${item.name}"/>
-                            </option>
+                            <option value="${item.name}" ${item.id == car.statusId ? 'selected="selected"' : ''}>${item.name}</option>
                         </c:forEach>
                     </select>
                 </div>

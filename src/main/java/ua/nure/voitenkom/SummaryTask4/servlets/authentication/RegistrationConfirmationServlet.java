@@ -2,17 +2,18 @@ package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.Attributes;
-import ua.nure.voitenkom.SummaryTask4.EntitiesValues;
-import ua.nure.voitenkom.SummaryTask4.Mappings;
-import ua.nure.voitenkom.SummaryTask4.PageNames;
+import ua.nure.voitenkom.SummaryTask4.util.Attributes;
+import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
+import ua.nure.voitenkom.SummaryTask4.util.Mappings;
+import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.account.DateService;
+import ua.nure.voitenkom.SummaryTask4.util.DateManager;
 import ua.nure.voitenkom.SummaryTask4.service.role.RoleService;
 import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,7 +37,7 @@ public class RegistrationConfirmationServlet extends HttpServlet {
         String[] splits = request.getRequestURI().split("/");
         String token = splits[splits.length - 1];
         User user = userService.selectByToken(token);
-        if (DateService.isWastedToken(user.getRegistrationTime())) {
+        if (DateManager.isWastedToken(user.getRegistrationTime())) {
             HttpSession session = request.getSession();
             userService.deleteUser(user.getId());
             session.setAttribute(Attributes.MESSAGE, "Sorry. Your one-time code is out of date. Try to register one more time and immediately activate a code.");
@@ -53,7 +54,9 @@ public class RegistrationConfirmationServlet extends HttpServlet {
             response.sendRedirect(Mappings.CAR_RENT_MAPPING);
             return;
         }
-        response.sendRedirect(PageNames.SUCCESS_CONFIRMATION_PAGE);
+        RequestDispatcher requestDispatcher = request
+                .getRequestDispatcher("/"+PageNames.SUCCESS_CONFIRMATION_PAGE);
+        requestDispatcher.forward(request, response);
     }
 
 }

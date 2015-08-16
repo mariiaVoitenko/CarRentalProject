@@ -28,43 +28,27 @@ public class PhotoService implements IPhotoService {
 
     @Override
     public void saveUserPicture(User user, Part picture) {
-        File fileSaveDirectory = new File(folder);
-        if (!fileSaveDirectory.exists()) {
-            boolean isCreated = fileSaveDirectory.mkdirs();
-            if (!isCreated) {
-                logger.error("Unable to create folder for pictures folder");
-                throw new FileSaveException("Unable to create folder for pictures folder");
-            }
-        }
+        checkFolder();
         String avatarName = generateAvatarName();
         String path = folder + "/" + avatarName;
         saveOnDisk(picture, path);
-        String[] splitted = path.split("/");
-        user.setPhotoPath("/" + splitted[splitted.length - 2] + "/" + avatarName);
+        user.setPhotoPath(avatarName);
         logger.debug("Picture has been saved {}", path);
     }
 
     @Override
     public void saveCarPicture(Car car, Part picture) {
-        File fileSaveDirectory = new File(folder);
-        if (!fileSaveDirectory.exists()) {
-            boolean isCreated = fileSaveDirectory.mkdirs();
-            if (!isCreated) {
-                logger.error("Unable to create folder for pictures folder");
-                throw new FileSaveException("Unable to create folder for pictures folder");
-            }
-        }
+        checkFolder();
         String avatarName = generateAvatarName();
         String path = folder + "/" + avatarName;
         saveOnDisk(picture, path);
-        String[] splitted = path.split("/");
-        car.setPhotoPath("/" + splitted[splitted.length - 2] + "/" + avatarName);
+        car.setPhotoPath(avatarName);
         logger.debug("Picture has been saved {}", path);
     }
 
     @Override
     public File getPicture(String picture) {
-        return new File(folder + picture);
+        return new File(folder + "/" + picture);
     }
 
     private String generateAvatarName() {
@@ -74,19 +58,20 @@ public class PhotoService implements IPhotoService {
     private void saveOnDisk(Part picture, String filePath) {
         try {
             picture.write(filePath);
-            resize(filePath);
         } catch (IOException e) {
             logger.warn("Unable to load picture", e);
             throw new FileSaveException("Unable to save picture", e);
         }
     }
 
-    private static void resize(String picture) throws IOException {
-        BufferedImage originalImage = ImageIO.read(new File(picture));
-        BufferedImage resizedImage = new BufferedImage(IMG_WIDTH, IMG_HEIGHT, originalImage.getType());
-        Graphics2D g = resizedImage.createGraphics();
-        g.drawImage(originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
-        g.dispose();
-        ImageIO.write(resizedImage, FORMAT, new File(picture));
+    private void checkFolder() {
+        File fileSaveDirectory = new File(folder);
+        if (!fileSaveDirectory.exists()) {
+            boolean isCreated = fileSaveDirectory.mkdirs();
+            if (!isCreated) {
+                logger.error("Unable to create folder for pictures folder");
+                throw new FileSaveException("Unable to create folder for pictures folder");
+            }
+        }
     }
 }

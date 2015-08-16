@@ -1,4 +1,4 @@
-package ua.nure.voitenkom.SummaryTask4;
+package ua.nure.voitenkom.SummaryTask4.util;
 
 public final class EntitiesValues {
 

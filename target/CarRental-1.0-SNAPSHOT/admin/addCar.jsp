@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="container">
-    <form action="addCar" method="POST" enctype="multipart/form-data">
+    <form action="<c:url value="addCar"/>" method="POST" enctype="multipart/form-data">
         <div class="container rectangle">
             <div class="left-div">
                 <div class="middle-headline">

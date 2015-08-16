@@ -36,7 +36,7 @@
     </context-param>
     <context-param>
         <param-name>picturesFolder</param-name>
-        <param-value>E:/EPAM/CarRentalProject/Project/src/main/webapp/images</param-value>
+        <param-value>E:/EPAM/CarRentalProject/Pics</param-value>
     </context-param>
     <context-param>
         <param-name>host</param-name>
@@ -236,6 +236,24 @@
     <servlet-mapping>
         <servlet-name>ErrorServlet</servlet-name>
         <url-pattern>/error</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PhotoServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.PhotoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PhotoServlet</servlet-name>
+        <url-pattern>/photo/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminPhotoServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.PhotoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminPhotoServlet</servlet-name>
+        <url-pattern>/admin/photo/*</url-pattern>
     </servlet-mapping>
 
     <jsp-config>

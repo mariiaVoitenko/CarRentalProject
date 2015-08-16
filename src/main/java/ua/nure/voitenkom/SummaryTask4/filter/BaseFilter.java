@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.filter;
 
-import ua.nure.voitenkom.SummaryTask4.Attributes;
+import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

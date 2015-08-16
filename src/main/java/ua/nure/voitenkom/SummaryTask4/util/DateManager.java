@@ -1,4 +1,4 @@
-package ua.nure.voitenkom.SummaryTask4.service.account;
+package ua.nure.voitenkom.SummaryTask4.util;
 
 import org.slf4j.Logger;
 
@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class DateService {
+public class DateManager {
 
     public static Timestamp getCurrentDate() {
         return new java.sql.Timestamp(Calendar.getInstance().getTime().getTime());

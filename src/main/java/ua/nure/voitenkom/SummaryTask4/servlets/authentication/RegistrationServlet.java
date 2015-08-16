@@ -2,11 +2,11 @@ package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.Attributes;
-import ua.nure.voitenkom.SummaryTask4.EntitiesValues;
-import ua.nure.voitenkom.SummaryTask4.PageNames;
+import ua.nure.voitenkom.SummaryTask4.util.Attributes;
+import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
+import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
-import ua.nure.voitenkom.SummaryTask4.service.account.DateService;
+import ua.nure.voitenkom.SummaryTask4.util.DateManager;
 import ua.nure.voitenkom.SummaryTask4.service.account.MailService;
 import ua.nure.voitenkom.SummaryTask4.service.account.PasswordMaker;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
@@ -85,7 +85,7 @@ public class RegistrationServlet extends AuthenticationServlet {
         int roleId = unregistered.getId();
         String cipherPassword = PasswordMaker.makePassword(registrationFormBean.getPassword());
         String token = TokenService.getToken();
-        Timestamp now = DateService.getCurrentDate();
+        Timestamp now = DateManager.getCurrentDate();
         User newUser = new User(registrationFormBean.getFullName(), token, registrationFormBean.getPassportNumber(), roleId, cipherPassword, registrationFormBean.getLogin(), now);
 
         if (!(photo.getSize() == 0)) {
@@ -100,8 +100,7 @@ public class RegistrationServlet extends AuthenticationServlet {
         userService.insertWithPhoto(newUser);
         logger.debug("User {} was added", newUser);
         try {
-            MailService mailService = new MailService(host, port);
-            mailService.sendEmail(newUser.getLogin(), userEmail, password, token);
+            MailService.sendEmail(host, port, newUser.getLogin(), userEmail, password, token);
         } catch (MessagingException e) {
             e.printStackTrace();
         }

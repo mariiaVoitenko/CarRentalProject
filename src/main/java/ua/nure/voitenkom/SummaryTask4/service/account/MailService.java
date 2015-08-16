@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.service.account;
 
-import ua.nure.voitenkom.SummaryTask4.Mappings;
+import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -10,34 +10,10 @@ import java.util.Properties;
 
 public class MailService {
 
-    private String host;
-    private String port;
-
-    public MailService(String port, String host) {
-        this.port = port;
-        this.host = host;
-    }
-
-    public String getPort() {
-        return port;
-    }
-
-    public void setPort(String port) {
-        this.port = port;
-    }
-
-    public String getHost() {
-        return host;
-    }
-
-    public void setHost(String host) {
-        this.host = host;
-    }
-
-    public void sendEmail(String email, final String user, final String pass, String token) throws MessagingException {
+    public static void  sendEmail(String host, String port, String email, final String user, final String pass, String token) throws MessagingException {
         Properties properties = new Properties();
-        properties.put("mail.smtp.host", this.getHost());
-        properties.put("mail.smtp.port", this.getPort());
+        properties.put("mail.smtp.host", host);
+        properties.put("mail.smtp.port", port);
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
 

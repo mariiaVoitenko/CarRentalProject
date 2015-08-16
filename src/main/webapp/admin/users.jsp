@@ -22,7 +22,7 @@
                     <div class="middle-headline">
                         <c:if test="${user.roleId == 4}"><fmt:message key="manager"/></c:if>
                     </div>
-                    <img src="<c:url value="${user.photoPath}"/>" alt="user" height="200" width="200">
+                    <img src="<c:url value="photo/${user.photoPath}"/>" alt="user" height="200" width="200">
                 </div>
                 <div class="gap-div40"></div>
                 <div class="right-div marginned20">

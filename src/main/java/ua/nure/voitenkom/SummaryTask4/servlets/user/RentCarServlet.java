@@ -2,10 +2,10 @@ package ua.nure.voitenkom.SummaryTask4.servlets.user;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.Attributes;
-import ua.nure.voitenkom.SummaryTask4.EntitiesValues;
-import ua.nure.voitenkom.SummaryTask4.Mappings;
-import ua.nure.voitenkom.SummaryTask4.PageNames;
+import ua.nure.voitenkom.SummaryTask4.util.Attributes;
+import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
+import ua.nure.voitenkom.SummaryTask4.util.Mappings;
+import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
@@ -31,8 +31,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import static ua.nure.voitenkom.SummaryTask4.service.account.DateService.parseDate;
-import static ua.nure.voitenkom.SummaryTask4.service.account.DateService.getDaysCount;
+import static ua.nure.voitenkom.SummaryTask4.util.DateManager.parseDate;
+import static ua.nure.voitenkom.SummaryTask4.util.DateManager.getDaysCount;
 
 public class RentCarServlet extends AuthenticationServlet {
 

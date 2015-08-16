@@ -14,7 +14,7 @@ import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
 import ua.nure.voitenkom.SummaryTask4.service.decline.DeclineService;
 import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 
-import static ua.nure.voitenkom.SummaryTask4.service.account.DateService.timestampToString;
+import static ua.nure.voitenkom.SummaryTask4.util.DateManager.timestampToString;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
