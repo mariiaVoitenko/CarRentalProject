@@ -58,12 +58,12 @@
                                 <br>
                             </div>
                             <div class="right-div">
-                                <form action="editCar?id=${car.id}" method="POST">
+                                <form action="<c:url value="editCar?id=${car.id}"/>" method="POST">
                                     <button class="btn btn-large btn-primary btn-group-justified" type="submit"><fmt:message
                                             key="edit"/></button>
                                 </form>
 
-                                <form action="deleteCar?id=${car.id}" method="POST">
+                                <form action="<c:url value="deleteCar?id=${car.id}"/>" method="POST">
                                     <button class="btn btn-large btn-danger btn-group-justified" type="submit"><fmt:message
                                             key="delete"/></button>
                                 </form>

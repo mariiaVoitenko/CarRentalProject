@@ -45,4 +45,6 @@ public final class Attributes {
     public static final String DRIVER = "driver";
     public static final String RENTS = "rents";
     public static final String DECLINES = "declinesList";
+    public static final String DECLINE = "decline";
+    public static final String ID = "id";
 }

@@ -43,10 +43,11 @@ public class AcceptApplicationServlet extends AdminServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkManagerRole(request, response);
 
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter(Attributes.ID));
         Rent rent = rentService.selectById(id);
         rent.setDeclineId(Integer.parseInt(EntitiesValues.ACCEPTED_APPLICATION_DECLINE_ID));
         rentService.updateDecline(rent);
+        logger.debug("Rent with id {} was accepted", id);
 
         List<Rent> rentList = rentService.selectUnapproved();
         List<RentFormBean> rents = new ArrayList<>();
@@ -55,7 +56,7 @@ public class AcceptApplicationServlet extends AdminServlet {
         }
         request.setAttribute(Attributes.RENTS, rents);
         RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(Mappings.APPLICATIONS_MAPPING);
+                .getRequestDispatcher(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
         requestDispatcher.forward(request, response);
     }
 }

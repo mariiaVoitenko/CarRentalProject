@@ -53,7 +53,7 @@ public class SaveCarServlet extends AdminServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
         HttpSession session = request.getSession();
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter(Attributes.ID));
         Car car = carService.getById(id);
         CarFormBean carFormBean = parseForm(request);
         Part photo = request.getPart(Attributes.PHOTO);

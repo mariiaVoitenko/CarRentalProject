@@ -36,66 +36,75 @@
                         </c:if>
                         <span class="small-image paragraph-text">${rent.car.doorsCount}&nbsp;<fmt:message
                                 key="doors"/></span>
-                        <span class="price red">${rent.check.sum} <fmt:message key="HRN"/></span>
+                        <span class="price red">${rent.check.sum}&nbsp; <fmt:message key="HRN"/></span>
                         <br><br><br><br>
 
-                        <div class="paragraph-text">
-                            <fmt:message key="user"/> : <a href="#"> ${rent.user.fullName}</a>
-                        </div>
-                        <br>
+                        <div>
+                            <div class="left-div">
+                                <div class="paragraph-text">
+                                    <fmt:message key="user"/> : <a href="#"> ${rent.user.fullName}</a>
+                                </div>
+                                <br>
 
-                        <div class="paragraph-text">
-                            <fmt:message key="passport"/> : ${rent.user.passportNumber}
-                        </div>
-                        <br>
+                                <div class="paragraph-text">
+                                    <fmt:message key="passport"/> : ${rent.user.passportNumber}
+                                </div>
+                                <br>
 
-                        <div class="paragraph-text">
-                            <fmt:message key="rental_start"/> : ${rent.startDate}
-                        </div>
-                        <br>
+                                <div class="paragraph-text">
+                                    <fmt:message key="rental_start"/> : ${rent.startDate}
+                                </div>
+                                <br>
 
-                        <div class="paragraph-text">
-                            <fmt:message key="rental_end"/> : ${rent.endDate}
-                        </div>
-                        <br>
+                                <div class="paragraph-text">
+                                    <fmt:message key="rental_end"/> : ${rent.endDate}
+                                </div>
+                                <br>
 
-                        <div class="paragraph-text">
-                            <fmt:message key="is_driven"/> :
-                            <c:choose>
-                                <c:when test="${rent.isDriven()}"><fmt:message key="yes"/></c:when>
-                                <c:otherwise><fmt:message key="no"/></c:otherwise>
-                            </c:choose>
-                        </div>
-                        <br>
+                                <div class="paragraph-text">
+                                    <fmt:message key="is_driven"/> :
+                                    <c:choose>
+                                        <c:when test="${rent.isDriven()}"><fmt:message key="yes"/></c:when>
+                                        <c:otherwise><fmt:message key="no"/></c:otherwise>
+                                    </c:choose>
+                                </div>
+                                <br>
 
-                        <div class="paragraph-text">
-                            <fmt:message key="class"/> : ${rent.car.className}
-                        </div>
-                        <br>
+                                <div class="paragraph-text">
+                                    <fmt:message key="class"/> : ${rent.car.className}
+                                </div>
+                                <br>
 
-                        <div class="paragraph-text">
-                            <fmt:message key="color"/> : ${rent.car.colorName}
-                        </div>
-                        <br>
-
-                        <form action="accept?id=${rent.id}" method="POST">
-                            <button class="btn btn-large btn-primary" type="submit"><fmt:message
-                                    key="accept"/></button>
-                        </form>
-
-                        <form action="decline?id=${rent.id}" method="POST">
-                            <div class="paragraph-text">
-                                <select name="brand">
-                                    <c:forEach var="item" items="${declinesList}">
-                                        <option value="${item.id}" ${item.id == car.brandId ? 'selected="selected"' : ''}>${item.name}</option>
-                                    </c:forEach>
-                                </select>
+                                <div class="paragraph-text">
+                                    <fmt:message key="color"/> : ${rent.car.colorName}
+                                </div>
+                                <br>
                             </div>
-                            <button class="btn btn-large btn-primary" type="submit"><fmt:message
-                                    key="decline"/></button>
-                        </form>
-
-                        <br>
+                            <div class="right-div">
+                                <form action="<c:url value="accept?id=${rent.id}"/>" method="POST">
+                                    <button class="btn btn-large btn-success btn-group-justified" type="submit">
+                                        <fmt:message
+                                                key="accept"/></button>
+                                </form>
+                                <div class="text-center paragraph-text">
+                                    <fmt:message key="decline_reason"/> :
+                                    <br>
+                                    <form action="<c:url value="decline?id=${rent.id}"/>" method="POST">
+                                        <div class="paragraph-text">
+                                            <select name="decline" class="paragraph-text">
+                                                <c:forEach var="item" items="${declinesList}">
+                                                    <option value="${item.id}" ${item.id == car.brandId ? 'selected="selected"' : ''}>${item.name}</option>
+                                                </c:forEach>
+                                            </select>
+                                            <br>
+                                        </div>
+                                        <button class="btn btn-large btn-danger btn-group-justified marginned20"
+                                                type="submit"><fmt:message key="decline"/></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </c:forEach>

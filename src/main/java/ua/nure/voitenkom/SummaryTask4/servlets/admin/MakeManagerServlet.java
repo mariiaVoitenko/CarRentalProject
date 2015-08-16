@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
@@ -29,7 +30,7 @@ public class MakeManagerServlet extends AdminServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter(Attributes.ID));
         User user = userService.selectById(id);
         int managerRoleId = Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID);
         if (user.getRoleId() != managerRoleId) {

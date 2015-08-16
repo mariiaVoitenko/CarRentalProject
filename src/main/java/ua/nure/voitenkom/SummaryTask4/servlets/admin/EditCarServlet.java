@@ -38,7 +38,7 @@ public class EditCarServlet extends AdminServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter(Attributes.ID));
         Car car = carService.getById(id);
         request.setAttribute(Attributes.CAR, car);
         logger.debug("Car selected");
