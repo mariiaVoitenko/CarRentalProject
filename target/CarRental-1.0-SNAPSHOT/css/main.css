@@ -145,3 +145,27 @@ body {
     margin-right:15px;
     margin-left: 50px;
 }
+
+#div_1 {
+    height: 25%;
+    width: 100%;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: scroll
+}
+
+#div_3{
+    float: left;
+    height: 100%;
+    width: 1500%;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: hidden
+}
+
+#div_2{
+    height: 200px;
+    width: 170px;
+    border: 1px solid #A2A2A2;
+    float: left
+}

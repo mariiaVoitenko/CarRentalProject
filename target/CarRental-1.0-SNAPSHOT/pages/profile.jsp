@@ -12,8 +12,7 @@
         <img src="<c:url value="photo/${user.photoPath}"/>" alt="user" height="250" width="250">
         <br>
         <c:if test="${edit == true}">
-            <form class="marginned20 center-input" action="<c:url value="/profile"/>" method="POST"
-                  enctype="multipart/form-data">
+            <form class="marginned20 center-input" action="<c:url value="/profile"/>" method="POST" enctype="multipart/form-data">
                 <input type="file" name="photo">
                 <button class="btn btn-large btn-success marginned20" type="submit"><fmt:message key="save"/></button>
             </form>
@@ -22,23 +21,23 @@
     </div>
     <div class="gap-div40"></div>
     <div class="right-div marginned20">
-        <div class="left-div">
-            <div class="middle-headline">
-                <fmt:message key="full_name"/> : ${user.fullName}
-            </div>
-            <div class="middle-headline">
-                <fmt:message key="login"/> : ${user.login}
-            </div>
-            <div class="middle-headline">
-                <c:if test="${user.roleId == 4}"><fmt:message key="role"/> : <fmt:message key="manager"/></c:if>
-                <c:if test="${user.roleId == 1}"><fmt:message key="role"/> : <fmt:message key="admin"/></c:if>
-            </div>
 
-            <div class="middle-headline">
-                <fmt:message key="passport"/> : ${user.passportNumber}
-            </div>
-            <br>
+        <div class="middle-headline">
+            <fmt:message key="full_name"/> : ${user.fullName}
         </div>
+        <div class="middle-headline">
+            <fmt:message key="login"/> : ${user.login}
+        </div>
+        <div class="middle-headline">
+            <c:if test="${user.roleId == 4}"><fmt:message key="role"/> : <fmt:message key="manager"/></c:if>
+            <c:if test="${user.roleId == 1}"><fmt:message key="role"/> : <fmt:message key="admin"/></c:if>
+        </div>
+
+        <div class="middle-headline">
+            <fmt:message key="passport"/> : ${user.passportNumber}
+        </div>
+        <br>
+
         <c:if test="${user.roleId == 1}">
             <form action="block?id=${user.id}" method="POST">
                 <button class="btn btn-large btn-danger" type="submit">

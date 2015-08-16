@@ -21,7 +21,7 @@
     </div>
     <div class="gap-div40"></div>
     <div class="right-div marginned20">
-        
+
         <div class="middle-headline">
             <fmt:message key="full_name"/> : ${user.fullName}
         </div>

@@ -30,9 +30,10 @@ public class CarsServlet extends AdminServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkRole(request, response);
+        //checkRole(request, response);
         List<CarFormBean> cars = carService.getFullInformationForAll();
         request.setAttribute(Attributes.CARS, cars);
+        request.setAttribute(Attributes.ROLE_ID, request.getSession().getAttribute(Attributes.ROLE_ID));
 
         logger.debug("All cars information has been got");
 

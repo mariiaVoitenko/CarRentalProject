@@ -2,6 +2,8 @@ package ua.nure.voitenkom.SummaryTask4.servlets;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
+import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
@@ -27,8 +29,8 @@ public class MainServlet extends HttpServlet{
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Car> cars = carService.getAll();
-        request.setAttribute("cars",cars);
+        List<CarFormBean> cars = carService.getFullInformationForAll();
+        request.setAttribute(Attributes.CARS, cars);
         RequestDispatcher requestDispatcher = request
                 .getRequestDispatcher(PageNames.INDEX_PAGE);
         requestDispatcher.forward(request, response);

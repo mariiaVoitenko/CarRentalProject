@@ -26,7 +26,7 @@
                         <fmt:message key="full_name"/> : ${user.fullName}
                     </div>
                     <div class="middle-headline">
-                        <fmt:message key="login"/> : ${user.login}
+                        <fmt:message key="login"/> : <a href="<c:url value="/profile?id=${user.id}&edit=false"/>">${user.login}</a>
                     </div>
                     <div class="middle-headline">
                         <fmt:message key="passport"/> : ${user.passportNumber}
