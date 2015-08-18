@@ -25,18 +25,12 @@ import java.util.List;
 public class ApplicationServlet extends AdminServlet{
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
-    private CarService carService;
     private RentService rentService;
-    private CheckService checkService;
     private DeclineService declineService;
-    private UserService userService;
 
     @Override
     public void init() throws ServletException {
-        carService = (CarService) getServletContext().getAttribute(ServiceConstant.CAR_SERVICE_CONTEXT);
         rentService = (RentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
-        userService = (UserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
-        checkService = (CheckService) getServletContext().getAttribute(ServiceConstant.CHECK_SERVICE_CONTEXT);
         declineService = (DeclineService) getServletContext().getAttribute(ServiceConstant.DECLINE_SERVICE_CONTEXT);
     }
 
@@ -46,9 +40,11 @@ public class ApplicationServlet extends AdminServlet{
         List<Rent> rentList = rentService.selectUnapproved();
         List<RentFormBean> rents = new ArrayList<>();
         if (rentList.size() != 0) {
-            rents = rentService.getPayedUnapprovedRents(rentList, carService, declineService, checkService, userService);
+            rents = rentService.getPayedUnapprovedRents(rentList);
         }
         request.setAttribute(Attributes.RENTS, rents);
+
+        logger.debug("Applications have been got");
 
         List<Decline> declines = declineService.getAll();
         request.setAttribute(Attributes.DECLINES, declines);

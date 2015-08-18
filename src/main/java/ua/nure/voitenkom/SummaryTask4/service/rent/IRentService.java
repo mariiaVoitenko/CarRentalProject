@@ -20,13 +20,15 @@ public interface IRentService {
 
     List<Rent> selectRentsForDates(Timestamp start, Timestamp end);
 
-    List<RentFormBean> getUserRents(List<Rent> rentList, CarService carService, DeclineService declineService, CheckService checkService);
+    List<RentFormBean> getUserRents(List<Rent> rentList);
 
     List<Rent> selectUnapproved();
 
-    List<RentFormBean> getPayedUnapprovedRents(List<Rent> rentList, CarService carService, DeclineService declineService, CheckService checkService, UserService userService);
+    List<RentFormBean> getPayedUnapprovedRents(List<Rent> rentList);
 
     Rent selectById(int id);
 
     void updateDecline(Rent rent);
+
+    List<Rent> selectReturnedCars() ;
 }

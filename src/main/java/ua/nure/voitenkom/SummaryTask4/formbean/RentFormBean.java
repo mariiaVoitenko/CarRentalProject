@@ -14,17 +14,19 @@ public class RentFormBean {
     private String startDate;
     private String endDate;
     private User user;
+    private boolean isReturned;
 
-    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate) {
+    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate, boolean isReturned) {
         this.isDriven = isDriven;
         this.car = car;
         this.check = check;
         this.decline = decline;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.isReturned = isReturned;
     }
 
-    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate, User user, int id) {
+    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate, User user, int id, boolean isReturned) {
         this.isDriven = isDriven;
         this.car = car;
         this.check = check;
@@ -33,6 +35,7 @@ public class RentFormBean {
         this.endDate = endDate;
         this.user = user;
         this.id = id;
+        this.isReturned = isReturned;
     }
 
     public User getUser() {
@@ -97,5 +100,13 @@ public class RentFormBean {
 
     public void setEndDate(String endDate) {
         this.endDate = endDate;
+    }
+
+    public boolean isReturned() {
+        return isReturned;
+    }
+
+    public void setIsReturned(boolean isReturned) {
+        this.isReturned = isReturned;
     }
 }

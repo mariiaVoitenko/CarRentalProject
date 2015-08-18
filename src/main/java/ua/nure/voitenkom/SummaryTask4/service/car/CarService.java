@@ -6,6 +6,7 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.car.ICarRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
+import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -132,7 +133,7 @@ public class CarService implements ICarService {
         for (Rent rent : rents) {
             int carId = rent.getCarId();
             for (CarFormBean car : carList) {
-                if (car.getId() != carId && car.getStatusName().equals("Free")) {
+                if (car.getId() != carId && car.getStatusName().equals(EntitiesValues.FREE_STATUS_VALUE)) {
                     notRentedCars.add(car);
                 }
             }

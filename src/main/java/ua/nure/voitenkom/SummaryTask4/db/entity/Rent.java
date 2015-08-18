@@ -12,8 +12,9 @@ public class Rent extends Entity {
     private int checkId;
     private Timestamp startDate;
     private Timestamp endDate;
+    private boolean isReturned;
 
-    public Rent(int id, boolean isDriven,  int carId, int userId, int declineId, int checkId, Timestamp startDate, Timestamp endDate) {
+    public Rent(int id, boolean isDriven, int carId, int userId, int declineId, int checkId, Timestamp startDate, Timestamp endDate, boolean isReturned) {
         this.setId(id);
         this.carId = carId;
         this.isDriven = isDriven;
@@ -22,6 +23,7 @@ public class Rent extends Entity {
         this.checkId = checkId;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.isReturned = isReturned;
     }
 
     public Rent(boolean isDriven, int carId, int userId, int declineId, int checkId, Timestamp startDate, Timestamp endDate) {
@@ -88,6 +90,14 @@ public class Rent extends Entity {
 
     public void setEndDate(Timestamp endDate) {
         this.endDate = endDate;
+    }
+
+    public boolean isReturned() {
+        return isReturned;
+    }
+
+    public void setIsReturned(boolean isReturned) {
+        this.isReturned = isReturned;
     }
 
     @Override

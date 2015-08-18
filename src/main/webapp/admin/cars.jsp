@@ -37,7 +37,7 @@
                         <span class="small-image paragraph-text">${car.doorsCount}&nbsp;<fmt:message
                                 key="doors"/></span>
                         <br><br>
-                        <span class="price red"><customPriceTag:formatNumber price="${car.price}" format="#,###"/> &nbsp;<fmt:message key="HRN"/></span>
+                        <span class="price red">${car.price}&nbsp;<fmt:message key="HRN"/></span>
                         <br><br><br><br>
 
                         <div class="marginned20">

@@ -107,10 +107,6 @@ public class BeanContextInitializer implements ServletContextListener {
         IMajorityClassService majorityClassService = new MajorityClassService(transactionManager, majorityClassRepository);
         context.getServletContext().setAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT, majorityClassService);
 
-        IRentRepository rentRepository = new RentRepository(connectionHolder);
-        IRentService rentService = new RentService(transactionManager, rentRepository);
-        context.getServletContext().setAttribute(ServiceConstant.RENT_SERVICE_CONTEXT, rentService);
-
         IRoleRepository roleRepository = new RoleRepository(connectionHolder);
         IRoleService roleService = new RoleService(transactionManager, roleRepository);
         context.getServletContext().setAttribute(ServiceConstant.ROLE_SERVICE_CONTEXT, roleService);
@@ -123,11 +119,17 @@ public class BeanContextInitializer implements ServletContextListener {
         IUserService userService = new UserService(transactionManager, userRepository);
         context.getServletContext().setAttribute(ServiceConstant.USER_SERVICE_CONTEXT, userService);
 
+        IRentRepository rentRepository = new RentRepository(connectionHolder);
+        IRentService rentService = new RentService(transactionManager, rentRepository, checkRepository,
+                declineRepository, carRepository, userRepository);
+        context.getServletContext().setAttribute(ServiceConstant.RENT_SERVICE_CONTEXT, rentService);
+
+
         String picturesFolder = context.getServletContext().getInitParameter(Attributes.PICTURES_FOLDER);
         IPhotoService photoService = new PhotoService(picturesFolder);
         context.getServletContext().setAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT, photoService);
 
-        logger.debug("Put beans to context");
+        logger.debug("Beans have been put to servlet context");
     }
 
     @Override

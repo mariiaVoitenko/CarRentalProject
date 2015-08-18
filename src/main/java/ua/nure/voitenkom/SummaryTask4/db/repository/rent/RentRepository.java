@@ -37,7 +37,8 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
             preparedStatement.setInt(5, rent.getCheckId());
             preparedStatement.setTimestamp(6, rent.getStartDate());
             preparedStatement.setTimestamp(7, rent.getEndDate());
-            preparedStatement.setInt(8, rent.getId());
+            preparedStatement.setBoolean(8, rent.isReturned());
+            preparedStatement.setInt(9, rent.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
@@ -88,6 +89,11 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
         }
+    }
+
+    @Override
+    public List<Rent> selectReturnedCars() {
+        return super.selectAll(StatementsContainer.SQL_SELECT_RETURNED_CARS, new RentExtractor());
     }
 
     @Override

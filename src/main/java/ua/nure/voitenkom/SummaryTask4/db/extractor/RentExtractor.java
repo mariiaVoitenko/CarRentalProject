@@ -22,6 +22,7 @@ public class RentExtractor implements IExtractor<Rent> {
         int checkId = resultSet.getInt(FieldsContainer.FIELD_CHECKS_ID);
         Timestamp startDate = resultSet.getTimestamp(FieldsContainer.FIELD_START_DATE);
         Timestamp endDate = resultSet.getTimestamp(FieldsContainer.FIELD_END_DATE);
-        return new Rent(id, isDriven, carId, userId, declineId, checkId, startDate, endDate);
+        boolean isReturned = resultSet.getBoolean(FieldsContainer.FIELD_IS_RETURNED);
+        return new Rent(id, isDriven, carId, userId, declineId, checkId, startDate, endDate, isReturned);
     }
 }

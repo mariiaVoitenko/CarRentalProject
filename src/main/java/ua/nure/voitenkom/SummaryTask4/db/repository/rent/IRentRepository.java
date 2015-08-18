@@ -21,4 +21,6 @@ public interface IRentRepository extends IAbstractRepository<Rent> {
 
     void updateDecline(Rent rent);
 
+    List<Rent> selectReturnedCars();
+
 }
