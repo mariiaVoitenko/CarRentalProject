@@ -283,6 +283,33 @@
         <url-pattern>/return/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ReturnAdminCarServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.ReturnedCarsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReturnAdminCarServlet</servlet-name>
+        <url-pattern>/admin/return</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetDamageRentServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.SetDamageRentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetDamageRentServlet</servlet-name>
+        <url-pattern>/setDamage/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetFinishedRentServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.admin.SetFinishedRentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetFinishedRentServlet</servlet-name>
+        <url-pattern>/setFinished/*</url-pattern>
+    </servlet-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

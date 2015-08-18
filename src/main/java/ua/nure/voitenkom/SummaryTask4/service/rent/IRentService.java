@@ -30,11 +30,15 @@ public interface IRentService {
 
     void updateDecline(Rent rent);
 
-    List<Rent> selectReturnedCars() ;
+    List<Rent> selectReturnedCarRents() ;
 
     void updateReturnedState(int rentId);
 
     void updateFinishedState(int rentId);
 
     void updateApprovedState(int rentId);
+
+    RentFormBean rentToRentFormBean(Rent rent);
+
+    List<RentFormBean> getReturnedRentFormBeanList();
 }

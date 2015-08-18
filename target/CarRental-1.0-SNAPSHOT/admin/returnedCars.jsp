@@ -81,25 +81,25 @@
                 <br>
               </div>
               <div class="right-div">
-                <form action="<c:url value="accept?id=${rent.id}"/>" method="POST">
+                <form action="<c:url value="setFinished?id=${rent.id}"/>" method="POST">
                   <button class="btn btn-large btn-success btn-group-justified" type="submit">
                     <fmt:message
                             key="accept"/></button>
                 </form>
                 <div class="text-center paragraph-text">
-                  <fmt:message key="decline_reason"/> :
+                  <fmt:message key="choose_damage"/> :
                   <br>
-                  <form action="<c:url value="decline?id=${rent.id}"/>" method="POST">
+                  <form action="<c:url value="setDamage?id=${rent.id}"/>" method="POST">
                     <div class="paragraph-text">
                       <select name="decline" class="paragraph-text">
-                        <c:forEach var="item" items="${declinesList}">
-                          <option value="${item.id}" ${item.id == car.brandId ? 'selected="selected"' : ''}>${item.name}</option>
+                        <c:forEach var="item" items="${damageList}">
+                          <option value="${item.id}">${item.name}</option>
                         </c:forEach>
                       </select>
                       <br>
                     </div>
                     <button class="btn btn-large btn-danger btn-group-justified marginned20"
-                            type="submit"><fmt:message key="decline"/></button>
+                            type="submit"><fmt:message key="create_damage_check"/></button>
                   </form>
                 </div>
               </div>

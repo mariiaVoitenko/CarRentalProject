@@ -76,8 +76,10 @@
                                href="#"><fmt:message key="managership"/><b
                                     class="caret"></b></a>
                             <ul role="menu" class="dropdown-menu">
-                                <li><a class="paragraph-text" href="/admin/applications"><fmt:message
+                                <li><a class="paragraph-text" href="<c:url value="/admin/applications"/>"><fmt:message
                                         key="applications"/></a></li>
+                                <li><a class="paragraph-text" href="<c:url value="/admin/return"/>"><fmt:message
+                                        key="returned_cars"/></a></li>
                             </ul>
                         </c:when>
                         <c:otherwise>

@@ -80,7 +80,7 @@ public class RentService implements IRentService {
     }
 
     @Override
-    public List<Rent> selectReturnedCars() {
+    public List<Rent> selectReturnedCarRents() {
         return transactionManager.doInTransaction(new Operation<List<Rent>>() {
             @Override
             public List<Rent> doOperation() {
@@ -187,6 +187,21 @@ public class RentService implements IRentService {
         });
     }
 
+    @Override
+    public RentFormBean rentToRentFormBean(final Rent rent) {
+        return transactionManager.doInTransaction(new Operation<RentFormBean>() {
+            @Override
+            public RentFormBean doOperation() {
+                Check check = checkRepository.selectById(rent.getCheckId());
+                CarFormBean car = carRepository.getFullCarInformationById(rent.getCarId());
+                User user = userRepository.selectById(rent.getUserId());
+                RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check,
+                        timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), user, rent.getId());
+                return rentFormBean;
+            }
+        });
+    }
+
 
     @Override
     public Rent selectById(final int id) {
@@ -206,5 +221,17 @@ public class RentService implements IRentService {
                 return rentRepository.selectUnapproved();
             }
         });
+    }
+
+    @Override
+    public List<RentFormBean> getReturnedRentFormBeanList(){
+        List<Rent> returnedCarRents = selectReturnedCarRents();
+        List<RentFormBean> returnedRentFormBeansList = new ArrayList<>();
+        if (returnedCarRents.size() != 0) {
+            for (Rent rent : returnedCarRents) {
+                returnedRentFormBeansList.add(rentToRentFormBean(rent));
+            }
+        }
+        return returnedRentFormBeansList;
     }
 }

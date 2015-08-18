@@ -2,23 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a9e38f4-19db-438a-b779-6ca3564f2bcf" name="Default" comment="Some beans changed. No linked entities in beans, just IDs. Some extractors">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/AcceptApplicationServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/AcceptApplicationServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/Attributes.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/Attributes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeclineApplicationServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeclineApplicationServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/FieldsContainer.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/FieldsContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/IDamageService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/IDamageService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/IRentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/IRentRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/util/PageNames.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/util/PageNames.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/util/PageNames.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/util/PageNames.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$12.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$12.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$13.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$13.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$4.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$4.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Rent.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Rent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/extractor/RentExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/extractor/RentExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/RentFormBean.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/RentFormBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/Mappings.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/Mappings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/PageNames.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/PageNames.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/history.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/history.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/header.jsp" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/header.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" afterPath="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/locale/locale_en.properties" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/locale/locale_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/locale/locale_en.properties" afterPath="$PROJECT_DIR$/target/classes/locale/locale_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/admin/returnedCars.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/admin/returnedCars.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/admin/returnedCars.jsp" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/admin/returnedCars.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CarRental.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,102 +62,79 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="201" column="22" selection-start-line="201" selection-start-column="22" selection-end-line="201" selection-end-column="22" />
+              <caret line="226" column="59" selection-start-line="226" selection-start-column="11" selection-end-line="226" selection-end-column="59" />
               <folding>
                 <element signature="e#3028#3218#0" expanded="true" />
                 <element signature="e#3217#3218#0" expanded="true" />
-                <element signature="e#4610#4791#0" expanded="true" />
-                <element signature="e#4790#4791#0" expanded="true" />
+                <element signature="e#4614#4795#0" expanded="true" />
+                <element signature="e#4794#4795#0" expanded="true" />
+                <element signature="e#7549#8166#0" expanded="true" />
+                <element signature="e#8165#8166#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatementsContainer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java">
+      <file leaf-file-name="IRentService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="132" selection-start-line="98" selection-start-column="132" selection-end-line="98" selection-end-column="132" />
+              <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AcceptApplicationServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/AcceptApplicationServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7505241">
-              <caret line="47" column="86" selection-start-line="47" selection-start-column="86" selection-end-line="47" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeclineApplicationServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeclineApplicationServlet.java">
+      <file leaf-file-name="ReturnedCarsServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RentFormBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/RentFormBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+              <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding>
-                <element signature="e#2778#2779#0" expanded="true" />
-                <element signature="e#2811#2812#0" expanded="true" />
-                <element signature="e#2864#2865#0" expanded="true" />
-                <element signature="e#2908#2909#0" expanded="true" />
-                <element signature="e#2943#2944#0" expanded="true" />
-                <element signature="e#2976#2977#0" expanded="true" />
-                <element signature="e#3029#3030#0" expanded="true" />
-                <element signature="e#3073#3074#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HistoryServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/HistoryServlet.java">
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="80" column="95" selection-start-line="80" selection-start-column="82" selection-end-line="80" selection-end-column="95" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mappings.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/Mappings.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/history.jsp">
+      <file leaf-file-name="returnedCars.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/returnedCars.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.307692">
-              <caret line="90" column="103" selection-start-line="90" selection-start-column="103" selection-end-line="90" selection-end-column="103" />
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="91" column="62" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applications.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/applications.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ApplicationServlet.java">
+      <file leaf-file-name="SetDamageRentServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-              <folding />
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,13 +142,35 @@
       <file leaf-file-name="locale_en.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/locale/locale_en.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.793104">
-              <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+            <state vertical-scroll-proportion="-13.103448">
+              <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="ResourceBundle">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetFinishedRentServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8574423">
+              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="291" column="34" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="34" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -172,8 +183,8 @@
         <option value="CSS File" />
         <option value="package-info" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -193,11 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/MakeManagerServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/PageNames.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/IUserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/user/IUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/user/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/PhotoValidator.java" />
@@ -224,26 +230,31 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/HistoryServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/BeanContextInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ApplicationServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/ReturnCarServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/IDamageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/Attributes.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/returnedCars.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/FieldsContainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Rent.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/extractor/RentExtractor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/IRentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/RentFormBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/history.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/AcceptApplicationServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeclineApplicationServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/PageNames.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/RentFormBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/returnedCars.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/Mappings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.java" />
       </list>
     </option>
   </component>
@@ -408,36 +419,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tags" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -734,6 +715,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1284,7 +1299,7 @@
       <workItem from="1439702600635" duration="32932000" />
       <workItem from="1439804575489" duration="155000" />
       <workItem from="1439838843109" duration="1411000" />
-      <workItem from="1439904102487" duration="17068000" />
+      <workItem from="1439904102487" duration="21121000" />
     </task>
     <task id="LOCAL-00001" summary="Some beans. Works">
       <created>1438281940901</created>
@@ -1314,7 +1329,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304366000" />
+    <option name="totallyTimeSpent" value="308419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1380,8 +1395,14 @@
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="96" />
+      <option name="time" value="97" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1390,52 +1411,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/CarsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/ErrorServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/tag/PriceFormattingTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#435#436#0" expanded="false" />
-            <element signature="e#471#472#0" expanded="false" />
-            <element signature="e#513#514#0" expanded="false" />
-            <element signature="e#547#548#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/priceFormatter.tld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1612,14 +1587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="282" column="28" selection-start-line="282" selection-start-column="28" selection-end-line="282" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1665,30 +1632,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/returnedCars.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-61.807693">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
           <folding>
-            <element signature="e#2286#2287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2286#2287#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1734,31 +1683,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/IRentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/locale_en.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.793104">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/HistoryServlet.java">
@@ -1777,23 +1707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/RentFormBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-          <folding>
-            <element signature="e#2778#2779#0" expanded="true" />
-            <element signature="e#2811#2812#0" expanded="true" />
-            <element signature="e#2864#2865#0" expanded="true" />
-            <element signature="e#2908#2909#0" expanded="true" />
-            <element signature="e#2943#2944#0" expanded="true" />
-            <element signature="e#2976#2977#0" expanded="true" />
-            <element signature="e#3029#3030#0" expanded="true" />
-            <element signature="e#3073#3074#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ApplicationServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1807,19 +1720,6 @@
         <state vertical-scroll-proportion="-0.65384614">
           <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="201" column="22" selection-start-line="201" selection-start-column="22" selection-end-line="201" selection-end-column="22" />
-          <folding>
-            <element signature="e#3028#3218#0" expanded="true" />
-            <element signature="e#3217#3218#0" expanded="true" />
-            <element signature="e#4610#4791#0" expanded="true" />
-            <element signature="e#4790#4791#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1841,9 +1741,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/AcceptApplicationServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7505241">
+        <state vertical-scroll-proportion="0.0">
           <caret line="47" column="86" selection-start-line="47" selection-start-column="86" selection-end-line="47" selection-end-column="86" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/PageNames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/RentFormBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2811#2812#0" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2908#2909#0" expanded="true" />
+            <element signature="e#2943#2944#0" expanded="true" />
+            <element signature="e#2976#2977#0" expanded="true" />
+            <element signature="e#3029#3030#0" expanded="true" />
+            <element signature="e#3073#3074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="226" column="59" selection-start-line="226" selection-start-column="11" selection-end-line="226" selection-end-column="59" />
+          <folding>
+            <element signature="e#3028#3218#0" expanded="true" />
+            <element signature="e#3217#3218#0" expanded="true" />
+            <element signature="e#4614#4795#0" expanded="true" />
+            <element signature="e#4794#4795#0" expanded="true" />
+            <element signature="e#7549#8166#0" expanded="true" />
+            <element signature="e#8165#8166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/locale_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.103448">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="80" column="95" selection-start-line="80" selection-start-column="82" selection-end-line="80" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/Mappings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="291" column="34" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/returnedCars.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="91" column="62" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8574423">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
