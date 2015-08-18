@@ -6,6 +6,8 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
+import java.util.List;
+
 public class DamageService implements IDamageService {
 
     private final ITransactionManager transactionManager;
@@ -55,6 +57,16 @@ public class DamageService implements IDamageService {
             public Void doOperation() {
                 damageRepository.updateSum(damage);
                 return null;
+            }
+        });
+    }
+
+    @Override
+    public List<Damage> getAll() {
+        return transactionManager.doInTransaction(new Operation<List<Damage>>() {
+            @Override
+            public List<Damage> doOperation() {
+                return damageRepository.selectAll();
             }
         });
     }

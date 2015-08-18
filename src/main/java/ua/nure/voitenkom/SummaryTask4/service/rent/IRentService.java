@@ -33,4 +33,8 @@ public interface IRentService {
     List<Rent> selectReturnedCars() ;
 
     void updateReturnedState(int rentId);
+
+    void updateFinishedState(int rentId);
+
+    void updateApprovedState(int rentId);
 }

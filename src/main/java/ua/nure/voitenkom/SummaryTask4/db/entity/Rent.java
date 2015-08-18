@@ -13,8 +13,11 @@ public class Rent extends Entity {
     private Timestamp startDate;
     private Timestamp endDate;
     private boolean isReturned;
+    private boolean isApproved;
+    private boolean isFinished;
 
-    public Rent(int id, boolean isDriven, int carId, int userId, int declineId, int checkId, Timestamp startDate, Timestamp endDate, boolean isReturned) {
+    public Rent(int id, boolean isDriven, int carId, int userId, int declineId, int checkId, Timestamp startDate,
+                Timestamp endDate, boolean isReturned, boolean isApproved, boolean isFinished) {
         this.setId(id);
         this.carId = carId;
         this.isDriven = isDriven;
@@ -24,6 +27,8 @@ public class Rent extends Entity {
         this.startDate = startDate;
         this.endDate = endDate;
         this.isReturned = isReturned;
+        this.isApproved = isApproved;
+        this.isFinished = isFinished;
     }
 
     public Rent(boolean isDriven, int carId, int userId, int declineId, int checkId, Timestamp startDate, Timestamp endDate) {
@@ -100,10 +105,25 @@ public class Rent extends Entity {
         this.isReturned = isReturned;
     }
 
+    public boolean isApproved() {
+        return isApproved;
+    }
+
+    public void setIsApproved(boolean isApproved) {
+        this.isApproved = isApproved;
+    }
+
+    public boolean isFinished() {
+        return isFinished;
+    }
+
+    public void setIsFinished(boolean isFinished) {
+        this.isFinished = isFinished;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Rent{");
-        sb.append("id=").append(this.getId());
         sb.append("isDriven=").append(isDriven);
         sb.append(", carId=").append(carId);
         sb.append(", userId=").append(userId);
@@ -112,6 +132,8 @@ public class Rent extends Entity {
         sb.append(", startDate=").append(startDate);
         sb.append(", endDate=").append(endDate);
         sb.append(", isReturned=").append(isReturned);
+        sb.append(", isApproved=").append(isApproved);
+        sb.append(", isFinished=").append(isFinished);
         sb.append('}');
         return sb.toString();
     }

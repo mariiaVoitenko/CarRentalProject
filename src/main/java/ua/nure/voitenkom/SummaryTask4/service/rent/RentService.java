@@ -101,6 +101,28 @@ public class RentService implements IRentService {
     }
 
     @Override
+    public void updateApprovedState(final int rentId) {
+        transactionManager.doInTransaction(new Operation<Void>() {
+            @Override
+            public Void doOperation() {
+                rentRepository.updateApprovedState(rentId);
+                return null;
+            }
+        });
+    }
+
+    @Override
+    public void updateFinishedState(final int rentId) {
+        transactionManager.doInTransaction(new Operation<Void>() {
+            @Override
+            public Void doOperation() {
+                rentRepository.updateFinishedState(rentId);
+                return null;
+            }
+        });
+    }
+
+    @Override
     public List<Rent> selectAllForUser(final int id) {
         return transactionManager.doInTransaction(new Operation<List<Rent>>() {
             @Override
@@ -131,7 +153,8 @@ public class RentService implements IRentService {
                     Check check = checkRepository.selectById(rent.getCheckId());
                     Decline decline = declineRepository.selectById(rent.getDeclineId());
                     RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check, decline,
-                            timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), rent.isReturned(), rent.getId());
+                            timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()),
+                            rent.isReturned(), rent.isApproved(), rent.isFinished(), rent.getId());
                     rents.add(rentFormBean);
                 }
                 return rents;
@@ -150,17 +173,20 @@ public class RentService implements IRentService {
                     if (!check.isPayed()) {
                         continue;
                     }
+                    if (rent.isApproved() || rent.isFinished()) {
+                        continue;
+                    }
                     CarFormBean car = carRepository.getFullCarInformationById(rent.getCarId());
-                    Decline decline = declineRepository.selectById(rent.getDeclineId());
                     User user = userRepository.selectById(rent.getUserId());
-                    RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check, decline,
-                            timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), user, rent.getId(), rent.isReturned());
+                    RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check,
+                            timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), user, rent.getId());
                     payedRents.add(rentFormBean);
                 }
                 return payedRents;
             }
         });
     }
+
 
     @Override
     public Rent selectById(final int id) {

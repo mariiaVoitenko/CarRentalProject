@@ -25,4 +25,8 @@ public interface IRentRepository extends IAbstractRepository<Rent> {
 
     void updateReturnedState(int rentId);
 
+    void updateApprovedState(int rentId);
+
+    void updateFinishedState(int rentId);
+
 }

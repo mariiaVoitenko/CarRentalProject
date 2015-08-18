@@ -15,8 +15,11 @@ public class RentFormBean {
     private String endDate;
     private User user;
     private boolean isReturned;
+    private boolean isApproved;
+    private boolean isFinished;
 
-    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate, boolean isReturned, int id) {
+    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate,
+                        String endDate, boolean isReturned,  boolean isApproved, boolean isFinished, int id) {
         this.isDriven = isDriven;
         this.car = car;
         this.check = check;
@@ -24,19 +27,20 @@ public class RentFormBean {
         this.startDate = startDate;
         this.endDate = endDate;
         this.isReturned = isReturned;
+        this.isApproved = isApproved;
+        this.isFinished = isFinished;
         this.id = id;
     }
 
-    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate, User user, int id, boolean isReturned) {
+    public RentFormBean(boolean isDriven, CarFormBean car, Check check, String startDate,
+                        String endDate, User user, int id) {
         this.isDriven = isDriven;
         this.car = car;
         this.check = check;
-        this.decline = decline;
         this.startDate = startDate;
         this.endDate = endDate;
         this.user = user;
         this.id = id;
-        this.isReturned = isReturned;
     }
 
     public User getUser() {
@@ -111,6 +115,22 @@ public class RentFormBean {
         this.isReturned = isReturned;
     }
 
+    public boolean isApproved() {
+        return isApproved;
+    }
+
+    public void setIsApproved(boolean isApproved) {
+        this.isApproved = isApproved;
+    }
+
+    public boolean isFinished() {
+        return isFinished;
+    }
+
+    public void setIsFinished(boolean isFinished) {
+        this.isFinished = isFinished;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("RentFormBean{");
@@ -123,6 +143,8 @@ public class RentFormBean {
         sb.append(", endDate='").append(endDate).append('\'');
         sb.append(", user=").append(user);
         sb.append(", isReturned=").append(isReturned);
+        sb.append(", isApproved=").append(isApproved);
+        sb.append(", isFinished=").append(isFinished);
         sb.append('}');
         return sb.toString();
     }

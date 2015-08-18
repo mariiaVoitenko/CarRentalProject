@@ -2,15 +2,14 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
-import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
+import ua.nure.voitenkom.SummaryTask4.service.damage.DamageService;
 import ua.nure.voitenkom.SummaryTask4.service.decline.DeclineService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 
@@ -26,12 +25,12 @@ public class ReturnedCarsServlet extends AdminServlet{
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
     private RentService rentService;
-    private DeclineService declineService;
+    private DamageService damageService;
 
     @Override
     public void init() throws ServletException {
         rentService = (RentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
-        declineService = (DeclineService) getServletContext().getAttribute(ServiceConstant.DECLINE_SERVICE_CONTEXT);
+        damageService = (DamageService) getServletContext().getAttribute(ServiceConstant.DAMAGE_SERVICE_CONTEXT);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -46,8 +45,8 @@ public class ReturnedCarsServlet extends AdminServlet{
 
         logger.debug("Applications have been got");
 
-        List<Decline> declines = declineService.getAll();
-        request.setAttribute(Attributes.DECLINES, declines);
+        List<Damage> damageList = damageService.getAll();
+        request.setAttribute(Attributes.DAMAGES, damageList);
 
         RequestDispatcher requestDispatcher = request
                 .getRequestDispatcher(PageNames.APPLICATIONS_PAGE);

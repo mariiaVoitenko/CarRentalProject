@@ -41,4 +41,6 @@ public class FieldsContainer {
     public static final String FIELD_REGISTRATION_TIME = "registration_time";
     public static final String FIELD_LAST_INSERTED_ID = "LAST_INSERT_ID()";
     public static final String FIELD_IS_RETURNED = "is_returned";
+    public static final String FIELD_IS_APPROVED = "is_approved";
+    public static final String FIELD_IS_FINISHED = "is_finished";
 }

@@ -96,21 +96,23 @@ public class StatementsContainer {
     //rent
     public static final String SQL_SELECT_ALL_RENTS = "SELECT * FROM rents";
     public static final String SQL_SELECT_ALL_RENTS_FOR_USER = "SELECT * FROM rents WHERE users_id = ?";
-    public static final String SQL_SELECT_ALL_UNAPPROVED_RENTS = "SELECT * FROM rents WHERE declines_id = 4";
+    public static final String SQL_SELECT_ALL_UNAPPROVED_RENTS = "SELECT * FROM rents WHERE  ISNULL(declines_id) AND is_approved = 0";
     public static final String SQL_SELECT_RENT_BY_ID = "SELECT * FROM rents WHERE id = ?";
-    public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, cars_id, users_id, declines_id, " +
-            "checks_id, start_date, end_date) VALUES (?,?,?,?,?,?,?)";
+    public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, cars_id, users_id, " +
+            "checks_id, start_date, end_date) VALUES (?,?,?,?,?,?)";
     public static final String SQL_UPDATE_RENT_BY_ID = "UPDATE rents SET is_driven = ?, days = ?, cars_id = ?, " +
-            "users_id = ?, declines_id = ?, checks_id = ?, start_date = ?, end_date = ?, is_returned = ? WHERE id = ?";
+            "users_id = ?, checks_id = ?, start_date = ?, end_date = ? WHERE id = ?";
     public static final String SQL_UPDATE_RENT_DECLINE_BY_ID = "UPDATE rents SET declines_id = ? WHERE id = ?";
     public static final String SQL_UPDATE_RETURNED_STATE_BY_ID = "UPDATE rents SET  is_returned  = 1 WHERE id = ?";
+    public static final String SQL_UPDATE_FINISHED_STATE_BY_ID = "UPDATE rents SET  is_finished  = 1 WHERE id = ?";
+    public static final String SQL_UPDATE_APPROVED_STATE_BY_ID = "UPDATE rents SET  is_approved  = 1 WHERE id = ?";
     public static final String SQL_DELETE_RENT_BY_ID = "DELETE FROM rents WHERE id = ?";
     //1. start_date = start
     //2. end_date = end
     //3. end_date = start
     //4. start_date = end
     public static final String SQL_SELECT_RENT_BY_DATE = "SELECT * FROM rents WHERE start_date >= ? AND end_date <= ? OR end_date >= ? AND start_date <= ?";
-    public static final String SQL_SELECT_RETURNED_CARS = "SELECT * FROM rents WHERE is_returned  = 1 ";
+    public static final String SQL_SELECT_RETURNED_CARS = "SELECT * FROM rents WHERE is_returned  = 1";
 
     // roles
     public static final String SQL_SELECT_ALL_ROLES = "SELECT * FROM roles";

@@ -47,8 +47,6 @@ public class DeclineApplicationServlet extends AdminServlet{
             rents = rentService.getPayedUnapprovedRents(rentList);
         }
         request.setAttribute(Attributes.RENTS, rents);
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
-        requestDispatcher.forward(request, response);
+        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
     }
 }

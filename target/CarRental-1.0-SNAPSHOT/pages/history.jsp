@@ -77,19 +77,20 @@
                         <div class="paragraph-text">
                             <fmt:message key="status"/> :
                             <c:choose>
-                                <c:when test="${rent.decline.id == 5}"><fmt:message key="not_approven"/></c:when>
-                                <c:when test="${rent.decline.id == 6}"><fmt:message key="approven"/></c:when>
+                                <c:when test="${rent.decline.name != null}"><span class="red-message"><fmt:message
+                                        key="denied"/>${rent.decline.name}</span></c:when>
+                                <c:when test="${rent.isApproved() == true}"><fmt:message key="approven"/></c:when>
+                                <c:when test="${rent.isApproved() == false}"><fmt:message key="not_approven"/></c:when>
                                 <c:otherwise>
-                                    <span class="red-message"><fmt:message key="denied"/>${rent.decline.name}</span>
                                 </c:otherwise>
                             </c:choose>
                         </div>
                         <br>
-
+                            ${rent}
                         <form action="/return?id=${rent.id}" method="POST">
-                            <c:if test="${(rent.decline.id == 6) && (rent.isReturned() == false)}">
-                                    <button class="btn btn-large btn-success" type="submit"><fmt:message key="return"/>
-                                    </button>
+                            <c:if test="${(rent.isFinished() == false) && (rent.isReturned() == false) && (rent.decline.name == null) && (rent.isApproved()==true)}">
+                                <button class="btn btn-large btn-success" type="submit"><fmt:message key="return"/>
+                                </button>
                             </c:if>
                         </form>
 

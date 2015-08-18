@@ -33,12 +33,10 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
             preparedStatement.setBoolean(1, rent.isDriven());
             preparedStatement.setInt(2, rent.getCarId());
             preparedStatement.setInt(3, rent.getUserId());
-            preparedStatement.setInt(4, rent.getDeclineId());
-            preparedStatement.setInt(5, rent.getCheckId());
-            preparedStatement.setTimestamp(6, rent.getStartDate());
-            preparedStatement.setTimestamp(7, rent.getEndDate());
-            preparedStatement.setBoolean(8, rent.isReturned());
-            preparedStatement.setInt(9, rent.getId());
+            preparedStatement.setInt(4, rent.getCheckId());
+            preparedStatement.setTimestamp(5, rent.getStartDate());
+            preparedStatement.setTimestamp(6, rent.getEndDate());
+            preparedStatement.setInt(7, rent.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
@@ -104,6 +102,30 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     }
 
     @Override
+    public void updateFinishedState(int rentId) {
+        String sql = StatementsContainer.SQL_UPDATE_FINISHED_STATE_BY_ID;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, rentId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public void updateApprovedState(int rentId) {
+        String sql = StatementsContainer.SQL_UPDATE_APPROVED_STATE_BY_ID;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, rentId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
     public List<Rent> selectReturnedCars() {
         return super.selectAll(StatementsContainer.SQL_SELECT_RETURNED_CARS, new RentExtractor());
     }
@@ -115,10 +137,9 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
             preparedStatement.setBoolean(1, rent.isDriven());
             preparedStatement.setInt(2, rent.getCarId());
             preparedStatement.setInt(3, rent.getUserId());
-            preparedStatement.setInt(4, rent.getDeclineId());
-            preparedStatement.setInt(5, rent.getCheckId());
-            preparedStatement.setTimestamp(6, rent.getStartDate());
-            preparedStatement.setTimestamp(7, rent.getEndDate());
+            preparedStatement.setInt(4, rent.getCheckId());
+            preparedStatement.setTimestamp(5, rent.getStartDate());
+            preparedStatement.setTimestamp(6, rent.getEndDate());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);

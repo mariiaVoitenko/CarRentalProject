@@ -36,9 +36,7 @@ public class AcceptApplicationServlet extends AdminServlet {
         checkManagerRole(request, response);
 
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
-        Rent rent = rentService.selectById(id);
-        rent.setDeclineId(Integer.parseInt(EntitiesValues.ACCEPTED_APPLICATION_DECLINE_ID));
-        rentService.updateDecline(rent);
+        rentService.updateApprovedState(id);
         logger.debug("Rent with id {} was accepted", id);
 
         List<Rent> rentList = rentService.selectUnapproved();
@@ -47,8 +45,6 @@ public class AcceptApplicationServlet extends AdminServlet {
             rents = rentService.getPayedUnapprovedRents(rentList);
         }
         request.setAttribute(Attributes.RENTS, rents);
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
-        requestDispatcher.forward(request, response);
+        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
     }
 }
