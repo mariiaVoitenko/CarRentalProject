@@ -274,6 +274,15 @@
         <url-pattern>/profile/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ReturnCarServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.user.ReturnCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReturnCarServlet</servlet-name>
+        <url-pattern>/return/*</url-pattern>
+    </servlet-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

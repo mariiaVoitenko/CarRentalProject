@@ -16,7 +16,7 @@ public class RentFormBean {
     private User user;
     private boolean isReturned;
 
-    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate, boolean isReturned) {
+    public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate, boolean isReturned, int id) {
         this.isDriven = isDriven;
         this.car = car;
         this.check = check;
@@ -24,6 +24,7 @@ public class RentFormBean {
         this.startDate = startDate;
         this.endDate = endDate;
         this.isReturned = isReturned;
+        this.id = id;
     }
 
     public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate, String endDate, User user, int id, boolean isReturned) {
@@ -108,5 +109,21 @@ public class RentFormBean {
 
     public void setIsReturned(boolean isReturned) {
         this.isReturned = isReturned;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("RentFormBean{");
+        sb.append("id=").append(id);
+        sb.append(", isDriven=").append(isDriven);
+        sb.append(", car=").append(car);
+        sb.append(", check=").append(check);
+        sb.append(", decline=").append(decline);
+        sb.append(", startDate='").append(startDate).append('\'');
+        sb.append(", endDate='").append(endDate).append('\'');
+        sb.append(", user=").append(user);
+        sb.append(", isReturned=").append(isReturned);
+        sb.append('}');
+        return sb.toString();
     }
 }

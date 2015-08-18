@@ -92,6 +92,18 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     }
 
     @Override
+    public void updateReturnedState(int rentId) {
+        String sql = StatementsContainer.SQL_UPDATE_RETURNED_STATE_BY_ID;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, rentId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
     public List<Rent> selectReturnedCars() {
         return super.selectAll(StatementsContainer.SQL_SELECT_RETURNED_CARS, new RentExtractor());
     }

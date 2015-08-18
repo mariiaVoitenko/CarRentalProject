@@ -103,6 +103,7 @@ public class StatementsContainer {
     public static final String SQL_UPDATE_RENT_BY_ID = "UPDATE rents SET is_driven = ?, days = ?, cars_id = ?, " +
             "users_id = ?, declines_id = ?, checks_id = ?, start_date = ?, end_date = ?, is_returned = ? WHERE id = ?";
     public static final String SQL_UPDATE_RENT_DECLINE_BY_ID = "UPDATE rents SET declines_id = ? WHERE id = ?";
+    public static final String SQL_UPDATE_RETURNED_STATE_BY_ID = "UPDATE rents SET  is_returned  = 1 WHERE id = ?";
     public static final String SQL_DELETE_RENT_BY_ID = "DELETE FROM rents WHERE id = ?";
     //1. start_date = start
     //2. end_date = end

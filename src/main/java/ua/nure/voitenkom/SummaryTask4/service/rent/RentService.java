@@ -90,6 +90,17 @@ public class RentService implements IRentService {
     }
 
     @Override
+    public void updateReturnedState(final int rentId) {
+        transactionManager.doInTransaction(new Operation<Void>() {
+            @Override
+            public Void doOperation() {
+                rentRepository.updateReturnedState(rentId);
+                return null;
+            }
+        });
+    }
+
+    @Override
     public List<Rent> selectAllForUser(final int id) {
         return transactionManager.doInTransaction(new Operation<List<Rent>>() {
             @Override
@@ -120,7 +131,7 @@ public class RentService implements IRentService {
                     Check check = checkRepository.selectById(rent.getCheckId());
                     Decline decline = declineRepository.selectById(rent.getDeclineId());
                     RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check, decline,
-                            timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), rent.isReturned());
+                            timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), rent.isReturned(), rent.getId());
                     rents.add(rentFormBean);
                 }
                 return rents;

@@ -31,4 +31,6 @@ public interface IRentService {
     void updateDecline(Rent rent);
 
     List<Rent> selectReturnedCars() ;
+
+    void updateReturnedState(int rentId);
 }

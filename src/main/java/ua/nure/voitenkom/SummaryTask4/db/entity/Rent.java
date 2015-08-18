@@ -103,6 +103,7 @@ public class Rent extends Entity {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Rent{");
+        sb.append("id=").append(this.getId());
         sb.append("isDriven=").append(isDriven);
         sb.append(", carId=").append(carId);
         sb.append(", userId=").append(userId);
@@ -110,6 +111,7 @@ public class Rent extends Entity {
         sb.append(", checkId=").append(checkId);
         sb.append(", startDate=").append(startDate);
         sb.append(", endDate=").append(endDate);
+        sb.append(", isReturned=").append(isReturned);
         sb.append('}');
         return sb.toString();
     }
