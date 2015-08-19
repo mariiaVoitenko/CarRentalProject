@@ -17,6 +17,8 @@ public class StatementsContainer {
             "cars.brands_id = brands.id";
     public static final String SQL_SELECT_CAR_CLASS_BY_ID = "SELECT classes.name FROM classes, cars WHERE cars.id = ? AND " +
             "cars.classes_id = classes.id";
+    public static final String SQL_SELECT_CARS_BY_BRAND_ID = "SELECT * from cars WHERE brands_id = ?";
+    public static final String SQL_SELECT_CARS_BY_CLASS_ID = "SELECT * from cars WHERE classes_id = ?";
     public static final String SQL_INSERT_CAR = "INSERT INTO cars (model, price, doors_count, has_conditioner, " +
             "big_luggage_count, small_luggage_count, sits_count, classes_id, colors_id, statuses_id, brands_id, photo) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
     public static final String SQL_UPDATE_CAR = "UPDATE cars SET model=?, price=?, doors_count=?, has_conditioner=?, " +

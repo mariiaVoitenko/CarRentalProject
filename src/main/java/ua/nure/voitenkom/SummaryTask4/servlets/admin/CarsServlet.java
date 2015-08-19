@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.service.brand.BrandService;
 import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
 import ua.nure.voitenkom.SummaryTask4.service.car.ICarService;
+import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
@@ -23,10 +24,13 @@ public class CarsServlet extends AdminServlet {
     private static final Logger logger = LoggerFactory.getLogger(CarsServlet.class);
     private ICarService carService;
     private IBrandService brandService;
+    private IMajorityClassService majorityClassService;
 
     @Override
     public void init() throws ServletException {
         carService = (ICarService) getServletContext().getAttribute(ServiceConstant.CAR_SERVICE_CONTEXT);
+        brandService = (IBrandService) getServletContext().getAttribute(ServiceConstant.BRAND_SERVICE_CONTEXT);
+        majorityClassService = (IMajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -37,6 +41,8 @@ public class CarsServlet extends AdminServlet {
         //checkRole(request, response);
         List<CarFormBean> cars = carService.getFullInformationForAll();
         request.setAttribute(Attributes.CARS, cars);
+        request.setAttribute(Attributes.BRANDS, brandService.getAll());
+        request.setAttribute(Attributes.CLASSES, majorityClassService.getAll());
         request.setAttribute(Attributes.ROLE_ID, request.getSession().getAttribute(Attributes.ROLE_ID));
 
         logger.debug("All cars information has been got");

@@ -25,4 +25,8 @@ public interface ICarRepository extends IAbstractRepository<Car> {
 
     void updateCar(Car car);
 
+    List<Car> getCarsByBrandId(int id);
+
+    List<Car> getCarsByClassId(int id);
+
 }

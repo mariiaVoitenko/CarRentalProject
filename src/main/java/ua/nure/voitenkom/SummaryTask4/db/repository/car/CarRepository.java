@@ -184,6 +184,32 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     }
 
     @Override
+    public List<Car> getCarsByBrandId(int id) {
+        String sql = StatementsContainer.SQL_SELECT_CARS_BY_BRAND_ID;
+        CarFormBeanExtractor extractor = new CarFormBeanExtractor();
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, id);
+            return executeQuery(preparedStatement, new CarExtractor());
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public List<Car> getCarsByClassId(int id) {
+        String sql = StatementsContainer.SQL_SELECT_CARS_BY_CLASS_ID;
+        CarFormBeanExtractor extractor = new CarFormBeanExtractor();
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, id);
+            return executeQuery(preparedStatement, new CarExtractor());
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
     public void updateCar(Car car) {
         String sql = StatementsContainer.SQL_UPDATE_CAR;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {

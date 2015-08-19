@@ -2,6 +2,8 @@ package ua.nure.voitenkom.SummaryTask4.formbean;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
 
+import java.util.Comparator;
+
 public class CarFormBean extends Entity {
 
     private String model;
@@ -168,4 +170,5 @@ public class CarFormBean extends Entity {
         sb.append('}');
         return sb.toString();
     }
+
 }

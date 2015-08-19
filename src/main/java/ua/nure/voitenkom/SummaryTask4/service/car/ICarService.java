@@ -32,4 +32,9 @@ public interface ICarService {
 
     CarFormBean getFullCarInformationById(int id);
 
+    List<Car> getCarsByBrandId(int id);
+
+    List<Car> getCarsByClassId(int id);
+
+
 }

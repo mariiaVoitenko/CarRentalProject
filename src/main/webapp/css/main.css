@@ -142,7 +142,6 @@ body {
 }
 
 .price{
-    margin-right:15px;
     margin-left: 50px;
 }
 
@@ -170,3 +169,21 @@ body {
     float: left
 }
 
+
+#col1 {
+    float:left;
+    width:25%;
+}
+#col2 {
+    float:left;
+    width:25%;
+}
+#col3 {
+    float:right;
+    width:25%;
+}
+
+#col4 {
+    float:right;
+    width:25%;
+}

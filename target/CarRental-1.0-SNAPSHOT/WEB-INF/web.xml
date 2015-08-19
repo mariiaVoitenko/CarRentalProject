@@ -329,6 +329,15 @@
         <url-pattern>/sort/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SortingAdminServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.SortingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortingAdminServlet</servlet-name>
+        <url-pattern>/admin/sort/*</url-pattern>
+    </servlet-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
