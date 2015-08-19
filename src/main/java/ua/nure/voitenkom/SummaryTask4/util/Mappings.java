@@ -10,6 +10,6 @@ public final class Mappings {
     public static final String USERS_MAPPING = "users";
     public static final String CARS_MAPPING = "cars";
     public static final String HISTORY_MAPPING = "history";
-    public static final String RETURNED_CARS_MAPPING =  "/return";
+    public static final String RETURNED_CARS_MAPPING =  "return";
 
 }

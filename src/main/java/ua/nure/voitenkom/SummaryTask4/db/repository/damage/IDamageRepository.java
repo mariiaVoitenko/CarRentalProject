@@ -13,4 +13,6 @@ public interface IDamageRepository extends IAbstractRepository<Damage> {
     void update(Damage damage);
 
     void updateSum(Damage damage);
+
+    int selectSumById(int id);
 }

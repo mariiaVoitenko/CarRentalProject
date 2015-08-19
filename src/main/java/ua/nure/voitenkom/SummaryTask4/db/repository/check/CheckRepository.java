@@ -85,7 +85,7 @@ public class CheckRepository extends AbstractRepository<Check> implements ICheck
     public void updateSum(Check check, int sum) {
         String sql = StatementsContainer.SQL_UPDATE_CHECK_SUM_BY_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setInt(1, check.getSum());
+            preparedStatement.setInt(1, sum);
             preparedStatement.setInt(2, check.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

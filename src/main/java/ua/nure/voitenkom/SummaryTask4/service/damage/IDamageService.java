@@ -16,4 +16,6 @@ public interface IDamageService {
 
     List<Damage> getAll();
 
+    int selectSumById(int id);
+
 }

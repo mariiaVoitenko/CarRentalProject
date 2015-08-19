@@ -91,15 +91,16 @@
                   <br>
                   <form action="<c:url value="setDamage?id=${rent.id}"/>" method="POST">
                     <div class="paragraph-text">
-                      <select name="decline" class="paragraph-text">
+                      <select name="damage" class="paragraph-text">
                         <c:forEach var="item" items="${damageList}">
-                          <option value="${item.id}">${item.name}</option>
+                          <option value="${item.id}" ${item.id == 1 ? 'selected="selected"' : ''}>${item.name}</option>
                         </c:forEach>
                       </select>
                       <br>
                     </div>
-                    <button class="btn btn-large btn-danger btn-group-justified marginned20"
-                            type="submit"><fmt:message key="create_damage_check"/></button>
+                    <button class="btn btn-large btn-danger btn-group-justified marginned20"  type="submit">
+                      <fmt:message key="create_damage_check"/>
+                    </button>
                   </form>
                 </div>
               </div>

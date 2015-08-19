@@ -93,7 +93,7 @@
                                         <div class="paragraph-text">
                                             <select name="decline" class="paragraph-text">
                                                 <c:forEach var="item" items="${declinesList}">
-                                                    <option value="${item.id}" ${item.id == car.brandId ? 'selected="selected"' : ''}>${item.name}</option>
+                                                    <option value="${item.id}" ${item.id == 1 ? 'selected="selected"' : ''}>${item.name}</option>
                                                 </c:forEach>
                                             </select>
                                             <br>

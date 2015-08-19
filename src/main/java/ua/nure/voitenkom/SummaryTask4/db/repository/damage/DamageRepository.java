@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.damage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
@@ -12,7 +13,9 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DamageRepository extends AbstractRepository<Damage> implements IDamageRepository {
@@ -74,6 +77,24 @@ public class DamageRepository extends AbstractRepository<Damage> implements IDam
             preparedStatement.setInt(2, damage.getSum());
             preparedStatement.setInt(3, damage.getId());
             preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public int selectSumById(int id) {
+        String sql = StatementsContainer.SQL_SELECT_DAMAGE_SUM_BY_ID;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1, id);
+            int sum = 0;
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    sum = resultSet.getInt(FieldsContainer.FIELD_SUM);
+                }
+            }
+            return sum;
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");

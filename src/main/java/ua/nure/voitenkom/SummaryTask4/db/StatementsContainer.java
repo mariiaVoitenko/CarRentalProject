@@ -60,6 +60,7 @@ public class StatementsContainer {
     public static final String SQL_SELECT_ALL_DAMAGES = "SELECT * FROM damages";
     public static final String SQL_SELECT_DAMAGE_BY_ID = "SELECT * FROM damages WHERE id = ?";
     public static final String SQL_SELECT_DAMAGE_BY_NAME = "SELECT * FROM damages WHERE name = ?";
+    public static final String SQL_SELECT_DAMAGE_SUM_BY_ID = "SELECT sum FROM damages WHERE id = ?";
     public static final String SQL_INSERT_DAMAGE = "INSERT INTO damages (name, sum) VALUES (?, ?)";
     public static final String SQL_UPDATE_DAMAGE_BY_ID = "UPDATE damages SET name = ?, sum = ? WHERE id = ?";
     public static final String SQL_UPDATE_DAMAGE_SUM_BY_ID = "UPDATE damages SET sum = ? WHERE id = ?";
@@ -112,7 +113,7 @@ public class StatementsContainer {
     //3. end_date = start
     //4. start_date = end
     public static final String SQL_SELECT_RENT_BY_DATE = "SELECT * FROM rents WHERE start_date >= ? AND end_date <= ? OR end_date >= ? AND start_date <= ?";
-    public static final String SQL_SELECT_RETURNED_CARS = "SELECT * FROM rents WHERE is_returned  = 1";
+    public static final String SQL_SELECT_RETURNED_CARS = "SELECT * FROM rents WHERE is_returned  = 1 AND is_finished = 0";
 
     // roles
     public static final String SQL_SELECT_ALL_ROLES = "SELECT * FROM roles";

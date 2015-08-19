@@ -11,6 +11,11 @@ public class DamageCheck extends Entity {
         this.damageId = damageId;
     }
 
+    public DamageCheck(int damageId, int checkId) {
+        this.checkId = checkId;
+        this.damageId = damageId;
+    }
+
     public int getCheckId() {
         return checkId;
     }

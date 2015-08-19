@@ -50,5 +50,6 @@ public final class Attributes {
     public static final String USER = "user";
     public static final String EDIT = "edit";
     public static final String DAMAGES = "damageList";
+    public static final String DAMAGE = "damage";
 
 }

@@ -70,4 +70,14 @@ public class DamageService implements IDamageService {
             }
         });
     }
+
+    @Override
+    public int selectSumById(final int id) {
+        return transactionManager.doInTransaction(new Operation<Integer>() {
+            @Override
+            public Integer doOperation() {
+                return damageRepository.selectSumById(id);
+            }
+        });
+    }
 }

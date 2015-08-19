@@ -298,7 +298,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>SetDamageRentServlet</servlet-name>
-        <url-pattern>/setDamage/*</url-pattern>
+        <url-pattern>/admin/setDamage/*</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -307,7 +307,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>SetFinishedRentServlet</servlet-name>
-        <url-pattern>/setFinished/*</url-pattern>
+        <url-pattern>/admin/setFinished/*</url-pattern>
     </servlet-mapping>
 
     <jsp-config>
