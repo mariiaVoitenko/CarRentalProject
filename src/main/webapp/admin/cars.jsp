@@ -6,6 +6,7 @@
     <title>All cars></title>
 </head>
 <body>
+<%@ include file="/WEB-INF/searchPanel.jsp" %>
 <div class="container">
     <c:choose>
         <c:when test="${empty requestScope.cars}">

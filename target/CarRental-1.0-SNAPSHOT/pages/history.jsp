@@ -86,7 +86,6 @@
                             </c:choose>
                         </div>
                         <br>
-                            ${rent}
                         <form action="/return?id=${rent.id}" method="POST">
                             <c:if test="${(rent.isFinished() == false) && (rent.isReturned() == false) && (rent.decline.name == null) && (rent.isApproved()==true)}">
                                 <button class="btn btn-large btn-success" type="submit"><fmt:message key="return"/>

@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
@@ -25,11 +26,11 @@ import java.util.List;
 public class AcceptApplicationServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
-    private RentService rentService;
+    private IRentService rentService;
 
     @Override
     public void init() throws ServletException {
-        rentService = (RentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
+        rentService = (IRentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -7,6 +7,8 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.damage.DamageService;
+import ua.nure.voitenkom.SummaryTask4.service.damage.IDamageService;
+import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
@@ -22,13 +24,13 @@ import java.util.List;
 public class ReturnedCarsServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
-    private RentService rentService;
-    private DamageService damageService;
+    private IRentService rentService;
+    private IDamageService damageService;
 
     @Override
     public void init() throws ServletException {
-        rentService = (RentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
-        damageService = (DamageService) getServletContext().getAttribute(ServiceConstant.DAMAGE_SERVICE_CONTEXT);
+        rentService = (IRentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
+        damageService = (IDamageService) getServletContext().getAttribute(ServiceConstant.DAMAGE_SERVICE_CONTEXT);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

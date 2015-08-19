@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
@@ -19,11 +20,11 @@ import java.util.List;
 public class ManagersServlet extends AdminServlet{
 
     private static final Logger logger = LoggerFactory.getLogger(UsersServlet.class);
-    private UserService usersService;
+    private IUserService usersService;
 
     @Override
     public void init() throws ServletException {
-        usersService = (UserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
+        usersService = (IUserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

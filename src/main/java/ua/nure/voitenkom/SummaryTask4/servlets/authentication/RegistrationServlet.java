@@ -2,6 +2,9 @@ package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.service.photo.IPhotoService;
+import ua.nure.voitenkom.SummaryTask4.service.role.IRoleService;
+import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
@@ -35,9 +38,9 @@ import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrec
 public class RegistrationServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(RegistrationServlet.class);
-    private UserService userService;
-    private PhotoService photoService;
-    private RoleService roleService;
+    private IUserService userService;
+    private IPhotoService photoService;
+    private IRoleService roleService;
     private IValidator<RegistrationFormBean> userValidator = new RegistrationValidator();
     private String host;
     private String port;
@@ -46,9 +49,9 @@ public class RegistrationServlet extends AuthenticationServlet {
 
     @Override
     public void init() throws ServletException {
-        roleService = (RoleService) getServletContext().getAttribute(ServiceConstant.ROLE_SERVICE_CONTEXT);
-        userService = (UserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
-        photoService = (PhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
+        roleService = (IRoleService) getServletContext().getAttribute(ServiceConstant.ROLE_SERVICE_CONTEXT);
+        userService = (IUserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
+        photoService = (IPhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
         host = getServletContext().getInitParameter(ServiceConstant.HOST_PARAM);
         port = getServletContext().getInitParameter(ServiceConstant.PORT_PARAM);
         userEmail = getServletContext().getInitParameter(ServiceConstant.USER_EMAIL_PARAM);

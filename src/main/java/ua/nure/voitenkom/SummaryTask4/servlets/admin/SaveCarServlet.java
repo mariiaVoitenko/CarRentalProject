@@ -2,6 +2,12 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
+import ua.nure.voitenkom.SummaryTask4.service.car.ICarService;
+import ua.nure.voitenkom.SummaryTask4.service.color.IColorService;
+import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassService;
+import ua.nure.voitenkom.SummaryTask4.service.photo.IPhotoService;
+import ua.nure.voitenkom.SummaryTask4.service.status.IStatusService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
@@ -29,22 +35,22 @@ import java.util.Map;
 public class SaveCarServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(SaveCarServlet.class);
-    private PhotoService photoService;
-    private CarService carService;
+    private IPhotoService photoService;
+    private ICarService carService;
     private IValidator<CarFormBean> carFormBeanIValidator = new CarValidator();
-    private StatusService statusService;
-    private BrandService brandService;
-    private ColorService colorService;
-    private MajorityClassService majorityClassService;
+    private IStatusService statusService;
+    private IBrandService brandService;
+    private IColorService colorService;
+    private IMajorityClassService majorityClassService;
 
     @Override
     public void init() throws ServletException {
-        carService = (CarService) getServletContext().getAttribute(ServiceConstant.CAR_SERVICE_CONTEXT);
-        brandService = (BrandService) getServletContext().getAttribute(ServiceConstant.BRAND_SERVICE_CONTEXT);
-        majorityClassService = (MajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
-        colorService = (ColorService) getServletContext().getAttribute(ServiceConstant.COLOR_SERVICE_CONTEXT);
-        statusService = (StatusService) getServletContext().getAttribute(ServiceConstant.STATUS_SERVICE_CONTEXT);
-        photoService = (PhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
+        carService = (ICarService) getServletContext().getAttribute(ServiceConstant.CAR_SERVICE_CONTEXT);
+        brandService = (IBrandService) getServletContext().getAttribute(ServiceConstant.BRAND_SERVICE_CONTEXT);
+        majorityClassService = (IMajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
+        colorService = (IColorService) getServletContext().getAttribute(ServiceConstant.COLOR_SERVICE_CONTEXT);
+        statusService = (IStatusService) getServletContext().getAttribute(ServiceConstant.STATUS_SERVICE_CONTEXT);
+        photoService = (IPhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

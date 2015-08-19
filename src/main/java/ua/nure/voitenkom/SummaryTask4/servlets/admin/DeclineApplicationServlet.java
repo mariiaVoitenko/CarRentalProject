@@ -8,6 +8,7 @@ import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
 import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
 import ua.nure.voitenkom.SummaryTask4.service.decline.DeclineService;
+import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
 import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
@@ -25,11 +26,11 @@ import java.util.List;
 public class DeclineApplicationServlet extends AdminServlet{
 
     private static final Logger logger = LoggerFactory.getLogger(DeclineApplicationServlet.class);
-    private RentService rentService;
+    private IRentService rentService;
 
     @Override
     public void init() throws ServletException {
-        rentService = (RentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
+        rentService = (IRentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

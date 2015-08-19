@@ -320,6 +320,15 @@
         <url-pattern>/admin/setFinished/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SortingServlet</servlet-name>
+        <servlet-class>ua.nure.voitenkom.SummaryTask4.servlets.SortingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortingServlet</servlet-name>
+        <url-pattern>/sort/*</url-pattern>
+    </servlet-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

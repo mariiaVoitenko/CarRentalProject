@@ -29,6 +29,16 @@ public class DamageService implements IDamageService {
     }
 
     @Override
+    public Damage findById(final int id) {
+        return transactionManager.doInTransaction(new Operation<Damage>() {
+            @Override
+            public Damage doOperation() {
+                return damageRepository.selectById(id);
+            }
+        });
+    }
+
+    @Override
     public void insert(final Damage damage) {
         transactionManager.doInTransaction(new Operation<Void>() {
             @Override

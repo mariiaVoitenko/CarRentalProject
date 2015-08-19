@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
@@ -22,12 +23,12 @@ import java.util.Map;
 public class LoginServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(LoginServlet.class);
-    private UserService userService;
+    private IUserService userService;
     private IValidator<LoginFormBean> userValidator = new LoginValidator();
 
     @Override
     public void init() throws ServletException {
-        userService = (UserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
+        userService = (IUserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

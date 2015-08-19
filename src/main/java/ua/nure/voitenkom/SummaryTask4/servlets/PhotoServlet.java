@@ -3,6 +3,7 @@ package ua.nure.voitenkom.SummaryTask4.servlets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
+import ua.nure.voitenkom.SummaryTask4.service.photo.IPhotoService;
 import ua.nure.voitenkom.SummaryTask4.service.photo.PhotoService;
 import ua.nure.voitenkom.SummaryTask4.util.FileManager;
 
@@ -18,11 +19,11 @@ import java.io.IOException;
 public class PhotoServlet extends HttpServlet {
 
     public static final Logger logger = LoggerFactory.getLogger(PhotoServlet.class);
-    private PhotoService photoService;
+    private IPhotoService photoService;
 
     @Override
     public void init() throws ServletException {
-        photoService = (PhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
+        photoService = (IPhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
     }
 
     @Override

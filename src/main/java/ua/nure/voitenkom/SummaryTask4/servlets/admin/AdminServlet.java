@@ -1,5 +1,9 @@
 package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
+import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
+import ua.nure.voitenkom.SummaryTask4.service.color.IColorService;
+import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassService;
+import ua.nure.voitenkom.SummaryTask4.service.status.IStatusService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
@@ -26,7 +30,7 @@ public abstract class AdminServlet extends HttpServlet {
         return isNotNull(session) ? (Integer) session.getAttribute(Attributes.ROLE_ID) : null;
     }
 
-    protected void loadEntities(HttpServletRequest request, BrandService brandService, MajorityClassService majorityClassService, ColorService colorService, StatusService statusService) {
+    protected void loadEntities(HttpServletRequest request, IBrandService brandService, IMajorityClassService majorityClassService, IColorService colorService, IStatusService statusService) {
         List<Brand> brands = brandService.getAll();
         request.setAttribute(Attributes.BRANDS, brands);
 
@@ -61,7 +65,7 @@ public abstract class AdminServlet extends HttpServlet {
         return errors;
     }
 
-    protected void fillEntity(Car car, CarFormBean carFormBean, StatusService statusService, BrandService brandService, ColorService colorService, MajorityClassService majorityClassService) {
+    protected void fillEntity(Car car, CarFormBean carFormBean, IStatusService statusService, IBrandService brandService, IColorService colorService, IMajorityClassService majorityClassService) {
         car.setModel(carFormBean.getModel());
         car.setBigLuggageCount(carFormBean.getBigLuggageCount());
         car.setDoorsCount(carFormBean.getDoorsCount());

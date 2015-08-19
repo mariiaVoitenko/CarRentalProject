@@ -5,7 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
+import ua.nure.voitenkom.SummaryTask4.service.photo.IPhotoService;
 import ua.nure.voitenkom.SummaryTask4.service.photo.PhotoService;
+import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
 import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServlet;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
@@ -27,13 +29,13 @@ import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrec
 public class ProfileServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(HistoryServlet.class);
-    private UserService userService;
-    private PhotoService photoService;
+    private IUserService userService;
+    private IPhotoService photoService;
 
     @Override
     public void init() throws ServletException {
-        userService = (UserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
-        photoService = (PhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
+        userService = (IUserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
+        photoService = (IPhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

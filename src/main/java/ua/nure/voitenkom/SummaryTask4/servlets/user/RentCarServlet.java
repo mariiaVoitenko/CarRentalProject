@@ -2,6 +2,18 @@ package ua.nure.voitenkom.SummaryTask4.servlets.user;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.service.account.MailService;
+import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
+import ua.nure.voitenkom.SummaryTask4.service.car.ICarService;
+import ua.nure.voitenkom.SummaryTask4.service.check.ICheckService;
+import ua.nure.voitenkom.SummaryTask4.service.color.IColorService;
+import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassService;
+import ua.nure.voitenkom.SummaryTask4.service.pdf.IPDFService;
+import ua.nure.voitenkom.SummaryTask4.service.pdf.PDFService;
+import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
+import ua.nure.voitenkom.SummaryTask4.service.status.IStatusService;
+import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
+import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
@@ -20,6 +32,7 @@ import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServ
 import ua.nure.voitenkom.SummaryTask4.validation.DateValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
+import javax.mail.MessagingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -37,28 +50,40 @@ import static ua.nure.voitenkom.SummaryTask4.util.DateManager.getDaysCount;
 public class RentCarServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(RentCarServlet.class);
-    private CarService carService;
-    private RentService rentService;
-    private BrandService brandService;
-    private MajorityClassService majorityClassService;
-    private ColorService colorService;
-    private StatusService statusService;
+    private ICarService carService;
+    private IRentService rentService;
+    private IBrandService brandService;
+    private IMajorityClassService majorityClassService;
+    private IColorService colorService;
+    private IStatusService statusService;
     private IValidator<Date> dateValidator = new DateValidator();
-    private CheckService checkService;
+    private ICheckService checkService;
+    private IPDFService pdfService;
+    private IUserService userService;
+    private String host;
+    private String port;
+    private String userEmail;
+    private String password;
 
     @Override
     public void init() throws ServletException {
-        carService = (CarService) getServletContext().getAttribute(ServiceConstant.CAR_SERVICE_CONTEXT);
-        rentService = (RentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
-        brandService = (BrandService) getServletContext().getAttribute(ServiceConstant.BRAND_SERVICE_CONTEXT);
-        majorityClassService = (MajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
-        colorService = (ColorService) getServletContext().getAttribute(ServiceConstant.COLOR_SERVICE_CONTEXT);
-        statusService = (StatusService) getServletContext().getAttribute(ServiceConstant.STATUS_SERVICE_CONTEXT);
-        checkService = (CheckService) getServletContext().getAttribute(ServiceConstant.CHECK_SERVICE_CONTEXT);
+        carService = (ICarService) getServletContext().getAttribute(ServiceConstant.CAR_SERVICE_CONTEXT);
+        rentService = (IRentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
+        brandService = (IBrandService) getServletContext().getAttribute(ServiceConstant.BRAND_SERVICE_CONTEXT);
+        majorityClassService = (IMajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
+        colorService = (IColorService) getServletContext().getAttribute(ServiceConstant.COLOR_SERVICE_CONTEXT);
+        statusService = (IStatusService) getServletContext().getAttribute(ServiceConstant.STATUS_SERVICE_CONTEXT);
+        checkService = (ICheckService) getServletContext().getAttribute(ServiceConstant.CHECK_SERVICE_CONTEXT);
+        pdfService = (IPDFService) getServletContext().getAttribute(ServiceConstant.PDF_SERVICE_CONTEXT);
+        userService = (IUserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
+        host = getServletContext().getInitParameter(ServiceConstant.HOST_PARAM);
+        port = getServletContext().getInitParameter(ServiceConstant.PORT_PARAM);
+        userEmail = getServletContext().getInitParameter(ServiceConstant.USER_EMAIL_PARAM);
+        password = getServletContext().getInitParameter(ServiceConstant.USER_PASSWORD_PARAM);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter(Attributes.ID));
         HttpSession session = request.getSession();
         String driver = session.getAttribute(Attributes.DRIVER).toString();
         String startDate = session.getAttribute(Attributes.START_DATE).toString();
@@ -81,6 +106,19 @@ public class RentCarServlet extends AuthenticationServlet {
                 checkId, new Timestamp(start.getTime()), new Timestamp(end.getTime()));
         rentService.insert(rent);
         logger.debug("Rent was inserted");
+
+        CarFormBean carFormBean = carService.getFullCarInformationById(id);
+        String fileName = pdfService.createFileName(userId, checkId);
+        String path = pdfService.createPath(fileName);
+        pdfService.createPdf(path, carFormBean, rent, check);
+
+        String login = userService.selectById(rent.getUserId()).getLogin();
+
+        try {
+            MailService.sendEmailWithDocument(host, port, login, userEmail, password, path);
+        } catch (MessagingException e) {
+            logger.error("Unable to send mail");
+        }
         response.sendRedirect(Mappings.HISTORY_MAPPING);
     }
 

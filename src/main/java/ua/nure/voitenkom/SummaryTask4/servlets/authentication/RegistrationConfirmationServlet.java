@@ -2,6 +2,8 @@ package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.service.role.IRoleService;
+import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
@@ -23,13 +25,13 @@ import java.io.IOException;
 
 public class RegistrationConfirmationServlet extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(RegistrationServlet.class);
-    private UserService userService;
-    private RoleService roleService;
+    private IUserService userService;
+    private IRoleService roleService;
 
     @Override
     public void init() throws ServletException {
-        userService = (UserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
-        roleService = (RoleService) getServletContext().getAttribute(ServiceConstant.ROLE_SERVICE_CONTEXT);
+        userService = (IUserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
+        roleService = (IRoleService) getServletContext().getAttribute(ServiceConstant.ROLE_SERVICE_CONTEXT);
     }
 
     @Override

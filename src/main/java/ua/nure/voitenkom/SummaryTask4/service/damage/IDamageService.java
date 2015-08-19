@@ -8,6 +8,8 @@ public interface IDamageService {
 
     Damage findByName(String name);
 
+    Damage findById(int id);
+
     void insert(Damage damage);
 
     void update(Damage damage);
