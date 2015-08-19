@@ -6,6 +6,7 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 
 import java.io.FileOutputStream;
 import java.util.Date;
@@ -118,7 +119,7 @@ public class PDFService implements IPDFService{
     }
 
 
-    private static void addEmptyLine(Paragraph paragraph, int number) {
+    private void addEmptyLine(Paragraph paragraph, int number) {
         for (int i = 0; i < number; i++) {
             paragraph.add(new Paragraph(" "));
         }

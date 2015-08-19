@@ -6,8 +6,11 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 import ua.nure.voitenkom.SummaryTask4.db.entity.DamageCheck;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.user.IUserRepository;
+import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.account.MailService;
+import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
+import ua.nure.voitenkom.SummaryTask4.service.car.ICarService;
 import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
 import ua.nure.voitenkom.SummaryTask4.service.check.ICheckService;
 import ua.nure.voitenkom.SummaryTask4.service.damage.DamageService;
@@ -35,6 +38,7 @@ public class SetDamageRentServlet extends AdminServlet {
     private ICheckService checkService;
     private IDamageService damageService;
     private IUserService userService;
+    private ICarService carService;
     private IPDFService pdfService;
     private String host;
     private String port;
@@ -48,6 +52,7 @@ public class SetDamageRentServlet extends AdminServlet {
         checkService = (CheckService) getServletContext().getAttribute(ServiceConstant.CHECK_SERVICE_CONTEXT);
         damageService = (DamageService) getServletContext().getAttribute(ServiceConstant.DAMAGE_SERVICE_CONTEXT);
         userService = (UserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
+        carService = (CarService) getServletContext().getAttribute(ServiceConstant.CAR_SERVICE_CONTEXT);
         pdfService = (PDFService) getServletContext().getAttribute(ServiceConstant.PDF_SERVICE_CONTEXT);
         host = getServletContext().getInitParameter(ServiceConstant.HOST_PARAM);
         port = getServletContext().getInitParameter(ServiceConstant.PORT_PARAM);
@@ -57,20 +62,30 @@ public class SetDamageRentServlet extends AdminServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkManagerRole(request, response);
+
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
-        int damageId = Integer.parseInt(request.getParameter(Attributes.DAMAGE));
-        rentService.updateFinishedState(id);
         Rent rent = rentService.selectById(id);
         int checkId = rent.getCheckId();
-        DamageCheck damageCheck = new DamageCheck(damageId,checkId);
-        damageCheckService.insert(damageCheck);
-        Check check = checkService.selectById(checkId);
-        int damageSum = damageService.selectSumById(damageId);
-        checkService.updateSum(check, damageSum);
 
+        String[] damages = request.getParameterValues(Attributes.DAMAGE);
+        int total = 0;
+        for (int i = 0; i < damages.length; i++) {
+            int damageId = Integer.parseInt(damages[i]);
+            DamageCheck damageCheck = new DamageCheck(damageId, checkId);
+            damageCheckService.insert(damageCheck);
+            int damageSum = damageService.selectSumById(damageId);
+            total += damageSum;
+        }
+
+        rentService.updateFinishedState(id);
+        Check check = checkService.selectById(checkId);
+        checkService.updateSum(check, total);
+
+        CarFormBean carFormBean = carService.getFullCarInformationById(rent.getCarId());
         String fileName = pdfService.createFileName(rent.getUserId(), checkId);
         String path = pdfService.createPath(fileName);
         pdfService.createPdf(path);
+
         String login = userService.selectById(rent.getUserId()).getLogin();
 
         try {
