@@ -2,6 +2,8 @@ package ua.nure.voitenkom.SummaryTask4.listener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.service.pdf.IPDFService;
+import ua.nure.voitenkom.SummaryTask4.service.pdf.PDFService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.db.connection.ConnectionFactory;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
@@ -124,10 +126,13 @@ public class BeanContextInitializer implements ServletContextListener {
                 declineRepository, carRepository, userRepository);
         context.getServletContext().setAttribute(ServiceConstant.RENT_SERVICE_CONTEXT, rentService);
 
-
         String picturesFolder = context.getServletContext().getInitParameter(Attributes.PICTURES_FOLDER);
         IPhotoService photoService = new PhotoService(picturesFolder);
         context.getServletContext().setAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT, photoService);
+
+        String pdfsFolder = context.getServletContext().getInitParameter(Attributes.PDFS_FOLDER);
+        IPDFService pdfService = new PDFService(pdfsFolder);
+        context.getServletContext().setAttribute(ServiceConstant.PDF_SERVICE_CONTEXT, pdfService);
 
         logger.debug("Beans have been put to servlet context");
     }

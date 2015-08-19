@@ -20,6 +20,7 @@
         <hikari-cp-version>2.3.9</hikari-cp-version>
         <md5-version>1.9</md5-version>
         <mail-version>1.4.3</mail-version>
+        <itext-pdf-version>5.0.6</itext-pdf-version>
     </properties>
 
     <dependencies>
@@ -93,6 +94,11 @@
             <version>${mail-version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+            <version>${itext-pdf-version}</version>
+        </dependency>
 
 
     </dependencies>

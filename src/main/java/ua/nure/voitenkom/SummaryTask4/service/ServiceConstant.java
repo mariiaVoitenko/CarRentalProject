@@ -11,6 +11,7 @@ public final class ServiceConstant {
     public static final String DECLINE_SERVICE_CONTEXT = "declineService";
     public static final String CLASS_SERVICE_CONTEXT = "classService";
     public static final String PHOTO_SERVICE_CONTEXT = "photoService";
+    public static final String PDF_SERVICE_CONTEXT = "pdfService";
     public static final String RENT_SERVICE_CONTEXT = "rentService";
     public static final String STATUS_SERVICE_CONTEXT = "statusService";
     public static final String USER_SERVICE_CONTEXT = "userService";

@@ -103,7 +103,7 @@ public class RegistrationServlet extends AuthenticationServlet {
         try {
             MailService.sendEmail(host, port, newUser.getLogin(), userEmail, password, token);
         } catch (MessagingException e) {
-            e.printStackTrace();
+            logger.error("Unable to send mail");
         }
 
         response.sendRedirect(PageNames.SUCCESS_REGISTRATION_PAGE);

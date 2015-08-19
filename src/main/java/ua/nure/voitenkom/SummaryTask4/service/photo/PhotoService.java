@@ -18,8 +18,6 @@ public class PhotoService implements IPhotoService {
 
     public static final String FORMAT = "jpg";
     private static final Logger logger = LoggerFactory.getLogger(PhotoService.class);
-    private static final int IMG_WIDTH = 200;
-    private static final int IMG_HEIGHT = 200;
     private final String folder;
 
     public PhotoService(String path) {
