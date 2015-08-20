@@ -4,18 +4,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
-import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
-import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
-import ua.nure.voitenkom.SummaryTask4.service.decline.DeclineService;
-import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,6 +37,7 @@ public class AcceptApplicationServlet extends AdminServlet {
         if (rentList.size() != 0) {
             rents = rentService.getPayedUnapprovedRents(rentList);
         }
+
         request.setAttribute(Attributes.RENTS, rents);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
     }

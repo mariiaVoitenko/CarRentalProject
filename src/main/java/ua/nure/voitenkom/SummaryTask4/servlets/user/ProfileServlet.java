@@ -39,7 +39,7 @@ public class ProfileServlet extends AuthenticationServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = 0;
+        int id;
         boolean canChange = false;
         if (request.getParameter(Attributes.EDIT) == null) {
             id = getAuthUserId(request);

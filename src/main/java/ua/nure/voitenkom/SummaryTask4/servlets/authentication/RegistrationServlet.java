@@ -16,11 +16,6 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.formbean.RegistrationFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.account.TokenService;
-import ua.nure.voitenkom.SummaryTask4.service.photo.PhotoService;
-import ua.nure.voitenkom.SummaryTask4.service.role.RoleService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
-import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
-import ua.nure.voitenkom.SummaryTask4.validation.user.RegistrationValidator;
 
 import javax.mail.*;
 import javax.servlet.ServletException;
@@ -31,6 +26,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.util.HashMap;
 import java.util.Map;
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
@@ -41,7 +37,6 @@ public class RegistrationServlet extends AuthenticationServlet {
     private IUserService userService;
     private IPhotoService photoService;
     private IRoleService roleService;
-    private IValidator<RegistrationFormBean> userValidator = new RegistrationValidator();
     private String host;
     private String port;
     private String userEmail;
@@ -69,7 +64,7 @@ public class RegistrationServlet extends AuthenticationServlet {
         session.setAttribute(Attributes.PASSWORD_MESSAGE, "");
         RegistrationFormBean registrationFormBean = parseForm(request);
         Part photo = request.getPart(Attributes.PHOTO);
-        Map<String, String> errors = validateData(registrationFormBean, photo);
+        Map<String, String> errors = validateData(registrationFormBean);
 
         if (!errors.isEmpty()) {
             logger.debug("Validation problems");
@@ -78,9 +73,6 @@ public class RegistrationServlet extends AuthenticationServlet {
             }
             if (errors.get("photo") != null) {
                 session.setAttribute(Attributes.PHOTO_MESSAGE, errors.get("photo"));
-            }
-            if (errors.get("password") != null) {
-                session.setAttribute(Attributes.PASSWORD_MESSAGE, errors.get("password"));
             }
             response.sendRedirect(PageNames.REGISTRATION_PAGE);
             return;
@@ -108,17 +100,15 @@ public class RegistrationServlet extends AuthenticationServlet {
         } catch (MessagingException e) {
             logger.error("Unable to send mail");
         }
+        session.setAttribute(Attributes.MESSAGE,"");
 
         response.sendRedirect(PageNames.SUCCESS_REGISTRATION_PAGE);
     }
 
-    private Map<String, String> validateData(RegistrationFormBean registrationFormBean, Part photo) {
-        Map<String, String> errors = userValidator.validate(registrationFormBean);
-        if (errors.isEmpty() && userService.findByLogin(registrationFormBean.getLogin()) != null) {
+    private Map<String, String> validateData(RegistrationFormBean registrationFormBean) {
+        Map<String, String> errors = new HashMap<>();
+        if (userService.findByLogin(registrationFormBean.getLogin()) != null) {
             errors.put("login", "Login already exists");
-        }
-        if (!registrationFormBean.getPassword().equals(registrationFormBean.getRepeatedPassword())) {
-            errors.put("password", "Passwords don't match");
         }
         return errors;
     }
@@ -129,8 +119,7 @@ public class RegistrationServlet extends AuthenticationServlet {
         String repeatedPassword = request.getParameter(Attributes.PASSWORD2);
         String passport = request.getParameter(Attributes.PASSPORT);
         String fullName = request.getParameter(Attributes.FULL_NAME);
-        RegistrationFormBean registrationFormBean = new RegistrationFormBean(login, password, passport, fullName, repeatedPassword);
-        return registrationFormBean;
+        return new RegistrationFormBean(login, password, passport, fullName, repeatedPassword);
     }
 
 

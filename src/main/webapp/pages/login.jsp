@@ -14,7 +14,7 @@
     <input type="text" class="input-block-level" name="login" placeholder="<fmt:message key="email"/>">
     <input type="password" class="input-block-level" name="password" placeholder="<fmt:message key="password"/>">
     <br>
-    <button class="btn btn-large btn-primary" type="submit"><fmt:message key="sign_in"/></button>
+    <button class="btn btn-large btn-primary" type="submit" name="submit" onClick="return submit_form(this.form)"><fmt:message key="sign_in"/></button>
 
   </form>
   <h4 class="paragraph-text"><fmt:message key="registration_message"/><a class="paragraph-text" href="/registration">&nbsp;<fmt:message key="registration_message_link"/></a></h4>
@@ -22,6 +22,6 @@
 </div>
 
 <%@ include file="../WEB-INF/footer.jsp" %>
-
+<script src="<c:url value="/js/validation.js"/>"></script>
 </body>
 </html>

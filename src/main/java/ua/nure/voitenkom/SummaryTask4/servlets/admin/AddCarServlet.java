@@ -71,6 +71,8 @@ public class AddCarServlet extends AdminServlet {
         checkRole(request, response);
 
         HttpSession session = request.getSession();
+        session.setAttribute(Attributes.MESSAGE,"");
+
         CarFormBean carFormBean = parseForm(request);
         Part photo = request.getPart(Attributes.PHOTO);
         Car car = new Car();

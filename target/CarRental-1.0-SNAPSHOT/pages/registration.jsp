@@ -18,7 +18,7 @@
         <input type="password" class="input-block-level" name="password2"
                placeholder="<fmt:message key="repeat_password"/>">
         <input type="file" name="photo">
-        <button class="btn btn-large btn-primary" type="submit"><fmt:message key="register"/></button>
+        <button class="btn btn-large btn-primary" type="submit"  onClick="return submit_registration_form(this.form)"><fmt:message key="register"/></button>
     </form>
 </div>
 
@@ -29,6 +29,6 @@
 </div>
 
 <%@ include file="../WEB-INF/footer.jsp" %>
-
+<script src="<c:url value="/js/registrationValidation.js"/>"></script>
 </body>
 </html>

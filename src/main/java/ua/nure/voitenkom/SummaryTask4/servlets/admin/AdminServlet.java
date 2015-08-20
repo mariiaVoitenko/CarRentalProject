@@ -9,10 +9,6 @@ import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
-import ua.nure.voitenkom.SummaryTask4.service.brand.BrandService;
-import ua.nure.voitenkom.SummaryTask4.service.color.ColorService;
-import ua.nure.voitenkom.SummaryTask4.service.majorityclass.MajorityClassService;
-import ua.nure.voitenkom.SummaryTask4.service.status.StatusService;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
 import javax.servlet.http.*;
