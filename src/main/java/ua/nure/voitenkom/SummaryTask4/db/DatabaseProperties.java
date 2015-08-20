@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db;
 
-public class DatabaseProperties {
+public final class DatabaseProperties {
 
     public static final String USER_NAME = "root";
     public static final String PASSWORD = "root";
@@ -11,5 +11,9 @@ public class DatabaseProperties {
     public static final String LEAK_DETECTION_THRESHOLD = "15000";
     public static final String CONNECTION_TEST_QUERY = "SELECT 1";
     public static final String CONNECTION_TIMEOUT = "1000";
+
+    private DatabaseProperties(){
+
+    }
 
 }

@@ -4,7 +4,6 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 import ua.nure.voitenkom.SummaryTask4.db.repository.damage.IDamageRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
 import java.util.List;
 

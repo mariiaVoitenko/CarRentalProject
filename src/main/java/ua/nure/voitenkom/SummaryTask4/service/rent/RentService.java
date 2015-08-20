@@ -13,11 +13,6 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
-import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
-import ua.nure.voitenkom.SummaryTask4.service.car.ICarService;
-import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
-import ua.nure.voitenkom.SummaryTask4.service.decline.DeclineService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 
 import static ua.nure.voitenkom.SummaryTask4.util.DateManager.timestampToString;
 
@@ -195,9 +190,8 @@ public class RentService implements IRentService {
                 Check check = checkRepository.selectById(rent.getCheckId());
                 CarFormBean car = carRepository.getFullCarInformationById(rent.getCarId());
                 User user = userRepository.selectById(rent.getUserId());
-                RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check,
+                return new RentFormBean(rent.isDriven(), car, check,
                         timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), user, rent.getId());
-                return rentFormBean;
             }
         });
     }

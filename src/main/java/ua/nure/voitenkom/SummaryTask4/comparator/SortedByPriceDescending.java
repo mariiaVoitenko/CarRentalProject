@@ -1,4 +1,4 @@
-package ua.nure.voitenkom.SummaryTask4.comparators;
+package ua.nure.voitenkom.SummaryTask4.comparator;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import java.util.Comparator;
 

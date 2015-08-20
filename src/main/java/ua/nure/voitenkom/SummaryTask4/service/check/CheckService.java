@@ -5,7 +5,6 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 import ua.nure.voitenkom.SummaryTask4.db.repository.check.ICheckRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
 import java.util.List;
 

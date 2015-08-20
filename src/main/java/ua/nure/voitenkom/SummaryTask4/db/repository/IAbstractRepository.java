@@ -1,9 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
 import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
-
 import java.util.List;
 
 public interface IAbstractRepository<T> {

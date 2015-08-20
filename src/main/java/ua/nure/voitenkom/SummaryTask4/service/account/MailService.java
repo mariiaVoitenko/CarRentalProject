@@ -15,54 +15,34 @@ import java.util.Properties;
 
 public class MailService {
 
-    public static void  sendEmail(String host, String port, String email, final String user, final String pass, String token) throws MessagingException {
-        Properties properties = new Properties();
-        properties.put("mail.smtp.host", host);
-        properties.put("mail.smtp.port", port);
-        properties.put("mail.smtp.auth", "true");
-        properties.put("mail.smtp.starttls.enable", "true");
-
-        Authenticator auth = new Authenticator() {
-            public PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(user, pass);
-            }
-        };
+    public static void sendEmail(String host, String port, String email, String user, String password, String token) throws MessagingException {
+        Properties properties = configureProperties(host, port);
+        Authenticator auth = getAuthenticator(user,password);
 
         Session session = Session.getInstance(properties, auth);
-        Message msg = new MimeMessage(session);
-
-        msg.setFrom(new InternetAddress(user));
+        Message message = new MimeMessage(session);
+        message.setFrom(new InternetAddress(user));
         InternetAddress[] toAddresses = {new InternetAddress(email)};
-        msg.setRecipients(Message.RecipientType.TO, toAddresses);
-        msg.setSubject("Registration confirmation");
-        msg.setSentDate(new Date());
-        msg.setText("Hello, to finish your registration you should click this link: " + Mappings.HOST + Mappings.CONFIRMATION_MAPPING + "/" + token);
+        message.setRecipients(Message.RecipientType.TO, toAddresses);
+        message.setSubject("Registration confirmation");
+        message.setSentDate(new Date());
+        message.setText("Hello, to finish your registration you should click this link: " + Mappings.HOST + Mappings.CONFIRMATION_MAPPING + "/" + token);
 
-        Transport.send(msg);
+        Transport.send(message);
     }
 
-    public static void  sendEmailWithDocument(String host, String port, String email, final String user, final String pass, String fileName) throws MessagingException {
-        Properties properties = new Properties();
-        properties.put("mail.smtp.host", host);
-        properties.put("mail.smtp.port", port);
-        properties.put("mail.smtp.auth", "true");
-        properties.put("mail.smtp.starttls.enable", "true");
-
-        Authenticator auth = new Authenticator() {
-            public PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(user, pass);
-            }
-        };
+    public static void sendEmailWithDocument(String host, String port, String email, String user, String password, String fileName) throws MessagingException {
+        Properties properties = configureProperties(host, port);
+        Authenticator auth = getAuthenticator(user,password);
 
         Session session = Session.getInstance(properties, auth);
-        Message msg = new MimeMessage(session);
-
-        msg.setFrom(new InternetAddress(user));
+        Message message = new MimeMessage(session);
+        message.setFrom(new InternetAddress(user));
         InternetAddress[] toAddresses = {new InternetAddress(email)};
-        msg.setRecipients(Message.RecipientType.TO, toAddresses);
-        msg.setSubject("Check Payment");
+        message.setRecipients(Message.RecipientType.TO, toAddresses);
+        message.setSubject("Check Payment");
         BodyPart messageBodyPart = new MimeBodyPart();
-        messageBodyPart.setText("To finish your rental application process you have to pay this check in any bank and send us photo of the payed check back");
+        messageBodyPart.setText("To finish your rental application process you have to pay this check in any bank and send us photo of the payed check back to this email");
         Multipart multipart = new MimeMultipart();
         multipart.addBodyPart(messageBodyPart);
         messageBodyPart = new MimeBodyPart();
@@ -70,8 +50,25 @@ public class MailService {
         messageBodyPart.setDataHandler(new DataHandler(source));
         messageBodyPart.setFileName(fileName);
         multipart.addBodyPart(messageBodyPart);
-        msg.setContent(multipart);
+        message.setContent(multipart);
 
-        Transport.send(msg);
+        Transport.send(message);
+    }
+
+    private static Properties configureProperties(String host, String port) {
+        Properties properties = new Properties();
+        properties.put("mail.smtp.host", host);
+        properties.put("mail.smtp.port", port);
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.enable", "true");
+        return properties;
+    }
+
+    private static Authenticator getAuthenticator(final String user, final String password){
+        return new Authenticator() {
+            public PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(user, password);
+            }
+        };
     }
 }

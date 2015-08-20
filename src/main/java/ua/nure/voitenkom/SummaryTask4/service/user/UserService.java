@@ -4,8 +4,6 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.db.repository.user.IUserRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
-
 import java.util.List;
 
 public class UserService implements IUserService {

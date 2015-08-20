@@ -2,15 +2,11 @@ package ua.nure.voitenkom.SummaryTask4.db.repository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
 import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

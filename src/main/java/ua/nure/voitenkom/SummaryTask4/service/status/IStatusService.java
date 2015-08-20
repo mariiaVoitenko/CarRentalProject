@@ -1,6 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.service.status;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Status;
 
 import java.util.List;

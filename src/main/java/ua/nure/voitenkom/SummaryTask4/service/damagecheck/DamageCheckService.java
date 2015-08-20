@@ -1,11 +1,9 @@
 package ua.nure.voitenkom.SummaryTask4.service.damagecheck;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.DamageCheck;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.damagecheck.IDamageCheckRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
 public class DamageCheckService implements IDamageCheckService {
 

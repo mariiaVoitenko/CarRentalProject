@@ -1,12 +1,9 @@
 package ua.nure.voitenkom.SummaryTask4.service.majorityclass;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.MajorityClass;
 import ua.nure.voitenkom.SummaryTask4.db.repository.majorityclass.IMajorityClassRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
-
 import java.util.List;
 
 public class MajorityClassService implements IMajorityClassService {

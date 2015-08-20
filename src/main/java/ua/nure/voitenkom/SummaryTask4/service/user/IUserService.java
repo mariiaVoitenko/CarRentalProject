@@ -1,7 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.service.user;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
-
 import java.util.List;
 
 public interface IUserService {

@@ -1,7 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.service.brand;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 
 import java.util.List;
 

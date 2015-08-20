@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db;
 
-public class FieldsContainer {
+public final class FieldsContainer {
 
     public static final String FIELD_ID = "id";
     public static final String FIELD_NAME = "name";
@@ -43,4 +43,9 @@ public class FieldsContainer {
     public static final String FIELD_IS_RETURNED = "is_returned";
     public static final String FIELD_IS_APPROVED = "is_approved";
     public static final String FIELD_IS_FINISHED = "is_finished";
+
+    private FieldsContainer(){
+
+    }
+
 }

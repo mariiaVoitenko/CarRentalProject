@@ -4,7 +4,6 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.repository.decline.IDeclineRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-
 import java.util.List;
 
 public class DeclineService implements IDeclineService {

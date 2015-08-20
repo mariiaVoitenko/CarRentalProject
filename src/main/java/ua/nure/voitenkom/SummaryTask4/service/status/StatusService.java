@@ -1,11 +1,9 @@
 package ua.nure.voitenkom.SummaryTask4.service.status;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Status;
 import ua.nure.voitenkom.SummaryTask4.db.repository.status.IStatusRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db;
 
-public class StatementsContainer {
+public final class StatementsContainer {
 
     //brands
     public static final String SQL_SELECT_ALL_BRANDS = "SELECT * FROM brands";
@@ -149,4 +149,8 @@ public class StatementsContainer {
     public static final String SQL_DELETE_USER_BY_ID = "DELETE FROM users WHERE id = ?";
     public static final String SQL_SELECT_USER_BY_LOGIN = "SELECT * FROM users WHERE login = ?";
     public static final String SQL_SELECT_USER_BY_ROLE_ID = "SELECT * FROM users WHERE roles_id = ?";
+
+    private StatementsContainer(){
+
+    }
 }

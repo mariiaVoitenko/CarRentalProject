@@ -66,9 +66,9 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 @WebListener
-public class BeanContextInitializer implements ServletContextListener {
+public class ServiceContextInitializer implements ServletContextListener {
 
-    private static final Logger logger = LoggerFactory.getLogger(BeanContextInitializer.class);
+    private static final Logger logger = LoggerFactory.getLogger(ServiceContextInitializer.class);
 
     @Override
     public void contextInitialized(ServletContextEvent context) {

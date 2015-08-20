@@ -2,10 +2,10 @@ package ua.nure.voitenkom.SummaryTask4.servlets;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.comparators.SortedByModel;
-import ua.nure.voitenkom.SummaryTask4.comparators.SortedByModelDescending;
-import ua.nure.voitenkom.SummaryTask4.comparators.SortedByPrice;
-import ua.nure.voitenkom.SummaryTask4.comparators.SortedByPriceDescending;
+import ua.nure.voitenkom.SummaryTask4.comparator.SortedByModel;
+import ua.nure.voitenkom.SummaryTask4.comparator.SortedByModelDescending;
+import ua.nure.voitenkom.SummaryTask4.comparator.SortedByPrice;
+import ua.nure.voitenkom.SummaryTask4.comparator.SortedByPriceDescending;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
