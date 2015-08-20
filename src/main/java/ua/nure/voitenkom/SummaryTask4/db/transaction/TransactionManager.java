@@ -12,12 +12,6 @@ import java.sql.Connection;
 public class TransactionManager implements ITransactionManager {
 
     private static final Logger logger = LoggerFactory.getLogger(TransactionManager.class);
-    private static ThreadLocal<Integer> currentTransaction = new ThreadLocal<Integer>() {
-        @Override
-        protected Integer initialValue() {
-            return 0;
-        }
-    };
     private final ConnectionFactory connectionFactory;
     private final ConnectionHolder connectionHolder;
 
@@ -43,30 +37,13 @@ public class TransactionManager implements ITransactionManager {
     }
 
     private Connection getConnection() {
-        Integer currTransaction = currentTransaction.get();
-        Connection connection;
-        if (isExternalTransaction(currTransaction)) {
-            connection = connectionFactory.getConnection();
-            connectionHolder.set(connection);
-        } else {
-            connection = connectionHolder.get();
-        }
-        currentTransaction.set(++currTransaction);
+        Connection connection = connectionFactory.getConnection();
+        connectionHolder.set(connection);
         return connection;
     }
 
-    private boolean isExternalTransaction(Integer currTransaction) {
-        return currTransaction == 0;
-    }
-
     private void closeConnection() {
-        Integer currTransaction = currentTransaction.get();
-        currentTransaction.set(--currTransaction);
-        if (isExternalTransaction(currTransaction)) {
-            Connection connection = connectionHolder.get();
-            ConnectionManager.closeConnection(connection);
-            connectionHolder.remove();
-        }
+        ConnectionManager.closeConnection(connectionHolder.get());
     }
 
 }
