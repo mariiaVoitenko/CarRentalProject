@@ -56,11 +56,6 @@ public abstract class AdminServlet extends HttpServlet {
         return carFormBean;
     }
 
-    protected Map<String, String> validateData(CarFormBean carFormBean, IValidator<CarFormBean> carFormBeanIValidator) {
-        Map<String, String> errors = carFormBeanIValidator.validate(carFormBean);
-        return errors;
-    }
-
     protected void fillEntity(Car car, CarFormBean carFormBean, IStatusService statusService, IBrandService brandService, IColorService colorService, IMajorityClassService majorityClassService) {
         car.setModel(carFormBean.getModel());
         car.setBigLuggageCount(carFormBean.getBigLuggageCount());

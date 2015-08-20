@@ -97,7 +97,7 @@
                 <br>
                 <br>
                 <br>
-                <button class="btn btn-large btn-success" type="submit"><fmt:message key="save"/></button>
+                <button class="btn btn-large btn-success" type="submit" onClick="return submit_car_form(this.form)"><fmt:message key="save"/></button>
             </div>
         </div>
     </form>
@@ -107,5 +107,6 @@
     <h3 class="middle-headline">${message}</h3>
 </div>
 <%@ include file="../WEB-INF/footer.jsp" %>
+<script src="<c:url value="/js/carValidation.js"/>"></script>
 </body>
 </html>

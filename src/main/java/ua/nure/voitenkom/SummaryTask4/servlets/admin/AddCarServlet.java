@@ -14,14 +14,6 @@ import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.brand.BrandService;
-import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
-import ua.nure.voitenkom.SummaryTask4.service.color.ColorService;
-import ua.nure.voitenkom.SummaryTask4.service.majorityclass.MajorityClassService;
-import ua.nure.voitenkom.SummaryTask4.service.photo.PhotoService;
-import ua.nure.voitenkom.SummaryTask4.service.status.StatusService;
-import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
-import ua.nure.voitenkom.SummaryTask4.validation.car.CarValidator;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -31,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
@@ -44,7 +37,6 @@ public class AddCarServlet extends AdminServlet {
     private IColorService colorService;
     private IStatusService statusService;
     private IPhotoService photoService;
-    private IValidator<CarFormBean> carFormBeanIValidator = new CarValidator();
 
     @Override
     public void init() throws ServletException {
@@ -76,17 +68,8 @@ public class AddCarServlet extends AdminServlet {
         CarFormBean carFormBean = parseForm(request);
         Part photo = request.getPart(Attributes.PHOTO);
         Car car = new Car();
-        Map<String, String> errors = validateData(carFormBean, carFormBeanIValidator);
+        Map<String, String> errors = new HashMap<>();
 
-        if (!errors.isEmpty()) {
-            session.setAttribute(Attributes.MESSAGE, errors.get("error"));
-            logger.debug("Car selected");
-            loadEntities(request, brandService, majorityClassService, colorService, statusService);
-            RequestDispatcher requestDispatcher = request
-                    .getRequestDispatcher(PageNames.ADD_CARS_PAGE);
-            requestDispatcher.forward(request, response);
-            return;
-        }
         if (photo != null) {
             if (isPhotoIncorrect(photo)) {
                 errors.put("error", "Some error with photo has occurred");

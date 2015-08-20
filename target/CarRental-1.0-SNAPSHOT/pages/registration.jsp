@@ -25,7 +25,6 @@
 <div class="center-input marginned">
     <h4>${photoMessage}</h4>
     <h4>${loginMessage}</h4>
-    <h4>${passwordMessage}</h4>
 </div>
 
 <%@ include file="../WEB-INF/footer.jsp" %>

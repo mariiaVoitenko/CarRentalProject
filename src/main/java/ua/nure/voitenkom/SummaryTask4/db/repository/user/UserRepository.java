@@ -10,6 +10,7 @@ import ua.nure.voitenkom.SummaryTask4.db.extractor.UserExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
+import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNull;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -71,8 +72,7 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
         String sql = StatementsContainer.SQL_SELECT_USER_BY_ROLE_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, roleId);
-            List<User> records = executeQuery(preparedStatement, new UserExtractor());
-            return records;
+            return executeQuery(preparedStatement, new UserExtractor());
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
@@ -120,7 +120,7 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     public boolean checkPassword(String login, String password) {
         User user = findByLogin(login);
         String cipherPassword = PasswordMaker.makePassword(password);
-        return user.getPassword().equals(cipherPassword) ? true : false;
+        return !isNull(user) && (user.getPassword().equals(cipherPassword));
     }
 
     @Override
