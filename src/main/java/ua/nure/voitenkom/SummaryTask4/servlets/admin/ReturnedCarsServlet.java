@@ -6,8 +6,10 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
+import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
 import ua.nure.voitenkom.SummaryTask4.service.damage.DamageService;
 import ua.nure.voitenkom.SummaryTask4.service.damage.IDamageService;
+import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
@@ -26,11 +28,15 @@ public class ReturnedCarsServlet extends AdminServlet {
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
     private IRentService rentService;
     private IDamageService damageService;
+    private IBrandService brandService;
+    private IMajorityClassService majorityClassService;
 
     @Override
     public void init() throws ServletException {
         rentService = (IRentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
         damageService = (IDamageService) getServletContext().getAttribute(ServiceConstant.DAMAGE_SERVICE_CONTEXT);
+        brandService = (IBrandService) getServletContext().getAttribute(ServiceConstant.BRAND_SERVICE_CONTEXT);
+        majorityClassService = (IMajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -38,6 +44,9 @@ public class ReturnedCarsServlet extends AdminServlet {
         request.setAttribute(Attributes.RENTS, rentService.getReturnedRentFormBeanList());
         logger.debug("Rents have been got");
         request.setAttribute(Attributes.DAMAGES, damageService.getAll());
+
+        request.setAttribute(Attributes.BRANDS, brandService.getAll());
+        request.setAttribute(Attributes.CLASSES, majorityClassService.getAll());
 
         RequestDispatcher requestDispatcher = request
                 .getRequestDispatcher(PageNames.RETURNED_CARS_PAGE);

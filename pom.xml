@@ -21,6 +21,8 @@
         <md5-version>1.9</md5-version>
         <mail-version>1.4.3</mail-version>
         <itext-pdf-version>5.0.6</itext-pdf-version>
+        <mockito-version>1.8.4</mockito-version>
+        <powermock.version>1.5.6</powermock.version>
     </properties>
 
     <dependencies>
@@ -100,6 +102,24 @@
             <version>${itext-pdf-version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito</artifactId>
+            <version>${powermock.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+            <version>${powermock.version}</version>
+        </dependency>
 
     </dependencies>
 

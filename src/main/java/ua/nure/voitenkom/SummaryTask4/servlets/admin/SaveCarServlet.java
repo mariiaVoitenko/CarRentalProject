@@ -13,8 +13,13 @@ import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
+import ua.nure.voitenkom.SummaryTask4.util.PageNames;
+import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
+import ua.nure.voitenkom.SummaryTask4.validation.car.CarValidator;
+
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.*;
@@ -32,6 +37,7 @@ public class SaveCarServlet extends AdminServlet {
     private IBrandService brandService;
     private IColorService colorService;
     private IMajorityClassService majorityClassService;
+    private IValidator<CarFormBean> carFormBeanIValidator = new CarValidator();
 
     @Override
     public void init() throws ServletException {
@@ -55,7 +61,18 @@ public class SaveCarServlet extends AdminServlet {
         CarFormBean carFormBean = parseForm(request);
         Part photo = request.getPart(Attributes.PHOTO);
 
-        Map<String, String> errors = new HashMap<>();
+        Map<String, String> errors = validateData(carFormBean, carFormBeanIValidator);
+
+        if (!errors.isEmpty()) {
+            session.setAttribute(Attributes.MESSAGE, errors.get("error"));
+            request.setAttribute(Attributes.CAR, car);
+            logger.debug("Car selected");
+            loadEntities(request, brandService, majorityClassService, colorService, statusService);
+            RequestDispatcher requestDispatcher = request
+                    .getRequestDispatcher(PageNames.EDIT_CARS_PAGE);
+            requestDispatcher.forward(request, response);
+            return;
+        }
         if (photo.getSize() != 0) {
             if (isPhotoIncorrect(photo)) {
                 errors.put("error", "Some error with photo has occurred");

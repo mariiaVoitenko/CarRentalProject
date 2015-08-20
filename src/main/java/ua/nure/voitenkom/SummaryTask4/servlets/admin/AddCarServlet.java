@@ -14,6 +14,8 @@ import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
+import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
+import ua.nure.voitenkom.SummaryTask4.validation.car.CarValidator;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,6 +27,7 @@ import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
@@ -37,6 +40,7 @@ public class AddCarServlet extends AdminServlet {
     private IColorService colorService;
     private IStatusService statusService;
     private IPhotoService photoService;
+    private IValidator<CarFormBean> carFormBeanIValidator = new CarValidator();
 
     @Override
     public void init() throws ServletException {
@@ -63,14 +67,26 @@ public class AddCarServlet extends AdminServlet {
         checkRole(request, response);
 
         HttpSession session = request.getSession();
-        session.setAttribute(Attributes.MESSAGE,"");
+        session.setAttribute(Attributes.MESSAGE, "");
 
         CarFormBean carFormBean = parseForm(request);
         Part photo = request.getPart(Attributes.PHOTO);
         Car car = new Car();
-        Map<String, String> errors = new HashMap<>();
+        Map<String, String> errors = validateData(carFormBean, carFormBeanIValidator);
 
-        if (photo != null) {
+        if (!errors.isEmpty()) {
+            session.setAttribute(Attributes.MESSAGE, errors.get("error"));
+            logger.debug("Car selected");
+            loadEntities(request, brandService, majorityClassService, colorService, statusService);
+            RequestDispatcher requestDispatcher = request
+                    .getRequestDispatcher(PageNames.ADD_CARS_PAGE);
+            requestDispatcher.forward(request, response);
+            return;
+        }
+
+        if (photo != null)
+
+        {
             if (isPhotoIncorrect(photo)) {
                 errors.put("error", "Some error with photo has occurred");
             }

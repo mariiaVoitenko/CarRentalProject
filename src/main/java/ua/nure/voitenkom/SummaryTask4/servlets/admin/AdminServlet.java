@@ -56,6 +56,11 @@ public abstract class AdminServlet extends HttpServlet {
         return carFormBean;
     }
 
+    protected Map<String, String> validateData(CarFormBean carFormBean, IValidator<CarFormBean> carFormBeanIValidator) {
+        Map<String, String> errors = carFormBeanIValidator.validate(carFormBean);
+        return errors;
+    }
+
     protected void fillEntity(Car car, CarFormBean carFormBean, IStatusService statusService, IBrandService brandService, IColorService colorService, IMajorityClassService majorityClassService) {
         car.setModel(carFormBean.getModel());
         car.setBigLuggageCount(carFormBean.getBigLuggageCount());
@@ -77,14 +82,13 @@ public abstract class AdminServlet extends HttpServlet {
     protected void checkRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
         if (getRoleId(request) != Integer.parseInt(EntitiesValues.ADMIN_ROLE_ID)) {
             response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
-            return;
         }
     }
 
     protected void checkManagerRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
         if (getRoleId(request) != Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID)) {
             response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
-            return;
         }
     }
+
 }

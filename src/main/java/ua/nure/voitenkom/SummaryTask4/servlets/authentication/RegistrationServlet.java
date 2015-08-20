@@ -16,6 +16,8 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.formbean.RegistrationFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.account.TokenService;
+import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
+import ua.nure.voitenkom.SummaryTask4.validation.user.RegistrationValidator;
 
 import javax.mail.*;
 import javax.servlet.ServletException;
@@ -28,6 +30,7 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
+
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
@@ -41,6 +44,7 @@ public class RegistrationServlet extends AuthenticationServlet {
     private String port;
     private String userEmail;
     private String password;
+    private IValidator<RegistrationFormBean> userValidator = new RegistrationValidator();
 
     @Override
     public void init() throws ServletException {
@@ -100,15 +104,18 @@ public class RegistrationServlet extends AuthenticationServlet {
         } catch (MessagingException e) {
             logger.error("Unable to send mail");
         }
-        session.setAttribute(Attributes.MESSAGE,"");
+        session.setAttribute(Attributes.MESSAGE, "");
 
         response.sendRedirect(PageNames.SUCCESS_REGISTRATION_PAGE);
     }
 
     private Map<String, String> validateData(RegistrationFormBean registrationFormBean) {
-        Map<String, String> errors = new HashMap<>();
-        if (userService.findByLogin(registrationFormBean.getLogin()) != null) {
+        Map<String, String> errors = userValidator.validate(registrationFormBean);
+        if (errors.isEmpty() && userService.findByLogin(registrationFormBean.getLogin()) != null) {
             errors.put("login", "Login already exists");
+        }
+        if (!registrationFormBean.getPassword().equals(registrationFormBean.getRepeatedPassword())) {
+            errors.put("password", "Passwords don't match");
         }
         return errors;
     }
