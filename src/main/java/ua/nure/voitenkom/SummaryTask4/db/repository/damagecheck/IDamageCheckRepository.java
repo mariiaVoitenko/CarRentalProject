@@ -5,7 +5,7 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 public interface IDamageCheckRepository extends IAbstractRepository<DamageCheck> {
 
-    void create(DamageCheck damageCheck);
+    void insert(DamageCheck damageCheck);
 
     void update(DamageCheck damageCheck);
 

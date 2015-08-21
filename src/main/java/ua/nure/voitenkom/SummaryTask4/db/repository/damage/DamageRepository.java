@@ -61,8 +61,8 @@ public class DamageRepository extends AbstractRepository<Damage> implements IDam
     public void updateSum(Damage damage) {
         String sql = StatementsContainer.SQL_UPDATE_DAMAGE_SUM_BY_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setInt(2, damage.getSum());
-            preparedStatement.setInt(3, damage.getId());
+            preparedStatement.setInt(1, damage.getSum());
+            preparedStatement.setInt(2, damage.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);

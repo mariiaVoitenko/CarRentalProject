@@ -78,5 +78,4 @@ public abstract class AbstractRepository<T extends Entity> implements IAbstractR
         }
     }
 
-
 }

@@ -36,7 +36,7 @@ public class DamageCheckRepository extends AbstractRepository<DamageCheck> imple
     }
 
     @Override
-    public void create(DamageCheck damageCheck) {
+    public void insert(DamageCheck damageCheck) {
         String sql = StatementsContainer.SQL_INSERT_DAMAGECHECK;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, damageCheck.getDamageId());
@@ -56,11 +56,6 @@ public class DamageCheckRepository extends AbstractRepository<DamageCheck> imple
     @Override
     public List<DamageCheck> selectAll() {
         return super.selectAll(StatementsContainer.SQL_SELECT_ALL_DAMAGECHECKS, new DamageCheckExtractor());
-    }
-
-    @Override
-    public void insert(DamageCheck entity) {
-        throw new UnsupportedOperationException();
     }
 
     @Override
