@@ -22,12 +22,12 @@ public class ConnectionFactory {
         dataSource.setLeakDetectionThreshold(Integer.parseInt(DatabaseProperties.LEAK_DETECTION_THRESHOLD));
         dataSource.setConnectionTestQuery(DatabaseProperties.CONNECTION_TEST_QUERY);
         dataSource.setConnectionTimeout(Integer.parseInt(DatabaseProperties.CONNECTION_TIMEOUT));
+        dataSource.setAutoCommit(false);
     }
 
     public Connection getConnection() {
         try {
             Connection connection = dataSource.getConnection();
-            connection.setAutoCommit(false);
             return connection;
         } catch (SQLException e) {
             logger.error("Connection failed", e);
