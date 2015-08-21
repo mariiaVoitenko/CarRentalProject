@@ -4,9 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.DamageCheck;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.DamageCheckExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
@@ -61,17 +59,13 @@ public class DamageCheckRepository extends AbstractRepository<DamageCheck> imple
     }
 
     @Override
-    public void insert(SimpleEntity entity) {
-
-    }
-
-    @Override
-    public void update(SimpleEntity entity) {
-
+    public void insert(DamageCheck entity) {
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void deleteById(int id) {
         super.deleteById(id, StatementsContainer.SQL_DELETE_DAMAGECHECK_BY_ID);
     }
+
 }

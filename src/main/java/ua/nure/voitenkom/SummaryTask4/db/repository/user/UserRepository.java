@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.service.account.PasswordMaker;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.UserExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
@@ -129,16 +128,6 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
     }
 
     @Override
-    public void insert(SimpleEntity entity) {
-
-    }
-
-    @Override
-    public void update(SimpleEntity entity) {
-
-    }
-
-    @Override
     public void deleteById(int id) {
         super.deleteById(id, StatementsContainer.SQL_DELETE_USER_BY_ID);
     }
@@ -172,6 +161,11 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
         }
+    }
+
+    @Override
+    public void update(User entity) {
+        throw new UnsupportedOperationException();
     }
 
     @Override

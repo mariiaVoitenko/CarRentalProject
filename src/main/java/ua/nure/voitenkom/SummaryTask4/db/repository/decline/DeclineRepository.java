@@ -1,18 +1,14 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.decline;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.DeclineExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
-import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
+import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
+
 import java.util.List;
 
-public class DeclineRepository extends AbstractRepository<Decline> implements IDeclineRepository {
-
-    private static final Logger logger = LoggerFactory.getLogger(DeclineRepository.class);
+public class DeclineRepository extends AbstractSimpleEntityRepository<Decline> implements IDeclineRepository {
 
     public DeclineRepository(ConnectionHolder connectionHolder) {
         super(connectionHolder);
@@ -34,12 +30,12 @@ public class DeclineRepository extends AbstractRepository<Decline> implements ID
     }
 
     @Override
-    public void insert(SimpleEntity entity) {
+    public void insert(Decline entity) {
         super.insert(entity, StatementsContainer.SQL_INSERT_DECLINE);
     }
 
     @Override
-    public void update(SimpleEntity entity) {
+    public void update(Decline entity) {
         super.insert(entity, StatementsContainer.SQL_UPDATE_DECLINE_BY_ID);
     }
 
@@ -47,4 +43,5 @@ public class DeclineRepository extends AbstractRepository<Decline> implements ID
     public void deleteById(int id) {
         super.deleteById(id, StatementsContainer.SQL_DELETE_DECLINE_BY_ID);
     }
+
 }

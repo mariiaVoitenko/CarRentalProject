@@ -1,18 +1,14 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.brand;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.BrandExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
-import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
+import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
+
 import java.util.List;
 
-public class BrandRepository extends AbstractRepository<Brand> implements IBrandRepository {
-
-    private static final Logger logger = LoggerFactory.getLogger(BrandRepository.class);
+public class BrandRepository extends AbstractSimpleEntityRepository<Brand> implements IBrandRepository {
 
     public BrandRepository(ConnectionHolder connectionHolder) {
         super(connectionHolder);
@@ -39,12 +35,13 @@ public class BrandRepository extends AbstractRepository<Brand> implements IBrand
     }
 
     @Override
-    public void update(SimpleEntity brand) {
+    public void update(Brand brand) {
         super.update(brand,StatementsContainer.SQL_UPDATE_BRAND_BY_ID);
     }
 
     @Override
-    public void insert(SimpleEntity brand) {
+    public void insert(Brand brand) {
        super.insert(brand,StatementsContainer.SQL_INSERT_BRAND);
     }
+
 }

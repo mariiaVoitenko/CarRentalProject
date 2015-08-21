@@ -1,7 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.check;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 
 import java.util.List;

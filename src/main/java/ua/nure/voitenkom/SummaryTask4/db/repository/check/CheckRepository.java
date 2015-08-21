@@ -5,9 +5,7 @@ import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CheckExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
@@ -38,16 +36,6 @@ public class CheckRepository extends AbstractRepository<Check> implements ICheck
     @Override
     public List<Check> selectUnpayed() {
         return super.selectAll(StatementsContainer.SQL_SELECT_ALL_UNPAYED_CHECKS, new CheckExtractor());
-    }
-
-    @Override
-    public void insert(SimpleEntity entity) {
-
-    }
-
-    @Override
-    public void update(SimpleEntity entity) {
-
     }
 
     @Override
@@ -123,4 +111,5 @@ public class CheckRepository extends AbstractRepository<Check> implements ICheck
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
         }
     }
+
 }

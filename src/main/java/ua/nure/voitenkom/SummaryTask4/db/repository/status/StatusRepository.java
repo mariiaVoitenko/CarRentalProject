@@ -1,18 +1,15 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.status;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Status;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.StatusExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
-import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
+import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
+
 import java.util.List;
 
-public class StatusRepository extends AbstractRepository<Status> implements IStatusRepository {
+public class StatusRepository extends AbstractSimpleEntityRepository<Status> implements IStatusRepository {
 
-    private static final Logger logger = LoggerFactory.getLogger(StatusRepository.class);
     public StatusRepository(ConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
@@ -38,12 +35,13 @@ public class StatusRepository extends AbstractRepository<Status> implements ISta
     }
 
     @Override
-    public void update(SimpleEntity status) {
+    public void update(Status status) {
         super.update(status, StatementsContainer.SQL_UPDATE_STATUS_BY_ID);
     }
 
     @Override
-    public void insert(SimpleEntity status) {
+    public void insert(Status status) {
         super.insert(status, StatementsContainer.SQL_INSERT_STATUS);
     }
+
 }

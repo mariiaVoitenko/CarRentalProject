@@ -1,6 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.car;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;

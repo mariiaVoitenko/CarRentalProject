@@ -1,6 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.damagecheck;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 import ua.nure.voitenkom.SummaryTask4.db.entity.DamageCheck;
 import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 

@@ -1,6 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.majorityclass;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.entity.MajorityClass;
 import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 

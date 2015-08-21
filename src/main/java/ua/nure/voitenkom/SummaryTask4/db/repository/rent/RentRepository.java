@@ -3,15 +3,11 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.rent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.BrandExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.RentExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
-import ua.nure.voitenkom.SummaryTask4.db.repository.brand.IBrandRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
 import java.sql.PreparedStatement;
@@ -22,6 +18,7 @@ import java.util.List;
 public class RentRepository extends AbstractRepository<Rent> implements IRentRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(RentRepository.class);
+
     public RentRepository(ConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
@@ -158,17 +155,8 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     }
 
     @Override
-    public void insert(SimpleEntity entity) {
-
-    }
-
-    @Override
-    public void update(SimpleEntity entity) {
-
-    }
-
-    @Override
     public void deleteById(int id) {
         super.deleteById(id, StatementsContainer.SQL_DELETE_RENT_BY_ID);
     }
+
 }

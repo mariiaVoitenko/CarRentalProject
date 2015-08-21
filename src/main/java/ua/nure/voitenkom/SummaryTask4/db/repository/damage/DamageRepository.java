@@ -5,9 +5,7 @@ import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.DamageExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
@@ -15,7 +13,6 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class DamageRepository extends AbstractRepository<Damage> implements IDamageRepository {
@@ -39,16 +36,6 @@ public class DamageRepository extends AbstractRepository<Damage> implements IDam
     @Override
     public Damage selectById(int id) {
         return super.selectById(id, StatementsContainer.SQL_SELECT_DAMAGE_BY_ID, new DamageExtractor());
-    }
-
-    @Override
-    public void insert(SimpleEntity entity) {
-
-    }
-
-    @Override
-    public void update(SimpleEntity entity) {
-
     }
 
     @Override
@@ -112,4 +99,5 @@ public class DamageRepository extends AbstractRepository<Damage> implements IDam
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
         }
     }
+
 }

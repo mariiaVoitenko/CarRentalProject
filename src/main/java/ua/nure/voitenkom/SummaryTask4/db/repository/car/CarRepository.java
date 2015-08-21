@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CarExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CarFormBeanExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
@@ -36,16 +35,6 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     @Override
     public List<Car> selectAll() {
         return super.selectAll(StatementsContainer.SQL_SELECT_ALL_CARS, new CarExtractor());
-    }
-
-    @Override
-    public void insert(SimpleEntity entity) {
-
-    }
-
-    @Override
-    public void update(SimpleEntity entity) {
-
     }
 
     @Override
@@ -146,6 +135,11 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     }
 
     @Override
+    public void update(Car entity) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
     public List<CarFormBean> getFullCarInformation() {
         String sql = StatementsContainer.SQL_SELECT_ALL_CAR_INFORMATION;
         CarFormBeanExtractor extractor = new CarFormBeanExtractor();
@@ -186,7 +180,6 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     @Override
     public List<Car> getCarsByBrandId(int id) {
         String sql = StatementsContainer.SQL_SELECT_CARS_BY_BRAND_ID;
-        CarFormBeanExtractor extractor = new CarFormBeanExtractor();
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, id);
             return executeQuery(preparedStatement, new CarExtractor());
@@ -199,7 +192,6 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     @Override
     public List<Car> getCarsByClassId(int id) {
         String sql = StatementsContainer.SQL_SELECT_CARS_BY_CLASS_ID;
-        CarFormBeanExtractor extractor = new CarFormBeanExtractor();
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, id);
             return executeQuery(preparedStatement, new CarExtractor());
@@ -232,4 +224,5 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
         }
     }
+
 }

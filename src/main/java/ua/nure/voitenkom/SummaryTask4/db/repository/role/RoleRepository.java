@@ -1,18 +1,14 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository.role;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.RoleExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
-import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
+import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
+
 import java.util.List;
 
-public class RoleRepository extends AbstractRepository<Role> implements IRoleRepository {
-
-    private static final Logger logger = LoggerFactory.getLogger(RoleRepository.class);
+public class RoleRepository extends AbstractSimpleEntityRepository<Role> implements IRoleRepository {
 
     public RoleRepository(ConnectionHolder connectionHolder) {
         super(connectionHolder);
@@ -39,12 +35,13 @@ public class RoleRepository extends AbstractRepository<Role> implements IRoleRep
     }
 
     @Override
-    public void update(SimpleEntity role) {
+    public void update(Role role) {
         super.update(role,StatementsContainer.SQL_UPDATE_ROLE_BY_ID);
     }
 
     @Override
-    public void insert(SimpleEntity role) {
+    public void insert(Role role) {
         super.insert(role,StatementsContainer.SQL_INSERT_ROLE);
     }
+
 }

@@ -1,17 +1,18 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.SimpleEntity;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
+
 import java.util.List;
 
-public interface IAbstractRepository<T> {
+public interface IAbstractRepository<T extends Entity> {
 
     T selectById(int id);
 
     List<T> selectAll();
 
-    void insert(SimpleEntity entity);
+    void insert(T entity);
 
-    void update(SimpleEntity entity);
+    void update(T entity);
 
     void deleteById(int id);
 
