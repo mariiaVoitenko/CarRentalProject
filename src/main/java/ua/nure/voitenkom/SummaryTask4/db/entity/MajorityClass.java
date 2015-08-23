@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
-public class MajorityClass extends SimpleEntity{
+public class MajorityClass extends SimpleEntity {
 
     public MajorityClass(int id, String name) {
         super(id, name);

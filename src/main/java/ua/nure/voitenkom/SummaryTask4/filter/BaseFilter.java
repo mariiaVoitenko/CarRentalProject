@@ -1,13 +1,9 @@
 package ua.nure.voitenkom.SummaryTask4.filter;
 
-import ua.nure.voitenkom.SummaryTask4.util.Attributes;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
 public abstract class BaseFilter implements Filter {
 
@@ -27,11 +23,6 @@ public abstract class BaseFilter implements Filter {
     @Override
     public void destroy() {
 
-    }
-
-    protected Integer getAuthUserId(HttpServletRequest request) {
-        HttpSession session = request.getSession(false);
-        return isNotNull(session) ? (Integer) session.getAttribute(Attributes.USER_ID) : null;
     }
 
 }

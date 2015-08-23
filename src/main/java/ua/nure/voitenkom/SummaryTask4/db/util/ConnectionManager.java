@@ -1,4 +1,4 @@
-package ua.nure.voitenkom.SummaryTask4.db.connection;
+package ua.nure.voitenkom.SummaryTask4.db.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,7 +7,8 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseConnectionException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ConnectionManager {
+public final class ConnectionManager {
+
     private static final Logger logger = LoggerFactory.getLogger(ConnectionManager.class);
 
     private ConnectionManager() {
@@ -30,4 +31,5 @@ public class ConnectionManager {
             throw new DatabaseConnectionException("Couldn't rollback ", e);
         }
     }
+
 }

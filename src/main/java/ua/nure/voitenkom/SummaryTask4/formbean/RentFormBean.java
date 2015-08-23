@@ -19,7 +19,7 @@ public class RentFormBean {
     private boolean isFinished;
 
     public RentFormBean(boolean isDriven, CarFormBean car, Check check, Decline decline, String startDate,
-                        String endDate, boolean isReturned,  boolean isApproved, boolean isFinished, int id) {
+                        String endDate, boolean isReturned, boolean isApproved, boolean isFinished, int id) {
         this.isDriven = isDriven;
         this.car = car;
         this.check = check;
@@ -148,4 +148,5 @@ public class RentFormBean {
         sb.append('}');
         return sb.toString();
     }
+
 }

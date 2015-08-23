@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.service.rent;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
+
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -25,7 +26,7 @@ public interface IRentService {
 
     void updateDecline(Rent rent);
 
-    List<Rent> selectReturnedCarRents() ;
+    List<Rent> selectReturnedCarRents();
 
     void updateReturnedState(int rentId);
 

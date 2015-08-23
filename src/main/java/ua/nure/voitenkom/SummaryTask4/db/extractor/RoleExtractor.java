@@ -14,4 +14,5 @@ public class RoleExtractor implements IExtractor<Role> {
         String name = resultSet.getString(FieldsContainer.FIELD_NAME);
         return new Role(id, name);
     }
+
 }

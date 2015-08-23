@@ -218,7 +218,7 @@ public class RentService implements IRentService {
     }
 
     @Override
-    public List<RentFormBean> getReturnedRentFormBeanList(){
+    public List<RentFormBean> getReturnedRentFormBeanList() {
         List<Rent> returnedCarRents = selectReturnedCarRents();
         List<RentFormBean> returnedRentFormBeansList = new ArrayList<>();
         if (returnedCarRents.size() != 0) {

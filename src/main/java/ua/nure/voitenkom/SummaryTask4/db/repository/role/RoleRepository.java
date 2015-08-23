@@ -36,12 +36,12 @@ public class RoleRepository extends AbstractSimpleEntityRepository<Role> impleme
 
     @Override
     public void update(Role role) {
-        super.update(role,StatementsContainer.SQL_UPDATE_ROLE_BY_ID);
+        super.update(role, StatementsContainer.SQL_UPDATE_ROLE_BY_ID);
     }
 
     @Override
     public void insert(Role role) {
-        super.insert(role,StatementsContainer.SQL_INSERT_ROLE);
+        super.insert(role, StatementsContainer.SQL_INSERT_ROLE);
     }
 
 }

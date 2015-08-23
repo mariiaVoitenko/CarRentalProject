@@ -6,6 +6,7 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -37,7 +38,7 @@ public abstract class AbstractRepository<T extends Entity> implements IAbstractR
         }
     }
 
-    public T selectById(int id, String sql, IExtractor<T> extractor) {
+    protected T selectById(int id, String sql, IExtractor<T> extractor) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, id);
             List<T> records = executeQuery(preparedStatement, extractor);
@@ -48,7 +49,7 @@ public abstract class AbstractRepository<T extends Entity> implements IAbstractR
         }
     }
 
-    public T selectByName(String name, String sql, IExtractor<T> extractor) {
+    protected T selectByName(String name, String sql, IExtractor<T> extractor) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, name);
             List<T> records = executeQuery(preparedStatement, extractor);
@@ -59,7 +60,7 @@ public abstract class AbstractRepository<T extends Entity> implements IAbstractR
         }
     }
 
-    public List<T> selectAll(String sql, IExtractor<T> extractor) {
+    protected List<T> selectAll(String sql, IExtractor<T> extractor) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             return executeQuery(preparedStatement, extractor);
         } catch (SQLException e) {
@@ -68,7 +69,7 @@ public abstract class AbstractRepository<T extends Entity> implements IAbstractR
         }
     }
 
-    public void deleteById(int id, String sql) {
+    protected void deleteById(int id, String sql) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();

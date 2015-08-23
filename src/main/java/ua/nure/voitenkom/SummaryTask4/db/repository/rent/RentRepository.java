@@ -87,17 +87,17 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
 
     @Override
     public void updateReturnedState(int rentId) {
-        updateState(rentId,StatementsContainer.SQL_UPDATE_RETURNED_STATE_BY_ID);
+        updateState(rentId, StatementsContainer.SQL_UPDATE_RETURNED_STATE_BY_ID);
     }
 
     @Override
     public void updateFinishedState(int rentId) {
-        updateState(rentId,StatementsContainer.SQL_UPDATE_FINISHED_STATE_BY_ID);
+        updateState(rentId, StatementsContainer.SQL_UPDATE_FINISHED_STATE_BY_ID);
     }
 
     @Override
     public void updateApprovedState(int rentId) {
-        updateState(rentId,StatementsContainer.SQL_UPDATE_APPROVED_STATE_BY_ID);
+        updateState(rentId, StatementsContainer.SQL_UPDATE_APPROVED_STATE_BY_ID);
     }
 
     @Override
@@ -137,7 +137,7 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
         super.deleteById(id, StatementsContainer.SQL_DELETE_RENT_BY_ID);
     }
 
-    private void updateState(int rentId, String sql){
+    private void updateState(int rentId, String sql) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, rentId);
             preparedStatement.executeUpdate();

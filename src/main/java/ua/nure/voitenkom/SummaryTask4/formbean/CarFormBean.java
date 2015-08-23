@@ -2,8 +2,6 @@ package ua.nure.voitenkom.SummaryTask4.formbean;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
 
-import java.util.Comparator;
-
 public class CarFormBean extends Entity {
 
     private String model;
@@ -19,9 +17,9 @@ public class CarFormBean extends Entity {
     private String className;
     private String statusName;
 
-    public CarFormBean(int id, String model, int price, int doorsCount,
-                       boolean hasConditioner, int bigLuggageCount,
-                       int smallLuggageCount, int sitsCount, String brandName, String colorName, String className, String statusName, String photoPath) {
+    public CarFormBean(int id, String model, int price, int doorsCount, boolean hasConditioner, int bigLuggageCount,
+                       int smallLuggageCount, int sitsCount, String brandName, String colorName, String className,
+                       String statusName, String photoPath) {
         this.setId(id);
         this.model = model;
         this.price = price;
@@ -37,9 +35,9 @@ public class CarFormBean extends Entity {
         this.statusName = statusName;
     }
 
-    public CarFormBean(String model, int price, int doorsCount,
-                       boolean hasConditioner, int bigLuggageCount,
-                       int smallLuggageCount, int sitsCount, String brandName, String colorName, String className, String statusName) {
+    public CarFormBean(String model, int price, int doorsCount,  boolean hasConditioner, int bigLuggageCount,
+                       int smallLuggageCount, int sitsCount, String brandName, String colorName,
+                       String className, String statusName) {
         this.model = model;
         this.price = price;
         this.doorsCount = doorsCount;

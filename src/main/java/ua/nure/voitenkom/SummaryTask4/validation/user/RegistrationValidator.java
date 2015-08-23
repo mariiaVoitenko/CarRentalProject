@@ -1,6 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.validation.user;
 
-import ua.nure.voitenkom.SummaryTask4.formbean.LoginFormBean;
 import ua.nure.voitenkom.SummaryTask4.formbean.RegistrationFormBean;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
@@ -17,8 +16,8 @@ public class RegistrationValidator implements IValidator<RegistrationFormBean> {
         Map<String, String> errorMap = new HashMap<>();
         loginValidator.validateLogin(registrationFormBean.getLogin(), errorMap);
         loginValidator.validatePassword(registrationFormBean.getPassword(), errorMap);
-        checkEmptyFullName(registrationFormBean.getFullName(),errorMap);
-        checkShortFullName(registrationFormBean.getFullName(),errorMap);
+        checkEmptyFullName(registrationFormBean.getFullName(), errorMap);
+        checkShortFullName(registrationFormBean.getFullName(), errorMap);
         return errorMap;
     }
 
@@ -30,10 +29,11 @@ public class RegistrationValidator implements IValidator<RegistrationFormBean> {
     }
 
     private Map<String, String> checkShortFullName(String fullName, Map<String, String> errorMap) {
-        if (fullName.length()<5) {
+        if (fullName.length() < 5) {
             String error = errorMap.get("fullName");
             errorMap.put("fullName", error + "short fullName.");
         }
         return errorMap;
     }
+
 }

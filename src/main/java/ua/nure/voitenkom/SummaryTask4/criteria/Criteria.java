@@ -59,7 +59,8 @@ public class Criteria {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Criteria{");
+        final StringBuilder sb;
+        sb = new StringBuilder("Criteria{");
         sb.append("brand='").append(brand).append('\'');
         sb.append(", brandValue=").append(brandValue);
         sb.append(", classType='").append(classType).append('\'');
@@ -69,4 +70,5 @@ public class Criteria {
         sb.append('}');
         return sb.toString();
     }
+
 }

@@ -10,7 +10,9 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
+
 import static ua.nure.voitenkom.SummaryTask4.util.DateManager.timestampToString;
+
 import java.io.FileOutputStream;
 import java.util.*;
 import java.util.List;

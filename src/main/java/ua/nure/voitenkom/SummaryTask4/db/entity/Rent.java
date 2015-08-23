@@ -1,6 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
 public class Rent extends Entity {
@@ -24,8 +23,8 @@ public class Rent extends Entity {
         this.userId = userId;
         this.declineId = declineId;
         this.checkId = checkId;
-        this.startDate = startDate;
-        this.endDate = endDate;
+        this.startDate = new Timestamp(startDate.getTime());
+        this.endDate = new Timestamp(endDate.getTime());
         this.isReturned = isReturned;
         this.isApproved = isApproved;
         this.isFinished = isFinished;
@@ -37,8 +36,8 @@ public class Rent extends Entity {
         this.userId = userId;
         this.declineId = declineId;
         this.checkId = checkId;
-        this.startDate = startDate;
-        this.endDate = endDate;
+        this.startDate = new Timestamp(startDate.getTime());
+        this.endDate = new Timestamp(endDate.getTime());
     }
 
     public boolean isDriven() {
@@ -86,7 +85,7 @@ public class Rent extends Entity {
     }
 
     public void setStartDate(Timestamp startDate) {
-        this.startDate = startDate;
+        this.startDate = new Timestamp(startDate.getTime());
     }
 
     public Timestamp getEndDate() {
@@ -94,7 +93,7 @@ public class Rent extends Entity {
     }
 
     public void setEndDate(Timestamp endDate) {
-        this.endDate = endDate;
+        this.endDate = new Timestamp(endDate.getTime());
     }
 
     public boolean isReturned() {
@@ -137,4 +136,5 @@ public class Rent extends Entity {
         sb.append('}');
         return sb.toString();
     }
+
 }

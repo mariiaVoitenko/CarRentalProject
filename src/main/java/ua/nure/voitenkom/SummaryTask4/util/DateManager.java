@@ -21,7 +21,7 @@ public class DateManager {
         cal.setTime(signupDate);
         cal.add(Calendar.DAY_OF_YEAR, 1);
         Date signupDatePlusOne = new Date(cal.getTime().getTime());
-        return now.after(signupDatePlusOne) ? true : false;
+        return now.after(signupDatePlusOne);
     }
 
     public static java.util.Date parseDate(String date, Logger logger) {
@@ -45,23 +45,19 @@ public class DateManager {
         long startTime = startDate.getTime();
         long endTime = endDate.getTime();
         long diffTime = endTime - startTime;
-        long diffDays = diffTime / (1000 * 60 * 60 * 24);
-        return diffDays;
+        return diffTime / (1000 * 60 * 60 * 24);
     }
 
     private static int getYear(String date) {
-        int year = Integer.parseInt(date.substring(0, 4));
-        return year;
+        return Integer.parseInt(date.substring(0, 4));
     }
 
     private static int getMonth(String date) {
-        int month = Integer.parseInt(date.substring(5, 7));
-        return month;
+        return Integer.parseInt(date.substring(5, 7));
     }
 
     private static int getDay(String date) {
-        int day = Integer.parseInt(date.substring(8, 10));
-        return day;
+        return Integer.parseInt(date.substring(8, 10));
     }
 
 

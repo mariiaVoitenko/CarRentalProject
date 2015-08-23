@@ -4,6 +4,7 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.db.repository.user.IUserRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
+
 import java.util.List;
 
 public class UserService implements IUserService {
@@ -84,7 +85,7 @@ public class UserService implements IUserService {
         transactionManager.doInTransaction(new Operation<Void>() {
             @Override
             public Void doOperation() {
-                userRepository.changeRole(roleId,userId);
+                userRepository.changeRole(roleId, userId);
                 return null;
             }
         });
@@ -94,7 +95,7 @@ public class UserService implements IUserService {
     public List<User> selectByRoleId(final int roleId) {
         return transactionManager.doInTransaction(new Operation<List<User>>() {
             @Override
-            public List<User>  doOperation() {
+            public List<User> doOperation() {
                 return userRepository.selectByRoleId(roleId);
             }
         });

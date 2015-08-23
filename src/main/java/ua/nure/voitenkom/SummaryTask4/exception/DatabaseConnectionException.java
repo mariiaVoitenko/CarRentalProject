@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.exception;
 
-public class DatabaseConnectionException extends RuntimeException{
+public class DatabaseConnectionException extends RuntimeException {
 
     public DatabaseConnectionException() {
     }

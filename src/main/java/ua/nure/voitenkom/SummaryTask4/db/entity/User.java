@@ -1,9 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
-public class User extends Entity{
+public class User extends Entity {
 
     private String fullName;
     private boolean isBlocked;
@@ -16,7 +15,9 @@ public class User extends Entity{
     private String login;
     private Timestamp registrationTime;
 
-    public User(int id, String fullName, boolean isBlocked, boolean isRegistered, String registrationToken, String passportNumber, int roleId, String photoPath, String password, String login, Timestamp registrationTime) {
+    public User(int id, String fullName, boolean isBlocked, boolean isRegistered, String registrationToken,
+                String passportNumber, int roleId, String photoPath, String password, String login,
+                Timestamp registrationTime) {
         this.setId(id);
         this.fullName = fullName;
         this.isBlocked = isBlocked;
@@ -27,17 +28,18 @@ public class User extends Entity{
         this.photoPath = photoPath;
         this.password = password;
         this.login = login;
-        this.registrationTime=registrationTime;
+        this.registrationTime = new Timestamp(registrationTime.getTime());
     }
 
-    public User(String fullName, String registrationToken, String passportNumber, int roleId,  String password, String login, Timestamp registrationTime) {
+    public User(String fullName, String registrationToken, String passportNumber, int roleId,
+                String password, String login, Timestamp registrationTime) {
         this.fullName = fullName;
         this.registrationToken = registrationToken;
         this.passportNumber = passportNumber;
         this.roleId = roleId;
         this.password = password;
         this.login = login;
-        this.registrationTime=registrationTime;
+        this.registrationTime = new Timestamp(registrationTime.getTime());
     }
 
     public String getFullName() {
@@ -117,7 +119,7 @@ public class User extends Entity{
     }
 
     public void setRegistrationTime(Timestamp registrationTime) {
-        this.registrationTime = registrationTime;
+        this.registrationTime = new Timestamp(registrationTime.getTime());
     }
 
     @Override
@@ -136,4 +138,5 @@ public class User extends Entity{
         sb.append('}');
         return sb.toString();
     }
+
 }

@@ -32,7 +32,7 @@ public class LocaleFilter extends BaseFilter {
         chain.doFilter(langRequest, response);
     }
 
-    private class LocaleRequestWrapper extends HttpServletRequestWrapper {
+    private static class LocaleRequestWrapper extends HttpServletRequestWrapper {
 
         private final Locale lang;
 
@@ -63,5 +63,7 @@ public class LocaleFilter extends BaseFilter {
                 }
             };
         }
+
     }
+
 }

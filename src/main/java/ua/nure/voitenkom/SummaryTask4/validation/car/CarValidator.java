@@ -58,4 +58,5 @@ public class CarValidator implements IValidator<CarFormBean> {
             errorMap.put("error", message);
         }
     }
+
 }

@@ -36,12 +36,12 @@ public class BrandRepository extends AbstractSimpleEntityRepository<Brand> imple
 
     @Override
     public void update(Brand brand) {
-        super.update(brand,StatementsContainer.SQL_UPDATE_BRAND_BY_ID);
+        super.update(brand, StatementsContainer.SQL_UPDATE_BRAND_BY_ID);
     }
 
     @Override
     public void insert(Brand brand) {
-       super.insert(brand,StatementsContainer.SQL_INSERT_BRAND);
+        super.insert(brand, StatementsContainer.SQL_INSERT_BRAND);
     }
 
 }

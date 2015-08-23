@@ -1,7 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db.extractor;
 
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 
 import java.sql.ResultSet;
@@ -27,4 +26,5 @@ public class CarFormBeanExtractor implements IExtractor<CarFormBean> {
         return new CarFormBean(id, model, price, doorsCount, hasConditioner, bigLuggageCount,
                 smallLuggageCount, sitsCount, brandName, colorName, className, statusName, photoPath);
     }
+
 }

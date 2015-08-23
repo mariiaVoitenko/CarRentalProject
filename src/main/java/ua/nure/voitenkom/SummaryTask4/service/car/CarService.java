@@ -185,7 +185,7 @@ public class CarService implements ICarService {
         });
     }
 
-    private String getSqlFromCriteria(Criteria criteria){
+    private String getSqlFromCriteria(Criteria criteria) {
         ISQLBuilder isqlBuilder = new SQLBuilder();
         return isqlBuilder.getSQL(criteria);
     }

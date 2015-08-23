@@ -16,6 +16,7 @@ public class ColorService implements IColorService {
         this.transactionManager = transactionManager;
         this.colorRepository = colorRepository;
     }
+
     @Override
     public List<Color> getAll() {
         return transactionManager.doInTransaction(new Operation<List<Color>>() {

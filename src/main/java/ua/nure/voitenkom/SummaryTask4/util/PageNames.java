@@ -1,6 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.util;
 
-public class PageNames {
+public final class PageNames {
 
     public static final String MAIN_PAGE = "/";
     public static final String LOGIN_PAGE = "pages/login.jsp";
@@ -20,4 +20,9 @@ public class PageNames {
     public static final String INDEX_PAGE = "index.jsp";
     public static final String PROFILE_PAGE = "pages/profile.jsp";
     public static final String RETURNED_CARS_PAGE = "returnedCars.jsp";
+
+    private PageNames(){
+
+    }
+
 }

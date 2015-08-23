@@ -41,4 +41,5 @@ public class DamageCheck extends Entity {
         sb.append('}');
         return sb.toString();
     }
+
 }

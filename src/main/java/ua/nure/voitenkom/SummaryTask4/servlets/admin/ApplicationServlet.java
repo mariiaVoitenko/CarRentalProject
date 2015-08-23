@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ApplicationServlet extends AdminServlet{
+public class ApplicationServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
     private IRentService rentService;
@@ -43,7 +43,7 @@ public class ApplicationServlet extends AdminServlet{
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkManagerRole(request,response);
+        checkManagerRole(request, response);
 
         List<Rent> rentList = rentService.selectUnapproved();
         List<RentFormBean> rents = new ArrayList<>();
@@ -66,6 +66,6 @@ public class ApplicationServlet extends AdminServlet{
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 }

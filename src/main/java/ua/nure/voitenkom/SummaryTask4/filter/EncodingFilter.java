@@ -17,4 +17,5 @@ public class EncodingFilter extends BaseFilter {
         request.setCharacterEncoding(DEFAULT_ENCODING);
         chain.doFilter(request, response);
     }
+
 }

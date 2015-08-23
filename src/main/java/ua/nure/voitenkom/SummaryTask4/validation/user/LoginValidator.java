@@ -70,4 +70,5 @@ public class LoginValidator implements IValidator<LoginFormBean> {
         }
         return errorMap;
     }
+
 }

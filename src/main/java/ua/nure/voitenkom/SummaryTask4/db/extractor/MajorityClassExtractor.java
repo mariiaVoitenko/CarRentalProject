@@ -1,7 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db.extractor;
 
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.MajorityClass;
 
 import java.sql.ResultSet;
@@ -15,4 +14,5 @@ public class MajorityClassExtractor implements IExtractor<MajorityClass> {
         String name = resultSet.getString(FieldsContainer.FIELD_NAME);
         return new MajorityClass(id, name);
     }
+
 }

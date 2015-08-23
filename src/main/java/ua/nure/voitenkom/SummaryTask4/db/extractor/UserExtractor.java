@@ -1,15 +1,14 @@
 package ua.nure.voitenkom.SummaryTask4.db.extractor;
 
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
 public class UserExtractor implements IExtractor<User> {
+
     @Override
     public User extract(ResultSet resultSet) throws SQLException {
         int id = resultSet.getInt(FieldsContainer.FIELD_ID);
@@ -23,6 +22,8 @@ public class UserExtractor implements IExtractor<User> {
         String login = resultSet.getString(FieldsContainer.FIELD_LOGIN);
         int roleId = resultSet.getInt(FieldsContainer.FIELD_ROLES_ID);
         Timestamp registrationTime = resultSet.getTimestamp(FieldsContainer.FIELD_REGISTRATION_TIME);
-        return new User(id, name, isBlocked, isRegistered, token, passportNumber, roleId, photoPath, password, login, registrationTime);
+        return new User(id, name, isBlocked, isRegistered, token, passportNumber, roleId, photoPath,
+                password, login, registrationTime);
     }
+
 }

@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.*;
+
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
 public class SortingServlet extends HttpServlet {
@@ -54,18 +55,18 @@ public class SortingServlet extends HttpServlet {
     private Criteria fillCriteria(HttpServletRequest request) {
         Criteria criteria = new Criteria();
         String brand = request.getParameter("brand");
-        if(isNotNull(brand)){
+        if (isNotNull(brand)) {
             criteria.setBrand(FieldsContainer.FIELD_BRANDS_ID);
             criteria.setBrandValue(Integer.parseInt(brand));
         }
         String classType = request.getParameter("class");
-        if(isNotNull(classType)){
+        if (isNotNull(classType)) {
             criteria.setClassType(FieldsContainer.FIELD_CLASSES_ID);
             criteria.setClassValue(Integer.parseInt(classType));
         }
         String nameSort = request.getParameter("nameSort");
         String priceSort = request.getParameter("priceSort");
-        if(isNotNull(nameSort) || isNotNull(priceSort)) {
+        if (isNotNull(nameSort) || isNotNull(priceSort)) {
             criteria.setSortType(isNotNull(priceSort) ? priceSort : nameSort);
             criteria.setSortColumn(isNotNull(priceSort) ? FieldsContainer.FIELD_PRICE : FieldsContainer.FIELD_MODEL);
         }

@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
+
     private static final Logger logger = LoggerFactory.getLogger(ConnectionFactory.class);
     private HikariDataSource dataSource = new HikariDataSource();
 
@@ -27,8 +28,7 @@ public class ConnectionFactory {
 
     public Connection getConnection() {
         try {
-            Connection connection = dataSource.getConnection();
-            return connection;
+            return dataSource.getConnection();
         } catch (SQLException e) {
             logger.error("Connection failed", e);
             throw new IllegalStateException("Connection failed", e);

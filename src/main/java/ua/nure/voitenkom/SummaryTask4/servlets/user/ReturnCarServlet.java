@@ -10,6 +10,7 @@ import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
 import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServlet;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +18,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReturnCarServlet extends AuthenticationServlet{
+public class ReturnCarServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(HistoryServlet.class);
     private IRentService rentService;

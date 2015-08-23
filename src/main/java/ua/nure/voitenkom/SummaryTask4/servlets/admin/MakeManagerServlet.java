@@ -39,8 +39,7 @@ public class MakeManagerServlet extends AdminServlet {
             Role managerRole = roleService.selectByName(EntitiesValues.MANAGER_USER_VALUE);
             userService.changeRole(managerRole.getId(), user.getId());
             logger.debug("User was made manager");
-        }
-        else{
+        } else {
             Role userRole = roleService.selectByName(EntitiesValues.USER_VALUE);
             userService.changeRole(userRole.getId(), user.getId());
             logger.debug("Manager was made simple user");

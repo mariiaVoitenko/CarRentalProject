@@ -1,7 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db.extractor;
 
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 
 import java.sql.ResultSet;
@@ -16,4 +15,5 @@ public class CheckExtractor implements IExtractor<Check> {
         boolean isPayed = resultSet.getBoolean(FieldsContainer.FIELD_IS_PAYED);
         return new Check(id, sum, isPayed);
     }
+
 }

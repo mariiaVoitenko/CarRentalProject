@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DeclineApplicationServlet extends AdminServlet{
+public class DeclineApplicationServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(DeclineApplicationServlet.class);
     private IRentService rentService;

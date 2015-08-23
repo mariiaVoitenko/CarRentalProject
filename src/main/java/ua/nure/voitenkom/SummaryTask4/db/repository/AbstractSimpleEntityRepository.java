@@ -9,7 +9,7 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public abstract class AbstractSimpleEntityRepository<T extends SimpleEntity> extends AbstractRepository<T>{
+public abstract class AbstractSimpleEntityRepository<T extends SimpleEntity> extends AbstractRepository<T> {
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractSimpleEntityRepository.class);
 
@@ -17,7 +17,7 @@ public abstract class AbstractSimpleEntityRepository<T extends SimpleEntity> ext
         super(connectionHolder);
     }
 
-    public void insert(T entity, String sql) {
+    protected void insert(T entity, String sql) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, entity.getName());
             preparedStatement.executeUpdate();
@@ -27,7 +27,7 @@ public abstract class AbstractSimpleEntityRepository<T extends SimpleEntity> ext
         }
     }
 
-    public void update(T entity, String sql) {
+    protected void update(T entity, String sql) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, entity.getName());
             preparedStatement.setInt(2, entity.getId());
@@ -37,4 +37,5 @@ public abstract class AbstractSimpleEntityRepository<T extends SimpleEntity> ext
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
         }
     }
+
 }

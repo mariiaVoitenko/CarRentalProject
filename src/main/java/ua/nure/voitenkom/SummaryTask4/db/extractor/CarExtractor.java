@@ -5,7 +5,6 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.FileHandler;
 
 public class CarExtractor implements IExtractor<Car> {
 
@@ -27,4 +26,5 @@ public class CarExtractor implements IExtractor<Car> {
         return new Car(id, model, price, doorsCount, hasConditioner, bigLuggageCount,
                 smallLuggageCount, sitsCount, classId, colorId, statusId, brandId, photoPath);
     }
+
 }

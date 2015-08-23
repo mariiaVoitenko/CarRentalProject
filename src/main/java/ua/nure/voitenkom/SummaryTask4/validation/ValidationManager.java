@@ -21,11 +21,11 @@ public class ValidationManager {
         String emailPattern = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
         Pattern pattern = Pattern.compile(emailPattern);
         Matcher matcher = pattern.matcher(s);
-        return matcher.matches() ? true : false;
+        return matcher.matches();
     }
 
     public static boolean ifNumber(String s) {
-        return (s.matches("[0-9]+")) ? true : false;
+        return (s.matches("[0-9]+"));
     }
 
 }

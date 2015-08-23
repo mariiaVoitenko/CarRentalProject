@@ -36,4 +36,5 @@ public class RegistrationFormBean extends LoginFormBean {
         this.fullName = fullName;
         this.repeatedPassword = repeatedPassword;
     }
+
 }

@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class MainServlet extends HttpServlet{
+public class MainServlet extends HttpServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(RegistrationServlet.class);
     private ICarService carService;

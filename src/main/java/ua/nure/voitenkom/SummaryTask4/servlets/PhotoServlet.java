@@ -30,7 +30,7 @@ public class PhotoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String requestURI = request.getRequestURI();
         String pictureName = requestURI.replaceAll("/photo/", "");
-        pictureName = pictureName.replaceAll("/admin","");
+        pictureName = pictureName.replaceAll("/admin", "");
         File picture = photoService.getPicture(pictureName);
         if (!picture.isFile()) {
             logger.warn("Unable to get picture {}", picture.getAbsoluteFile());
@@ -43,7 +43,7 @@ public class PhotoServlet extends HttpServlet {
     private void sendPicture(File picture, HttpServletResponse response) {
         try (ServletOutputStream output = response.getOutputStream();
              FileInputStream input = new FileInputStream(picture)) {
-                FileManager.copyStream(input, output);
+            FileManager.copyStream(input, output);
         } catch (IOException e) {
             logger.warn("Unable send picture on client by file stream", e);
         }

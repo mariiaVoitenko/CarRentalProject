@@ -1,7 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.db.extractor;
 
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Color;
 
 import java.sql.ResultSet;
@@ -15,4 +14,5 @@ public class ColorExtractor implements IExtractor<Color> {
         String name = resultSet.getString(FieldsContainer.FIELD_NAME);
         return new Color(id, name);
     }
+
 }

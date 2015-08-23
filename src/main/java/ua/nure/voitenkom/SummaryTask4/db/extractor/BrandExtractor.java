@@ -6,7 +6,7 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class BrandExtractor implements IExtractor<Brand>{
+public class BrandExtractor implements IExtractor<Brand> {
 
     @Override
     public Brand extract(ResultSet resultSet) throws SQLException {

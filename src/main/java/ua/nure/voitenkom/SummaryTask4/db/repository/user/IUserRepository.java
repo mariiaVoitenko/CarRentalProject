@@ -28,4 +28,5 @@ public interface IUserRepository extends IAbstractRepository<User> {
     List<User> selectByRoleId(int roleId);
 
     void updatePhoto(User user);
+
 }

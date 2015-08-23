@@ -51,9 +51,5 @@ public final class Attributes {
     public static final String EDIT = "edit";
     public static final String DAMAGES = "damageList";
     public static final String DAMAGE = "damage";
-    public static final String PRICE_SORT = "priceSort";
-    public static final String NAME_SORT = "nameSort";
-    public static final String ASCENDING = "asc";
-    public static final String DESCENDING = "desc";
 
 }

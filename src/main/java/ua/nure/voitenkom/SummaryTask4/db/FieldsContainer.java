@@ -44,7 +44,7 @@ public final class FieldsContainer {
     public static final String FIELD_IS_APPROVED = "is_approved";
     public static final String FIELD_IS_FINISHED = "is_finished";
 
-    private FieldsContainer(){
+    private FieldsContainer() {
 
     }
 

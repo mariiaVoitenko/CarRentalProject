@@ -9,10 +9,6 @@ public interface ICheckRepository extends IAbstractRepository<Check> {
 
     List<Check> selectUnpayed();
 
-    void insert(Check check);
-
-    void update(Check check);
-
     void setPayed(Check check);
 
     void updateSum(Check check, int sum);

@@ -14,4 +14,5 @@ public class Role extends SimpleEntity {
         sb.append('}');
         return sb.toString();
     }
+
 }

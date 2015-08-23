@@ -8,11 +8,7 @@ public class Brand extends SimpleEntity {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Brand{");
-        sb.append("id='").append(this.getId()).append('\'');
-        sb.append("name='").append(this.getName()).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return "Brand{" + "id='" + this.getId() + '\'' + "name='" + this.getName() + '\'' + '}';
     }
 
 }

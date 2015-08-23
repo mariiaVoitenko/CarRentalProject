@@ -12,7 +12,7 @@ public final class DatabaseProperties {
     public static final String CONNECTION_TEST_QUERY = "SELECT 1";
     public static final String CONNECTION_TIMEOUT = "1000";
 
-    private DatabaseProperties(){
+    private DatabaseProperties() {
 
     }
 

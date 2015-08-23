@@ -36,7 +36,7 @@ public class Car extends Entity {
         this.brandId = brandId;
     }
 
-    public Car(){
+    public Car() {
 
     }
 
@@ -156,4 +156,5 @@ public class Car extends Entity {
     public void setDoorsCount(int doorsCount) {
         this.doorsCount = doorsCount;
     }
+
 }

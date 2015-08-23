@@ -57,7 +57,7 @@ public class RegistrationConfirmationServlet extends HttpServlet {
             return;
         }
         RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher("/"+PageNames.SUCCESS_CONFIRMATION_PAGE);
+                .getRequestDispatcher("/" + PageNames.SUCCESS_CONFIRMATION_PAGE);
         requestDispatcher.forward(request, response);
     }
 

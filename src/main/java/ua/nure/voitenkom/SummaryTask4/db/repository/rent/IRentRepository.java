@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.rent;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
+
 import java.sql.Timestamp;
 import java.util.List;
 

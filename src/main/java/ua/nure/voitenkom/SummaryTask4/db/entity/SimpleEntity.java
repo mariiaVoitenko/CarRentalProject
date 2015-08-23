@@ -1,25 +1,12 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
-public class SimpleEntity extends Entity{
+public abstract class SimpleEntity extends Entity {
 
     private String name;
 
-    public SimpleEntity(){
-        super();
-    }
-
-    public SimpleEntity(int id,String name) {
+    public SimpleEntity(int id, String name) {
         this.setId(id);
         this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("SimpleEntity{");
-        sb.append("id='").append(this.getId()).append('\'');
-        sb.append("name='").append(name).append('\'');
-        sb.append('}');
-        return sb.toString();
     }
 
     public String getName() {
@@ -29,4 +16,5 @@ public class SimpleEntity extends Entity{
     public void setName(String name) {
         this.name = name;
     }
+
 }

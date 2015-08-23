@@ -25,4 +25,5 @@ public class LoginFormBean {
         this.login = login;
         this.password = password;
     }
+
 }
