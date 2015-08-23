@@ -28,4 +28,6 @@ public interface ICarRepository extends IAbstractRepository<Car> {
 
     List<Car> getCarsByClassId(int id);
 
+    List<CarFormBean> getSortedCars(String sql);
+
 }

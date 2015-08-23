@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.service.car;
 
+import ua.nure.voitenkom.SummaryTask4.criteria.Criteria;
+import ua.nure.voitenkom.SummaryTask4.db.converter.ISQLBuilder;
+import ua.nure.voitenkom.SummaryTask4.db.converter.SQLBuilder;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.car.ICarRepository;
@@ -169,5 +172,21 @@ public class CarService implements ICarService {
                 return carRepository.getCarsByClassId(id);
             }
         });
+    }
+
+    @Override
+    public List<CarFormBean> getSortedCars(final Criteria criteria) {
+        final String sql = getSqlFromCriteria(criteria);
+        return transactionManager.doInTransaction(new Operation<List<CarFormBean>>() {
+            @Override
+            public List<CarFormBean> doOperation() {
+                return carRepository.getSortedCars(sql);
+            }
+        });
+    }
+
+    private String getSqlFromCriteria(Criteria criteria){
+        ISQLBuilder isqlBuilder = new SQLBuilder();
+        return isqlBuilder.getSQL(criteria);
     }
 }

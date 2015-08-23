@@ -20,7 +20,7 @@ public class DamageCheckService implements IDamageCheckService {
         transactionManager.doInTransaction(new Operation<Void>() {
             @Override
             public Void doOperation() {
-                damageCheckRepository.create(damageCheck);
+                damageCheckRepository.insert(damageCheck);
                 return null;
             }
         });

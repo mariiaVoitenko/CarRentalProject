@@ -129,6 +129,16 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     }
 
     @Override
+    public List<CarFormBean> getSortedCars(String sql) {
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            return extract(preparedStatement);
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
     public void updateCar(Car car) {
         String sql = StatementsContainer.SQL_UPDATE_CAR;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {

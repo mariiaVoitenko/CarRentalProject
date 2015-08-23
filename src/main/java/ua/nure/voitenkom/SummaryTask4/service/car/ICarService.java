@@ -1,5 +1,6 @@
 package ua.nure.voitenkom.SummaryTask4.service.car;
 
+import ua.nure.voitenkom.SummaryTask4.criteria.Criteria;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
@@ -36,5 +37,6 @@ public interface ICarService {
 
     List<Car> getCarsByClassId(int id);
 
+    List<CarFormBean> getSortedCars(Criteria criteria);
 
 }

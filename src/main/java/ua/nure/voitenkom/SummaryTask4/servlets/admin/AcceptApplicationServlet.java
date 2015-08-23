@@ -34,7 +34,7 @@ public class AcceptApplicationServlet extends AdminServlet {
 
         List<Rent> rentList = rentService.selectUnapproved();
         List<RentFormBean> rents = new ArrayList<>();
-        if (rentList.size() != 0) {
+        if (!rentList.isEmpty()) {
             rents = rentService.getPayedUnapprovedRents(rentList);
         }
 

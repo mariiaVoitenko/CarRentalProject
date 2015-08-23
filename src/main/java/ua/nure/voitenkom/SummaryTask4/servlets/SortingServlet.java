@@ -2,11 +2,8 @@ package ua.nure.voitenkom.SummaryTask4.servlets;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.comparator.SortedByModel;
-import ua.nure.voitenkom.SummaryTask4.comparator.SortedByModelDescending;
-import ua.nure.voitenkom.SummaryTask4.comparator.SortedByPrice;
-import ua.nure.voitenkom.SummaryTask4.comparator.SortedByPriceDescending;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
+import ua.nure.voitenkom.SummaryTask4.criteria.Criteria;
+import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
@@ -23,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.*;
+import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
 public class SortingServlet extends HttpServlet {
 
@@ -39,44 +37,8 @@ public class SortingServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<CarFormBean> carFormBeans = new ArrayList<>();
-        if (request.getParameter(Attributes.BRAND) != null) {
-            int brandId = Integer.parseInt(request.getParameter(Attributes.BRAND));
-            List<Car> cars = carService.getCarsByBrandId(brandId);
-            for (Car car : cars) {
-                carFormBeans.add(carService.getFullCarInformationById(car.getId()));
-            }
-        } else {
-            if (request.getParameter(Attributes.CLASS) != null) {
-                int classId = Integer.parseInt(request.getParameter(Attributes.CLASS));
-                List<Car> cars = carService.getCarsByClassId(classId);
-                for (Car car : cars) {
-                    carFormBeans.add(carService.getFullCarInformationById(car.getId()));
-                }
-            }
-            else{
-                if (request.getParameter(Attributes.NAME_SORT) != null) {
-                    carFormBeans = carService.getFullInformationForAll();
-                    if(request.getParameter(Attributes.NAME_SORT).equals(Attributes.ASCENDING)){
-                        Collections.sort(carFormBeans, new SortedByModel());
-                    }
-                    else{
-                        Collections.sort(carFormBeans, new SortedByModelDescending());
-                    }
-                }
-                else{
-                    if (request.getParameter(Attributes.PRICE_SORT) != null) {
-                        carFormBeans = carService.getFullInformationForAll();
-                        if(request.getParameter(Attributes.PRICE_SORT).equals(Attributes.ASCENDING)){
-                            Collections.sort(carFormBeans, new SortedByPrice());
-                        }
-                        else{
-                            Collections.sort(carFormBeans, new SortedByPriceDescending());
-                        }
-                    }
-                }
-            }
-        }
+        Criteria criteria = fillCriteria(request);
+        List<CarFormBean> carFormBeans = carService.getSortedCars(criteria);
 
         request.setAttribute(Attributes.CARS, carFormBeans);
         request.setAttribute(Attributes.BRANDS, brandService.getAll());
@@ -87,8 +49,27 @@ public class SortingServlet extends HttpServlet {
         RequestDispatcher requestDispatcher = request
                 .getRequestDispatcher(PageNames.CARS_PAGE);
         requestDispatcher.forward(request, response);
+    }
 
-
+    private Criteria fillCriteria(HttpServletRequest request) {
+        Criteria criteria = new Criteria();
+        String brand = request.getParameter("brand");
+        if(isNotNull(brand)){
+            criteria.setBrand(FieldsContainer.FIELD_BRANDS_ID);
+            criteria.setBrandValue(Integer.parseInt(brand));
+        }
+        String classType = request.getParameter("class");
+        if(isNotNull(classType)){
+            criteria.setClassType(FieldsContainer.FIELD_CLASSES_ID);
+            criteria.setClassValue(Integer.parseInt(classType));
+        }
+        String nameSort = request.getParameter("nameSort");
+        String priceSort = request.getParameter("priceSort");
+        if(isNotNull(nameSort) || isNotNull(priceSort)) {
+            criteria.setSortType(isNotNull(priceSort) ? priceSort : nameSort);
+            criteria.setSortColumn(isNotNull(priceSort) ? FieldsContainer.FIELD_PRICE : FieldsContainer.FIELD_MODEL);
+        }
+        return criteria;
     }
 
 }

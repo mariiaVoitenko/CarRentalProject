@@ -80,13 +80,13 @@ public abstract class AdminServlet extends HttpServlet {
     }
 
     protected void checkRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if (getRoleId(request) != Integer.parseInt(EntitiesValues.ADMIN_ROLE_ID)) {
+        if (getRoleId(request) != null && getRoleId(request) != Integer.parseInt(EntitiesValues.ADMIN_ROLE_ID)) {
             response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
         }
     }
 
     protected void checkManagerRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if (getRoleId(request) != Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID)) {
+        if (getRoleId(request) != null && getRoleId(request) != Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID)) {
             response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
         }
     }
