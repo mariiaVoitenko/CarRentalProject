@@ -9,12 +9,12 @@ import java.util.List;
 
 public interface IPDFService {
 
-    void createPdf(String path, CarFormBean carFormBean, List<Damage> damages);
+    void createDamagePdf(String path, CarFormBean carFormBean, List<Damage> damages);
 
     String createFileName(int userId, int checkId);
 
     String createPath(String file);
 
-    void createPdf(String path, CarFormBean carFormBean, Rent rent, Check check);
+    void createRentPdf(String path, CarFormBean carFormBean, Rent rent, Check check);
 
 }

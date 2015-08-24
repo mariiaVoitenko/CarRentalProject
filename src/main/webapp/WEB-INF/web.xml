@@ -29,11 +29,6 @@
     </context-param>
 
     <context-param>
-        <param-name>LangFilterType</param-name>
-        <param-value>Cookie</param-value>
-    </context-param>
-
-    <context-param>
         <param-name>CookieLangTimeout</param-name>
         <param-value>100</param-value>
     </context-param>

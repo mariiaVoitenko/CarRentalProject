@@ -17,7 +17,6 @@ public final class Attributes {
 
     public static final String APP_LOCALES = "AppLocales";
     public static final String DEFAULT_LOCALE = "DefaultLocale";
-    public static final String LANG_FILTER_TYPE = "LangFilterType";
     public static final String COOKIE_LANG_TIMEOUT = "CookieLangTimeout";
 
     public static final String PICTURES_FOLDER = "picturesFolder";

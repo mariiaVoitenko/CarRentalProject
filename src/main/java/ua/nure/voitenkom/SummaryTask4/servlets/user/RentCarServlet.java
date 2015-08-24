@@ -9,11 +9,9 @@ import ua.nure.voitenkom.SummaryTask4.service.check.ICheckService;
 import ua.nure.voitenkom.SummaryTask4.service.color.IColorService;
 import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassService;
 import ua.nure.voitenkom.SummaryTask4.service.pdf.IPDFService;
-import ua.nure.voitenkom.SummaryTask4.service.pdf.PDFService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.service.status.IStatusService;
 import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
@@ -21,13 +19,6 @@ import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.brand.BrandService;
-import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
-import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
-import ua.nure.voitenkom.SummaryTask4.service.color.ColorService;
-import ua.nure.voitenkom.SummaryTask4.service.majorityclass.MajorityClassService;
-import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
-import ua.nure.voitenkom.SummaryTask4.service.status.StatusService;
 import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServlet;
 import ua.nure.voitenkom.SummaryTask4.validation.DateValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
@@ -110,7 +101,7 @@ public class RentCarServlet extends AuthenticationServlet {
         CarFormBean carFormBean = carService.getFullCarInformationById(id);
         String fileName = pdfService.createFileName(userId, checkId);
         String path = pdfService.createPath(fileName);
-        pdfService.createPdf(path, carFormBean, rent, check);
+        pdfService.createDamagePdf(path, carFormBean, rent, check);
 
         String login = userService.selectById(rent.getUserId()).getLogin();
 

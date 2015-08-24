@@ -13,6 +13,7 @@ import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 
 import static ua.nure.voitenkom.SummaryTask4.util.DateManager.timestampToString;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.*;
 import java.util.List;
@@ -20,16 +21,12 @@ import java.util.List;
 public class PDFService implements IPDFService {
 
     private final String folder;
-    public static final String FORMAT = "pdf";
+    private static final String FORMAT = "pdf";
     private static final Logger logger = LoggerFactory.getLogger(PDFService.class);
-    private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18,
-            Font.BOLD);
-    private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 18,
-            Font.NORMAL, BaseColor.RED);
-    private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16,
-            Font.BOLD);
-    private static Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12,
-            Font.BOLD);
+    private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18, Font.BOLD);
+    private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 18, Font.NORMAL, BaseColor.RED);
+    private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD);
+    private static Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD);
 
     public PDFService(String folder) {
         this.folder = folder;
@@ -46,14 +43,10 @@ public class PDFService implements IPDFService {
     }
 
     @Override
-    public void createPdf(String path, CarFormBean carFormBean, List<Damage> damages) {
+    public void createDamagePdf(String path, CarFormBean carFormBean, List<Damage> damages) {
         try {
-            Document document = new Document();
-            PdfWriter.getInstance(document, new FileOutputStream(path));
-            document.open();
-            addMetaData(document);
-            addTitle(document, carFormBean);
-            addContent(document, damages);
+            Document document = createDocument(path, carFormBean);
+            addDamageContent(document, damages);
             document.close();
             logger.debug("PDF was created");
         } catch (Exception e) {
@@ -62,19 +55,24 @@ public class PDFService implements IPDFService {
     }
 
     @Override
-    public void createPdf(String path, CarFormBean carFormBean, Rent rent, Check check) {
+    public void createRentPdf(String path, CarFormBean carFormBean, Rent rent, Check check) {
         try {
-            Document document = new Document();
-            PdfWriter.getInstance(document, new FileOutputStream(path));
-            document.open();
-            addMetaData(document);
-            addTitle(document, carFormBean);
-            addContent(document, rent, check);
+            Document document = createDocument(path, carFormBean);
+            addRentContent(document, rent, check);
             document.close();
             logger.debug("PDF was created");
         } catch (Exception e) {
             logger.debug("Failed to create PDF");
         }
+    }
+
+    private Document createDocument(String path, CarFormBean carFormBean) throws FileNotFoundException, DocumentException {
+        Document document = new Document();
+        PdfWriter.getInstance(document, new FileOutputStream(path));
+        document.open();
+        addMetaData(document);
+        addTitle(document, carFormBean);
+        return document;
     }
 
     private void addMetaData(Document document) {
@@ -102,14 +100,14 @@ public class PDFService implements IPDFService {
         document.add(preface);
     }
 
-    private void addContent(Document document, List<Damage> damages) throws DocumentException {
+    private void addDamageContent(Document document, List<Damage> damages) throws DocumentException {
         Paragraph paragraph = new Paragraph();
         addEmptyLine(paragraph, 1);
         createDamageTable(paragraph, damages);
         document.add(paragraph);
     }
 
-    private void addContent(Document document, Rent rent, Check check) throws DocumentException {
+    private void addRentContent(Document document, Rent rent, Check check) throws DocumentException {
         Paragraph paragraph = new Paragraph();
         addEmptyLine(paragraph, 1);
         paragraph.add(new Paragraph("Rent time: " + timestampToString(rent.getStartDate()) + " - " + timestampToString(rent.getEndDate()), subFont));
@@ -120,24 +118,25 @@ public class PDFService implements IPDFService {
     private void createDamageTable(Paragraph paragraph, List<Damage> damages) throws BadElementException {
         PdfPTable table = new PdfPTable(2);
 
-        PdfPCell c1 = new PdfPCell(new Phrase("Damage"));
-        c1.setHorizontalAlignment(Element.ALIGN_CENTER);
-        table.addCell(c1);
+        PdfPCell damageCell = new PdfPCell(new Phrase("Damage"));
+        damageCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+        table.addCell(damageCell);
 
-        c1 = new PdfPCell(new Phrase("Sum"));
-        c1.setHorizontalAlignment(Element.ALIGN_CENTER);
-        table.addCell(c1);
+        PdfPCell sumCell = new PdfPCell(new Phrase("Sum"));
+        sumCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+        table.addCell(sumCell);
         table.setHeaderRows(1);
 
         int total = 0;
         for (Damage damage : damages) {
             int sum = damage.getSum();
             table.addCell(damage.getName());
-            table.addCell(sum + "");
+            table.addCell(String.valueOf(sum));
             total += sum;
         }
+
         table.addCell("Total: ");
-        table.addCell(total + "");
+        table.addCell(String.valueOf(total));
         paragraph.add(table);
     }
 

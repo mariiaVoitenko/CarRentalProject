@@ -13,7 +13,7 @@ import java.util.UUID;
 
 public class PhotoService implements IPhotoService {
 
-    public static final String FORMAT = "jpg";
+    private static final String FORMAT = "jpg";
     private static final Logger logger = LoggerFactory.getLogger(PhotoService.class);
     private final String folder;
 
@@ -23,22 +23,16 @@ public class PhotoService implements IPhotoService {
 
     @Override
     public void saveUserPicture(User user, Part picture) {
-        checkFolder();
-        String avatarName = generateAvatarName();
-        String path = folder + "/" + avatarName;
-        saveOnDisk(picture, path);
+        String avatarName = handlePicture(picture);
         user.setPhotoPath(avatarName);
-        logger.debug("Picture has been saved {}", path);
+        logger.debug("Picture has been saved {}", avatarName);
     }
 
     @Override
     public void saveCarPicture(Car car, Part picture) {
-        checkFolder();
-        String avatarName = generateAvatarName();
-        String path = folder + "/" + avatarName;
-        saveOnDisk(picture, path);
+        String avatarName = handlePicture(picture);
         car.setPhotoPath(avatarName);
-        logger.debug("Picture has been saved {}", path);
+        logger.debug("Picture has been saved {}", avatarName);
     }
 
     @Override
@@ -69,4 +63,13 @@ public class PhotoService implements IPhotoService {
             }
         }
     }
+
+    private String handlePicture(Part picture){
+        checkFolder();
+        String avatarName = generateAvatarName();
+        String path = folder + "/" + avatarName;
+        saveOnDisk(picture, path);
+        return avatarName;
+    }
+
 }

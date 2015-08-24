@@ -6,24 +6,16 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 import ua.nure.voitenkom.SummaryTask4.db.entity.DamageCheck;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
-import ua.nure.voitenkom.SummaryTask4.db.repository.user.IUserRepository;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.account.MailService;
-import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
 import ua.nure.voitenkom.SummaryTask4.service.car.ICarService;
-import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
 import ua.nure.voitenkom.SummaryTask4.service.check.ICheckService;
-import ua.nure.voitenkom.SummaryTask4.service.damage.DamageService;
 import ua.nure.voitenkom.SummaryTask4.service.damage.IDamageService;
-import ua.nure.voitenkom.SummaryTask4.service.damagecheck.DamageCheckService;
 import ua.nure.voitenkom.SummaryTask4.service.damagecheck.IDamageCheckService;
 import ua.nure.voitenkom.SummaryTask4.service.pdf.IPDFService;
-import ua.nure.voitenkom.SummaryTask4.service.pdf.PDFService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
-import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
 import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 
@@ -95,7 +87,7 @@ public class SetDamageRentServlet extends AdminServlet {
         CarFormBean carFormBean = carService.getFullCarInformationById(rent.getCarId());
         String fileName = pdfService.createFileName(rent.getUserId(), checkId);
         String path = pdfService.createPath(fileName);
-        pdfService.createPdf(path, carFormBean, damageInformation);
+        pdfService.createDamagePdf(path, carFormBean, damageInformation);
 
         String login = userService.selectById(rent.getUserId()).getLogin();
 

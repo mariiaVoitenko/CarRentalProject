@@ -15,9 +15,9 @@ public class TransactionManager implements ITransactionManager {
     private final ConnectionFactory connectionFactory;
     private final ConnectionHolder connectionHolder;
 
-    public TransactionManager(ConnectionFactory connectionFactory, ConnectionHolder holder) {
+    public TransactionManager(ConnectionFactory connectionFactory, ConnectionHolder connectionHolder) {
         this.connectionFactory = connectionFactory;
-        connectionHolder = holder;
+        this.connectionHolder = connectionHolder;
     }
 
     @Override

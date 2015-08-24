@@ -19,6 +19,7 @@ public final class ServiceConstant {
     public static final String LOCALE_SERVICE_CONTEXT = "localeService";
 
     public static final String LANG_PARAM = "lang";
+    public static final String COOKIES_LOCALE = "locale";
 
     public static final String HOST_PARAM = "host";
     public static final String PORT_PARAM = "port";

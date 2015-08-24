@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 <nav role="navigation" class="navbar navbar-default navbar-static-top ">
@@ -41,12 +42,9 @@
                                 <li><a href="#"></a></li>
                                 <li><a class="paragraph-text" href="/profile"><fmt:message key="edit_profile"/></a></li>
                                 <li><a class="paragraph-text" href="/history"><fmt:message key="show_rents"/></a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">TODO</a></li>
                             </ul>
                         </c:when>
                         <c:otherwise>
-
                         </c:otherwise>
                     </c:choose>
                 </li>
