@@ -28,7 +28,6 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
 import java.sql.Timestamp;
-import java.util.HashMap;
 import java.util.Map;
 
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
@@ -57,10 +56,12 @@ public class RegistrationServlet extends AuthenticationServlet {
         password = getServletContext().getInitParameter(ServiceConstant.USER_PASSWORD_PARAM);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect(PageNames.REGISTRATION_PAGE);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.setAttribute(Attributes.PHOTO_MESSAGE, "");
@@ -81,6 +82,7 @@ public class RegistrationServlet extends AuthenticationServlet {
             response.sendRedirect(PageNames.REGISTRATION_PAGE);
             return;
         }
+
         Role unregistered = roleService.selectByName(EntitiesValues.UNREGISTERED_USER_VALUE);
         int roleId = unregistered.getId();
         String cipherPassword = PasswordMaker.makePassword(registrationFormBean.getPassword());
@@ -99,14 +101,19 @@ public class RegistrationServlet extends AuthenticationServlet {
         }
         userService.insertWithPhoto(newUser);
         logger.debug("User {} was added", newUser);
+
+        sendMail(token, newUser);
+
+        session.setAttribute(Attributes.MESSAGE, "");
+        response.sendRedirect(PageNames.SUCCESS_REGISTRATION_PAGE);
+    }
+
+    private void sendMail(String token, User newUser) {
         try {
             MailService.sendEmail(host, port, newUser.getLogin(), userEmail, password, token);
         } catch (MessagingException e) {
             logger.error("Unable to send mail");
         }
-        session.setAttribute(Attributes.MESSAGE, "");
-
-        response.sendRedirect(PageNames.SUCCESS_REGISTRATION_PAGE);
     }
 
     private Map<String, String> validateData(RegistrationFormBean registrationFormBean) {
@@ -128,6 +135,5 @@ public class RegistrationServlet extends AuthenticationServlet {
         String fullName = request.getParameter(Attributes.FULL_NAME);
         return new RegistrationFormBean(login, password, passport, fullName, repeatedPassword);
     }
-
 
 }

@@ -13,7 +13,6 @@ import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.service.status.IStatusService;
 import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
-import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
@@ -24,7 +23,6 @@ import ua.nure.voitenkom.SummaryTask4.validation.DateValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
 import javax.mail.MessagingException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -73,69 +71,47 @@ public class RentCarServlet extends AuthenticationServlet {
         password = getServletContext().getInitParameter(ServiceConstant.USER_PASSWORD_PARAM);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
+
         HttpSession session = request.getSession();
         String driver = session.getAttribute(Attributes.DRIVER).toString();
         String startDate = session.getAttribute(Attributes.START_DATE).toString();
         String endDate = session.getAttribute(Attributes.END_DATE).toString();
+
         Date start = parseDate(startDate, logger);
         Date end = parseDate(endDate, logger);
         long days = getDaysCount(startDate, endDate);
-        boolean isDriven = driver.isEmpty() ? false : true;
+        boolean isDriven = !driver.isEmpty();
 
         Car car = carService.getById(id);
         int sum = isDriven ? checkService.getSumWithDriver(car, days) : checkService.getSum(car, days);
-        Check check = new Check(sum, false);
-        checkService.insert(check);
-        logger.debug("Check was inserted");
+
+        Check check = insertCheck(sum);
 
         int userId = Integer.parseInt(session.getAttribute(Attributes.USER_ID).toString());
         int checkId = checkService.selectLastInsertedId();
-        Rent rent = new Rent(isDriven,
-                car.getId(), userId, Integer.parseInt(EntitiesValues.NOT_APPROVEN_DECLINE_ID),
-                checkId, new Timestamp(start.getTime()), new Timestamp(end.getTime()));
+
+        Rent rent = new Rent(isDriven, car.getId(), userId, checkId, new Timestamp(start.getTime()), new Timestamp(end.getTime()));
         rentService.insert(rent);
         logger.debug("Rent was inserted");
 
-        CarFormBean carFormBean = carService.getFullCarInformationById(id);
-        String fileName = pdfService.createFileName(userId, checkId);
-        String path = pdfService.createPath(fileName);
-        pdfService.createRentPdf(path, carFormBean, rent, check);
-
-        String login = userService.selectById(rent.getUserId()).getLogin();
-
-        try {
-            MailService.sendEmailWithDocument(host, port, login, userEmail, password, path);
-        } catch (MessagingException e) {
-
-            logger.error("Unable to send mail");
-        }
+        String path = createPDF(id, check, userId, checkId, rent);
+        sendMail(rent, path);
         response.sendRedirect(Mappings.HISTORY_MAPPING);
     }
 
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String startDate = null;
-        String endDate = null;
-        String driver = null;
-        if (getAuthUserId(request) == null) {
-            session.setAttribute(Attributes.START_DATE, request.getParameter(Attributes.START_DATE));
-            session.setAttribute(Attributes.END_DATE, request.getParameter(Attributes.END_DATE));
-            if (request.getParameter(Attributes.DRIVER) == null) {
-                session.setAttribute(Attributes.DRIVER, "");
-            } else {
-                session.setAttribute(Attributes.DRIVER, request.getParameter(Attributes.DRIVER));
-            }
-
-            response.sendRedirect(PageNames.LOGIN_PAGE);
-            return;
-        }
+        String startDate, endDate, driver;
+        if (checkAuthenticationState(request, response, session)) return;
 
         if (request.getParameter(Attributes.START_DATE) == null) {
             startDate = session.getAttribute(Attributes.START_DATE).toString();
             endDate = session.getAttribute(Attributes.END_DATE).toString();
-            driver = session.getAttribute(Attributes.DRIVER).toString();
         } else {
             startDate = request.getParameter(Attributes.START_DATE);
             endDate = request.getParameter(Attributes.END_DATE);
@@ -152,44 +128,64 @@ public class RentCarServlet extends AuthenticationServlet {
         Date start = parseDate(startDate, logger);
         Date end = parseDate(endDate, logger);
 
-        if (start == null || end == null) {
-            request.setAttribute(Attributes.MESSAGE, "Can't parse dates");
-            RequestDispatcher requestDispatcher = request
-                    .getRequestDispatcher(PageNames.MAIN_PAGE);
-            requestDispatcher.forward(request, response);
-            return;
-        }
-
-        Map<String, String> errors = dateValidator.validate(start);
-        errors = dateValidator.validate(end);
-        errors = validateDates(start, end, errors);
-
-        if (errors.size() != 0) {
-            request.setAttribute(Attributes.MESSAGE, errors.get("error"));
-            RequestDispatcher requestDispatcher = request
-                    .getRequestDispatcher(PageNames.MAIN_PAGE);
-            requestDispatcher.forward(request, response);
-            return;
-        }
+        if (showParseError(request, response, start, end)) return;
+        if (validateDates(request, response, start, end)) return;
 
         List<CarFormBean> carList = carService.getFullInformationForAll();
-
         loadLists(request);
+        getAvailableCars(request, start, end, carList);
 
+        request.getRequestDispatcher(PageNames.RENT_CARS_PAGE).forward(request, response);
+    }
+
+    private void getAvailableCars(HttpServletRequest request, Date start, Date end, List<CarFormBean> carList) {
         Timestamp startTimestamp = new Timestamp(start.getTime());
         Timestamp endTimestamp = new Timestamp(end.getTime());
         List<Rent> rents = rentService.selectRentsForDates(startTimestamp, endTimestamp);
-        if (rents.size() != 0) {
+        if (!rents.isEmpty()) {
             List<CarFormBean> notRentedCars = carService.getNotRentedCars(rents, carList);
             request.setAttribute(Attributes.CARS, notRentedCars);
         } else {
             request.setAttribute(Attributes.CARS, carList);
         }
         logger.debug("All cars information has been got");
+    }
 
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.RENT_CARS_PAGE);
-        requestDispatcher.forward(request, response);
+    private boolean validateDates(HttpServletRequest request, HttpServletResponse response, Date start, Date end) throws ServletException, IOException {
+        Map<String, String> errors = dateValidator.validate(start);
+        errors = dateValidator.validate(end);
+        errors = validateDates(start, end, errors);
+
+        if (!errors.isEmpty()) {
+            request.setAttribute(Attributes.MESSAGE, errors.get("error"));
+            request.getRequestDispatcher(PageNames.MAIN_PAGE).forward(request, response);
+            return true;
+        }
+        return false;
+    }
+
+    private boolean showParseError(HttpServletRequest request, HttpServletResponse response, Date start, Date end) throws ServletException, IOException {
+        if (start == null || end == null) {
+            request.setAttribute(Attributes.MESSAGE, "Can't parse dates");
+            request.getRequestDispatcher(PageNames.MAIN_PAGE).forward(request, response);
+            return true;
+        }
+        return false;
+    }
+
+    private boolean checkAuthenticationState(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
+        if (getAuthUserId(request) == null) {
+            session.setAttribute(Attributes.START_DATE, request.getParameter(Attributes.START_DATE));
+            session.setAttribute(Attributes.END_DATE, request.getParameter(Attributes.END_DATE));
+            if (request.getParameter(Attributes.DRIVER) == null) {
+                session.setAttribute(Attributes.DRIVER, "");
+            } else {
+                session.setAttribute(Attributes.DRIVER, request.getParameter(Attributes.DRIVER));
+            }
+            request.getRequestDispatcher(PageNames.LOGIN_PAGE).forward(request, response);
+            return true;
+        }
+        return false;
     }
 
     private void loadLists(HttpServletRequest request) {
@@ -223,5 +219,28 @@ public class RentCarServlet extends AuthenticationServlet {
         }
     }
 
+    private Check insertCheck(int sum) {
+        Check check = new Check(sum, false);
+        checkService.insert(check);
+        logger.debug("Check was inserted");
+        return check;
+    }
+
+    private void sendMail(Rent rent, String path) {
+        String login = userService.selectById(rent.getUserId()).getLogin();
+        try {
+            MailService.sendEmailWithDocument(host, port, login, userEmail, password, path);
+        } catch (MessagingException e) {
+            logger.error("Unable to send mail");
+        }
+    }
+
+    private String createPDF(int id, Check check, int userId, int checkId, Rent rent) {
+        CarFormBean carFormBean = carService.getFullCarInformationById(id);
+        String fileName = pdfService.createFileName(userId, checkId);
+        String path = pdfService.createPath(fileName);
+        pdfService.createRentPdf(path, carFormBean, rent, check);
+        return path;
+    }
 
 }

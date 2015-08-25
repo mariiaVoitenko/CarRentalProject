@@ -23,15 +23,23 @@ public class ReturnCarServlet extends AuthenticationServlet {
         rentService = (IRentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int rentId = Integer.parseInt(request.getParameter(Attributes.ID));
-        rentService.updateReturnedState(rentId);
-        logger.debug("Rent with id{} has returned state now");
+        setReturned(request);
+        setUserRents(request);
+        response.sendRedirect((Mappings.HISTORY_MAPPING));
+    }
 
+    private void setUserRents(HttpServletRequest request) {
         int userId = getAuthUserId(request);
         request.setAttribute(Attributes.RENTS, rentService.getUserRents(userId));
         logger.debug("All rents have been got");
-        response.sendRedirect((Mappings.HISTORY_MAPPING));
+    }
+
+    private void setReturned(HttpServletRequest request) {
+        int rentId = Integer.parseInt(request.getParameter(Attributes.ID));
+        rentService.updateReturnedState(rentId);
+        logger.debug("Rent with id{} has returned state now");
     }
 
 }

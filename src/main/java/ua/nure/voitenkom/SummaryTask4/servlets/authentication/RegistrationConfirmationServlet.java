@@ -12,10 +12,6 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.util.DateManager;
-import ua.nure.voitenkom.SummaryTask4.service.role.RoleService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -39,12 +35,7 @@ public class RegistrationConfirmationServlet extends HttpServlet {
         String[] splits = request.getRequestURI().split("/");
         String token = splits[splits.length - 1];
         User user = userService.selectByToken(token);
-        if (DateManager.isWastedToken(user.getRegistrationTime())) {
-            HttpSession session = request.getSession();
-            userService.deleteUser(user.getId());
-            session.setAttribute(Attributes.MESSAGE, "Sorry. Your one-time code is out of date. Try to register one more time and immediately activate a code.");
-            return;
-        }
+        if (sendTokenError(request, user)) return;
         user.setIsRegistered(true);
         userService.setRegisteredState(user.getId());
         Role registeredUserRole = roleService.selectByName(EntitiesValues.USER_VALUE);
@@ -56,9 +47,17 @@ public class RegistrationConfirmationServlet extends HttpServlet {
             response.sendRedirect(Mappings.CAR_RENT_MAPPING);
             return;
         }
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher("/" + PageNames.SUCCESS_CONFIRMATION_PAGE);
-        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher("/" + PageNames.SUCCESS_CONFIRMATION_PAGE).forward(request, response);
+    }
+
+    private boolean sendTokenError(HttpServletRequest request, User user) {
+        if (DateManager.isWastedToken(user.getRegistrationTime())) {
+            HttpSession session = request.getSession();
+            userService.deleteUser(user.getId());
+            session.setAttribute(Attributes.MESSAGE, "Sorry. Your one-time code is out of date. Try to register one more time and immediately activate a code.");
+            return true;
+        }
+        return false;
     }
 
 }

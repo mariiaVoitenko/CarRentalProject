@@ -30,6 +30,12 @@ public class LoginServlet extends AuthenticationServlet {
         userService = (IUserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
     }
 
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.sendRedirect(PageNames.LOGIN_PAGE);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginFormBean loginFormBean = parseLoginForm(request);
         Map<String, String> errors = userValidator.validate(loginFormBean);
@@ -47,28 +53,27 @@ public class LoginServlet extends AuthenticationServlet {
                         return;
                     }
                     response.sendRedirect(PageNames.MAIN_PAGE);
-                    return;
                 } else {
                     logger.debug("User {} was blocked. Access denied", user);
                     response.sendRedirect(PageNames.BANNED_PAGE);
-                    return;
                 }
             } else {
-                sendMessage(request, "Wrong login or password");
-                logger.debug("Wrong login or password");
-                response.sendRedirect(PageNames.LOGIN_PAGE);
-                return;
+                sendLoginError(request, response);
             }
         } else {
-            logger.debug("Validation problems");
-            sendMessage(request, "Login is your email. Password must be more than 8 characters");
-            response.sendRedirect(PageNames.LOGIN_PAGE);
-            return;
+            sendValidationFailMessage(request, response);
         }
-
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void sendLoginError(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        sendMessage(request, "Wrong login or password");
+        logger.debug("Wrong login or password");
+        response.sendRedirect(PageNames.LOGIN_PAGE);
+    }
+
+    private void sendValidationFailMessage(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        logger.debug("Validation problems");
+        sendMessage(request, "Login is your email. Password must be more than 8 characters");
         response.sendRedirect(PageNames.LOGIN_PAGE);
     }
 
@@ -82,4 +87,5 @@ public class LoginServlet extends AuthenticationServlet {
         HttpSession session = request.getSession();
         session.setAttribute(Attributes.MESSAGE, message);
     }
+
 }

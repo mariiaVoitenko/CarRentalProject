@@ -57,6 +57,7 @@ public class SetDamageRentServlet extends AdminServlet {
         password = getServletContext().getInitParameter(ServiceConstant.USER_PASSWORD_PARAM);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkManagerRole(request, response);
 
@@ -91,13 +92,17 @@ public class SetDamageRentServlet extends AdminServlet {
 
         String login = userService.selectById(rent.getUserId()).getLogin();
 
+        sendMail(path, login);
+
+        logger.debug("Rent with id {} was finished", id);
+        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.RETURNED_CARS_MAPPING);
+    }
+
+    private void sendMail(String path, String login) {
         try {
             MailService.sendEmailWithDocument(host, port, login, userEmail, password, path);
         } catch (MessagingException e) {
             logger.error("Unable to send mail");
         }
-
-        logger.debug("Rent with id {} was finished", id);
-        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.RETURNED_CARS_MAPPING);
     }
 }

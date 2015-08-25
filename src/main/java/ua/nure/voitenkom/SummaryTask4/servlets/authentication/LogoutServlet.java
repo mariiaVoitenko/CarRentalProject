@@ -21,4 +21,5 @@ public class LogoutServlet extends HttpServlet {
         }
         response.sendRedirect(PageNames.MAIN_PAGE);
     }
+
 }

@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.photo.IPhotoService;
-import ua.nure.voitenkom.SummaryTask4.service.photo.PhotoService;
 import ua.nure.voitenkom.SummaryTask4.util.FileManager;
 
 import javax.servlet.ServletException;
@@ -41,11 +40,12 @@ public class PhotoServlet extends HttpServlet {
     }
 
     private void sendPicture(File picture, HttpServletResponse response) {
-        try (ServletOutputStream output = response.getOutputStream();
-             FileInputStream input = new FileInputStream(picture)) {
+        try {
+            ServletOutputStream output = response.getOutputStream();
+            FileInputStream input = new FileInputStream(picture);
             FileManager.copyStream(input, output);
         } catch (IOException e) {
-            logger.warn("Unable send picture on client by file stream", e);
+            logger.warn("Unable to send picture on client by file stream", e);
         }
     }
 

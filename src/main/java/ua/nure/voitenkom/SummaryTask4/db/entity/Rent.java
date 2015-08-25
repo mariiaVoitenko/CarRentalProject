@@ -30,11 +30,10 @@ public class Rent extends Entity {
         this.isFinished = isFinished;
     }
 
-    public Rent(boolean isDriven, int carId, int userId, int declineId, int checkId, Timestamp startDate, Timestamp endDate) {
+    public Rent(boolean isDriven, int carId, int userId, int checkId, Timestamp startDate, Timestamp endDate) {
         this.carId = carId;
         this.isDriven = isDriven;
         this.userId = userId;
-        this.declineId = declineId;
         this.checkId = checkId;
         this.startDate = new Timestamp(startDate.getTime());
         this.endDate = new Timestamp(endDate.getTime());

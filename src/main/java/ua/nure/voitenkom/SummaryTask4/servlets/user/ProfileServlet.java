@@ -1,25 +1,19 @@
 package ua.nure.voitenkom.SummaryTask4.servlets.user;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.photo.IPhotoService;
-import ua.nure.voitenkom.SummaryTask4.service.photo.PhotoService;
 import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServlet;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
-import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
 
@@ -38,6 +32,7 @@ public class ProfileServlet extends AuthenticationServlet {
         photoService = (IPhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id;
         boolean canChange = false;
@@ -48,15 +43,14 @@ public class ProfileServlet extends AuthenticationServlet {
         } else {
             id = Integer.parseInt(request.getParameter(Attributes.ID));
         }
+
         User user = userService.selectById(id);
-        request.setAttribute(Attributes.USER, user);
-        request.setAttribute(Attributes.EDIT, canChange);
+        setAttributes(request, canChange, user);
         logger.debug("Information about user with id {} has been got", id);
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.PROFILE_PAGE);
-        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher(PageNames.PROFILE_PAGE).forward(request, response);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = getAuthUserId(request);
         User user = userService.selectById(id);
@@ -69,11 +63,14 @@ public class ProfileServlet extends AuthenticationServlet {
             photoService.saveUserPicture(user, photo);
         }
         userService.updatePhoto(user);
-        request.setAttribute(Attributes.USER, user);
-        request.setAttribute(Attributes.EDIT, true);
+        setAttributes(request, true, user);
         logger.debug("Photo was saved", id);
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.PROFILE_PAGE);
-        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher(PageNames.PROFILE_PAGE).forward(request, response);
     }
+
+    private void setAttributes(HttpServletRequest request, boolean canChange, User user) {
+        request.setAttribute(Attributes.USER, user);
+        request.setAttribute(Attributes.EDIT, canChange);
+    }
+
 }

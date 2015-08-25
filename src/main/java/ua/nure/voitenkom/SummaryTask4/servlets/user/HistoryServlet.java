@@ -23,6 +23,7 @@ public class HistoryServlet extends AuthenticationServlet {
         rentService = (IRentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int userId = getAuthUserId(request);
         request.setAttribute(Attributes.RENTS, rentService.getUserRents(userId));
