@@ -18,10 +18,12 @@ public class CarService implements ICarService {
 
     private final ITransactionManager transactionManager;
     private final ICarRepository carRepository;
+    private final ISQLBuilder isqlBuilder;
 
-    public CarService(ITransactionManager transactionManager, ICarRepository carRepository) {
+    public CarService(ITransactionManager transactionManager, ICarRepository carRepository, ISQLBuilder isqlBuilder) {
         this.transactionManager = transactionManager;
         this.carRepository = carRepository;
+        this.isqlBuilder = isqlBuilder;
     }
 
     @Override
@@ -186,7 +188,6 @@ public class CarService implements ICarService {
     }
 
     private String getSqlFromCriteria(Criteria criteria) {
-        ISQLBuilder isqlBuilder = new SQLBuilder();
         return isqlBuilder.getSQL(criteria);
     }
 }

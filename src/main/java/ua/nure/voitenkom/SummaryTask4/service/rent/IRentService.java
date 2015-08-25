@@ -1,6 +1,7 @@
 package ua.nure.voitenkom.SummaryTask4.service.rent;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
+import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 
 import java.sql.Timestamp;
@@ -18,9 +19,7 @@ public interface IRentService {
 
     List<RentFormBean> getUserRents(List<Rent> rentList);
 
-    List<Rent> selectUnapproved();
-
-    List<RentFormBean> getPayedUnapprovedRents(List<Rent> rentList);
+    List<Rent> selectPayedUnapproved();
 
     Rent selectById(int id);
 
@@ -37,4 +36,6 @@ public interface IRentService {
     RentFormBean rentToRentFormBean(Rent rent);
 
     List<RentFormBean> getReturnedRentFormBeanList();
+
+    List<ApplicationFormBean> getApplications();
 }

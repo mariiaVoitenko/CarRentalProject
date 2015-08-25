@@ -48,4 +48,5 @@ public class PhotoServlet extends HttpServlet {
             logger.warn("Unable send picture on client by file stream", e);
         }
     }
+
 }

@@ -4,14 +4,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
+import ua.nure.voitenkom.SummaryTask4.db.extractor.ApplicationExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.RentExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
+import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RentRepository extends AbstractRepository<Rent> implements IRentRepository {
@@ -68,8 +72,8 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     }
 
     @Override
-    public List<Rent> selectUnapproved() {
-        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_UNAPPROVED_RENTS, new RentExtractor());
+    public List<Rent> selectPayedUnapproved() {
+        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_PAYED_UNAPPROVED_RENTS, new RentExtractor());
     }
 
     @Override
@@ -93,6 +97,24 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     @Override
     public void updateFinishedState(int rentId) {
         updateState(rentId, StatementsContainer.SQL_UPDATE_FINISHED_STATE_BY_ID);
+    }
+
+    @Override
+    public List<ApplicationFormBean> getApplications() {
+        String sql = StatementsContainer.SQL_SELECT_APPLICATIONS;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            ApplicationExtractor extractor = new ApplicationExtractor();
+            List<ApplicationFormBean> applicationFormBeans = new ArrayList<>();
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    applicationFormBeans.add(extractor.extract(resultSet));
+                }
+            }
+            return applicationFormBeans;
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
     }
 
     @Override

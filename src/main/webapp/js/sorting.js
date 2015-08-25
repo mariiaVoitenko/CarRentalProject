@@ -8,7 +8,7 @@ function getCriterias() {
     query = buildQuery(query, "nameSort", selectedNameSort);
     var selectedPriceSort = returnValue("priceSortSelect");
     query = buildQuery(query, "priceSort", selectedPriceSort);
-    if (selectedNameSort == "" && selectedPriceSort == "" && selectedBrand=="" && selectedClass=="") {
+    if (selectedNameSort == "" && selectedPriceSort == "" && selectedBrand == "" && selectedClass == "") {
         alert("You should select at least one parameter of sorting");
         return;
     }
@@ -36,22 +36,8 @@ function buildQuery(query, option, selectedValue) {
 
 function sendGetRequest() {
     var url = "sort";
-    var xhr = new XMLHttpRequest();
     var params = getCriterias();
     if (params != undefined) {
-        xhr.open("GET", url + "?" + params, true);
-        xhr.onload = function (e) {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    alert(xhr.responseText + "200");
-                } else {
-                    alert(xhr.statusText + xhr.status);
-                }
-            }
-        };
-        xhr.onerror = function (e) {
-            alert(xhr.statusText + "error");
-        };
-        xhr.send(null);
+        window.location.href = url + "?" + params;
     }
 }

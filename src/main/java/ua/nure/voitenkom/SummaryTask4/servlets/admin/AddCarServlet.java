@@ -17,7 +17,6 @@ import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.car.CarValidator;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
@@ -25,7 +24,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
@@ -52,17 +50,17 @@ public class AddCarServlet extends AdminServlet {
         photoService = (IPhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
 
         loadEntities(request, brandService, majorityClassService, colorService, statusService);
         logger.debug("Dropdowns are loaded");
 
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.ADD_CARS_PAGE);
-        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher(PageNames.ADD_CARS_PAGE).forward(request, response);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
 
@@ -70,6 +68,7 @@ public class AddCarServlet extends AdminServlet {
         session.setAttribute(Attributes.MESSAGE, "");
 
         CarFormBean carFormBean = parseForm(request);
+
         Part photo = request.getPart(Attributes.PHOTO);
         Car car = new Car();
         Map<String, String> errors = validateData(carFormBean, carFormBeanIValidator);
@@ -78,15 +77,11 @@ public class AddCarServlet extends AdminServlet {
             session.setAttribute(Attributes.MESSAGE, errors.get("error"));
             logger.debug("Car selected");
             loadEntities(request, brandService, majorityClassService, colorService, statusService);
-            RequestDispatcher requestDispatcher = request
-                    .getRequestDispatcher(PageNames.ADD_CARS_PAGE);
-            requestDispatcher.forward(request, response);
+            request.getRequestDispatcher(PageNames.ADD_CARS_PAGE).forward(request, response);
             return;
         }
 
-        if (photo != null)
-
-        {
+        if (photo != null) {
             if (isPhotoIncorrect(photo)) {
                 errors.put("error", "Some error with photo has occurred");
             }
@@ -99,4 +94,5 @@ public class AddCarServlet extends AdminServlet {
         logger.debug("Car was updated");
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.CARS_MAPPING);
     }
+
 }

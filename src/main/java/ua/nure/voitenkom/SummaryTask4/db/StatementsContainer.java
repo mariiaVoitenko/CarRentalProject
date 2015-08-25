@@ -76,10 +76,6 @@ public final class StatementsContainer {
     //damagecheks
     public static final String SQL_SELECT_DAMAGECHECK_BY_ID = "SELECT * FROM damages_checks WHERE id = ?";
     public static final String SQL_SELECT_ALL_DAMAGECHECKS = "SELECT * FROM damages_checks";
-    public static final String SQL_SELECT_DAMAGE_ID_BY_DAMAGECHECK_ID = "SELECT damages_id FROM damages_checks WHERE id = ?";
-    public static final String SQL_SELECT_CHECK_ID_BY_DAMAGECHECK_ID = "SELECT checks_id FROM damages_checks WHERE id = ?";
-    public static final String SQL_SELECT_ALL_DAMAGECHECK_INFORMATION = "SELECT damages.name, damages.sum, checks.id " +
-            "AS check, damages.id AS damage, damages_checks.id FROM damages_checks, damages, checks";
     public static final String SQL_INSERT_DAMAGECHECK = "INSERT INTO damages_checks (damages_id, checks_id) VALUES (?, ?)";
     public static final String SQL_UPDATE_DAMAGECHECK_BY_ID = "UPDATE damages_checks SET damages_id = ?, checks_id = ? " +
             "WHERE id = ?";
@@ -104,7 +100,8 @@ public final class StatementsContainer {
     //rent
     public static final String SQL_SELECT_ALL_RENTS = "SELECT * FROM rents";
     public static final String SQL_SELECT_ALL_RENTS_FOR_USER = "SELECT * FROM rents WHERE users_id = ?";
-    public static final String SQL_SELECT_ALL_UNAPPROVED_RENTS = "SELECT * FROM rents WHERE  ISNULL(declines_id) AND is_approved = 0";
+    public static final String SQL_SELECT_ALL_PAYED_UNAPPROVED_RENTS = "SELECT rents.* FROM rents, checks WHERE " +
+            "checks.is_payed = 1 AND rents.is_approved = 0 AND checks.id = rents.checks_id AND ISNULL(declines_id)";
     public static final String SQL_SELECT_RENT_BY_ID = "SELECT * FROM rents WHERE id = ?";
     public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, cars_id, users_id, " +
             "checks_id, start_date, end_date) VALUES (?,?,?,?,?,?)";
@@ -119,8 +116,18 @@ public final class StatementsContainer {
     //2. end_date = end
     //3. end_date = start
     //4. start_date = end
-    public static final String SQL_SELECT_RENT_BY_DATE = "SELECT * FROM rents WHERE start_date >= ? AND end_date <= ? OR end_date >= ? AND start_date <= ?";
+    public static final String SQL_SELECT_RENT_BY_DATE = "SELECT * FROM rents WHERE start_date >= ? AND end_date <= ? " +
+            "OR end_date >= ? AND start_date <= ?";
     public static final String SQL_SELECT_RETURNED_CARS = "SELECT * FROM rents WHERE is_returned  = 1 AND is_finished = 0";
+    public static final String SQL_SELECT_APPLICATIONS = "SELECT cars.model, brands.name AS brand_name, cars.photo, cars.id " +
+            "AS car_id, rents.id AS rent_id, cars.doors_count, cars.sits_count, cars.big_luggage_count, " +
+            "cars.small_luggage_count, cars.has_conditioner, checks.sum,\n" +
+            "users.full_name, users.passport_number, rents.start_date, rents.end_date, rents.is_driven, classes.name " +
+            "AS class_name, colors.name AS color_name, users.id AS user_id\n" +
+            "FROM rents, checks, cars, classes, colors, brands, users\n" +
+            "WHERE checks.is_payed = 1 AND rents.is_approved = 0 AND checks.id = rents.checks_id AND ISNULL(declines_id)\n" +
+            "AND rents.cars_id=cars.id AND rents.checks_id = checks.id AND rents.users_id = users.id AND " +
+            "cars.brands_id=brands.id AND cars.colors_id=colors.id AND cars.classes_id=classes.id";
 
     // roles
     public static final String SQL_SELECT_ALL_ROLES = "SELECT * FROM roles";

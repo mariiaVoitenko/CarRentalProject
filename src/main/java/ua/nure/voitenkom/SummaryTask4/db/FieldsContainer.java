@@ -43,6 +43,9 @@ public final class FieldsContainer {
     public static final String FIELD_IS_RETURNED = "is_returned";
     public static final String FIELD_IS_APPROVED = "is_approved";
     public static final String FIELD_IS_FINISHED = "is_finished";
+    public static final String FIELD_CAR_ID = "car_id";
+    public static final String FIELD_RENT_ID = "rent_id";
+    public static final String FIELD_USER_ID = "user_id";
 
     private FieldsContainer() {
 

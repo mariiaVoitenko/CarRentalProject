@@ -52,13 +52,11 @@ public abstract class AdminServlet extends HttpServlet {
         boolean hasConditioner = Boolean.valueOf(request.getParameter(Attributes.HAS_CONDITIONER));
         int price = Integer.parseInt(request.getParameter(Attributes.PRICE));
         int doorsCount = Integer.parseInt(request.getParameter(Attributes.DOORS_COUNT));
-        CarFormBean carFormBean = new CarFormBean(model, price, doorsCount, hasConditioner, bigLuggageCount, smallLuggageCount, sitsCount, brand, color, classType, status);
-        return carFormBean;
+        return new CarFormBean(model, price, doorsCount, hasConditioner, bigLuggageCount, smallLuggageCount, sitsCount, brand, color, classType, status);
     }
 
     protected Map<String, String> validateData(CarFormBean carFormBean, IValidator<CarFormBean> carFormBeanIValidator) {
-        Map<String, String> errors = carFormBeanIValidator.validate(carFormBean);
-        return errors;
+        return carFormBeanIValidator.validate(carFormBean);
     }
 
     protected void fillEntity(Car car, CarFormBean carFormBean, IStatusService statusService, IBrandService brandService, IColorService colorService, IMajorityClassService majorityClassService) {

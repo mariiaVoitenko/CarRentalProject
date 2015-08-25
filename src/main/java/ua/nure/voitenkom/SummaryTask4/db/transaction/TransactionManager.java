@@ -44,6 +44,7 @@ public class TransactionManager implements ITransactionManager {
 
     private void closeConnection() {
         ConnectionManager.closeConnection(connectionHolder.get());
+        connectionHolder.remove();
     }
 
 }

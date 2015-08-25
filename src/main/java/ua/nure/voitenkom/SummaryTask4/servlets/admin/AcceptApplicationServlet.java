@@ -26,20 +26,18 @@ public class AcceptApplicationServlet extends AdminServlet {
         rentService = (IRentService) getServletContext().getAttribute(ServiceConstant.RENT_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkManagerRole(request, response);
+        setApprovedState(request);
+        request.setAttribute(Attributes.RENTS, rentService.getApplications());
+        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
+    }
 
+    private void setApprovedState(HttpServletRequest request) {
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         rentService.updateApprovedState(id);
         logger.debug("Rent with id {} was accepted", id);
-
-        List<Rent> rentList = rentService.selectUnapproved();
-        List<RentFormBean> rents = new ArrayList<>();
-        if (!rentList.isEmpty()) {
-            rents = rentService.getPayedUnapprovedRents(rentList);
-        }
-
-        request.setAttribute(Attributes.RENTS, rents);
-        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
     }
+
 }

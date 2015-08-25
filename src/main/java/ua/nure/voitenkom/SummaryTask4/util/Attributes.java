@@ -51,4 +51,6 @@ public final class Attributes {
     public static final String DAMAGES = "damageList";
     public static final String DAMAGE = "damage";
 
+    public static final String CRITERIA = "criteria";
+
 }

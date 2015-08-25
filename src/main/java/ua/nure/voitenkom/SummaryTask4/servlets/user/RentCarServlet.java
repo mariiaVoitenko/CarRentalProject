@@ -101,13 +101,14 @@ public class RentCarServlet extends AuthenticationServlet {
         CarFormBean carFormBean = carService.getFullCarInformationById(id);
         String fileName = pdfService.createFileName(userId, checkId);
         String path = pdfService.createPath(fileName);
-        pdfService.createDamagePdf(path, carFormBean, rent, check);
+        pdfService.createRentPdf(path, carFormBean, rent, check);
 
         String login = userService.selectById(rent.getUserId()).getLogin();
 
         try {
             MailService.sendEmailWithDocument(host, port, login, userEmail, password, path);
         } catch (MessagingException e) {
+
             logger.error("Unable to send mail");
         }
         response.sendRedirect(Mappings.HISTORY_MAPPING);

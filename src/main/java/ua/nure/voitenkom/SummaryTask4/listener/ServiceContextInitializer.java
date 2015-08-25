@@ -2,6 +2,8 @@ package ua.nure.voitenkom.SummaryTask4.listener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.converter.ISQLBuilder;
+import ua.nure.voitenkom.SummaryTask4.db.converter.SQLBuilder;
 import ua.nure.voitenkom.SummaryTask4.service.pdf.IPDFService;
 import ua.nure.voitenkom.SummaryTask4.service.pdf.PDFService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
@@ -81,8 +83,9 @@ public class ServiceContextInitializer implements ServletContextListener {
         IBrandService brandService = new BrandService(transactionManager, brandRepository);
         context.getServletContext().setAttribute(ServiceConstant.BRAND_SERVICE_CONTEXT, brandService);
 
+        ISQLBuilder isqlBuilder = new SQLBuilder();
         ICarRepository carRepository = new CarRepository(connectionHolder);
-        ICarService carService = new CarService(transactionManager, carRepository);
+        ICarService carService = new CarService(transactionManager, carRepository, isqlBuilder);
         context.getServletContext().setAttribute(ServiceConstant.CAR_SERVICE_CONTEXT, carService);
 
         ICheckRepository checkRepository = new CheckRepository(connectionHolder);

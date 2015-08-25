@@ -11,6 +11,7 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.rent.IRentRepository;
 import ua.nure.voitenkom.SummaryTask4.db.repository.user.IUserRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
+import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 
@@ -158,31 +159,6 @@ public class RentService implements IRentService {
     }
 
     @Override
-    public List<RentFormBean> getPayedUnapprovedRents(final List<Rent> rentList) {
-        return transactionManager.doInTransaction(new Operation<List<RentFormBean>>() {
-            @Override
-            public List<RentFormBean> doOperation() {
-                List<RentFormBean> payedRents = new ArrayList<>();
-                for (Rent rent : rentList) {
-                    Check check = checkRepository.selectById(rent.getCheckId());
-                    if (!check.isPayed()) {
-                        continue;
-                    }
-                    if (rent.isApproved() || rent.isFinished()) {
-                        continue;
-                    }
-                    CarFormBean car = carRepository.getFullCarInformationById(rent.getCarId());
-                    User user = userRepository.selectById(rent.getUserId());
-                    RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check,
-                            timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), user, rent.getId());
-                    payedRents.add(rentFormBean);
-                }
-                return payedRents;
-            }
-        });
-    }
-
-    @Override
     public RentFormBean rentToRentFormBean(final Rent rent) {
         return transactionManager.doInTransaction(new Operation<RentFormBean>() {
             @Override
@@ -208,11 +184,11 @@ public class RentService implements IRentService {
     }
 
     @Override
-    public List<Rent> selectUnapproved() {
+    public List<Rent> selectPayedUnapproved() {
         return transactionManager.doInTransaction(new Operation<List<Rent>>() {
             @Override
             public List<Rent> doOperation() {
-                return rentRepository.selectUnapproved();
+                return rentRepository.selectPayedUnapproved();
             }
         });
     }
@@ -228,4 +204,15 @@ public class RentService implements IRentService {
         }
         return returnedRentFormBeansList;
     }
+
+    @Override
+    public List<ApplicationFormBean> getApplications() {
+        return transactionManager.doInTransaction(new Operation<List<ApplicationFormBean>>() {
+            @Override
+            public List<ApplicationFormBean> doOperation() {
+                return rentRepository.getApplications();
+            }
+        });
+    }
+
 }

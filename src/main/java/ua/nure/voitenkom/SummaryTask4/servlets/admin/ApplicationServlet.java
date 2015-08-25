@@ -2,23 +2,16 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
 import ua.nure.voitenkom.SummaryTask4.service.decline.IDeclineService;
 import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
-import ua.nure.voitenkom.SummaryTask4.service.check.CheckService;
-import ua.nure.voitenkom.SummaryTask4.service.decline.DeclineService;
-import ua.nure.voitenkom.SummaryTask4.service.rent.RentService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,30 +35,26 @@ public class ApplicationServlet extends AdminServlet {
         majorityClassService = (IMajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkManagerRole(request, response);
+        setAttributes(request);
+        request.getRequestDispatcher(PageNames.APPLICATIONS_PAGE).forward(request, response);
+    }
 
-        List<Rent> rentList = rentService.selectUnapproved();
-        List<RentFormBean> rents = new ArrayList<>();
-        if (rentList.size() != 0) {
-            rents = rentService.getPayedUnapprovedRents(rentList);
-        }
-        request.setAttribute(Attributes.RENTS, rents);
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        checkManagerRole(request, response);
+        setAttributes(request);
+        request.getRequestDispatcher(PageNames.APPLICATIONS_PAGE).forward(request, response);
+    }
 
-        logger.debug("Applications have been got");
-
+    private void setAttributes(HttpServletRequest request) {
+        List<ApplicationFormBean> applications = rentService.getApplications();
+        request.setAttribute(Attributes.RENTS, applications);
         request.setAttribute(Attributes.BRANDS, brandService.getAll());
         request.setAttribute(Attributes.CLASSES, majorityClassService.getAll());
-
-        List<Decline> declines = declineService.getAll();
-        request.setAttribute(Attributes.DECLINES, declines);
-
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.APPLICATIONS_PAGE);
-        requestDispatcher.forward(request, response);
+        request.setAttribute(Attributes.DECLINES, declineService.getAll());
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
 }

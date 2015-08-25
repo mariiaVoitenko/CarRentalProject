@@ -37,6 +37,7 @@ public class SortingServlet extends HttpServlet {
         majorityClassService = (IMajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Criteria criteria = fillCriteria(request);
         List<CarFormBean> carFormBeans = carService.getSortedCars(criteria);
@@ -44,12 +45,11 @@ public class SortingServlet extends HttpServlet {
         request.setAttribute(Attributes.CARS, carFormBeans);
         request.setAttribute(Attributes.BRANDS, brandService.getAll());
         request.setAttribute(Attributes.CLASSES, majorityClassService.getAll());
+        request.setAttribute(Attributes.CRITERIA, criteria);
 
         logger.debug("All cars information has been got");
 
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.CARS_PAGE);
-        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher(PageNames.CARS_PAGE).forward(request, response);
     }
 
     private Criteria fillCriteria(HttpServletRequest request) {
