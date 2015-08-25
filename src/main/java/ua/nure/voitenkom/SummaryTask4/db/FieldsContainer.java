@@ -46,6 +46,7 @@ public final class FieldsContainer {
     public static final String FIELD_CAR_ID = "car_id";
     public static final String FIELD_RENT_ID = "rent_id";
     public static final String FIELD_USER_ID = "user_id";
+    public static final String FIELD_DECLINE_NAME = "decline_name";
 
     private FieldsContainer() {
 

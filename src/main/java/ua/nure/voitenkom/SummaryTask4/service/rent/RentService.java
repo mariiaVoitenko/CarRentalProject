@@ -1,21 +1,11 @@
 package ua.nure.voitenkom.SummaryTask4.service.rent;
 
-import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
-import ua.nure.voitenkom.SummaryTask4.db.entity.User;
-import ua.nure.voitenkom.SummaryTask4.db.repository.car.ICarRepository;
-import ua.nure.voitenkom.SummaryTask4.db.repository.check.ICheckRepository;
-import ua.nure.voitenkom.SummaryTask4.db.repository.decline.IDeclineRepository;
 import ua.nure.voitenkom.SummaryTask4.db.repository.rent.IRentRepository;
-import ua.nure.voitenkom.SummaryTask4.db.repository.user.IUserRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
-import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
-import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
-
-import static ua.nure.voitenkom.SummaryTask4.util.DateManager.timestampToString;
+import ua.nure.voitenkom.SummaryTask4.formbean.HistoryFormBean;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -25,19 +15,11 @@ public class RentService implements IRentService {
 
     private final ITransactionManager transactionManager;
     private final IRentRepository rentRepository;
-    private final ICheckRepository checkRepository;
-    private final ICarRepository carRepository;
-    private final IDeclineRepository declineRepository;
 
 
-    public RentService(ITransactionManager transactionManager, IRentRepository rentRepository,
-                       ICheckRepository checkRepository, IDeclineRepository declineRepository,
-                       ICarRepository carRepository) {
+    public RentService(ITransactionManager transactionManager, IRentRepository rentRepository) {
         this.transactionManager = transactionManager;
         this.rentRepository = rentRepository;
-        this.checkRepository = checkRepository;
-        this.carRepository = carRepository;
-        this.declineRepository = declineRepository;
     }
 
     @Override
@@ -107,41 +89,11 @@ public class RentService implements IRentService {
     }
 
     @Override
-    public List<Rent> selectAllForUser(final int id) {
-        return transactionManager.doInTransaction(new Operation<List<Rent>>() {
-            @Override
-            public List<Rent> doOperation() {
-                return rentRepository.selectAllForUser(id);
-            }
-        });
-    }
-
-    @Override
     public List<Rent> selectRentsForDates(final Timestamp start, final Timestamp end) {
         return transactionManager.doInTransaction(new Operation<List<Rent>>() {
             @Override
             public List<Rent> doOperation() {
                 return rentRepository.selectRentsForDates(start, end);
-            }
-        });
-    }
-
-    @Override
-    public List<RentFormBean> getUserRents(final List<Rent> rentList) {
-        return transactionManager.doInTransaction(new Operation<List<RentFormBean>>() {
-            @Override
-            public List<RentFormBean> doOperation() {
-                List<RentFormBean> rents = new ArrayList<>();
-                for (Rent rent : rentList) {
-                    CarFormBean car = carRepository.getFullCarInformationById(rent.getCarId());
-                    Check check = checkRepository.selectById(rent.getCheckId());
-                    Decline decline = declineRepository.selectById(rent.getDeclineId());
-                    RentFormBean rentFormBean = new RentFormBean(rent.isDriven(), car, check, decline,
-                            timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()),
-                            rent.isReturned(), rent.isApproved(), rent.isFinished(), rent.getId());
-                    rents.add(rentFormBean);
-                }
-                return rents;
             }
         });
     }
@@ -175,5 +127,33 @@ public class RentService implements IRentService {
             }
         });
     }
+
+    @Override
+    public List<HistoryFormBean> getUserRentsWithDeclines(final int id) {
+        return transactionManager.doInTransaction(new Operation<List<HistoryFormBean>>() {
+            @Override
+            public List<HistoryFormBean> doOperation() {
+                return rentRepository.getUserRentsWithDeclines(id);
+            }
+        });
+    }
+
+    @Override
+    public List<HistoryFormBean> getUserRentsWithoutDeclines(final int id) {
+        return transactionManager.doInTransaction(new Operation<List<HistoryFormBean>>() {
+            @Override
+            public List<HistoryFormBean> doOperation() {
+                return rentRepository.getUserRentsWithoutDeclines(id);
+            }
+        });
+    }
+
+    @Override
+    public List<HistoryFormBean> getUserRents(int id) {
+        List<HistoryFormBean> historyFormBeans = getUserRentsWithDeclines(id);
+        historyFormBeans.addAll(getUserRentsWithoutDeclines(id));
+        return historyFormBeans;
+    }
+
 
 }

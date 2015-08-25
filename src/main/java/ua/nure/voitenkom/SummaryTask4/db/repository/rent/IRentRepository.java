@@ -3,6 +3,7 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.rent;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.IAbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
+import ua.nure.voitenkom.SummaryTask4.formbean.HistoryFormBean;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -12,8 +13,6 @@ public interface IRentRepository extends IAbstractRepository<Rent> {
     void insert(Rent rent);
 
     void update(Rent rent);
-
-    List<Rent> selectAllForUser(int id);
 
     List<Rent> selectRentsForDates(Timestamp start, Timestamp end);
 
@@ -28,5 +27,9 @@ public interface IRentRepository extends IAbstractRepository<Rent> {
     List<ApplicationFormBean> getApplications();
 
     List<ApplicationFormBean> getReturned();
+
+    List<HistoryFormBean> getUserRentsWithDeclines(int id);
+
+    List<HistoryFormBean> getUserRentsWithoutDeclines(int id);
 
 }

@@ -2,7 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.service.rent;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
-import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
+import ua.nure.voitenkom.SummaryTask4.formbean.HistoryFormBean;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -13,11 +13,7 @@ public interface IRentService {
 
     void update(Rent rent);
 
-    List<Rent> selectAllForUser(int id);
-
     List<Rent> selectRentsForDates(Timestamp start, Timestamp end);
-
-    List<RentFormBean> getUserRents(List<Rent> rentList);
 
     Rent selectById(int id);
 
@@ -32,4 +28,11 @@ public interface IRentService {
     List<ApplicationFormBean> getApplications();
 
     List<ApplicationFormBean> getReturned();
+
+    List<HistoryFormBean> getUserRentsWithDeclines(int id);
+
+    List<HistoryFormBean> getUserRentsWithoutDeclines(int id);
+
+    List<HistoryFormBean> getUserRents(int id);
+
 }

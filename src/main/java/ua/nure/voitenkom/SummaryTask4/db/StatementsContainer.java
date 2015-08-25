@@ -99,9 +99,6 @@ public final class StatementsContainer {
 
     //rent
     public static final String SQL_SELECT_ALL_RENTS = "SELECT * FROM rents";
-    public static final String SQL_SELECT_ALL_RENTS_FOR_USER = "SELECT * FROM rents WHERE users_id = ?";
-    public static final String SQL_SELECT_ALL_PAYED_UNAPPROVED_RENTS = "SELECT rents.* FROM rents, checks WHERE " +
-            "checks.is_payed = 1 AND rents.is_approved = 0 AND checks.id = rents.checks_id AND ISNULL(declines_id)";
     public static final String SQL_SELECT_RENT_BY_ID = "SELECT * FROM rents WHERE id = ?";
     public static final String SQL_INSERT_RENT = "INSERT INTO rents (is_driven, cars_id, users_id, " +
             "checks_id, start_date, end_date) VALUES (?,?,?,?,?,?)";
@@ -136,6 +133,22 @@ public final class StatementsContainer {
             "AND checks.id = rents.checks_id AND ISNULL(declines_id) AND rents.cars_id=cars.id AND rents.checks_id =" +
             " checks.id AND rents.users_id = users.id AND\n" +
             "cars.brands_id=brands.id AND cars.colors_id=colors.id AND cars.classes_id=classes.id";
+    public static final String SQL_SELECT_USER_RENTS_WITHOUT_DECLINES = "SELECT cars.model, brands.name as brand_name, cars.photo, rents.id as rent_id, " +
+            "cars.doors_count, cars.sits_count, cars.big_luggage_count, \n" +
+            "cars.small_luggage_count, cars.has_conditioner, checks.sum, checks.is_payed, rents.start_date, rents.end_date, " +
+            "rents.is_approved, rents.is_finished, rents.is_returned, rents.is_driven,\n" +
+            "classes.name  as class_name, colors.name as color_name FROM rents, checks, cars, classes, colors, brands\n" +
+            "WHERE checks.id = rents.checks_id AND rents.cars_id=cars.id AND rents.checks_id = checks.id AND \n" +
+            "cars.brands_id=brands.id AND cars.colors_id=colors.id AND cars.classes_id=classes.id AND isnull(rents.declines_id) AND rents.users_id = ?";
+    public static final String SQL_SELECT_USER_RENTS_WITH_DECLINES = "SELECT cars.model, brands.name as brand_name, " +
+            "cars.photo, rents.id as rent_id, cars.doors_count, cars.sits_count, cars.big_luggage_count, \n" +
+            "cars.small_luggage_count, cars.has_conditioner, checks.sum, checks.is_payed, rents.start_date, rents.end_date," +
+            " rents.is_approved, rents.is_finished, rents.is_returned, rents.is_driven, declines.name AS decline_name,\n" +
+            "classes.name  as class_name, colors.name as color_name FROM rents, checks, cars, classes, colors, brands, " +
+            "declines \n" +
+            "WHERE checks.id = rents.checks_id AND rents.cars_id=cars.id AND rents.checks_id = checks.id AND \n" +
+            "cars.brands_id=brands.id AND cars.colors_id=colors.id AND cars.classes_id=classes.id AND rents.declines_id = " +
+            "declines.id AND rents.users_id = ?";
 
     // roles
     public static final String SQL_SELECT_ALL_ROLES = "SELECT * FROM roles";
