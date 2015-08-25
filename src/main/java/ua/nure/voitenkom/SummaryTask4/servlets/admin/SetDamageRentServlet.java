@@ -67,6 +67,30 @@ public class SetDamageRentServlet extends AdminServlet {
 
         String[] damages = request.getParameterValues(Attributes.DAMAGE);
         int[] damagesIds = new int[damages.length];
+
+        int total = getTotal(checkId, damages, damagesIds);
+
+        rentService.updateFinishedState(id);
+        Check check = checkService.selectById(checkId);
+        checkService.updateSum(check, total);
+
+        List<Damage> damageInformation = getDamageNames(damagesIds);
+        String path = createPDF(rent, checkId, damageInformation);
+        sendMail(rent, path);
+
+        logger.debug("Rent with id {} was finished", id);
+        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.RETURNED_CARS_MAPPING);
+    }
+
+    private List<Damage> getDamageNames(int[] damagesIds) {
+        List<Damage> damageInformation = new ArrayList<>();
+        for (int i = 0; i < damagesIds.length; i++) {
+            damageInformation.add(damageService.findById(damagesIds[i]));
+        }
+        return damageInformation;
+    }
+
+    private int getTotal(int checkId, String[] damages, int[] damagesIds) {
         int total = 0;
         for (int i = 0; i < damages.length; i++) {
             damagesIds[i] = Integer.parseInt(damages[i]);
@@ -75,34 +99,24 @@ public class SetDamageRentServlet extends AdminServlet {
             int damageSum = damageService.selectSumById(damagesIds[i]);
             total += damageSum;
         }
+        return total;
+    }
 
-        rentService.updateFinishedState(id);
-        Check check = checkService.selectById(checkId);
-        checkService.updateSum(check, total);
-
-        List<Damage> damageInformation = new ArrayList<>();
-        for (int i = 0; i < damagesIds.length; i++) {
-            damageInformation.add(damageService.findById(damagesIds[i]));
-        }
-
+    private String createPDF(Rent rent, int checkId, List<Damage> damageInformation) {
         CarFormBean carFormBean = carService.getFullCarInformationById(rent.getCarId());
         String fileName = pdfService.createFileName(rent.getUserId(), checkId);
         String path = pdfService.createPath(fileName);
         pdfService.createDamagePdf(path, carFormBean, damageInformation);
-
-        String login = userService.selectById(rent.getUserId()).getLogin();
-
-        sendMail(path, login);
-
-        logger.debug("Rent with id {} was finished", id);
-        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.RETURNED_CARS_MAPPING);
+        return path;
     }
 
-    private void sendMail(String path, String login) {
+    private void sendMail(Rent rent, String path) {
+        String login = userService.selectById(rent.getUserId()).getLogin();
         try {
             MailService.sendEmailWithDocument(host, port, login, userEmail, password, path);
         } catch (MessagingException e) {
             logger.error("Unable to send mail");
         }
     }
+
 }

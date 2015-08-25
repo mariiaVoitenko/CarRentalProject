@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 public class ReturnedCarsServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
@@ -30,19 +31,26 @@ public class ReturnedCarsServlet extends AdminServlet {
         majorityClassService = (IMajorityClassService) getServletContext().getAttribute(ServiceConstant.CLASS_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkManagerRole(request, response);
-        request.setAttribute(Attributes.RENTS, rentService.getReturned());
-        logger.debug("Rents have been got");
-        request.setAttribute(Attributes.DAMAGES, damageService.getAll());
-
-        request.setAttribute(Attributes.BRANDS, brandService.getAll());
-        request.setAttribute(Attributes.CLASSES, majorityClassService.getAll());
-
+        setAttributes(request);
+        logger.debug("Data have been got");
         request.getRequestDispatcher(PageNames.RETURNED_CARS_PAGE).forward(request, response);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
+        checkManagerRole(request, response);
+        setAttributes(request);
+        logger.debug("Data have been got");
+        request.getRequestDispatcher(PageNames.RETURNED_CARS_PAGE).forward(request, response);
+    }
+
+    private void setAttributes(HttpServletRequest request) {
+        request.setAttribute(Attributes.RENTS, rentService.getReturned());
+        request.setAttribute(Attributes.DAMAGES, damageService.getAll());
+        request.setAttribute(Attributes.BRANDS, brandService.getAll());
+        request.setAttribute(Attributes.CLASSES, majorityClassService.getAll());
     }
 }

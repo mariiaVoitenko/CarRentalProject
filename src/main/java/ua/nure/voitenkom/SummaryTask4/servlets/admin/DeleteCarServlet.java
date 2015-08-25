@@ -6,7 +6,6 @@ import ua.nure.voitenkom.SummaryTask4.service.car.ICarService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.car.CarService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +22,7 @@ public class DeleteCarServlet extends AdminServlet {
         carService = (ICarService) getServletContext().getAttribute(ServiceConstant.CAR_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
@@ -31,7 +31,4 @@ public class DeleteCarServlet extends AdminServlet {
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.CARS_MAPPING);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 }

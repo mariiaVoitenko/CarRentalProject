@@ -8,7 +8,6 @@ import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,20 +26,12 @@ public class ManagersServlet extends AdminServlet {
         usersService = (IUserService) getServletContext().getAttribute(ServiceConstant.USER_SERVICE_CONTEXT);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
-
         List<User> users = usersService.selectByRoleId(Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID));
         request.setAttribute(Attributes.USERS, users);
-
         logger.debug("All managers information has been got");
-
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.USERS_PAGE);
-        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher(PageNames.USERS_PAGE).forward(request, response);
     }
 }

@@ -12,7 +12,6 @@ import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.*;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,6 +35,7 @@ public class EditCarServlet extends AdminServlet {
         statusService = (IStatusService) getServletContext().getAttribute(ServiceConstant.STATUS_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
@@ -45,12 +45,7 @@ public class EditCarServlet extends AdminServlet {
 
         loadEntities(request, brandService, majorityClassService, colorService, statusService);
 
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.EDIT_CARS_PAGE);
-        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher(PageNames.EDIT_CARS_PAGE).forward(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkRole(request, response);
-    }
 }

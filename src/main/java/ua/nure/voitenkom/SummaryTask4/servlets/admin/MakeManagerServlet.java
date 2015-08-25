@@ -10,8 +10,6 @@ import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.role.RoleService;
-import ua.nure.voitenkom.SummaryTask4.service.user.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -30,11 +28,17 @@ public class MakeManagerServlet extends AdminServlet {
         roleService = (IRoleService) getServletContext().getAttribute(ServiceConstant.ROLE_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         User user = userService.selectById(id);
         int managerRoleId = Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID);
+        changeRole(user, managerRoleId);
+        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.USERS_MAPPING);
+    }
+
+    private void changeRole(User user, int managerRoleId) {
         if (user.getRoleId() != managerRoleId) {
             Role managerRole = roleService.selectByName(EntitiesValues.MANAGER_USER_VALUE);
             userService.changeRole(managerRole.getId(), user.getId());
@@ -44,6 +48,5 @@ public class MakeManagerServlet extends AdminServlet {
             userService.changeRole(userRole.getId(), user.getId());
             logger.debug("Manager was made simple user");
         }
-        response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.USERS_MAPPING);
     }
 }

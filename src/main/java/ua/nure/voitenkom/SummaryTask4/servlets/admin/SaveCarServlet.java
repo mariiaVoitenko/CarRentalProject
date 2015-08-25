@@ -49,10 +49,12 @@ public class SaveCarServlet extends AdminServlet {
         photoService = (IPhotoService) getServletContext().getAttribute(ServiceConstant.PHOTO_SERVICE_CONTEXT);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkRole(request, response);
         HttpSession session = request.getSession();
@@ -62,17 +64,8 @@ public class SaveCarServlet extends AdminServlet {
         Part photo = request.getPart(Attributes.PHOTO);
 
         Map<String, String> errors = validateData(carFormBean, carFormBeanIValidator);
+        if (sendError(request, response, session, car, errors)) return;
 
-        if (!errors.isEmpty()) {
-            session.setAttribute(Attributes.MESSAGE, errors.get("error"));
-            request.setAttribute(Attributes.CAR, car);
-            logger.debug("Car selected");
-            loadEntities(request, brandService, majorityClassService, colorService, statusService);
-            RequestDispatcher requestDispatcher = request
-                    .getRequestDispatcher(PageNames.EDIT_CARS_PAGE);
-            requestDispatcher.forward(request, response);
-            return;
-        }
         if (photo.getSize() != 0) {
             if (isPhotoIncorrect(photo)) {
                 errors.put("error", "Some error with photo has occurred");
@@ -81,9 +74,20 @@ public class SaveCarServlet extends AdminServlet {
         }
 
         fillEntity(car, carFormBean, statusService, brandService, colorService, majorityClassService);
-
         carService.update(car);
         logger.debug("Car {} was updated", id);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.CARS_MAPPING);
+    }
+
+    private boolean sendError(HttpServletRequest request, HttpServletResponse response, HttpSession session, Car car, Map<String, String> errors) throws ServletException, IOException {
+        if (!errors.isEmpty()) {
+            session.setAttribute(Attributes.MESSAGE, errors.get("error"));
+            request.setAttribute(Attributes.CAR, car);
+            logger.debug("Car selected");
+            loadEntities(request, brandService, majorityClassService, colorService, statusService);
+            request.getRequestDispatcher(PageNames.EDIT_CARS_PAGE).forward(request, response);
+            return true;
+        }
+        return false;
     }
 }
