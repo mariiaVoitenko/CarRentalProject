@@ -126,7 +126,7 @@ public class ServiceContextInitializer implements ServletContextListener {
 
         IRentRepository rentRepository = new RentRepository(connectionHolder);
         IRentService rentService = new RentService(transactionManager, rentRepository, checkRepository,
-                declineRepository, carRepository, userRepository);
+                declineRepository, carRepository);
         context.getServletContext().setAttribute(ServiceConstant.RENT_SERVICE_CONTEXT, rentService);
 
         String picturesFolder = context.getServletContext().getInitParameter(Attributes.PICTURES_FOLDER);

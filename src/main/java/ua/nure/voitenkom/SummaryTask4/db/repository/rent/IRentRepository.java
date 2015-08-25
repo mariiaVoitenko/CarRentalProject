@@ -17,11 +17,7 @@ public interface IRentRepository extends IAbstractRepository<Rent> {
 
     List<Rent> selectRentsForDates(Timestamp start, Timestamp end);
 
-    List<Rent> selectPayedUnapproved();
-
     void updateDecline(Rent rent);
-
-    List<Rent> selectReturnedCars();
 
     void updateReturnedState(int rentId);
 
@@ -30,5 +26,7 @@ public interface IRentRepository extends IAbstractRepository<Rent> {
     void updateFinishedState(int rentId);
 
     List<ApplicationFormBean> getApplications();
+
+    List<ApplicationFormBean> getReturned();
 
 }

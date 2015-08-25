@@ -41,16 +41,14 @@ public class ReturnedCarsServlet extends AdminServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkManagerRole(request, response);
-        request.setAttribute(Attributes.RENTS, rentService.getReturnedRentFormBeanList());
+        request.setAttribute(Attributes.RENTS, rentService.getReturned());
         logger.debug("Rents have been got");
         request.setAttribute(Attributes.DAMAGES, damageService.getAll());
 
         request.setAttribute(Attributes.BRANDS, brandService.getAll());
         request.setAttribute(Attributes.CLASSES, majorityClassService.getAll());
 
-        RequestDispatcher requestDispatcher = request
-                .getRequestDispatcher(PageNames.RETURNED_CARS_PAGE);
-        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher(PageNames.RETURNED_CARS_PAGE).forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -118,7 +118,6 @@ public final class StatementsContainer {
     //4. start_date = end
     public static final String SQL_SELECT_RENT_BY_DATE = "SELECT * FROM rents WHERE start_date >= ? AND end_date <= ? " +
             "OR end_date >= ? AND start_date <= ?";
-    public static final String SQL_SELECT_RETURNED_CARS = "SELECT * FROM rents WHERE is_returned  = 1 AND is_finished = 0";
     public static final String SQL_SELECT_APPLICATIONS = "SELECT cars.model, brands.name AS brand_name, cars.photo, cars.id " +
             "AS car_id, rents.id AS rent_id, cars.doors_count, cars.sits_count, cars.big_luggage_count, " +
             "cars.small_luggage_count, cars.has_conditioner, checks.sum,\n" +
@@ -127,6 +126,15 @@ public final class StatementsContainer {
             "FROM rents, checks, cars, classes, colors, brands, users\n" +
             "WHERE checks.is_payed = 1 AND rents.is_approved = 0 AND checks.id = rents.checks_id AND ISNULL(declines_id)\n" +
             "AND rents.cars_id=cars.id AND rents.checks_id = checks.id AND rents.users_id = users.id AND " +
+            "cars.brands_id=brands.id AND cars.colors_id=colors.id AND cars.classes_id=classes.id";
+    public static final String SQL_SELECT_RETURNED_CARS = "SELECT cars.model, brands.name as brand_name, cars.photo, cars.id  " +
+            "as car_id, rents.id as rent_id, cars.doors_count, cars.sits_count, cars.big_luggage_count, " +
+            " cars.small_luggage_count, cars.has_conditioner, checks.sum, users.id AS user_id, \n" +
+            "users.full_name, users.passport_number, rents.start_date, rents.end_date, rents.is_driven," +
+            " classes.name  as class_name, colors.name as color_name FROM rents, checks, cars, classes, colors, brands, users\n" +
+            "WHERE rents.is_approved = 1 AND rents.is_returned = 1 AND rents.is_finished = 0  " +
+            "AND checks.id = rents.checks_id AND ISNULL(declines_id) AND rents.cars_id=cars.id AND rents.checks_id =" +
+            " checks.id AND rents.users_id = users.id AND\n" +
             "cars.brands_id=brands.id AND cars.colors_id=colors.id AND cars.classes_id=classes.id";
 
     // roles

@@ -28,18 +28,16 @@ public class RentService implements IRentService {
     private final ICheckRepository checkRepository;
     private final ICarRepository carRepository;
     private final IDeclineRepository declineRepository;
-    private final IUserRepository userRepository;
 
 
     public RentService(ITransactionManager transactionManager, IRentRepository rentRepository,
                        ICheckRepository checkRepository, IDeclineRepository declineRepository,
-                       ICarRepository carRepository, IUserRepository userRepository) {
+                       ICarRepository carRepository) {
         this.transactionManager = transactionManager;
         this.rentRepository = rentRepository;
         this.checkRepository = checkRepository;
         this.carRepository = carRepository;
         this.declineRepository = declineRepository;
-        this.userRepository = userRepository;
     }
 
     @Override
@@ -71,16 +69,6 @@ public class RentService implements IRentService {
             public Void doOperation() {
                 rentRepository.updateDecline(rent);
                 return null;
-            }
-        });
-    }
-
-    @Override
-    public List<Rent> selectReturnedCarRents() {
-        return transactionManager.doInTransaction(new Operation<List<Rent>>() {
-            @Override
-            public List<Rent> doOperation() {
-                return rentRepository.selectReturnedCars();
             }
         });
     }
@@ -159,21 +147,6 @@ public class RentService implements IRentService {
     }
 
     @Override
-    public RentFormBean rentToRentFormBean(final Rent rent) {
-        return transactionManager.doInTransaction(new Operation<RentFormBean>() {
-            @Override
-            public RentFormBean doOperation() {
-                Check check = checkRepository.selectById(rent.getCheckId());
-                CarFormBean car = carRepository.getFullCarInformationById(rent.getCarId());
-                User user = userRepository.selectById(rent.getUserId());
-                return new RentFormBean(rent.isDriven(), car, check,
-                        timestampToString(rent.getStartDate()), timestampToString(rent.getEndDate()), user, rent.getId());
-            }
-        });
-    }
-
-
-    @Override
     public Rent selectById(final int id) {
         return transactionManager.doInTransaction(new Operation<Rent>() {
             @Override
@@ -184,33 +157,21 @@ public class RentService implements IRentService {
     }
 
     @Override
-    public List<Rent> selectPayedUnapproved() {
-        return transactionManager.doInTransaction(new Operation<List<Rent>>() {
-            @Override
-            public List<Rent> doOperation() {
-                return rentRepository.selectPayedUnapproved();
-            }
-        });
-    }
-
-    @Override
-    public List<RentFormBean> getReturnedRentFormBeanList() {
-        List<Rent> returnedCarRents = selectReturnedCarRents();
-        List<RentFormBean> returnedRentFormBeansList = new ArrayList<>();
-        if (returnedCarRents.size() != 0) {
-            for (Rent rent : returnedCarRents) {
-                returnedRentFormBeansList.add(rentToRentFormBean(rent));
-            }
-        }
-        return returnedRentFormBeansList;
-    }
-
-    @Override
     public List<ApplicationFormBean> getApplications() {
         return transactionManager.doInTransaction(new Operation<List<ApplicationFormBean>>() {
             @Override
             public List<ApplicationFormBean> doOperation() {
                 return rentRepository.getApplications();
+            }
+        });
+    }
+
+    @Override
+    public List<ApplicationFormBean> getReturned() {
+        return transactionManager.doInTransaction(new Operation<List<ApplicationFormBean>>() {
+            @Override
+            public List<ApplicationFormBean> doOperation() {
+                return rentRepository.getReturned();
             }
         });
     }

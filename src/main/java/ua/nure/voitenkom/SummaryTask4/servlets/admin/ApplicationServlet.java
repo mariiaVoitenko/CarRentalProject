@@ -9,14 +9,11 @@ import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassServic
 import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
-import ua.nure.voitenkom.SummaryTask4.formbean.RentFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ApplicationServlet extends AdminServlet {
@@ -39,6 +36,7 @@ public class ApplicationServlet extends AdminServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkManagerRole(request, response);
         setAttributes(request);
+        logger.debug("Applications have been got");
         request.getRequestDispatcher(PageNames.APPLICATIONS_PAGE).forward(request, response);
     }
 
@@ -46,6 +44,7 @@ public class ApplicationServlet extends AdminServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         checkManagerRole(request, response);
         setAttributes(request);
+        logger.debug("Applications have been got");
         request.getRequestDispatcher(PageNames.APPLICATIONS_PAGE).forward(request, response);
     }
 

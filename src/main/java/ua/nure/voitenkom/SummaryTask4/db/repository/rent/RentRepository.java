@@ -72,11 +72,6 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     }
 
     @Override
-    public List<Rent> selectPayedUnapproved() {
-        return super.selectAll(StatementsContainer.SQL_SELECT_ALL_PAYED_UNAPPROVED_RENTS, new RentExtractor());
-    }
-
-    @Override
     public void updateDecline(Rent rent) {
         String sql = StatementsContainer.SQL_UPDATE_RENT_DECLINE_BY_ID;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
@@ -103,14 +98,18 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     public List<ApplicationFormBean> getApplications() {
         String sql = StatementsContainer.SQL_SELECT_APPLICATIONS;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            ApplicationExtractor extractor = new ApplicationExtractor();
-            List<ApplicationFormBean> applicationFormBeans = new ArrayList<>();
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                while (resultSet.next()) {
-                    applicationFormBeans.add(extractor.extract(resultSet));
-                }
-            }
-            return applicationFormBeans;
+            return extract(preparedStatement);
+        } catch (SQLException e) {
+            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
+            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
+        }
+    }
+
+    @Override
+    public List<ApplicationFormBean> getReturned() {
+        String sql = StatementsContainer.SQL_SELECT_RETURNED_CARS;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            return extract(preparedStatement);
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
@@ -120,11 +119,6 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
     @Override
     public void updateApprovedState(int rentId) {
         updateState(rentId, StatementsContainer.SQL_UPDATE_APPROVED_STATE_BY_ID);
-    }
-
-    @Override
-    public List<Rent> selectReturnedCars() {
-        return super.selectAll(StatementsContainer.SQL_SELECT_RETURNED_CARS, new RentExtractor());
     }
 
     @Override
@@ -167,6 +161,17 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");
         }
+    }
+
+    private List<ApplicationFormBean> extract(PreparedStatement preparedStatement) throws SQLException {
+        ApplicationExtractor extractor = new ApplicationExtractor();
+        List<ApplicationFormBean> applicationFormBeans = new ArrayList<>();
+        try (ResultSet resultSet = preparedStatement.executeQuery()) {
+            while (resultSet.next()) {
+                applicationFormBeans.add(extractor.extract(resultSet));
+            }
+        }
+        return applicationFormBeans;
     }
 
 }

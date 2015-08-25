@@ -19,13 +19,9 @@ public interface IRentService {
 
     List<RentFormBean> getUserRents(List<Rent> rentList);
 
-    List<Rent> selectPayedUnapproved();
-
     Rent selectById(int id);
 
     void updateDecline(Rent rent);
-
-    List<Rent> selectReturnedCarRents();
 
     void updateReturnedState(int rentId);
 
@@ -33,9 +29,7 @@ public interface IRentService {
 
     void updateApprovedState(int rentId);
 
-    RentFormBean rentToRentFormBean(Rent rent);
-
-    List<RentFormBean> getReturnedRentFormBeanList();
-
     List<ApplicationFormBean> getApplications();
+
+    List<ApplicationFormBean> getReturned();
 }
