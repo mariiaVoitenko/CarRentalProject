@@ -18,7 +18,7 @@
             <br>
             <br>
 
-            <form action="rentCar" method="GET">
+            <form action="rentCar" method="GET" onsubmit="return checkForm(this);">
                 <div>
                     <fmt:message key="rental_start"/> : <input type="date" name="start">
                 </div>
@@ -32,7 +32,7 @@
                 <div>
                     <fmt:message key="order_driver"/>&nbsp;<input name="driver" type="checkbox" checked>
                 </div>
-                <button class="btn btn-large btn-success marginned" type="submit"><fmt:message key="rent"/></button>
+                <button class="btn btn-large btn-success marginned" type="submit" ><fmt:message key="rent"/></button>
             </form>
         </div>
     </div>
@@ -67,6 +67,6 @@
     <h3 class="middle-headline">${message}</h3>
 </div>
 <%@ include file="/WEB-INF/footer.jsp" %>
-
+<script src="<c:url value="/js/dateValidation.js"/>"></script>
 </body>
 </html>
