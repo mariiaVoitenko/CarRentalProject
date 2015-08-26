@@ -4,13 +4,14 @@ import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Status;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.StatusExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
 
 import java.util.List;
 
 public class StatusRepository extends AbstractSimpleEntityRepository<Status> implements IStatusRepository {
 
-    public StatusRepository(ConnectionHolder connectionHolder) {
+    public StatusRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 

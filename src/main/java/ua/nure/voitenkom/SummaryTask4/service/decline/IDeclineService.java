@@ -9,4 +9,6 @@ public interface IDeclineService {
     Decline selectById(int id);
 
     List<Decline> getAll();
+
+    Decline selectByName(String name);
 }

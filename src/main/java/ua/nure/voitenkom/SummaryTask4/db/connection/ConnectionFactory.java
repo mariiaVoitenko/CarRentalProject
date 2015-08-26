@@ -8,7 +8,7 @@ import ua.nure.voitenkom.SummaryTask4.db.DatabaseProperties;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ConnectionFactory {
+public class ConnectionFactory implements IConnectionFactory{
 
     private static final Logger logger = LoggerFactory.getLogger(ConnectionFactory.class);
     private HikariDataSource dataSource = new HikariDataSource();

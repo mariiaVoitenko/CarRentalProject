@@ -9,6 +9,7 @@ import ua.nure.voitenkom.SummaryTask4.db.extractor.CarExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CarFormBeanExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
@@ -23,7 +24,7 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
 
     private static final Logger logger = LoggerFactory.getLogger(CarRepository.class);
 
-    public CarRepository(ConnectionHolder connectionHolder) {
+    public CarRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 
@@ -42,29 +43,10 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
         super.deleteById(id, StatementsContainer.SQL_DELETE_CAR_BY_ID);
     }
 
-    @Override
-    public String getBrandName(int id) {
-        return getInnerEntityName(id, StatementsContainer.SQL_SELECT_CAR_BRAND_BY_ID);
-    }
-
-    @Override
-    public String getClassName(int id) {
-        return getInnerEntityName(id, StatementsContainer.SQL_SELECT_CAR_CLASS_BY_ID);
-    }
 
     @Override
     public List<Car> selectAll(String sql, IExtractor<Car> extractor) {
         return super.selectAll(StatementsContainer.SQL_SELECT_ALL_CARS, extractor);
-    }
-
-    @Override
-    public void updateStatus(Car car) {
-        updateByCriteria(car, StatementsContainer.SQL_UPDATE_CAR_STATUS_BY_ID);
-    }
-
-    @Override
-    public void updatePrice(Car car) {
-        updateByCriteria(car, StatementsContainer.SQL_UPDATE_CAR_PRICE_BY_ID);
     }
 
     @Override
@@ -119,16 +101,6 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
     }
 
     @Override
-    public List<Car> getCarsByBrandId(int id) {
-        return getCarByCriteria(id, StatementsContainer.SQL_SELECT_CARS_BY_BRAND_ID);
-    }
-
-    @Override
-    public List<Car> getCarsByClassId(int id) {
-        return getCarByCriteria(id, StatementsContainer.SQL_SELECT_CARS_BY_CLASS_ID);
-    }
-
-    @Override
     public List<CarFormBean> getSortedCars(String sql) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             return extract(preparedStatement);
@@ -156,44 +128,6 @@ public class CarRepository extends AbstractRepository<Car> implements ICarReposi
             preparedStatement.setString(12, car.getPhotoPath());
             preparedStatement.setInt(13, car.getId());
             preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
-            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
-        }
-    }
-
-    private List<Car> getCarByCriteria(int id, String sql) {
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setInt(1, id);
-            return executeQuery(preparedStatement, new CarExtractor());
-        } catch (SQLException e) {
-            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
-            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
-        }
-    }
-
-    private void updateByCriteria(Car car, String sql) {
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setInt(1, car.getStatusId());
-            preparedStatement.setInt(2, car.getId());
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
-            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
-        }
-    }
-
-    private String getInnerEntityName(int id, String sql) {
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setInt(1, id);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                List<String> result = new ArrayList<>();
-                while (resultSet.next()) {
-                    String record = resultSet.getString(FieldsContainer.FIELD_NAME);
-                    result.add(record);
-                }
-                return result.get(0);
-            }
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
             throw new DatabaseException("Fail while executing sql ['" + sql + "']");

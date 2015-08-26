@@ -36,4 +36,15 @@ public class DeclineService implements IDeclineService {
             }
         });
     }
+
+    @Override
+    public Decline selectByName(final String name) {
+        return transactionManager.doInTransaction(new Operation<Decline>() {
+            @Override
+            public Decline doOperation() {
+                return declineRepository.findByName(name);
+            }
+        });
+    }
+
 }

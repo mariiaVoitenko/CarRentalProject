@@ -6,6 +6,10 @@ public class Brand extends SimpleEntity {
         super(id, name);
     }
 
+    public Brand(String name) {
+        super(name);
+    }
+
     @Override
     public String toString() {
         return "Brand{" + "id='" + this.getId() + '\'' + "name='" + this.getName() + '\'' + '}';

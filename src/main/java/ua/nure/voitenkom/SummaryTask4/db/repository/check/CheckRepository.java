@@ -7,6 +7,7 @@ import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Check;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CheckExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
@@ -19,7 +20,7 @@ public class CheckRepository extends AbstractRepository<Check> implements ICheck
 
     private static final Logger logger = LoggerFactory.getLogger(CheckRepository.class);
 
-    public CheckRepository(ConnectionHolder connectionHolder) {
+    public CheckRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 

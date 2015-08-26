@@ -6,6 +6,10 @@ public class Color extends SimpleEntity {
         super(id, name);
     }
 
+    public Color(String name) {
+        super(name);
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Color{");

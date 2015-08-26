@@ -4,13 +4,14 @@ import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.BrandExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
 
 import java.util.List;
 
 public class BrandRepository extends AbstractSimpleEntityRepository<Brand> implements IBrandRepository {
 
-    public BrandRepository(ConnectionHolder connectionHolder) {
+    public BrandRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 

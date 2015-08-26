@@ -1,9 +1,8 @@
-package filter;
+package ua.nure.voitenkom.SummaryTask4.filter;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.powermock.api.support.membermodification.MemberModifier;
-import ua.nure.voitenkom.SummaryTask4.filter.LocaleFilter;
 import ua.nure.voitenkom.SummaryTask4.service.locale.ILocaleService;
 
 import javax.servlet.FilterChain;

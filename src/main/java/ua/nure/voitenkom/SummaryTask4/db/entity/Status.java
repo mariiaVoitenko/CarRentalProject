@@ -6,6 +6,10 @@ public class Status extends SimpleEntity {
         super(id, name);
     }
 
+    public Status(String name) {
+        super(name);
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Status{");

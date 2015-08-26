@@ -2,14 +2,122 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a9e38f4-19db-438a-b779-6ca3564f2bcf" name="Default" comment="Some beans changed. No linked entities in beans, just IDs. Some extractors">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractSimpleEntityRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractSimpleEntityRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractSimpleEntityRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractSimpleEntityRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Brand.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Brand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Brand.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Brand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/car/CarRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/car/CarRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/car/CarRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/car/CarRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/check/CheckRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/check/CheckRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/check/CheckRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/check/CheckRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Color.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Color.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damagecheck/DamageCheckRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damagecheck/DamageCheckRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damagecheck/DamageCheckRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damagecheck/DamageCheckRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/decline/DeclineService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/decline/DeclineService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/decline/DeclineService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/decline/DeclineService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeleteCarServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeleteCarServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeleteCarServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeleteCarServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/EditCarServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/EditCarServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/EditCarServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/EditCarServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/decline/IDeclineService.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/service/decline/IDeclineService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/decline/IDeclineService.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/service/decline/IDeclineService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/LoginServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/LoginServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/LoginServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/LoginServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/MajorityClass.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/MajorityClass.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/MajorityClass.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/MajorityClass.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/MakeManagerServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/MakeManagerServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/MakeManagerServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/MakeManagerServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ManagersServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ManagersServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ManagersServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ManagersServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationConfirmationServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationConfirmationServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationConfirmationServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationConfirmationServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/user/ReturnCarServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/user/ReturnCarServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/user/ReturnCarServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/user/ReturnCarServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Role.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Role.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Role.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Role.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SaveCarServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SaveCarServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SaveCarServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SaveCarServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Status.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Status.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Status.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/entity/Status.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/UsersServlet.class" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/UsersServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/UsersServlet.class" afterPath="$PROJECT_DIR$/target/classes/ua/nure/voitenkom/SummaryTask4/servlets/admin/UsersServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractSimpleEntityRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractSimpleEntityRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Brand.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Brand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/CarRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/CarRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/CarService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/CarService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/check/CheckRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/check/CheckRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Color.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Color.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damagecheck/DamageCheckRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damagecheck/DamageCheckRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeclineApplicationServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeclineApplicationServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeleteCarServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeleteCarServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/EditCarServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/EditCarServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/MakeManagerServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/MakeManagerServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ManagersServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ManagersServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SaveCarServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SaveCarServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/decline/DeclineService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/decline/DeclineService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/ICarRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/ICarRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/ICarService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/ICarService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/decline/IDeclineService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/decline/IDeclineService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/MajorityClass.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/MajorityClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Status.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Status.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" afterPath="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/locale/locale_en.properties" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/locale/locale_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/locale/locale_en.properties" afterPath="$PROJECT_DIR$/target/classes/locale/locale_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/locale/locale_ru.properties" afterPath="$PROJECT_DIR$/src/main/resources/locale/locale_ru.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/locale/locale_ru.properties" afterPath="$PROJECT_DIR$/target/CarRental-1.0-SNAPSHOT/WEB-INF/classes/locale/locale_ru.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/locale/locale_ru.properties" afterPath="$PROJECT_DIR$/target/classes/locale/locale_ru.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\EPAM\CarRentalProject\Project\src\test\filter\LocaleFilterTest.java" afterPath="$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/filter/LocaleFilterTest.java" />
     </list>
     <ignored path="CarRental.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +134,29 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CarRental$RoleServiceTest.coverage" NAME="RoleServiceTest Coverage Results" MODIFIED="1440539850383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>service.role.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/CarRental$LocaleFilterTest.coverage" NAME="LocaleFilterTest Coverage Results" MODIFIED="1440081068671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CarRental$index_jsp.coverage" NAME="index.jsp Coverage Results" MODIFIED="1439313142305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CarRental$ua_in_Project.coverage" NAME="ua in Project Coverage Results" MODIFIED="1440592099850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CarRental$UserServiceTest.coverage" NAME="UserServiceTest Coverage Results" MODIFIED="1440579357915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>service.user.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CarRental$ColorServiceTest.coverage" NAME="ColorServiceTest Coverage Results" MODIFIED="1440570419527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>service.color.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CarRental$index_jsp.coverage" NAME="index.jsp Coverage Results" MODIFIED="1440587524944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CarRental$BrandServiceTest.coverage" NAME="BrandServiceTest Coverage Results" MODIFIED="1440570403595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>service.brand.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CarRental$DeclineServiceTest.coverage" NAME="DeclineServiceTest Coverage Results" MODIFIED="1440570428401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>service.decline.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -40,11 +167,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UsersServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/UsersServlet.java">
+      <file leaf-file-name="CarServiceTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/car/CarServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.7105263">
+              <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,99 +179,99 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetFinishedRentServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.java">
+      <file leaf-file-name="ICarService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/ICarService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SetDamageRentServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="68" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="68" />
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaveCarServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SaveCarServlet.java">
+      <file leaf-file-name="CarService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/CarService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="102" selection-start-line="75" selection-start-column="102" selection-end-line="75" selection-end-column="102" />
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReturnedCarsServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java">
+      <file leaf-file-name="ICarRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/ICarRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="94" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManagersServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ManagersServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MakeManagerServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/MakeManagerServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditCarServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/EditCarServlet.java">
+      <file leaf-file-name="CarRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/CarRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteCarServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeleteCarServlet.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/user/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.3448277">
+              <caret line="19" column="82" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#1094#1095#0" expanded="true" />
+                <element signature="e#1464#1465#0" expanded="true" />
+                <element signature="e#1540#1541#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeclineApplicationServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeclineApplicationServlet.java">
+      <file leaf-file-name="IUserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/IUserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7323077">
-              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -180,50 +307,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/searchPanel.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/sorting.js" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/CarService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/holder/ConnectionHolder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/filter/LocaleFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/AddCarServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/extractor/RentFormBeanExtractor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/extractor/ApplicationExtractor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/ApplicationFormBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/applications.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/returnedCars.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ApplicationServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/AcceptApplicationServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/FieldsContainer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/extractor/HistoryExtractor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/formbean/HistoryFormBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/IRentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/history.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/MainServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/PhotoServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/SortingServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/ErrorServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/HistoryServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/ProfileServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/EntitiesValues.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Rent.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/RentCarServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/ReturnCarServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/authentication/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/authentication/LogoutServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationConfirmationServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/UsersServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SaveCarServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ManagersServlet.java" />
@@ -231,6 +314,50 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/EditCarServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeleteCarServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeclineApplicationServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/locale/locale_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/locale/locale_ru.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Role.java" />
+        <option value="$PROJECT_DIR$/src/test/service/brand/BrandSeviceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Brand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Color.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/MajorityClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Status.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/decline/IDeclineService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/decline/DeclineService.java" />
+        <option value="$PROJECT_DIR$/src/test/service/status/StatusServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/service/role/RoleServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/service/majorityclass/MajorityClassServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/service/decline/DeclineServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/service/color/ColorServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/service/brand/BrandServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractSimpleEntityRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/check/CheckRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damagecheck/DamageCheckRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/service/user/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
+        <option value="$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/AllTests.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/brand/BrandServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/user/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/car/CarServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/ICarService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/CarService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/ICarRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/CarRepository.java" />
       </list>
     </option>
   </component>
@@ -317,6 +444,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -348,6 +478,302 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="status" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="role" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="majorityclass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="decline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="color" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="car" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="brand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SummaryTask4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -367,111 +793,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -530,140 +852,9 @@
               <option name="myItemId" value="SummaryTask4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="validation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SummaryTask4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SummaryTask4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SummaryTask4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SummaryTask4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -686,6 +877,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\EPAM\CarRentalProject\Project\src\main\resources" />
       <recent name="E:\EPAM\CarRentalProject\Project\src\main\webapp\js" />
       <recent name="E:\EPAM\CarRentalProject\Project\src\main\webapp\images" />
       <recent name="E:\EPAM\CarRentalProject\Project\src\main\java\ua\nure\voitenkom\SummaryTask4\service\locale" />
@@ -700,28 +892,135 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="ua.nure.voitenkom.SummaryTask4.db.repository" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ua.nure.voitenkom.SummaryTask4" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ua.nure.voitenkom.SummaryTask4.listener" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.index.jsp">
-    <configuration default="false" name="LocaleFilterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ua in Project">
+    <configuration default="false" name="RoleServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="service.*" />
+          <option name="PATTERN" value="ua.nure.voitenkom.SummaryTask4.service.role.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Project" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="filter" />
-      <option name="MAIN_CLASS_NAME" value="filter.LocaleFilterTest" />
+      <option name="PACKAGE_NAME" value="ua.nure.voitenkom.SummaryTask4.service.role" />
+      <option name="MAIN_CLASS_NAME" value="ua.nure.voitenkom.SummaryTask4.service.role.RoleServiceTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BrandServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ua.nure.voitenkom.SummaryTask4.brand.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Project" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="service.brand" />
+      <option name="MAIN_CLASS_NAME" value="ua.nure.voitenkom.SummaryTask4.brand.BrandServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ColorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ua.nure.voitenkom.SummaryTask4.service.color.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Project" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.nure.voitenkom.SummaryTask4.service.color" />
+      <option name="MAIN_CLASS_NAME" value="ua.nure.voitenkom.SummaryTask4.service.color.ColorServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DeclineServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ua.nure.voitenkom.SummaryTask4.service.decline.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Project" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.nure.voitenkom.SummaryTask4.service.decline" />
+      <option name="MAIN_CLASS_NAME" value="ua.nure.voitenkom.SummaryTask4.service.decline.DeclineServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ua.nure.voitenkom.SummaryTask4.service.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Project" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="D:/JAVA/jdk1.8.0_45/jre" />
+      <option name="PACKAGE_NAME" value="ua.nure.voitenkom.SummaryTask4.service.user" />
+      <option name="MAIN_CLASS_NAME" value="ua.nure.voitenkom.SummaryTask4.service.user.UserServiceTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -1157,15 +1456,45 @@
       </ConfigurationWrapper>
       <method />
     </configuration>
-    <list size="4">
+    <configuration default="false" name="ua in Project" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Project" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="ua" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.hello.html" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.index.jsp" />
       <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0.62" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LocaleFilterTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RoleServiceTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BrandServiceTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ColorServiceTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.DeclineServiceTest" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.UserServiceTest" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.ua in Project" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LocaleFilterTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserServiceTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DeclineServiceTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ColorServiceTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BrandServiceTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RoleServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1225,7 +1554,8 @@
       <workItem from="1440361975263" duration="8308000" />
       <workItem from="1440413525520" duration="27150000" />
       <workItem from="1440483459157" duration="17825000" />
-      <workItem from="1440525774457" duration="3852000" />
+      <workItem from="1440525774457" duration="8115000" />
+      <workItem from="1440568907727" duration="13672000" />
     </task>
     <task id="LOCAL-00001" summary="Some beans. Works">
       <created>1438281940901</created>
@@ -1255,42 +1585,51 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440526000" />
+    <option name="totallyTimeSpent" value="458461000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.50213677" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.49786323" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2943723" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19936034" sideWeight="0.48108107" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18763326" sideWeight="0.51891893" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22294372" sideWeight="0.49679488" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27056277" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20309168" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19349681" sideWeight="0.48108107" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18763326" sideWeight="0.51891893" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26623377" sideWeight="0.49679488" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1314,7 +1653,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="154" />
+      <option name="time" value="157" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1323,122 +1662,51 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/IRentService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#130#131#0" expanded="false" />
+            <element signature="e#161#162#0" expanded="false" />
+            <element signature="e#220#221#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/role/IRoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/rent/RentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="85" selection-start-line="127" selection-start-column="85" selection-end-line="127" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/IRentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="76" selection-start-line="100" selection-start-column="76" selection-end-line="100" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/locale_ru.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/IConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/converter/ISQLBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/converter/SQLBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/role/RoleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Brand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Check.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="e#223#224#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Color.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/DamageCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="e#223#224#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1446,13 +1714,283 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Decline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#229#230#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/MajorityClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="e#247#248#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="e#226#227#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/damage/DamageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/decline/IDeclineService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/decline/DeclineService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+          <folding>
+            <element signature="e#1449#1623#0" expanded="false" />
+            <element signature="e#1622#1623#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/role/RoleServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/status/StatusServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/decline/DeclineServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/color/ColorServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="72" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/transaction/ITransactionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/transaction/TransactionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+          <folding>
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/AbstractSimpleEntityRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/brand/BrandRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding>
+            <element signature="e#656#657#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/connection/ConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/check/CheckRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="e#996#997#0" expanded="false" />
+            <element signature="e#1035#1036#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/color/ColorRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#656#657#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damage/DamageRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="e#1004#1005#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/damagecheck/DamageCheckRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="e#959#960#0" expanded="false" />
+            <element signature="e#998#999#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/decline/DeclineRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="e#670#671#0" expanded="false" />
+            <element signature="e#709#710#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/majorityclass/MajorityClassRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="e#712#713#0" expanded="false" />
+            <element signature="e#751#752#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/role/RoleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#688#689#0" expanded="false" />
+            <element signature="e#1221#1222#0" expanded="false" />
+            <element signature="e#1300#1301#0" expanded="false" />
+            <element signature="e#1351#1352#0" expanded="false" />
+            <element signature="e#1428#1429#0" expanded="false" />
+            <element signature="e#1479#1480#0" expanded="false" />
+            <element signature="e#1550#1551#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/status/StatusRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#663#664#0" expanded="false" />
+            <element signature="e#702#703#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/listener/ServiceContextInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="128" column="53" selection-start-line="128" selection-start-column="53" selection-end-line="128" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3484087">
+          <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/StatementsContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="182" column="96" selection-start-line="182" selection-start-column="96" selection-end-line="182" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/rent/RentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1464,103 +2002,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/MajorityClass.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/SimpleEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Role.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/SortingServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/PhotoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/MainServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/ErrorServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/util/EntitiesValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/entity/Rent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/validation/IValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/history.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="94" selection-start-line="81" selection-start-column="94" selection-end-line="81" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/locale_en.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/validation/DateValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/authentication/AuthenticationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1568,174 +2024,125 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/HistoryServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/ProfileServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/RentCarServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="172" column="21" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="21" />
-          <folding>
-            <element signature="method#loadLists#0;class#RentCarServlet#0" expanded="false" />
-            <element signature="method#writeMessage#0;class#RentCarServlet#0" expanded="false" />
-            <element signature="method#insertCheck#0;class#RentCarServlet#0" expanded="false" />
-            <element signature="method#sendMail#0;class#RentCarServlet#0" expanded="false" />
-            <element signature="method#createPDF#0;class#RentCarServlet#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/user/ReturnCarServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/authentication/LogoutServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/brand/BrandService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/authentication/LoginServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/brand/BrandServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.7368421">
+          <caret line="55" column="5" selection-start-line="23" selection-start-column="4" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/authentication/RegistrationConfirmationServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3448277">
+          <caret line="19" column="82" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
+          <folding>
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/AcceptApplicationServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/user/IUserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/UsersServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/user/IUserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/majorityclass/MajorityClassServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetFinishedRentServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/user/UserServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.6315789">
+          <caret line="97" column="3" selection-start-line="97" selection-start-column="3" selection-end-line="104" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SetDamageRentServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/ICarService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="68" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="68" />
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/SaveCarServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/service/car/CarService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="102" selection-start-line="75" selection-start-column="102" selection-end-line="75" selection-end-column="102" />
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ReturnedCarsServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/ICarRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="94" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/db/repository/car/CarRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/nure/voitenkom/SummaryTask4/service/car/CarServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7105263">
+          <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/ManagersServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/MakeManagerServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/EditCarServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeleteCarServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/nure/voitenkom/SummaryTask4/servlets/admin/DeclineApplicationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7323077">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>

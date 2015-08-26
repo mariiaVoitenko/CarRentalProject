@@ -69,49 +69,6 @@ public class CarService implements ICarService {
     }
 
     @Override
-    public String getBrandName(final int id) {
-        return transactionManager.doInTransaction(new Operation<String>() {
-            @Override
-            public String doOperation() {
-                return carRepository.getBrandName(id);
-            }
-        });
-    }
-
-    @Override
-    public String getClassName(final int id) {
-        return transactionManager.doInTransaction(new Operation<String>() {
-            @Override
-            public String doOperation() {
-                return carRepository.getClassName(id);
-            }
-        });
-    }
-
-
-    @Override
-    public void updateStatus(final Car car) {
-        transactionManager.doInTransaction(new Operation<Void>() {
-            @Override
-            public Void doOperation() {
-                carRepository.updateStatus(car);
-                return null;
-            }
-        });
-    }
-
-    @Override
-    public void updatePrice(final Car car) {
-        transactionManager.doInTransaction(new Operation<Void>() {
-            @Override
-            public Void doOperation() {
-                carRepository.updatePrice(car);
-                return null;
-            }
-        });
-    }
-
-    @Override
     public Car getById(final int id) {
         return transactionManager.doInTransaction(new Operation<Car>() {
             @Override
@@ -152,26 +109,6 @@ public class CarService implements ICarService {
             @Override
             public CarFormBean doOperation() {
                 return carRepository.getFullCarInformationById(id);
-            }
-        });
-    }
-
-    @Override
-    public List<Car> getCarsByBrandId(final int id) {
-        return transactionManager.doInTransaction(new Operation<List<Car>>() {
-            @Override
-            public List<Car> doOperation() {
-                return carRepository.getCarsByBrandId(id);
-            }
-        });
-    }
-
-    @Override
-    public List<Car> getCarsByClassId(final int id) {
-        return transactionManager.doInTransaction(new Operation<List<Car>>() {
-            @Override
-            public List<Car> doOperation() {
-                return carRepository.getCarsByClassId(id);
             }
         });
     }

@@ -9,6 +9,10 @@ public abstract class SimpleEntity extends Entity {
         this.name = name;
     }
 
+    public SimpleEntity(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

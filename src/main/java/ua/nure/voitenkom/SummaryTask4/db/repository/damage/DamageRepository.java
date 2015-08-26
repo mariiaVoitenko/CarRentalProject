@@ -7,6 +7,7 @@ import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.DamageExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
@@ -19,7 +20,7 @@ public class DamageRepository extends AbstractRepository<Damage> implements IDam
 
     private static final Logger logger = LoggerFactory.getLogger(DamageRepository.class);
 
-    public DamageRepository(ConnectionHolder connectionHolder) {
+    public DamageRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 

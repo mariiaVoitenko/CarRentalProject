@@ -4,13 +4,14 @@ import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.MajorityClass;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.MajorityClassExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
 
 import java.util.List;
 
 public class MajorityClassRepository extends AbstractSimpleEntityRepository<MajorityClass> implements IMajorityClassRepository {
 
-    public MajorityClassRepository(ConnectionHolder connectionHolder) {
+    public MajorityClassRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 

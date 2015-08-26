@@ -6,6 +6,10 @@ public class MajorityClass extends SimpleEntity {
         super(id, name);
     }
 
+    public MajorityClass(String name) {
+        super(name);
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("MajorityClass{");

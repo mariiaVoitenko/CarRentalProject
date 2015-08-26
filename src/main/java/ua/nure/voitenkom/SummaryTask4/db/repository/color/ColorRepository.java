@@ -4,13 +4,14 @@ import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Color;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.ColorExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
 
 import java.util.List;
 
 public class ColorRepository extends AbstractSimpleEntityRepository<Color> implements IColorRepository {
 
-    public ColorRepository(ConnectionHolder connectionHolder) {
+    public ColorRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 

@@ -8,14 +8,6 @@ import java.util.List;
 
 public interface ICarRepository extends IAbstractRepository<Car> {
 
-    String getBrandName(int id);
-
-    String getClassName(int id);
-
-    void updateStatus(Car car);
-
-    void updatePrice(Car car);
-
     void insert(Car car);
 
     List<CarFormBean> getFullCarInformation();
@@ -23,10 +15,6 @@ public interface ICarRepository extends IAbstractRepository<Car> {
     CarFormBean getFullCarInformationById(int id);
 
     void updateCar(Car car);
-
-    List<Car> getCarsByBrandId(int id);
-
-    List<Car> getCarsByClassId(int id);
 
     List<CarFormBean> getSortedCars(String sql);
 

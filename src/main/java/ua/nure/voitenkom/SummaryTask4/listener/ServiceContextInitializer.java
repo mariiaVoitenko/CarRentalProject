@@ -2,8 +2,10 @@ package ua.nure.voitenkom.SummaryTask4.listener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.connection.IConnectionFactory;
 import ua.nure.voitenkom.SummaryTask4.db.converter.ISQLBuilder;
 import ua.nure.voitenkom.SummaryTask4.db.converter.SQLBuilder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.service.pdf.IPDFService;
 import ua.nure.voitenkom.SummaryTask4.service.pdf.PDFService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
@@ -76,7 +78,7 @@ public class ServiceContextInitializer implements ServletContextListener {
     public void contextInitialized(ServletContextEvent context) {
         logger.debug("Initializing beans");
 
-        ConnectionHolder connectionHolder = new ConnectionHolder();
+        IConnectionHolder connectionHolder = new ConnectionHolder();
         ITransactionManager transactionManager = new TransactionManager(new ConnectionFactory(), connectionHolder);
 
         IBrandRepository brandRepository = new BrandRepository(connectionHolder);

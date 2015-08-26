@@ -37,5 +37,5 @@ public class DeclineApplicationServlet extends AdminServlet {
         rentService.updateDecline(rent);
         logger.debug("Rent with id {} was not accepted", id);
     }
-    
+
 }

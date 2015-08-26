@@ -6,6 +6,10 @@ public class Role extends SimpleEntity {
         super(id, name);
     }
 
+    public Role(String name) {
+        super(name);
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Role{");

@@ -4,13 +4,14 @@ import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.RoleExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
 
 import java.util.List;
 
 public class RoleRepository extends AbstractSimpleEntityRepository<Role> implements IRoleRepository {
 
-    public RoleRepository(ConnectionHolder connectionHolder) {
+    public RoleRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 

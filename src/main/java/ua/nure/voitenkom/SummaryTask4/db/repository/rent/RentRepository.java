@@ -8,6 +8,7 @@ import ua.nure.voitenkom.SummaryTask4.db.extractor.ApplicationExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.HistoryExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.RentExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
@@ -24,7 +25,7 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
 
     private static final Logger logger = LoggerFactory.getLogger(RentRepository.class);
 
-    public RentRepository(ConnectionHolder connectionHolder) {
+    public RentRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 

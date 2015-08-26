@@ -2,9 +2,10 @@ package ua.nure.voitenkom.SummaryTask4.db.transaction;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.db.connection.ConnectionFactory;
-import ua.nure.voitenkom.SummaryTask4.db.util.ConnectionManager;
+import ua.nure.voitenkom.SummaryTask4.db.connection.IConnectionFactory;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.util.ConnectionManager;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
 import java.sql.Connection;
@@ -12,10 +13,10 @@ import java.sql.Connection;
 public class TransactionManager implements ITransactionManager {
 
     private static final Logger logger = LoggerFactory.getLogger(TransactionManager.class);
-    private final ConnectionFactory connectionFactory;
-    private final ConnectionHolder connectionHolder;
+    private final IConnectionFactory connectionFactory;
+    private final IConnectionHolder connectionHolder;
 
-    public TransactionManager(ConnectionFactory connectionFactory, ConnectionHolder connectionHolder) {
+    public TransactionManager(IConnectionFactory connectionFactory, IConnectionHolder connectionHolder) {
         this.connectionFactory = connectionFactory;
         this.connectionHolder = connectionHolder;
     }

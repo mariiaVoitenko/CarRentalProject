@@ -6,6 +6,10 @@ public class Decline extends SimpleEntity {
         super(id, name);
     }
 
+    public Decline(String name) {
+        super(name);
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Decline{");

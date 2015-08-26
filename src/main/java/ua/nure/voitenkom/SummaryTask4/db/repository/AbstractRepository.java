@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
 import java.sql.Connection;
@@ -17,9 +17,9 @@ import java.util.List;
 public abstract class AbstractRepository<T extends Entity> implements IAbstractRepository<T> {
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractRepository.class);
-    private final ConnectionHolder connectionHolder;
+    private final IConnectionHolder connectionHolder;
 
-    public AbstractRepository(ConnectionHolder connectionHolder) {
+    public AbstractRepository(IConnectionHolder connectionHolder) {
         this.connectionHolder = connectionHolder;
     }
 

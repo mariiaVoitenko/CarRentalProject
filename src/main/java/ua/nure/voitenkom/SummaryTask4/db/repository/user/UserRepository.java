@@ -2,6 +2,7 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.user;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.service.account.PasswordMaker;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
@@ -20,7 +21,7 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
 
     private static final Logger logger = LoggerFactory.getLogger(UserRepository.class);
 
-    public UserRepository(ConnectionHolder connectionHolder) {
+    public UserRepository(IConnectionHolder connectionHolder) {
         super(connectionHolder);
     }
 
