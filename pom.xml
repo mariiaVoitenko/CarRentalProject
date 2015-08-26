@@ -23,6 +23,8 @@
         <itext-pdf-version>5.0.6</itext-pdf-version>
         <mockito-version>1.8.4</mockito-version>
         <powermock.version>1.5.6</powermock.version>
+        <logback.version>1.0.1</logback.version>
+
     </properties>
 
     <dependencies>
@@ -119,6 +121,18 @@
             <groupId>org.powermock</groupId>
             <artifactId>powermock-module-junit4</artifactId>
             <version>${powermock.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
         </dependency>
 
     </dependencies>

@@ -6,6 +6,7 @@ import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServlet;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
+import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 
 import javax.servlet.ServletException;
@@ -25,10 +26,14 @@ public class HistoryServlet extends AuthenticationServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int userId = getAuthUserId(request);
-        request.setAttribute(Attributes.RENTS, rentService.getUserRents(userId));
-        logger.debug("All rents have been got");
-        request.getRequestDispatcher(PageNames.HISTORY_PAGE).forward(request, response);
+        if (getAuthUserId(request) == null) {
+            request.getRequestDispatcher(PageNames.LOGIN_PAGE).forward(request, response);
+            logger.warn("Access denied. Session time ended");
+        } else {
+            request.setAttribute(Attributes.RENTS, rentService.getUserRents(getAuthUserId(request)));
+            logger.debug("All rents have been got");
+            request.getRequestDispatcher(PageNames.HISTORY_PAGE).forward(request, response);
+        }
     }
 
 }
