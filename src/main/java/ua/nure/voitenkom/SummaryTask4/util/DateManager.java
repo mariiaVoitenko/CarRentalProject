@@ -11,6 +11,8 @@ import java.util.GregorianCalendar;
 
 public class DateManager {
 
+    private static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+
     public static Timestamp getCurrentDate() {
         return new java.sql.Timestamp(Calendar.getInstance().getTime().getTime());
     }
@@ -25,10 +27,9 @@ public class DateManager {
     }
 
     public static java.util.Date parseDate(String date, Logger logger) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         java.util.Date parsedDate = null;
         try {
-            parsedDate = simpleDateFormat.parse(date);
+            parsedDate = SIMPLE_DATE_FORMAT.parse(date);
         } catch (ParseException e) {
             logger.error("Can't parse date");
         }
@@ -62,7 +63,11 @@ public class DateManager {
 
 
     public static String timestampToString(Timestamp timestamp) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        return simpleDateFormat.format(timestamp);
+        return SIMPLE_DATE_FORMAT.format(timestamp);
     }
+
+    public static String dateToString(java.util.Date date) {
+        return SIMPLE_DATE_FORMAT.format(date);
+    }
+
 }

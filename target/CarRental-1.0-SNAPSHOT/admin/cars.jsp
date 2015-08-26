@@ -10,7 +10,7 @@
 <div class="container">
     <c:choose>
         <c:when test="${empty requestScope.cars}">
-            <fmt:message key="noItems"/>
+            <div class="middle-headline"><fmt:message key="noItems"/></div>
         </c:when>
         <c:otherwise>
             <c:forEach items="${requestScope.cars}" var="car">

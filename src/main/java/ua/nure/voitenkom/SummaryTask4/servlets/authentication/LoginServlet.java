@@ -48,6 +48,7 @@ public class LoginServlet extends AuthenticationServlet {
                     authorize(user, request);
                     logger.debug("User {} was authenticated", user);
                     HttpSession session = request.getSession();
+                    session.setAttribute(Attributes.MESSAGE, "");
                     if (session.getAttribute(Attributes.START_DATE) != null && session.getAttribute(Attributes.END_DATE) != null) {
                         response.sendRedirect(Mappings.CAR_RENT_MAPPING);
                         return;

@@ -7,7 +7,7 @@
 <body>
 <c:choose>
     <c:when test="${empty requestScope.users}">
-        <fmt:message key="noItems"/>
+        <div class="middle-headline"><fmt:message key="noItems"/></div>
     </c:when>
     <c:otherwise>
         <c:forEach items="${requestScope.users}" var="user">

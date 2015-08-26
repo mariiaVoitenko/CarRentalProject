@@ -821,3 +821,699 @@
 19:46:54.921 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
 19:47:05.048 [http-bio-8080-exec-8] DEBUG u.n.v.S.servlets.user.HistoryServlet - Information about user with id 27 has been got
 19:47:11.365 [http-bio-8080-exec-8] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+19:47:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:47:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:47:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:47:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:48:10.470 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.HistoryServlet - Information about user with id 27 has been got
+19:48:12.056 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+19:48:12.056 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+19:48:12.057 [http-bio-8080-exec-3] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+19:48:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:48:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:48:29.050 [http-bio-8080-exec-2] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+19:48:31.754 [http-bio-8080-exec-5] WARN  u.n.v.S.servlets.user.HistoryServlet - Access denied. Session time ended
+19:48:39.133 [http-bio-8080-exec-5] DEBUG u.n.v.S.s.a.LoginServlet - User User{id='30'fullName='Sara Sheferd', isBlocked=false, isRegistered=true, registrationToken='6fdb0d14-9c74-4f0b-8180-94ad821b3eed', passportNumber='0213654788', roleId=2, photoPath='3ac88f59-18f8-44c0-b072-4009a96b84bb.jpg', password='25d55ad283aa400af464c76d713c07ad', login='mashka_voyt@mail.ru'} was authenticated
+19:48:39.142 [http-bio-8080-exec-5] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+19:48:41.611 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+19:48:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:48:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:49:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:49:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:49:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:49:54.896 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:50:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:50:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:50:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:50:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:51:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:51:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:51:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:51:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:52:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:52:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:52:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:52:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:53:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:53:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:53:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:53:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:54:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:54:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:54:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:54:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:55:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:55:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:55:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:55:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:56:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:56:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:56:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:56:54.899 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=0, avail=1, waiting=0)
+19:56:54.900 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@435b24bc in pool HikariPool-0 (connection passed idleTimeout)
+19:56:54.918 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@516d07c1 in pool HikariPool-0 (connection passed idleTimeout)
+19:56:54.920 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@509cc723 in pool HikariPool-0 (connection passed idleTimeout)
+19:56:54.921 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@756d2e3d in pool HikariPool-0 (connection passed idleTimeout)
+19:56:54.948 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:57:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:57:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:57:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:57:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:58:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:58:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:58:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:58:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=4, inUse=0, avail=4, waiting=0)
+19:58:54.894 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@7a80161b in pool HikariPool-0 (connection passed idleTimeout)
+19:58:54.911 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:59:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:59:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:59:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+19:59:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:00:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:00:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:00:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:00:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:01:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:01:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:01:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:01:54.896 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:02:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:02:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:02:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:02:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:03:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:03:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:03:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:03:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:04:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:04:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:04:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:04:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:05:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:05:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:05:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:05:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:06:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:06:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:06:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:06:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:07:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:07:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=0, avail=1, waiting=0)
+20:07:24.896 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@15c0cc22 in pool HikariPool-0 (connection passed idleTimeout)
+20:07:24.900 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@1b0730ea in pool HikariPool-0 (connection passed idleTimeout)
+20:07:24.902 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@1f38a752 in pool HikariPool-0 (connection passed idleTimeout)
+20:07:24.905 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@5a3a3ad1 in pool HikariPool-0 (connection passed idleTimeout)
+20:07:24.942 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:07:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:07:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:08:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:08:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:08:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:08:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:09:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:09:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=4, inUse=0, avail=4, waiting=0)
+20:09:24.896 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@31c559d5 in pool HikariPool-0 (connection passed idleTimeout)
+20:09:24.911 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:09:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:09:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:10:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:10:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:10:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:10:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:11:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:11:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:11:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:11:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:12:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:12:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:12:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:12:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:13:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:13:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:13:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:13:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:14:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:14:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:14:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:14:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:15:01.237 [http-bio-8080-exec-4] DEBUG u.n.v.S.servlets.user.HistoryServlet - Information about user with id 30 has been got
+20:15:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:15:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:15:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:15:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:15:59.916 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+20:16:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:16:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:16:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:16:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:17:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:17:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:17:36.858 [http-bio-8080-exec-6] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+20:17:41.676 [http-bio-8080-exec-2] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:17:50.444 [http-bio-8080-exec-4] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:17:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:17:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=2, inUse=0, avail=2, waiting=0)
+20:17:54.894 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@1c37c789 in pool HikariPool-0 (connection passed idleTimeout)
+20:17:54.895 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@12f02a7f in pool HikariPool-0 (connection passed idleTimeout)
+20:17:54.896 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@16cfacf9 in pool HikariPool-0 (connection passed idleTimeout)
+20:17:54.936 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:18:06.055 [http-bio-8080-exec-7] DEBUG u.n.v.S.s.a.LoginServlet - Wrong login or password
+20:18:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:18:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:18:50.533 [http-bio-8080-exec-2] DEBUG u.n.v.S.s.a.LoginServlet - User User{id='18'fullName='Manager', isBlocked=false, isRegistered=true, registrationToken='7fe0a75c-c926-4fab-93b7-76b24780a2ca', passportNumber='MT 145678', roleId=4, photoPath='69bf8c55-2a9c-4c58-bc5f-231083683c3d.jpg', password='25d55ad283aa400af464c76d713c07ad', login='mailmail@mail.ru'} was authenticated
+20:18:50.546 [http-bio-8080-exec-2] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:18:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:18:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:19:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:19:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:19:49.438 [http-bio-8080-exec-8] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:19:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:19:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=4, inUse=0, avail=4, waiting=0)
+20:19:54.906 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@469f9c55 in pool HikariPool-0 (connection passed idleTimeout)
+20:19:54.923 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:19:58.940 [http-bio-8080-exec-9] DEBUG u.n.v.S.s.a.LoginServlet - Validation problems
+20:20:10.085 [http-bio-8080-exec-9] DEBUG u.n.v.S.s.a.LoginServlet - User User{id='14'fullName='Admin', isBlocked=false, isRegistered=true, registrationToken='a0161212-7a2c-4259-9bc3-8b6bc27be5f4', passportNumber='admin', roleId=1, photoPath='user.png', password='25d55ad283aa400af464c76d713c07ad', login='admin@gmail.com'} was authenticated
+20:20:10.096 [http-bio-8080-exec-9] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:20:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:20:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:20:38.144 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:20:44.220 [http-bio-8080-exec-3] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:20:48.806 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:20:48.868 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:20:49.136 [http-bio-8080-exec-9] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:20:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:20:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:20:56.378 [http-bio-8080-exec-9] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:20:56.379 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+20:21:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:21:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:21:41.935 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:21:41.936 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+20:21:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:21:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:22:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:22:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:22:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:22:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:23:25.526 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:23:26.882 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:32:20.296 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:32:20.297 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.297 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.297 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.297 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.297 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.298 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.298 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.299 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.299 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.299 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.299 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.299 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.299 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.299 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.299 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.300 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.301 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.301 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.302 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.302 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.302 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.302 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=1, inUse=1, avail=0, waiting=0)
+20:32:20.305 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@3af6dda3 in pool HikariPool-0 (connection passed idleTimeout)
+20:32:20.308 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@3431348d in pool HikariPool-0 (connection passed idleTimeout)
+20:32:20.312 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@300eb6d3 in pool HikariPool-0 (connection passed idleTimeout)
+20:32:20.314 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@750c3eb6 in pool HikariPool-0 (connection passed idleTimeout)
+20:32:20.319 [http-bio-8080-exec-9] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:32:20.330 [http-bio-8080-exec-1] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:32:20.352 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.352 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.353 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.353 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.353 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.353 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.353 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.353 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.354 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.354 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.354 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.354 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.354 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.354 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.354 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:20.354 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:32:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:33:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:33:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:33:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:33:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:34:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:34:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:34:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:34:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:35:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:35:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:35:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:35:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:36:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:36:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:36:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:36:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:37:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:37:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=6, inUse=0, avail=6, waiting=0)
+20:37:24.918 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@59e2055e in pool HikariPool-0 (connection reached maxLifetime)
+20:37:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:37:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:38:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:38:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:38:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:38:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:39:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:39:24.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:39:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:39:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:40:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:40:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:40:54.902 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:40:54.902 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:41:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:41:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:41:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:41:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:42:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:42:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=0, inUse=0, avail=0, waiting=0)
+20:42:24.895 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@7589e8a6 in pool HikariPool-0 (connection passed idleTimeout)
+20:42:24.897 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@7b4e1867 in pool HikariPool-0 (connection passed idleTimeout)
+20:42:24.900 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@7f7183d6 in pool HikariPool-0 (connection passed idleTimeout)
+20:42:24.902 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@3a73125c in pool HikariPool-0 (connection passed idleTimeout)
+20:42:24.905 [HikariCP connection closer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.PoolUtilities - Closing connection com.mysql.jdbc.JDBC4Connection@85116c in pool HikariPool-0 (connection passed idleTimeout)
+20:42:24.950 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:42:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:42:54.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:43:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:43:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:43:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:43:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:44:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:44:24.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:44:54.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:44:54.896 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:45:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:45:24.894 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:45:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:45:54.893 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:46:34.138 [RMI TCP Connection(3)-127.0.0.1] DEBUG u.n.v.S.l.ServiceContextInitializer - Initializing beans
+20:46:35.057 [RMI TCP Connection(3)-127.0.0.1] DEBUG u.n.v.S.l.ServiceContextInitializer - Beans have been put to servlet context
+20:46:35.827 [http-bio-8080-exec-1] WARN  com.zaxxer.hikari.HikariDataSource - validationTimeout is greater than connectionTimeout, setting validationTimeout to connectionTimeout.
+20:46:35.830 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - HikariCP pool HikariPool-0 configuration:
+20:46:35.847 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................false
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionCustomizer............com.zaxxer.hikari.AbstractHikariConfig$1@6d7ba175
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionCustomizerClassName...
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............SELECT 1
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............1000
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................com.mysql.jdbc.Driver
+20:46:35.848 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://127.0.0.1:3306/carRentDB?characterEncoding=UTF-8
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........15000
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................100
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................5
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+20:46:35.849 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................HikariPool-0
+20:46:35.850 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+20:46:35.850 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+20:46:35.850 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................
+20:46:35.850 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............
+20:46:35.850 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - username........................root
+20:46:35.850 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............1000
+20:46:35.850 [http-bio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP pool HikariPool-0 is starting.
+20:46:36.329 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:46:36.351 [http-bio-8080-exec-1] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:46:37.957 [http-bio-8080-exec-2] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:46:38.363 [http-bio-8080-exec-5] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:46:50.005 [http-bio-8080-exec-9] DEBUG u.n.v.S.s.a.LoginServlet - User User{id='27'fullName='Jane McGrey', isBlocked=false, isRegistered=true, registrationToken='b3f58197-cd5f-4d9e-a918-39008334e915', passportNumber='HU 14668511645', roleId=2, photoPath='0b4b18fc-9750-4bf4-b1c5-564e54b92486.jpg', password='25d55ad283aa400af464c76d713c07ad', login='jane@gmail.com'} was authenticated
+20:46:50.017 [http-bio-8080-exec-9] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:46:56.918 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:47:02.081 [http-bio-8080-exec-6] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:47:05.226 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:47:05.260 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:47:05.665 [http-bio-8080-exec-5] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:47:05.903 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:47:05.948 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:47:12.048 [http-bio-8080-exec-5] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:47:12.049 [http-bio-8080-exec-5] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:47:12.049 [http-bio-8080-exec-5] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:47:12.050 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+20:47:35.905 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:47:35.905 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:47:40.000 [http-bio-8080-exec-1] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:47:40.025 [http-bio-8080-exec-1] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:47:40.032 [http-bio-8080-exec-1] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:47:46.565 [http-bio-8080-exec-1] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:47:46.565 [http-bio-8080-exec-1] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:47:46.565 [http-bio-8080-exec-1] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:47:46.566 [http-bio-8080-exec-1] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:47:46.567 [http-bio-8080-exec-1] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+20:48:05.905 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:48:05.906 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:48:14.623 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:48:14.636 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:48:14.645 [http-bio-8080-exec-7] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:48:21.254 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:48:21.254 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:48:21.255 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:48:21.255 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:48:21.256 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:48:21.256 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+20:48:35.903 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:48:35.904 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:52:22.586 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+20:52:22.589 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:22.589 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:22.589 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:22.590 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:22.590 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:22.590 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:22.591 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:26.175 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:26.176 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:26.176 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:26.176 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:26.176 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:31.152 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+20:52:32.667 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=6, inUse=5, avail=1, waiting=0)
+20:52:32.672 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:52:32.679 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=7, inUse=5, avail=2, waiting=0)
+20:52:32.691 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=8, inUse=5, avail=3, waiting=0)
+20:52:32.694 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:52:32.700 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=9, inUse=5, avail=4, waiting=0)
+20:52:32.705 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:52:32.705 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:52:32.709 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=10, inUse=5, avail=5, waiting=0)
+20:52:32.717 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=11, inUse=5, avail=6, waiting=0)
+20:52:32.717 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=11, inUse=5, avail=6, waiting=0)
+20:52:32.725 [http-bio-8080-exec-10] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:52:32.729 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:52:32.738 [http-bio-8080-exec-3] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:52:32.747 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:52:32.792 [http-bio-8080-exec-9] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:52:32.803 [http-bio-8080-exec-7] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:52:32.817 [http-bio-8080-exec-5] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:52:35.904 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:52:35.905 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:53:11.230 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:53:11.454 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:53:33.960 [http-bio-8080-exec-2] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:53:36.140 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:53:36.142 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:53:50.916 [http-bio-8080-exec-2] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:53:53.333 [http-bio-8080-exec-2] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:54:05.903 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:54:05.903 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:54:07.299 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:54:07.299 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:54:07.300 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:54:07.300 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:54:07.300 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:54:07.300 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:54:07.301 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:54:07.301 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:54:07.301 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+20:54:07.302 [http-bio-8080-exec-2] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+20:54:09.689 [http-bio-8080-exec-2] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+20:54:21.322 [http-bio-8080-exec-4] DEBUG u.n.v.S.s.a.LoginServlet - Wrong login or password
+20:54:28.147 [http-bio-8080-exec-8] DEBUG u.n.v.S.s.a.LoginServlet - User User{id='30'fullName='Sara Sheferd', isBlocked=false, isRegistered=true, registrationToken='6fdb0d14-9c74-4f0b-8180-94ad821b3eed', passportNumber='0213654788', roleId=2, photoPath='3ac88f59-18f8-44c0-b072-4009a96b84bb.jpg', password='25d55ad283aa400af464c76d713c07ad', login='mashka_voyt@mail.ru'} was authenticated
+20:54:38.083 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:54:38.084 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:14.401 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:14.401 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:14.420 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:26.566 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:26.567 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:26.567 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:26.567 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:26.567 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:26.568 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:26.568 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:26.575 [http-bio-8080-exec-3] DEBUG u.n.v.S.s.a.LoginServlet - User User{id='30'fullName='Sara Sheferd', isBlocked=false, isRegistered=true, registrationToken='6fdb0d14-9c74-4f0b-8180-94ad821b3eed', passportNumber='0213654788', roleId=2, photoPath='3ac88f59-18f8-44c0-b072-4009a96b84bb.jpg', password='25d55ad283aa400af464c76d713c07ad', login='mashka_voyt@mail.ru'} was authenticated
+20:57:26.584 [http-bio-8080-exec-8] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:57:26.609 [http-bio-8080-exec-3] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:57:35.905 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:35.905 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:57:37.808 [http-bio-8080-exec-3] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:57:40.741 [http-bio-8080-exec-4] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:58:11.256 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:58:11.257 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=1, avail=10, waiting=0)
+20:58:11.287 [http-bio-8080-exec-4] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:58:11.313 [http-bio-8080-exec-4] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:58:11.320 [http-bio-8080-exec-4] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:58:20.806 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:59:05.706 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:59:05.713 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:59:12.845 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:59:12.845 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:59:12.855 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+20:59:12.881 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:59:12.902 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:59:12.940 [http-bio-8080-exec-7] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+20:59:44.828 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:59:44.828 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=11, inUse=0, avail=11, waiting=0)
+20:59:51.532 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+20:59:51.570 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+20:59:51.579 [http-bio-8080-exec-5] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+21:00:06.457 [RMI TCP Connection(3)-127.0.0.1] DEBUG u.n.v.S.l.ServiceContextInitializer - Initializing beans
+21:00:07.179 [RMI TCP Connection(3)-127.0.0.1] DEBUG u.n.v.S.l.ServiceContextInitializer - Beans have been put to servlet context
+21:00:07.747 [http-bio-8080-exec-1] WARN  com.zaxxer.hikari.HikariDataSource - validationTimeout is greater than connectionTimeout, setting validationTimeout to connectionTimeout.
+21:00:07.752 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - HikariCP pool HikariPool-0 configuration:
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................false
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionCustomizer............com.zaxxer.hikari.AbstractHikariConfig$1@6a55dc06
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionCustomizerClassName...
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............SELECT 1
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............1000
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............
+21:00:07.768 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................com.mysql.jdbc.Driver
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://127.0.0.1:3306/carRentDB?characterEncoding=UTF-8
+21:00:07.769 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........15000
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................100
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................5
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................HikariPool-0
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................
+21:00:07.770 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............
+21:00:07.771 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - username........................root
+21:00:07.771 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............1000
+21:00:07.771 [http-bio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP pool HikariPool-0 is starting.
+21:00:08.253 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+21:00:08.281 [http-bio-8080-exec-1] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+21:00:10.146 [http-bio-8080-exec-2] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+21:00:10.801 [http-bio-8080-exec-4] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+21:00:37.837 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:00:37.914 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:00:44.074 [http-bio-8080-exec-4] DEBUG u.n.v.S.s.a.LoginServlet - User User{id='27'fullName='Jane McGrey', isBlocked=false, isRegistered=true, registrationToken='b3f58197-cd5f-4d9e-a918-39008334e915', passportNumber='HU 14668511645', roleId=2, photoPath='0b4b18fc-9750-4bf4-b1c5-564e54b92486.jpg', password='25d55ad283aa400af464c76d713c07ad', login='jane@gmail.com'} was authenticated
+21:00:44.111 [http-bio-8080-exec-4] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+21:01:07.827 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:01:07.828 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:01:37.827 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:01:37.828 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:02:02.217 [http-bio-8080-exec-2] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+21:02:07.985 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:02:08.182 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:03:08.625 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:03:08.626 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:03:08.628 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:03:08.633 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:03:35.728 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+21:03:35.734 [http-bio-8080-exec-6] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+21:03:35.841 [http-bio-8080-exec-8] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+21:03:35.884 [http-bio-8080-exec-8] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+21:03:36.528 [http-bio-8080-exec-8] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+21:03:37.827 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:03:37.827 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:05:52.895 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:05:52.896 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:05:52.896 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:05:52.897 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:05:52.897 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:05:52.898 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:05:52.898 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:05:52.899 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:07:07.801 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:07:23.772 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:07:46.040 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:07:46.042 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:07:46.042 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:07:46.043 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:07:46.043 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:07:46.043 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:07:52.819 [http-bio-8080-exec-9] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+21:08:15.744 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:08:15.744 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:08:27.701 [RMI TCP Connection(3)-127.0.0.1] DEBUG u.n.v.S.l.ServiceContextInitializer - Initializing beans
+21:08:28.401 [RMI TCP Connection(3)-127.0.0.1] DEBUG u.n.v.S.l.ServiceContextInitializer - Beans have been put to servlet context
+21:08:29.052 [http-bio-8080-exec-1] WARN  com.zaxxer.hikari.HikariDataSource - validationTimeout is greater than connectionTimeout, setting validationTimeout to connectionTimeout.
+21:08:29.054 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - HikariCP pool HikariPool-0 configuration:
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................false
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionCustomizer............com.zaxxer.hikari.AbstractHikariConfig$1@5c2be152
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionCustomizerClassName...
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............SELECT 1
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............1000
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................
+21:08:29.070 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................com.mysql.jdbc.Driver
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://127.0.0.1:3306/carRentDB?characterEncoding=UTF-8
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........15000
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................100
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................5
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................HikariPool-0
+21:08:29.071 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+21:08:29.072 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+21:08:29.072 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................
+21:08:29.072 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............
+21:08:29.072 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - username........................root
+21:08:29.073 [http-bio-8080-exec-1] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............1000
+21:08:29.073 [http-bio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP pool HikariPool-0 is starting.
+21:08:29.570 [HikariCP connection filler (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After fill pool stats HikariPool-0 (total=5, inUse=1, avail=4, waiting=0)
+21:08:29.594 [http-bio-8080-exec-1] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+21:08:31.303 [http-bio-8080-exec-2] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+21:08:31.824 [http-bio-8080-exec-4] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+21:08:59.150 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:08:59.177 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:09:00.111 [http-bio-8080-exec-3] DEBUG u.n.v.S.s.a.LoginServlet - User User{id='27'fullName='Jane McGrey', isBlocked=false, isRegistered=true, registrationToken='b3f58197-cd5f-4d9e-a918-39008334e915', passportNumber='HU 14668511645', roleId=2, photoPath='0b4b18fc-9750-4bf4-b1c5-564e54b92486.jpg', password='25d55ad283aa400af464c76d713c07ad', login='jane@gmail.com'} was authenticated
+21:09:00.150 [http-bio-8080-exec-3] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+21:09:29.150 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:09:29.151 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:09:59.149 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:09:59.149 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:10:29.149 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:10:29.150 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:10:59.150 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:10:59.151 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:11:03.216 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+21:11:13.468 [http-bio-8080-exec-3] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+21:11:26.760 [http-bio-8080-exec-1] DEBUG u.n.v.S.servlets.user.RentCarServlet - All cars information has been got
+21:11:29.149 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:11:29.149 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:11:31.476 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.RentCarServlet - Check was inserted
+21:11:31.498 [http-bio-8080-exec-5] DEBUG u.n.v.S.servlets.user.RentCarServlet - Rent was inserted
+21:11:31.935 [http-bio-8080-exec-5] DEBUG u.n.v.S.service.pdf.PDFService - PDF was created
+21:11:38.965 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.965 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.965 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.966 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.966 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.967 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.967 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.967 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.968 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.968 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.968 [http-bio-8080-exec-7] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:11:38.969 [http-bio-8080-exec-7] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+21:11:59.149 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:11:59.150 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:12:29.149 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:12:29.150 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:12:44.148 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.149 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.149 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.149 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.150 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.150 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.150 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.150 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.150 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.151 [http-bio-8080-exec-10] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:44.151 [http-bio-8080-exec-10] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+21:12:48.063 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.063 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.064 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.064 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.064 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.064 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.065 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.065 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.065 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.066 [http-bio-8080-exec-2] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:48.066 [http-bio-8080-exec-2] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+21:12:52.128 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.128 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.128 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.128 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.129 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.129 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.129 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.129 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.129 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.129 [http-bio-8080-exec-3] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:12:52.130 [http-bio-8080-exec-3] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+21:12:59.151 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:12:59.151 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:13:23.455 [http-bio-8080-exec-8] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:13:23.455 [http-bio-8080-exec-8] WARN  u.n.v.S.d.extractor.HistoryExtractor - This rent wasn't declined. It's decline name is null. It's ok
+21:13:23.456 [http-bio-8080-exec-8] DEBUG u.n.v.S.servlets.user.HistoryServlet - All rents have been got
+21:13:27.074 [http-bio-8080-exec-5] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+21:13:29.151 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:13:29.151 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:13:33.069 [http-bio-8080-exec-4] DEBUG u.n.v.S.s.a.LoginServlet - User User{id='18'fullName='Manager', isBlocked=false, isRegistered=true, registrationToken='7fe0a75c-c926-4fab-93b7-76b24780a2ca', passportNumber='MT 145678', roleId=4, photoPath='69bf8c55-2a9c-4c58-bc5f-231083683c3d.jpg', password='25d55ad283aa400af464c76d713c07ad', login='mailmail@mail.ru'} was authenticated
+21:13:33.078 [http-bio-8080-exec-4] DEBUG u.n.v.S.s.a.RegistrationServlet - All car information has been got
+21:13:36.484 [http-bio-8080-exec-5] DEBUG u.n.v.S.s.admin.ApplicationServlet - Applications have been got
+21:13:38.834 [http-bio-8080-exec-10] DEBUG u.n.v.S.s.admin.ApplicationServlet - Applications have been got
+21:13:39.886 [http-bio-8080-exec-10] DEBUG u.n.v.S.s.admin.ApplicationServlet - Data have been got
+21:13:59.149 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - Before cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)
+21:13:59.149 [Hikari Housekeeping Timer (pool HikariPool-0)] DEBUG com.zaxxer.hikari.pool.HikariPool - After cleanup pool stats HikariPool-0 (total=5, inUse=0, avail=5, waiting=0)

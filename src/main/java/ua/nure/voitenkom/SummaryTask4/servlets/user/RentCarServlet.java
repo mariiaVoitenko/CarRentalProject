@@ -19,7 +19,8 @@ import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServ
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
-import ua.nure.voitenkom.SummaryTask4.validation.DateValidator;
+import ua.nure.voitenkom.SummaryTask4.validation.date.DateFormatValidator;
+import ua.nure.voitenkom.SummaryTask4.validation.date.DateValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
 import javax.mail.MessagingException;
@@ -46,6 +47,7 @@ public class RentCarServlet extends AuthenticationServlet {
     private IColorService colorService;
     private IStatusService statusService;
     private IValidator<Date> dateValidator = new DateValidator();
+    private IValidator<String> dateFormatValidator = new DateFormatValidator();
     private ICheckService checkService;
     private IPDFService pdfService;
     private IUserService userService;
@@ -80,8 +82,18 @@ public class RentCarServlet extends AuthenticationServlet {
         String startDate = session.getAttribute(Attributes.START_DATE).toString();
         String endDate = session.getAttribute(Attributes.END_DATE).toString();
 
+        Map<String, String> errors = dateFormatValidator.validate(startDate);
+        errors.putAll(dateFormatValidator.validate(endDate));
+
+        if (!errors.isEmpty()) {
+            session.setAttribute(Attributes.MESSAGE, errors.get("error"));
+            response.sendRedirect(PageNames.MAIN_PAGE);
+            return;
+        }
+
         Date start = parseDate(startDate, logger);
         Date end = parseDate(endDate, logger);
+
         long days = getDaysCount(startDate, endDate);
         boolean isDriven = !driver.isEmpty();
 
@@ -153,8 +165,8 @@ public class RentCarServlet extends AuthenticationServlet {
 
     private boolean validateDates(HttpServletRequest request, HttpServletResponse response, Date start, Date end) throws ServletException, IOException {
         Map<String, String> errors = dateValidator.validate(start);
-        errors = dateValidator.validate(end);
-        errors = validateDates(start, end, errors);
+        errors.putAll(dateValidator.validate(end));
+        errors.putAll(validateDates(start, end, errors));
 
         if (!errors.isEmpty()) {
             request.setAttribute(Attributes.MESSAGE, errors.get("error"));
