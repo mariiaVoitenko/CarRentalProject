@@ -22,6 +22,9 @@ import java.io.IOException;
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
+/**
+ * @author Mariia Voitenko
+ */
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class ProfileServlet extends AuthenticationServlet {
 

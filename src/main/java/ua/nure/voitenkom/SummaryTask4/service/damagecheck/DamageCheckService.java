@@ -5,6 +5,9 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.damagecheck.IDamageCheckRepo
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class DamageCheckService implements IDamageCheckService {
 
     private final ITransactionManager transactionManager;

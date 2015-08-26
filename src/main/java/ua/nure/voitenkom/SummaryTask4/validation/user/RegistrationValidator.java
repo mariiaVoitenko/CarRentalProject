@@ -8,6 +8,10 @@ import java.util.Map;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isEmpty;
 
+/**
+ * @author Mariia Voitenko
+ */
+
 public class RegistrationValidator implements IValidator<RegistrationFormBean> {
 
     @Override

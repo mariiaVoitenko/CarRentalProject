@@ -7,13 +7,15 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class DateFormatValidator implements IValidator<String> {
-
-    private Pattern pattern;
-    private Matcher matcher;
 
     private static final String DATE_PATTERN =
             "^\\d{4}-\\d{2}-\\d{2}$";
+    private Pattern pattern;
+    private Matcher matcher;
 
     public DateFormatValidator() {
         pattern = Pattern.compile(DATE_PATTERN);

@@ -9,6 +9,9 @@ import javax.servlet.http.HttpSession;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
+/**
+ * @author Mariia Voitenko
+ */
 public abstract class AuthenticationServlet extends HttpServlet {
 
     protected void authorize(User user, HttpServletRequest request) {

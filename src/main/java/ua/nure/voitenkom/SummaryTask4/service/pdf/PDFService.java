@@ -18,15 +18,18 @@ import java.util.List;
 
 import static ua.nure.voitenkom.SummaryTask4.util.DateManager.timestampToString;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class PDFService implements IPDFService {
 
-    private final String folder;
     private static final String FORMAT = "pdf";
     private static final Logger logger = LoggerFactory.getLogger(PDFService.class);
     private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18, Font.BOLD);
     private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 18, Font.NORMAL, BaseColor.RED);
     private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD);
     private static Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD);
+    private final String folder;
 
     public PDFService(String folder) {
         this.folder = folder;

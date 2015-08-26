@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.db;
 
+/**
+ * @author Mariia Voitenko
+ */
 public final class FieldsContainer {
 
     public static final String FIELD_ID = "id";

@@ -11,6 +11,9 @@ import java.io.IOException;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class LogoutServlet extends HttpServlet {
 
     @Override

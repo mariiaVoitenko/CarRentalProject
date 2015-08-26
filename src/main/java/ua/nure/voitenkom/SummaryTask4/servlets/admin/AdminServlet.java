@@ -22,6 +22,9 @@ import java.util.Map;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
+/**
+ * @author Mariia Voitenko
+ */
 public abstract class AdminServlet extends HttpServlet {
 
     protected Integer getRoleId(HttpServletRequest request) {

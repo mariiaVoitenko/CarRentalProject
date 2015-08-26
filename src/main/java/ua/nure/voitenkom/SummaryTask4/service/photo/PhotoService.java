@@ -11,6 +11,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class PhotoService implements IPhotoService {
 
     private static final String FORMAT = "jpg";
@@ -64,7 +67,7 @@ public class PhotoService implements IPhotoService {
         }
     }
 
-    private String handlePicture(Part picture){
+    private String handlePicture(Part picture) {
         checkFolder();
         String avatarName = generateAvatarName();
         String path = folder + "/" + avatarName;

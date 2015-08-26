@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class UsersServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(UsersServlet.class);
@@ -24,7 +27,7 @@ public class UsersServlet extends AdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkRole(request, response))return;
+        if (!checkRole(request, response)) return;
         request.setAttribute(Attributes.USERS, usersService.getAll());
         logger.debug("All users information has been got");
         request.getRequestDispatcher(PageNames.USERS_PAGE).forward(request, response);

@@ -6,6 +6,9 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.check.ICheckRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class CheckService implements ICheckService {
 
     private final ITransactionManager transactionManager;

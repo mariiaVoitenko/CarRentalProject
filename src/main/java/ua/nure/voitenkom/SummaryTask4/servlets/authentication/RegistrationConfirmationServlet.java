@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class RegistrationConfirmationServlet extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(RegistrationServlet.class);
     private IUserService userService;

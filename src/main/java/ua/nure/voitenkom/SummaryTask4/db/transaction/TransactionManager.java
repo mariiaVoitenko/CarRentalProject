@@ -9,6 +9,9 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 
 import java.sql.Connection;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class TransactionManager implements ITransactionManager {
 
     private static final Logger logger = LoggerFactory.getLogger(TransactionManager.class);
@@ -20,6 +23,11 @@ public class TransactionManager implements ITransactionManager {
         this.connectionHolder = connectionHolder;
     }
 
+    /**
+     * @param operation that is tp proceed in transaction
+     * @return generic type of performed operation
+     * @throws DatabaseException if error in extractor or sql occurred
+     */
     @Override
     public <T> T doInTransaction(Operation<T> operation) throws DatabaseException {
         Connection connection = getConnection();

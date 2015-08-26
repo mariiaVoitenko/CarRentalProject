@@ -5,8 +5,16 @@ import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class SQLBuilder implements ISQLBuilder {
-
+    /**
+     * Gets full SQL query from parameters of criteria
+     *
+     * @param criteria built from selected sort items
+     * @return SQL query
+     */
     @Override
     public String getSQL(Criteria criteria) {
         StringBuilder stringBuilder = new StringBuilder(StatementsContainer.SQL_SELECT_CARFORMBEAN_FIELDS);

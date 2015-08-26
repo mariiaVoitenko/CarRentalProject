@@ -14,6 +14,9 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Locale;
 
+/**
+ * @author Mariia Voitenko
+ */
 @WebFilter("/*")
 public class LocaleFilter extends BaseFilter {
 

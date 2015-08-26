@@ -10,6 +10,9 @@ import java.sql.SQLException;
 
 import static ua.nure.voitenkom.SummaryTask4.util.DateManager.timestampToString;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class HistoryExtractor implements IExtractor<HistoryFormBean> {
 
     private static final Logger logger = LoggerFactory.getLogger(HistoryExtractor.class);

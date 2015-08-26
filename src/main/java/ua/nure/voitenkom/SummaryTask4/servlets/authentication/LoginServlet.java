@@ -19,6 +19,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class LoginServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(LoginServlet.class);

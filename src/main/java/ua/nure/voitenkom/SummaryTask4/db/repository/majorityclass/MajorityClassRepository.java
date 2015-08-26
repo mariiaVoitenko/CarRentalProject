@@ -8,6 +8,9 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityReposito
 
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class MajorityClassRepository extends AbstractSimpleEntityRepository<MajorityClass> implements IMajorityClassRepository {
 
     public MajorityClassRepository(IConnectionHolder connectionHolder) {

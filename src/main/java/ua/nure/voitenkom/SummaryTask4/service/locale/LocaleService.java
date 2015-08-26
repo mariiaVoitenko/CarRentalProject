@@ -11,6 +11,9 @@ import java.util.Locale;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNull;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class LocaleService implements ILocaleService {
 
     private final int expiry;

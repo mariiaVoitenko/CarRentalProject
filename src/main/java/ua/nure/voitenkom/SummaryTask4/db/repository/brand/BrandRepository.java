@@ -8,6 +8,9 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityReposito
 
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class BrandRepository extends AbstractSimpleEntityRepository<Brand> implements IBrandRepository {
 
     public BrandRepository(IConnectionHolder connectionHolder) {

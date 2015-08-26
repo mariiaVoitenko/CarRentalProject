@@ -28,6 +28,9 @@ import java.util.Map;
 
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
+/**
+ * @author Mariia Voitenko
+ */
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class AddCarServlet extends AdminServlet {
 
@@ -52,7 +55,7 @@ public class AddCarServlet extends AdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkRole(request, response))return;
+        if (!checkRole(request, response)) return;
 
         loadEntities(request, brandService, majorityClassService, colorService, statusService);
         logger.debug("Dropdowns are loaded");
@@ -62,7 +65,7 @@ public class AddCarServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkRole(request, response))return;
+        if (!checkRole(request, response)) return;
 
         HttpSession session = request.getSession();
         session.setAttribute(Attributes.MESSAGE, "");

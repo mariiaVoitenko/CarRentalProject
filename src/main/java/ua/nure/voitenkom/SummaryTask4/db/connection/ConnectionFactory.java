@@ -8,11 +8,17 @@ import ua.nure.voitenkom.SummaryTask4.db.DatabaseProperties;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ConnectionFactory implements IConnectionFactory{
+/**
+ * @author Mariia Voitenko
+ */
+public class ConnectionFactory implements IConnectionFactory {
 
     private static final Logger logger = LoggerFactory.getLogger(ConnectionFactory.class);
     private HikariDataSource dataSource = new HikariDataSource();
 
+    /**
+     * Constructor that sets the connection parameters from DatabaseProperties.class with static fields
+     */
     public ConnectionFactory() {
         dataSource.setDriverClassName(DatabaseProperties.DRIVER);
         dataSource.setJdbcUrl(DatabaseProperties.URL);
@@ -26,6 +32,12 @@ public class ConnectionFactory implements IConnectionFactory{
         dataSource.setAutoCommit(false);
     }
 
+    /**
+     * Wrapper method to get connection from datasource
+     *
+     * @return connection object
+     * @throws SQLException if connection failed
+     */
     public Connection getConnection() {
         try {
             return dataSource.getConnection();

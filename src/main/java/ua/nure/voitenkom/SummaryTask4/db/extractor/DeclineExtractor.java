@@ -6,6 +6,9 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class DeclineExtractor implements IExtractor<Decline> {
 
     @Override

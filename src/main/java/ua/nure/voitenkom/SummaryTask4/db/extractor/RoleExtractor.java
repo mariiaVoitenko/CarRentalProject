@@ -6,6 +6,9 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class RoleExtractor implements IExtractor<Role> {
 
     @Override

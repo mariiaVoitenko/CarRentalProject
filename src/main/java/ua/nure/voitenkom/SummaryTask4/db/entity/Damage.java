@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class Damage extends SimpleEntity {
 
     private int sum;
@@ -9,16 +12,16 @@ public class Damage extends SimpleEntity {
         this.sum = sum;
     }
 
+    public Damage(int id, String name, int sum) {
+        super(id, name);
+        this.sum = sum;
+    }
+
     public int getSum() {
         return sum;
     }
 
     public void setSum(int sum) {
-        this.sum = sum;
-    }
-
-    public Damage(int id, String name, int sum) {
-        super(id, name);
         this.sum = sum;
     }
 

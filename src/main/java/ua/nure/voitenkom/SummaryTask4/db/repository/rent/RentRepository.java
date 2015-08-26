@@ -20,6 +20,9 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class RentRepository extends AbstractRepository<Rent> implements IRentRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(RentRepository.class);
@@ -185,7 +188,7 @@ public class RentRepository extends AbstractRepository<Rent> implements IRentRep
         return historyFormBeans;
     }
 
-    private List<HistoryFormBean> getUserHistory(String sql, int id){
+    private List<HistoryFormBean> getUserHistory(String sql, int id) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setInt(1, id);
             return extractHistory(preparedStatement);

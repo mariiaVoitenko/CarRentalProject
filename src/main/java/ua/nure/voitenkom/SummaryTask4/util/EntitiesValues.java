@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.util;
 
+/**
+ * @author Mariia Voitenko
+ */
 public final class EntitiesValues {
 
     public static final String UNREGISTERED_USER_VALUE = "Unregistered user";
@@ -9,7 +12,7 @@ public final class EntitiesValues {
     public static final String MANAGER_ROLE_ID = "4";
     public static final String ADMIN_ROLE_ID = "1";
 
-    private EntitiesValues(){
+    private EntitiesValues() {
 
     }
 

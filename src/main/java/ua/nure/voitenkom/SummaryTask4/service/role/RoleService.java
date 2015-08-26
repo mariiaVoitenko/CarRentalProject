@@ -5,6 +5,9 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.role.IRoleRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class RoleService implements IRoleService {
 
     private final ITransactionManager transactionManager;

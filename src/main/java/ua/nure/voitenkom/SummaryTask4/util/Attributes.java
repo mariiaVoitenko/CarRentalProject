@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.util;
 
+/**
+ * @author Mariia Voitenko
+ */
 public final class Attributes {
 
     public static final String USER_ID = "userId";

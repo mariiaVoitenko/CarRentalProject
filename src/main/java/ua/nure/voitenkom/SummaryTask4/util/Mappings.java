@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.util;
 
+/**
+ * @author Mariia Voitenko
+ */
 public final class Mappings {
 
     public static final String HOST = "http://localhost:8080/";
@@ -12,7 +15,7 @@ public final class Mappings {
     public static final String HISTORY_MAPPING = "history";
     public static final String RETURNED_CARS_MAPPING = "return";
 
-    private Mappings(){
+    private Mappings() {
 
     }
 

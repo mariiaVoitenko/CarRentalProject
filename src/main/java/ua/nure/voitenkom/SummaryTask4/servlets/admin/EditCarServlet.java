@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class EditCarServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(EditCarServlet.class);
@@ -37,7 +40,7 @@ public class EditCarServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkRole(request, response))return;
+        if (!checkRole(request, response)) return;
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         Car car = carService.getById(id);
         request.setAttribute(Attributes.CAR, car);

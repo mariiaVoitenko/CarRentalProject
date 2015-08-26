@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class ManagersServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(UsersServlet.class);
@@ -27,7 +30,7 @@ public class ManagersServlet extends AdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkRole(request, response))return;
+        if (!checkRole(request, response)) return;
         List<User> users = usersService.selectByRoleId(Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID));
         request.setAttribute(Attributes.USERS, users);
         logger.debug("All managers information has been got");

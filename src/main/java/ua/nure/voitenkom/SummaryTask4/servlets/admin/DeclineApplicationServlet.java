@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class DeclineApplicationServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(DeclineApplicationServlet.class);
@@ -25,7 +28,7 @@ public class DeclineApplicationServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkManagerRole(request, response))return;
+        if (!checkManagerRole(request, response)) return;
         setDeclineReason(request);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
     }

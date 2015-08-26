@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class SetFinishedRentServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
@@ -24,14 +27,14 @@ public class SetFinishedRentServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkManagerRole(request, response))return;
+        if (!checkManagerRole(request, response)) return;
         finishRent(request);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.RETURNED_CARS_MAPPING);
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkManagerRole(request, response))return;
+        if (!checkManagerRole(request, response)) return;
         finishRent(request);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.RETURNED_CARS_MAPPING);
     }

@@ -10,6 +10,9 @@ import ua.nure.voitenkom.SummaryTask4.formbean.HistoryFormBean;
 import java.sql.Timestamp;
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class RentService implements IRentService {
 
     private final ITransactionManager transactionManager;

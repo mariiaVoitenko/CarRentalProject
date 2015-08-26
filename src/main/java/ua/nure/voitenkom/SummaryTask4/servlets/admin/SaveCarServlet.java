@@ -28,6 +28,9 @@ import java.util.Map;
 
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
+/**
+ * @author Mariia Voitenko
+ */
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class SaveCarServlet extends AdminServlet {
 
@@ -57,7 +60,7 @@ public class SaveCarServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkRole(request, response))return;
+        if (!checkRole(request, response)) return;
         HttpSession session = request.getSession();
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         Car car = carService.getById(id);

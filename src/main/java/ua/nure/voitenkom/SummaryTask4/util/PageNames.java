@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.util;
 
+/**
+ * @author Mariia Voitenko
+ */
 public final class PageNames {
 
     public static final String MAIN_PAGE = "/";
@@ -21,7 +24,7 @@ public final class PageNames {
     public static final String PROFILE_PAGE = "pages/profile.jsp";
     public static final String RETURNED_CARS_PAGE = "returnedCars.jsp";
 
-    private PageNames(){
+    private PageNames() {
 
     }
 

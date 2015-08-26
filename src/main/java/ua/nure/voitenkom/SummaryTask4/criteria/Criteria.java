@@ -1,5 +1,13 @@
 package ua.nure.voitenkom.SummaryTask4.criteria;
 
+/**
+ * @author Mariia Voitenko
+ *         <p>
+ *         Class for building SQL query with parameters to sort cars on pages. Contains brand column as brand field in car table
+ *         if brand sorting needed, brand id value to put in SQL, class column as classType field, class id value, sortType to
+ *         sort records ascending or descending and sort column that can be either price or model. All parameters don't need to
+ *         be set.
+ */
 public class Criteria {
 
     private String brand;

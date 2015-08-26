@@ -3,6 +3,9 @@ package ua.nure.voitenkom.SummaryTask4.validation;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class ValidationManager {
 
     public static boolean isNotNull(Object obj) {

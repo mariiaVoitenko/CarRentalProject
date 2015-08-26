@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class RentExtractor implements IExtractor<Rent> {
 
     @Override

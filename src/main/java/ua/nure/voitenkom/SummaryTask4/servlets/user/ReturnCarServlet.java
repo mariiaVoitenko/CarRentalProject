@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class ReturnCarServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(HistoryServlet.class);

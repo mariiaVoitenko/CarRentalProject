@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class ReturnedCarsServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
@@ -33,7 +36,7 @@ public class ReturnedCarsServlet extends AdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkManagerRole(request, response))return;
+        if (!checkManagerRole(request, response)) return;
         setAttributes(request);
         logger.debug("Data have been got");
         request.getRequestDispatcher(PageNames.RETURNED_CARS_PAGE).forward(request, response);
@@ -41,7 +44,7 @@ public class ReturnedCarsServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkManagerRole(request, response))return;
+        if (!checkManagerRole(request, response)) return;
         setAttributes(request);
         logger.debug("Data have been got");
         request.getRequestDispatcher(PageNames.RETURNED_CARS_PAGE).forward(request, response);

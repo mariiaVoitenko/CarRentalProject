@@ -6,6 +6,9 @@ import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class CarValidator implements IValidator<CarFormBean> {
 
     @Override

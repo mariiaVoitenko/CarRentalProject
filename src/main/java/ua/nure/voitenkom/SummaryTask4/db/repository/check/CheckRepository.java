@@ -15,6 +15,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class CheckRepository extends AbstractRepository<Check> implements ICheckRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CheckRepository.class);

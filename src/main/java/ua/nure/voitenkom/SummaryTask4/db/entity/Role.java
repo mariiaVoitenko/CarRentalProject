@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class Role extends SimpleEntity {
 
     public Role(int id, String name) {

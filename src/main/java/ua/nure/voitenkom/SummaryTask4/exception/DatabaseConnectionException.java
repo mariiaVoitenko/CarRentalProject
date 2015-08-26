@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.exception;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class DatabaseConnectionException extends RuntimeException {
 
     public DatabaseConnectionException() {

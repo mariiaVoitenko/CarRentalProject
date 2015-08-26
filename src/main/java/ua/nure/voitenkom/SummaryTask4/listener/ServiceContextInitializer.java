@@ -68,6 +68,9 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+/**
+ * @author Mariia Voitenko
+ */
 @WebListener
 public class ServiceContextInitializer implements ServletContextListener {
 

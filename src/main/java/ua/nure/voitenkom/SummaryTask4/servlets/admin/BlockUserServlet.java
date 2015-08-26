@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class BlockUserServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(UsersServlet.class);
@@ -25,7 +28,7 @@ public class BlockUserServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkRole(request, response))return;
+        if (!checkRole(request, response)) return;
         changeUserState(request);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.USERS_MAPPING);
     }

@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class Brand extends SimpleEntity {
 
     public Brand(int id, String name) {

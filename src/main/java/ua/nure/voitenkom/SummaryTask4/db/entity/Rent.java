@@ -1,5 +1,9 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
+/**
+ * @author MariiaVoitenko
+ */
+
 import java.sql.Timestamp;
 
 public class Rent extends Entity {

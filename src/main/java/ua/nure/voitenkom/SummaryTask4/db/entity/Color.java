@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class Color extends SimpleEntity {
 
     public Color(int id, String name) {

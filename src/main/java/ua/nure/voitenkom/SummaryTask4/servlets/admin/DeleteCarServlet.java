@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class DeleteCarServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(DeleteCarServlet.class);
@@ -24,7 +27,7 @@ public class DeleteCarServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkRole(request, response))return;
+        if (!checkRole(request, response)) return;
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         carService.delete(id);
         logger.debug("Deleted car with id {}", id);

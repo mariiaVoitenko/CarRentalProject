@@ -6,6 +6,9 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class PriceFormattingTag extends SimpleTagSupport {
 
     private String format;

@@ -13,8 +13,22 @@ import javax.mail.internet.MimeMultipart;
 import java.util.Date;
 import java.util.Properties;
 
+/**
+ * Service to send emails with checks or messages about registration
+ *
+ * @author Mariia Voitenko
+ */
 public class MailService {
-
+    /**
+     * Sends email with message of registration success
+     *
+     * @param host
+     * @param port
+     * @param email    of user
+     * @param user     email of account mails to be send from
+     * @param password of account mails to be send from
+     * @param token    of user
+     */
     public static void sendEmail(String host, String port, String email, String user, String password, String token) throws MessagingException {
         Properties properties = configureProperties(host, port);
         Authenticator auth = getAuthenticator(user, password);
@@ -26,6 +40,16 @@ public class MailService {
         Transport.send(message);
     }
 
+    /**
+     * Sends email with check to pay
+     *
+     * @param host
+     * @param port
+     * @param email    of user
+     * @param user     email of account mails to be send from
+     * @param password of account mails to be send from
+     * @param fileName path to file
+     */
     public static void sendEmailWithDocument(String host, String port, String email, String user, String password, String fileName) throws MessagingException {
         Properties properties = configureProperties(host, port);
         Authenticator auth = getAuthenticator(user, password);

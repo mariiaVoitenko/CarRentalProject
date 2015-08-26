@@ -19,9 +19,9 @@ import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServ
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
+import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.date.DateFormatValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.date.DateValidator;
-import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
 import javax.mail.MessagingException;
 import javax.servlet.ServletException;
@@ -37,6 +37,9 @@ import java.util.Map;
 import static ua.nure.voitenkom.SummaryTask4.util.DateManager.getDaysCount;
 import static ua.nure.voitenkom.SummaryTask4.util.DateManager.parseDate;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class RentCarServlet extends AuthenticationServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(RentCarServlet.class);

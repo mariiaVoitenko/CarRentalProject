@@ -18,6 +18,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class CarRepository extends AbstractRepository<Car> implements ICarRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CarRepository.class);

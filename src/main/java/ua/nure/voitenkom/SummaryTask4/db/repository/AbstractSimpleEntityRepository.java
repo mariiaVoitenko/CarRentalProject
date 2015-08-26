@@ -9,6 +9,9 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public abstract class AbstractSimpleEntityRepository<T extends SimpleEntity> extends AbstractRepository<T> {
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractSimpleEntityRepository.class);

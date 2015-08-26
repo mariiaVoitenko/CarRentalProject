@@ -15,6 +15,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class PhotoServlet extends HttpServlet {
 
     public static final Logger logger = LoggerFactory.getLogger(PhotoServlet.class);

@@ -32,6 +32,9 @@ import java.util.Map;
 
 import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
+/**
+ * @author Mariia Voitenko
+ */
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class RegistrationServlet extends AuthenticationServlet {
 

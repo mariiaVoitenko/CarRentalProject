@@ -2,6 +2,9 @@ package ua.nure.voitenkom.SummaryTask4.db.entity;
 
 import java.sql.Timestamp;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class User extends Entity {
 
     private String fullName;

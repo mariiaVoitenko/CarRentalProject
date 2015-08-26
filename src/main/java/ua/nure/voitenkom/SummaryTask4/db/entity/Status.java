@@ -1,5 +1,8 @@
 package ua.nure.voitenkom.SummaryTask4.db.entity;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class Status extends SimpleEntity {
 
     public Status(int id, String name) {

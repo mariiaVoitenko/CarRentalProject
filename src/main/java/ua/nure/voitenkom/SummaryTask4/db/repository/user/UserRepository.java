@@ -16,6 +16,9 @@ import java.util.List;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNull;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class UserRepository extends AbstractRepository<User> implements IUserRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(UserRepository.class);
@@ -151,7 +154,7 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
         }
     }
 
-    private void changeState(String sql, int id){
+    private void changeState(String sql, int id) {
         try (PreparedStatement ps = getConnection().prepareStatement(sql)) {
             ps.setInt(1, id);
             ps.executeUpdate();
@@ -161,7 +164,7 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
         }
     }
 
-    private User selectByStringParameter(String sql, String parameter){
+    private User selectByStringParameter(String sql, String parameter) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             preparedStatement.setString(1, parameter);
             List<User> records = executeQuery(preparedStatement, new UserExtractor());

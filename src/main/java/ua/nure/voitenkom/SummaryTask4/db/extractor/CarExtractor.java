@@ -6,6 +6,9 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class CarExtractor implements IExtractor<Car> {
 
     @Override

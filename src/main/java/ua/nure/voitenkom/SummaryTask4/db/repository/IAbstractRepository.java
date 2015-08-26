@@ -4,6 +4,9 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
 
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public interface IAbstractRepository<T extends Entity> {
 
     T selectById(int id);

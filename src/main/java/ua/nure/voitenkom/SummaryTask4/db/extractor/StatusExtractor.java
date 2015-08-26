@@ -6,6 +6,9 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Status;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class StatusExtractor implements IExtractor<Status> {
 
     @Override

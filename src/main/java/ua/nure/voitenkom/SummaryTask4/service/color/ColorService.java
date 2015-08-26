@@ -7,6 +7,9 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class ColorService implements IColorService {
 
     private final ITransactionManager transactionManager;

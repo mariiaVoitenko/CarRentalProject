@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class MakeManagerServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(UsersServlet.class);
@@ -30,7 +33,7 @@ public class MakeManagerServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkRole(request, response))return;
+        if (!checkRole(request, response)) return;
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         User user = userService.selectById(id);
         int managerRoleId = Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID);

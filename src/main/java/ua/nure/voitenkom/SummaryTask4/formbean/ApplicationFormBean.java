@@ -1,5 +1,10 @@
 package ua.nure.voitenkom.SummaryTask4.formbean;
 
+/**
+ * Special class to show data from variable tables of database
+ *
+ * @author Mariia Voitenko
+ */
 public class ApplicationFormBean {
 
     private String model;

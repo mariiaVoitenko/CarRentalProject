@@ -27,6 +27,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class SetDamageRentServlet extends AdminServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);
@@ -59,7 +62,7 @@ public class SetDamageRentServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(!checkManagerRole(request, response))return;
+        if (!checkManagerRole(request, response)) return;
 
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         Rent rent = rentService.selectById(id);

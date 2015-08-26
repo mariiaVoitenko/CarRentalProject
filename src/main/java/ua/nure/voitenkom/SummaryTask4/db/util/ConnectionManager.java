@@ -7,6 +7,9 @@ import ua.nure.voitenkom.SummaryTask4.exception.DatabaseConnectionException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * @author Mariia Voitenko
+ */
 public final class ConnectionManager {
 
     private static final Logger logger = LoggerFactory.getLogger(ConnectionManager.class);
@@ -14,6 +17,12 @@ public final class ConnectionManager {
     private ConnectionManager() {
     }
 
+    /**
+     * Closes connection with database
+     *
+     * @param connection to be closed
+     * @throws DatabaseConnectionException if connection is unable to be closed
+     */
     public static void closeConnection(Connection connection) throws DatabaseConnectionException {
         try {
             connection.close();
@@ -23,6 +32,12 @@ public final class ConnectionManager {
         }
     }
 
+    /**
+     * Does rollback when some operation can't be performed
+     *
+     * @param connection to perform rollback
+     * @throws DatabaseConnectionException if rollback can't be done
+     */
     public static void rollback(Connection connection) throws DatabaseConnectionException {
         try {
             connection.rollback();

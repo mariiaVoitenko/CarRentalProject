@@ -6,6 +6,9 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author MariiaVoitenko
+ */
 public class BrandExtractor implements IExtractor<Brand> {
 
     @Override

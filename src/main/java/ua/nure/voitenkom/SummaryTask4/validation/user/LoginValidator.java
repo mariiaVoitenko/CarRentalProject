@@ -8,6 +8,9 @@ import java.util.Map;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.*;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class LoginValidator implements IValidator<LoginFormBean> {
 
     @Override

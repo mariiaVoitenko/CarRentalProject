@@ -1,5 +1,10 @@
 package ua.nure.voitenkom.SummaryTask4.formbean;
 
+/**
+ * Special class proceed data when user registers
+ *
+ * @author Mariia Voitenko
+ */
 public class RegistrationFormBean extends LoginFormBean {
 
     private String passportNumber;
@@ -26,11 +31,13 @@ public class RegistrationFormBean extends LoginFormBean {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public String getFullName() {
+        return fullName;
     }
 
-    public RegistrationFormBean(String login, String password, String passportNumber, String fullName, String repeatedPassword) {
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }    public RegistrationFormBean(String login, String password, String passportNumber, String fullName, String repeatedPassword) {
         super(login, password);
         this.passportNumber = passportNumber;
         this.fullName = fullName;

@@ -22,6 +22,9 @@ import java.util.List;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNotNull;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class SortingServlet extends HttpServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServlet.class);

@@ -7,6 +7,9 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class BrandService implements IBrandService {
 
     private final ITransactionManager transactionManager;

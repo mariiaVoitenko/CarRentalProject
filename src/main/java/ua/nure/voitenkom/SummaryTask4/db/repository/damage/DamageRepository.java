@@ -15,6 +15,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class DamageRepository extends AbstractRepository<Damage> implements IDamageRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(DamageRepository.class);

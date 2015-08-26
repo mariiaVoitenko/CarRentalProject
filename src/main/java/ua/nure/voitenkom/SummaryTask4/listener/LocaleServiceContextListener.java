@@ -15,6 +15,9 @@ import java.util.Locale;
 
 import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNull;
 
+/**
+ * @author Mariia Voitenko
+ */
 @WebListener
 public class LocaleServiceContextListener implements ServletContextListener {
 

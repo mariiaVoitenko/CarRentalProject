@@ -2,6 +2,11 @@ package ua.nure.voitenkom.SummaryTask4.formbean;
 
 import ua.nure.voitenkom.SummaryTask4.db.entity.Entity;
 
+/**
+ * Special class to show data from variable tables of database
+ *
+ * @author Mariia Voitenko
+ */
 public class CarFormBean extends Entity {
 
     private String model;
@@ -35,7 +40,7 @@ public class CarFormBean extends Entity {
         this.statusName = statusName;
     }
 
-    public CarFormBean(String model, int price, int doorsCount,  boolean hasConditioner, int bigLuggageCount,
+    public CarFormBean(String model, int price, int doorsCount, boolean hasConditioner, int bigLuggageCount,
                        int smallLuggageCount, int sitsCount, String brandName, String colorName,
                        String className, String statusName) {
         this.model = model;

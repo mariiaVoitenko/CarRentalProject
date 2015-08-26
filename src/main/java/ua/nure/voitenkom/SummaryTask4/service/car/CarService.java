@@ -13,6 +13,9 @@ import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Mariia Voitenko
+ */
 public class CarService implements ICarService {
 
     private final ITransactionManager transactionManager;
