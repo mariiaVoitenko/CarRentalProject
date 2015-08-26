@@ -2,6 +2,9 @@ package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
+import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
+import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
 import ua.nure.voitenkom.SummaryTask4.service.car.ICarService;
 import ua.nure.voitenkom.SummaryTask4.service.color.IColorService;
@@ -10,22 +13,20 @@ import ua.nure.voitenkom.SummaryTask4.service.photo.IPhotoService;
 import ua.nure.voitenkom.SummaryTask4.service.status.IStatusService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
-import ua.nure.voitenkom.SummaryTask4.db.entity.*;
-import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
-import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.car.CarValidator;
 
-import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
+
+import static ua.nure.voitenkom.SummaryTask4.util.PhotoValidator.isPhotoIncorrect;
 
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 public class SaveCarServlet extends AdminServlet {

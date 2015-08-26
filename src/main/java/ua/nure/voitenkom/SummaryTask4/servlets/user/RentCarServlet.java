@@ -2,6 +2,9 @@ package ua.nure.voitenkom.SummaryTask4.servlets.user;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ua.nure.voitenkom.SummaryTask4.db.entity.*;
+import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
+import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
 import ua.nure.voitenkom.SummaryTask4.service.account.MailService;
 import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
 import ua.nure.voitenkom.SummaryTask4.service.car.ICarService;
@@ -12,13 +15,10 @@ import ua.nure.voitenkom.SummaryTask4.service.pdf.IPDFService;
 import ua.nure.voitenkom.SummaryTask4.service.rent.IRentService;
 import ua.nure.voitenkom.SummaryTask4.service.status.IStatusService;
 import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
+import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServlet;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.Mappings;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
-import ua.nure.voitenkom.SummaryTask4.db.entity.*;
-import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
-import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.servlets.authentication.AuthenticationServlet;
 import ua.nure.voitenkom.SummaryTask4.validation.DateValidator;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
@@ -33,8 +33,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import static ua.nure.voitenkom.SummaryTask4.util.DateManager.parseDate;
 import static ua.nure.voitenkom.SummaryTask4.util.DateManager.getDaysCount;
+import static ua.nure.voitenkom.SummaryTask4.util.DateManager.parseDate;
 
 public class RentCarServlet extends AuthenticationServlet {
 

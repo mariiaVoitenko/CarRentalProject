@@ -3,19 +3,18 @@ package ua.nure.voitenkom.SummaryTask4.service.car;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import ua.nure.voitenkom.SummaryTask4.criteria.Criteria;
 import ua.nure.voitenkom.SummaryTask4.db.connection.IConnectionFactory;
 import ua.nure.voitenkom.SummaryTask4.db.converter.ISQLBuilder;
 import ua.nure.voitenkom.SummaryTask4.db.converter.SQLBuilder;
-import ua.nure.voitenkom.SummaryTask4.db.entity.Brand;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
-import ua.nure.voitenkom.SummaryTask4.db.repository.brand.BrandRepository;
 import ua.nure.voitenkom.SummaryTask4.db.repository.car.CarRepository;
 import ua.nure.voitenkom.SummaryTask4.db.repository.car.ICarRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
-import ua.nure.voitenkom.SummaryTask4.service.brand.BrandService;
+import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 
 import java.sql.Connection;
 import java.util.List;
@@ -32,6 +31,7 @@ public class CarServiceTest {
     private Connection connection;
     private ICarRepository carRepository;
     private ISQLBuilder sqlBuilder;
+    private CarFormBean carFormBean = mock(CarFormBean.class);
 
     @Before
     public void setUp() throws Exception {
@@ -59,6 +59,24 @@ public class CarServiceTest {
         int id = 1;
         when(carRepository.selectById(id)).thenReturn(car);
         assertEquals(carService.getById(id), car);
+        verify(connection).commit();
+        verify(connection).close();
+    }
+
+    @Test
+    public void testSelectFullInformation() throws Exception {
+        int id = 1;
+        when(carRepository.getFullCarInformationById(id)).thenReturn(carFormBean);
+        assertEquals(carService.getFullCarInformationById(id), carFormBean);
+        verify(connection).commit();
+        verify(connection).close();
+    }
+
+    @Test
+    public void testAllCarsInformation() throws Exception {
+        List<CarFormBean> cars = mock(List.class);
+        when(carRepository.getFullCarInformation()).thenReturn(cars);
+        Assert.assertEquals(cars, carService.getFullInformationForAll());
         verify(connection).commit();
         verify(connection).close();
     }

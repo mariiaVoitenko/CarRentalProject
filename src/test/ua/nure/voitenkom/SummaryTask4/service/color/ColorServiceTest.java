@@ -1,8 +1,10 @@
 package ua.nure.voitenkom.SummaryTask4.service.color;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import ua.nure.voitenkom.SummaryTask4.db.connection.IConnectionFactory;
+import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Color;
 import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
@@ -12,6 +14,7 @@ import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.TransactionManager;
 
 import java.sql.Connection;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -40,6 +43,24 @@ public class ColorServiceTest {
     public void testNameGetting() throws Exception {
         when(colorRepository.selectByName(RED_COLOR.getName())).thenReturn(RED_COLOR);
         assertEquals(RED_COLOR, colorService.selectByName("Red"));
+        verify(connection).commit();
+        verify(connection).close();
+    }
+
+    @Test
+    public void testSelectById() throws Exception {
+        int id = 1;
+        when(colorRepository.selectById(id)).thenReturn(RED_COLOR);
+        assertEquals(RED_COLOR, colorService.selectById(id));
+        verify(connection).commit();
+        verify(connection).close();
+    }
+
+    @Test
+    public void testFindAll() throws Exception {
+        List<Color> colors = mock(List.class);
+        when(colorRepository.selectAll()).thenReturn(colors);
+        Assert.assertEquals(colors, colorService.getAll());
         verify(connection).commit();
         verify(connection).close();
     }

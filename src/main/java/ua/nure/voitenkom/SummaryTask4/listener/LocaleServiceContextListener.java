@@ -1,9 +1,9 @@
 package ua.nure.voitenkom.SummaryTask4.listener;
 
-import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.service.locale.LocaleService;
 import ua.nure.voitenkom.SummaryTask4.service.locale.ILocaleService;
+import ua.nure.voitenkom.SummaryTask4.service.locale.LocaleService;
+import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

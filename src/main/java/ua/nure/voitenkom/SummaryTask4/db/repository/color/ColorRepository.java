@@ -3,7 +3,6 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.color;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Color;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.ColorExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
 

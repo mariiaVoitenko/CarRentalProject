@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.DamageCheck;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.DamageCheckExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;

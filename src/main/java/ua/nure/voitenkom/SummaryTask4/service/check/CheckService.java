@@ -6,8 +6,6 @@ import ua.nure.voitenkom.SummaryTask4.db.repository.check.ICheckRepository;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.ITransactionManager;
 import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
 
-import java.util.List;
-
 public class CheckService implements ICheckService {
 
     private final ITransactionManager transactionManager;
@@ -16,16 +14,6 @@ public class CheckService implements ICheckService {
     public CheckService(ITransactionManager transactionManager, ICheckRepository checkRepository) {
         this.transactionManager = transactionManager;
         this.checkRepository = checkRepository;
-    }
-
-    @Override
-    public List<Check> selectUnpayed() {
-        return transactionManager.doInTransaction(new Operation<List<Check>>() {
-            @Override
-            public List<Check> doOperation() {
-                return checkRepository.selectUnpayed();
-            }
-        });
     }
 
     @Override
@@ -45,17 +33,6 @@ public class CheckService implements ICheckService {
             @Override
             public Void doOperation() {
                 checkRepository.update(check);
-                return null;
-            }
-        });
-    }
-
-    @Override
-    public void setPayed(final Check check) {
-        transactionManager.doInTransaction(new Operation<Void>() {
-            @Override
-            public Void doOperation() {
-                checkRepository.setPayed(check);
                 return null;
             }
         });

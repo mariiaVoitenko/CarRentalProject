@@ -1,13 +1,5 @@
 package ua.nure.voitenkom.SummaryTask4.db.repository;
 
-import ua.nure.voitenkom.SummaryTask4.db.transaction.Operation;
-import ua.nure.voitenkom.SummaryTask4.db.util.ConnectionManager;
-import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
 /**
  * Created by Maria on 24.08.2015.
  */

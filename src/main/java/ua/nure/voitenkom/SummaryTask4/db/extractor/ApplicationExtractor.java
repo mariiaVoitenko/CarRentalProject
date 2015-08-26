@@ -3,10 +3,10 @@ package ua.nure.voitenkom.SummaryTask4.db.extractor;
 import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
 
-import static ua.nure.voitenkom.SummaryTask4.util.DateManager.timestampToString;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import static ua.nure.voitenkom.SummaryTask4.util.DateManager.timestampToString;
 
 public class ApplicationExtractor implements IExtractor<ApplicationFormBean> {
 

@@ -3,7 +3,6 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.decline;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Decline;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.DeclineExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractSimpleEntityRepository;
 

@@ -8,7 +8,6 @@ import ua.nure.voitenkom.SummaryTask4.formbean.ApplicationFormBean;
 import ua.nure.voitenkom.SummaryTask4.formbean.HistoryFormBean;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 
 public class RentService implements IRentService {

@@ -2,7 +2,6 @@ package ua.nure.voitenkom.SummaryTask4.service.car;
 
 import ua.nure.voitenkom.SummaryTask4.criteria.Criteria;
 import ua.nure.voitenkom.SummaryTask4.db.converter.ISQLBuilder;
-import ua.nure.voitenkom.SummaryTask4.db.converter.SQLBuilder;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.repository.car.ICarRepository;

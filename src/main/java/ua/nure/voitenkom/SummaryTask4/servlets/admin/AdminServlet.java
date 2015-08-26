@@ -1,5 +1,7 @@
 package ua.nure.voitenkom.SummaryTask4.servlets.admin;
 
+import ua.nure.voitenkom.SummaryTask4.db.entity.*;
+import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.service.brand.IBrandService;
 import ua.nure.voitenkom.SummaryTask4.service.color.IColorService;
 import ua.nure.voitenkom.SummaryTask4.service.majorityclass.IMajorityClassService;
@@ -7,12 +9,12 @@ import ua.nure.voitenkom.SummaryTask4.service.status.IStatusService;
 import ua.nure.voitenkom.SummaryTask4.util.Attributes;
 import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
-import ua.nure.voitenkom.SummaryTask4.db.entity.*;
-import ua.nure.voitenkom.SummaryTask4.formbean.CarFormBean;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
-import javax.servlet.http.*;
-
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;

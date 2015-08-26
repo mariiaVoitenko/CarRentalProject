@@ -2,16 +2,13 @@ package ua.nure.voitenkom.SummaryTask4.servlets.authentication;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.service.role.IRoleService;
-import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
-import ua.nure.voitenkom.SummaryTask4.util.Attributes;
-import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
-import ua.nure.voitenkom.SummaryTask4.util.Mappings;
-import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Role;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.service.ServiceConstant;
-import ua.nure.voitenkom.SummaryTask4.util.DateManager;
+import ua.nure.voitenkom.SummaryTask4.service.role.IRoleService;
+import ua.nure.voitenkom.SummaryTask4.service.user.IUserService;
+import ua.nure.voitenkom.SummaryTask4.util.*;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

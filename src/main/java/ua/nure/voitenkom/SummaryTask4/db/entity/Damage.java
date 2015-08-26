@@ -4,6 +4,11 @@ public class Damage extends SimpleEntity {
 
     private int sum;
 
+    public Damage(String name, int sum) {
+        super(name);
+        this.sum = sum;
+    }
+
     public int getSum() {
         return sum;
     }

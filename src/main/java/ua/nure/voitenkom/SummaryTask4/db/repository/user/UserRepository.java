@@ -2,20 +2,19 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.user;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
-import ua.nure.voitenkom.SummaryTask4.service.account.PasswordMaker;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.User;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.UserExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
+import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
-
-import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNull;
+import ua.nure.voitenkom.SummaryTask4.service.account.PasswordMaker;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
+
+import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isNull;
 
 public class UserRepository extends AbstractRepository<User> implements IUserRepository {
 

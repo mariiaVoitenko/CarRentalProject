@@ -6,9 +6,7 @@ import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 import java.util.HashMap;
 import java.util.Map;
 
-import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.ifMail;
-import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.ifNumber;
-import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.isEmpty;
+import static ua.nure.voitenkom.SummaryTask4.validation.ValidationManager.*;
 
 public class LoginValidator implements IValidator<LoginFormBean> {
 

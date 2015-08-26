@@ -14,8 +14,6 @@ public interface IDamageService {
 
     void update(Damage damage);
 
-    void updateSum(Damage damage);
-
     List<Damage> getAll();
 
     int selectSumById(int id);

@@ -3,7 +3,6 @@ package ua.nure.voitenkom.SummaryTask4.db.transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.nure.voitenkom.SummaryTask4.db.connection.IConnectionFactory;
-import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.util.ConnectionManager;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;

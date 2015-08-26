@@ -60,17 +60,6 @@ public class DamageService implements IDamageService {
     }
 
     @Override
-    public void updateSum(final Damage damage) {
-        transactionManager.doInTransaction(new Operation<Void>() {
-            @Override
-            public Void doOperation() {
-                damageRepository.updateSum(damage);
-                return null;
-            }
-        });
-    }
-
-    @Override
     public List<Damage> getAll() {
         return transactionManager.doInTransaction(new Operation<List<Damage>>() {
             @Override

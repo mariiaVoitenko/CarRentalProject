@@ -7,7 +7,6 @@ import ua.nure.voitenkom.SummaryTask4.db.entity.Rent;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.ApplicationExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.HistoryExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.RentExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;

@@ -2,13 +2,11 @@ package ua.nure.voitenkom.SummaryTask4.db.repository.car;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Car;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CarExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.CarFormBeanExtractor;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.IExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;

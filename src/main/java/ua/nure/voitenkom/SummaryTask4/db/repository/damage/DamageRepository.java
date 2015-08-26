@@ -6,7 +6,6 @@ import ua.nure.voitenkom.SummaryTask4.db.FieldsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.StatementsContainer;
 import ua.nure.voitenkom.SummaryTask4.db.entity.Damage;
 import ua.nure.voitenkom.SummaryTask4.db.extractor.DamageExtractor;
-import ua.nure.voitenkom.SummaryTask4.db.holder.ConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.holder.IConnectionHolder;
 import ua.nure.voitenkom.SummaryTask4.db.repository.AbstractRepository;
 import ua.nure.voitenkom.SummaryTask4.exception.DatabaseException;
@@ -51,19 +50,6 @@ public class DamageRepository extends AbstractRepository<Damage> implements IDam
             preparedStatement.setString(1, damage.getName());
             preparedStatement.setInt(2, damage.getSum());
             preparedStatement.setInt(3, damage.getId());
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error("Fail while executing sql ['{}']; Message: ", sql, e);
-            throw new DatabaseException("Fail while executing sql ['" + sql + "']");
-        }
-    }
-
-    @Override
-    public void updateSum(Damage damage) {
-        String sql = StatementsContainer.SQL_UPDATE_DAMAGE_SUM_BY_ID;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setInt(1, damage.getSum());
-            preparedStatement.setInt(2, damage.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             logger.error("Fail while executing sql ['{}']; Message: ", sql, e);

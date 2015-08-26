@@ -13,18 +13,10 @@ public final class StatementsContainer {
     //cars
     public static final String SQL_SELECT_ALL_CARS = "SELECT * FROM cars";
     public static final String SQL_SELECT_CAR_BY_ID = "SELECT * FROM cars WHERE id = ?";
-    public static final String SQL_SELECT_CAR_BRAND_BY_ID = "SELECT brands.name FROM brands, cars WHERE cars.id = ? AND " +
-            "cars.brands_id = brands.id";
-    public static final String SQL_SELECT_CAR_CLASS_BY_ID = "SELECT classes.name FROM classes, cars WHERE cars.id = ? AND " +
-            "cars.classes_id = classes.id";
-    public static final String SQL_SELECT_CARS_BY_BRAND_ID = "SELECT * from cars WHERE brands_id = ?";
-    public static final String SQL_SELECT_CARS_BY_CLASS_ID = "SELECT * from cars WHERE classes_id = ?";
     public static final String SQL_INSERT_CAR = "INSERT INTO cars (model, price, doors_count, has_conditioner, " +
             "big_luggage_count, small_luggage_count, sits_count, classes_id, colors_id, statuses_id, brands_id, photo) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
     public static final String SQL_UPDATE_CAR = "UPDATE cars SET model=?, price=?, doors_count=?, has_conditioner=?, " +
             "big_luggage_count=?, small_luggage_count=?, sits_count=?, classes_id=?, colors_id=?, statuses_id=?, brands_id=?, photo=? WHERE cars.id=?";
-    public static final String SQL_UPDATE_CAR_STATUS_BY_ID = "UPDATE cars SET statuses_id = ? WHERE id = ?";
-    public static final String SQL_UPDATE_CAR_PRICE_BY_ID = "UPDATE cars SET price = ? WHERE id = ?";
     public static final String SQL_DELETE_CAR_BY_ID = "DELETE FROM cars WHERE id = ?";
     public static final String SQL_SELECT_ALL_CAR_INFORMATION = "SELECT cars.id, cars.model, price, doors_count, has_conditioner, " +
             "big_luggage_count, small_luggage_count, sits_count, photo, classes.name AS class_name, brands.name AS brand_name, \n" +
@@ -45,11 +37,9 @@ public final class StatementsContainer {
     //checks
     public static final String SQL_SELECT_ALL_CHECKS = "SELECT * FROM checks";
     public static final String SQL_SELECT_CHECK_BY_ID = "SELECT * FROM checks WHERE id = ?";
-    public static final String SQL_SELECT_ALL_UNPAYED_CHECKS = "SELECT * FROM checks WHERE is_payed = false";
     public static final String SQL_INSERT_CHECK = "INSERT INTO checks (sum, is_payed) VALUES (?, ?)";
     public static final String SQL_UPDATE_CHECK_BY_ID = "UPDATE checks SET sum = ?, is_payed = ? WHERE id = ?";
     public static final String SQL_UPDATE_CHECK_SUM_BY_ID = "UPDATE checks SET sum = ? WHERE id = ?";
-    public static final String SQL_UPDATE_CHECK_PAY_BY_ID = "UPDATE checks SET is_payed = true WHERE id = ?";
     public static final String SQL_DELETE_CHECK_BY_ID = "DELETE FROM checks WHERE id = ?";
 
 
