@@ -24,7 +24,7 @@ public class UsersServlet extends AdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkRole(request, response);
+        if(!checkRole(request, response))return;
         request.setAttribute(Attributes.USERS, usersService.getAll());
         logger.debug("All users information has been got");
         request.getRequestDispatcher(PageNames.USERS_PAGE).forward(request, response);

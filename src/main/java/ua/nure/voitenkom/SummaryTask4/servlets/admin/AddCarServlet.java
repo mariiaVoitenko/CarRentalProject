@@ -52,7 +52,7 @@ public class AddCarServlet extends AdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkRole(request, response);
+        if(!checkRole(request, response))return;
 
         loadEntities(request, brandService, majorityClassService, colorService, statusService);
         logger.debug("Dropdowns are loaded");
@@ -62,7 +62,7 @@ public class AddCarServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkRole(request, response);
+        if(!checkRole(request, response))return;
 
         HttpSession session = request.getSession();
         session.setAttribute(Attributes.MESSAGE, "");

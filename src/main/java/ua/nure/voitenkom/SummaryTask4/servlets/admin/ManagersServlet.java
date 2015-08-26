@@ -27,7 +27,7 @@ public class ManagersServlet extends AdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkRole(request, response);
+        if(!checkRole(request, response))return;
         List<User> users = usersService.selectByRoleId(Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID));
         request.setAttribute(Attributes.USERS, users);
         logger.debug("All managers information has been got");

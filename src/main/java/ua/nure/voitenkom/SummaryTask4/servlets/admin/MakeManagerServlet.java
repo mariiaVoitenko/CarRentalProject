@@ -30,7 +30,7 @@ public class MakeManagerServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkRole(request, response);
+        if(!checkRole(request, response))return;
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         User user = userService.selectById(id);
         int managerRoleId = Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID);

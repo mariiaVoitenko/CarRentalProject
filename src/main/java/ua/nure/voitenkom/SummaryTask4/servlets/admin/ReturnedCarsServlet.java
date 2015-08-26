@@ -33,7 +33,7 @@ public class ReturnedCarsServlet extends AdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkManagerRole(request, response);
+        if(!checkManagerRole(request, response))return;
         setAttributes(request);
         logger.debug("Data have been got");
         request.getRequestDispatcher(PageNames.RETURNED_CARS_PAGE).forward(request, response);
@@ -41,7 +41,7 @@ public class ReturnedCarsServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkManagerRole(request, response);
+        if(!checkManagerRole(request, response))return;
         setAttributes(request);
         logger.debug("Data have been got");
         request.getRequestDispatcher(PageNames.RETURNED_CARS_PAGE).forward(request, response);

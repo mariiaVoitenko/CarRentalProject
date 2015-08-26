@@ -25,7 +25,7 @@ public class DeclineApplicationServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkManagerRole(request, response);
+        if(!checkManagerRole(request, response))return;
         setDeclineReason(request);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.APPLICATIONS_MAPPING);
     }

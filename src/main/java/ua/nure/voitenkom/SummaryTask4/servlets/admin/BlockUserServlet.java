@@ -25,7 +25,7 @@ public class BlockUserServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkRole(request, response);
+        if(!checkRole(request, response))return;
         changeUserState(request);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.USERS_MAPPING);
     }

@@ -24,7 +24,7 @@ public class DeleteCarServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkRole(request, response);
+        if(!checkRole(request, response))return;
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         carService.delete(id);
         logger.debug("Deleted car with id {}", id);

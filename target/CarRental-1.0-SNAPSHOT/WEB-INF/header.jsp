@@ -60,7 +60,7 @@
                                 <li><a class="paragraph-text" href="/admin/managers"><fmt:message key="managers"/></a>
                                 </li>
                                 <li class="divider"></li>
-                                <li><a class="paragraph-text" href="addCar"><fmt:message key="add"/></a></li>
+                                <li><a class="paragraph-text" href="/admin/addCar"><fmt:message key="add"/></a></li>
                             </ul>
                         </c:when>
                         <c:otherwise>

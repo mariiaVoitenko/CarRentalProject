@@ -59,7 +59,7 @@ public class SetDamageRentServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkManagerRole(request, response);
+        if(!checkManagerRole(request, response))return;
 
         int id = Integer.parseInt(request.getParameter(Attributes.ID));
         Rent rent = rentService.selectById(id);

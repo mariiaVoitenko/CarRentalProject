@@ -11,6 +11,7 @@ import ua.nure.voitenkom.SummaryTask4.util.EntitiesValues;
 import ua.nure.voitenkom.SummaryTask4.util.PageNames;
 import ua.nure.voitenkom.SummaryTask4.validation.IValidator;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -79,16 +80,20 @@ public abstract class AdminServlet extends HttpServlet {
         car.setClassTypeId(majorityClass.getId());
     }
 
-    protected void checkRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if (getRoleId(request) != null && getRoleId(request) != Integer.parseInt(EntitiesValues.ADMIN_ROLE_ID)) {
-            response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
+    protected boolean checkRole(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        if (getRoleId(request) == null || getRoleId(request) != Integer.parseInt(EntitiesValues.ADMIN_ROLE_ID)) {
+            response.sendRedirect("/" + PageNames.ACCESS_DENIED_PAGE);
+            return false;
         }
+        return true;
     }
 
-    protected void checkManagerRole(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if (getRoleId(request) != null && getRoleId(request) != Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID)) {
-            response.sendRedirect(PageNames.ACCESS_DENIED_PAGE);
+    protected boolean checkManagerRole(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        if (getRoleId(request) == null || getRoleId(request) != Integer.parseInt(EntitiesValues.MANAGER_ROLE_ID)) {
+            response.sendRedirect("/" + PageNames.ACCESS_DENIED_PAGE);
+            return false;
         }
+        return true;
     }
 
 }

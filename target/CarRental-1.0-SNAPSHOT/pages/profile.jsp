@@ -38,7 +38,7 @@
         </div>
         <br>
 
-        <c:if test="${user.roleId == 1}">
+        <c:if test="${sessionScope.roleId == 1}">
             <form action="block?id=${user.id}" method="POST">
                 <button class="btn btn-large btn-danger" type="submit">
                     <c:choose>
@@ -49,7 +49,7 @@
             </form>
         </c:if>
 
-        <c:if test="${user.roleId == 1}">
+        <c:if test="${sessionScope.roleId == 1}">
             <form action="makeManager?id=${user.id}" method="POST">
                 <c:choose>
                     <c:when test="${user.roleId == 4}">

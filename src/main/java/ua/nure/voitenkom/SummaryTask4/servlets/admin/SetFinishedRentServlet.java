@@ -24,14 +24,14 @@ public class SetFinishedRentServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkManagerRole(request, response);
+        if(!checkManagerRole(request, response))return;
         finishRent(request);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.RETURNED_CARS_MAPPING);
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkManagerRole(request, response);
+        if(!checkManagerRole(request, response))return;
         finishRent(request);
         response.sendRedirect(Mappings.ADMIN_MAPPING + Mappings.RETURNED_CARS_MAPPING);
     }

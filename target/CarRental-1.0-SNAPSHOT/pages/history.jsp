@@ -36,7 +36,7 @@
                         </c:if>
                         <span class="small-image paragraph-text">${rent.doorsCount}&nbsp;<fmt:message
                                 key="doors"/></span>
-                        <span class="price red">${rent.checkSum} <fmt:message key="HRN"/></span>
+                        <span class="price red">${rent.checkSum} &nbsp;<fmt:message key="HRN"/></span>
                         <br><br><br><br>
 
                         <div class="paragraph-text">

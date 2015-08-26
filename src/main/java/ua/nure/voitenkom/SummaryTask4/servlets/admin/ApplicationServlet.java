@@ -35,7 +35,7 @@ public class ApplicationServlet extends AdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkManagerRole(request, response);
+        if(!checkManagerRole(request, response))return;
         setAttributes(request);
         logger.debug("Applications have been got");
         request.getRequestDispatcher(PageNames.APPLICATIONS_PAGE).forward(request, response);
@@ -43,7 +43,7 @@ public class ApplicationServlet extends AdminServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkManagerRole(request, response);
+        if(!checkManagerRole(request, response))return;
         setAttributes(request);
         logger.debug("Applications have been got");
         request.getRequestDispatcher(PageNames.APPLICATIONS_PAGE).forward(request, response);
